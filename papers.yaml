@@ -1,0 +1,3861 @@
+# papers.yaml — canonical source of truth for the Human-AI Coevolution Paper List.
+# Edit this file to add or correct papers. `bibtex` is auto-generated;
+# set `bibtex_confirmed: true` after verifying against the official source.
+
+- title: 'Examining University Students'' Engagement with ChatGPT in English Essay Writing: Interaction Patterns and Perceptions'
+  link: https://link.springer.com/article/10.1007/s40299-025-01076-9
+  authors:
+  - Hyeji Jang
+  - Lingxi Jin
+  - Hyo-Jeong So
+  institutions:
+  - Ewha Womans University
+  date: '2026-12-31'
+  publisher: The Asia-Pacific Education Researcher 2026
+  envs:
+  - Longitudinal HCI Studies
+  - Collaboration & Co-Creation
+  keywords:
+  - ChatGPT
+  - essay writing
+  - engagement
+  - Korean students
+  tldr: |-
+    Examines university students’ interaction patterns and perceptions during ChatGPT-assisted English essay writing.
+  bibtex: |-
+    @article{jang2026engagement,
+      title = {Examining University Students' Engagement with {ChatGPT} in English Essay Writing: Interaction Patterns and Perceptions},
+      author = {Jang, Hyeji and Jin, Lingxi and So, Hyo-Jeong},
+      journal = {The Asia-Pacific Education Researcher},
+      year = {2026},
+      doi = {10.1007/s40299-025-01076-9}
+    }
+  bibtex_confirmed: false
+- title: 'Trust in human-AI collaboration in finance: a bibliometric-systematic literature review'
+  link: https://doi.org/10.1007/s00146-026-03049-y
+  authors:
+  - Mario Mirabile
+  - Giovanni Emanuele Corazza
+  - Jose María Alonso-Moral
+  institutions: []
+  date: '2026-05-08'
+  publisher: AI & SOCIETY 2026
+  envs:
+  - Position & Survey
+  - Mutual Adaptation
+  keywords:
+  - trust
+  - finance
+  - AI governance
+  - bibliometric
+  - systematic review
+  tldr: |-
+    Bibliometric-systematic review of 114 publications (2018-2025) identifying six research clusters and proposing a micro-meso-macro socio-technical framework for trust in financial human-AI collaboration.
+  bibtex: |-
+    @article{mirabile2026trust,
+      title = {Trust in human-{AI} collaboration in finance: a bibliometric-systematic literature review},
+      author = {Mirabile, Mario and Corazza, Giovanni Emanuele and Alonso-Moral, Jose Mar{\'i}a},
+      journal = {AI \& SOCIETY},
+      year = {2026},
+      doi = {10.1007/s00146-026-03049-y}
+    }
+  bibtex_confirmed: false
+- title: Agentic AI in the Software Development Lifecycle
+  link: https://arxiv.org/abs/2604.26275
+  authors:
+  - Happy Bhati
+  institutions: []
+  date: '2026-04-29'
+  publisher: arXiv
+  envs:
+  - Position & Survey
+  keywords:
+  - agentic AI
+  - software engineering
+  - SDLC
+  - oversight
+  - productivity
+  tldr: |-
+    Proposes a six-layer reference architecture for agentic SE systems and synthesizes empirical evidence (productivity gains 13.6–55.8%) for the shift from line-level completion to repository-scale autonomous agents.
+  arxiv_id: '2604.26275'
+  sources:
+    arxiv: https://arxiv.org/abs/2604.26275
+  bibtex: |-
+    @misc{bhati2026agentic,
+      title = {Agentic {AI} in the Software Development Lifecycle},
+      author = {Bhati, Happy},
+      year = {2026},
+      eprint = {2604.26275},
+      archivePrefix = {arXiv}
+    }
+  bibtex_confirmed: false
+- title: 'A Co-Evolutionary Theory of Human-AI Coexistence: Mutualism, Governance, and Dynamics in Complex Societies'
+  link: https://arxiv.org/abs/2604.22227
+  authors:
+  - Somyajit Chakraborty
+  institutions: []
+  date: '2026-04-24'
+  publisher: arXiv
+  envs:
+  - Position & Survey
+  - Mutual Adaptation
+  keywords:
+  - mutualism
+  - governance
+  - multiplex systems
+  - conditional coexistence
+  - dynamical systems
+  tldr: |-
+    Proposes "conditional mutualism under governance" as an alternative to traditional robot-ethics frameworks, modeling human-AI coexistence as a multiplex dynamical system with reciprocal coupling and governance mechanisms.
+  arxiv_id: '2604.22227'
+  sources:
+    arxiv: https://arxiv.org/abs/2604.22227
+  bibtex: |-
+    @misc{chakraborty2026coevolutionary,
+      title = {A Co-Evolutionary Theory of Human-{AI} Coexistence: Mutualism, Governance, and Dynamics in Complex Societies},
+      author = {Chakraborty, Somyajit},
+      year = {2026},
+      eprint = {2604.22227},
+      archivePrefix = {arXiv}
+    }
+  bibtex_confirmed: false
+- title: 'SWE-chat: Coding Agent Interactions From Real Users in the Wild'
+  link: https://arxiv.org/abs/2604.20779
+  authors:
+  - Joachim Baumann
+  - Vishakh Padmakumar
+  - Xiang Li
+  - John Yang
+  - Diyi Yang
+  - Sanmi Koyejo
+  institutions:
+  - Stanford
+  - Princeton
+  date: '2026-04-22'
+  publisher: arXiv
+  envs:
+  - Longitudinal HCI Studies
+  - Collaboration & Co-Creation
+  keywords:
+  - SWE-chat
+  - coding agents
+  - real users
+  - vibe coding
+  - dataset
+  tldr: |-
+    First large-scale dataset (6,000 sessions, 63K user prompts, 355K agent tool calls). Bimodal usage: 41% agent-authored, 23% human-only. Only 44% of agent code survives.
+  arxiv_id: '2604.20779'
+  sources:
+    arxiv: https://arxiv.org/abs/2604.20779
+  bibtex: |-
+    @misc{baumann2026swechat,
+      title = {{SWE}-chat: Coding Agent Interactions From Real Users in the Wild},
+      author = {Baumann, Joachim and Padmakumar, Vishakh and Li, Xiang and Yang, John and Yang, Diyi and Koyejo, Sanmi},
+      year = {2026},
+      eprint = {2604.20779},
+      archivePrefix = {arXiv}
+    }
+  bibtex_confirmed: false
+- title: 'The Triadic Loop: A Framework for Negotiating Alignment in AI Co-hosted Livestreaming'
+  link: https://arxiv.org/abs/2604.18850
+  authors:
+  - Katherine Wang
+  - Nadia Berthouze
+  - Aneesha Singh
+  institutions:
+  - UCL
+  date: '2026-04-20'
+  publisher: arXiv
+  envs:
+  - Collaboration & Co-Creation
+  - Mutual Adaptation
+  keywords:
+  - triadic loop
+  - livestreaming
+  - AI co-host
+  - alignment
+  - audience
+  tldr: |-
+    Framework for bidirectional adaptation among streamer, AI co-host, and audience; introduces "strategic misalignment" as engagement mechanism.
+  arxiv_id: '2604.18850'
+  sources:
+    arxiv: https://arxiv.org/abs/2604.18850
+  bibtex: |-
+    @misc{wang2026triadic,
+      title = {The Triadic Loop: A Framework for Negotiating Alignment in {AI} Co-hosted Livestreaming},
+      author = {Wang, Katherine and Berthouze, Nadia and Singh, Aneesha},
+      year = {2026},
+      eprint = {2604.18850},
+      archivePrefix = {arXiv}
+    }
+  bibtex_confirmed: false
+- title: 'Strategic Algorithmic Monoculture: Experimental Evidence from Coordination Games'
+  link: https://arxiv.org/abs/2604.09502
+  authors:
+  - Gonzalo Ballestero
+  - Hadi Hosseini
+  - Samarth Khanna
+  - Ran I. Shorrer
+  institutions:
+  - Penn State
+  - IIT
+  date: '2026-04-10'
+  publisher: arXiv
+  envs:
+  - Human Feedback Loops
+  - Collaboration & Co-Creation
+  keywords:
+  - monoculture
+  - LLM coordination
+  - strategic similarity
+  - coordination games
+  tldr: |-
+    Distinguishes "primary algorithmic monoculture" (baseline action similarity) from "strategic algorithmic monoculture" (similarity adjusted by incentives). LLMs coordinate well on similar actions but lag humans in sustaining heterogeneity when divergence is rewarded.
+  arxiv_id: '2604.09502'
+  sources:
+    arxiv: https://arxiv.org/abs/2604.09502
+  bibtex: |-
+    @misc{ballestero2026strategic,
+      title = {Strategic Algorithmic Monoculture: Experimental Evidence from Coordination Games},
+      author = {Ballestero, Gonzalo and Hosseini, Hadi and Khanna, Samarth and Shorrer, Ran I.},
+      year = {2026},
+      eprint = {2604.09502},
+      archivePrefix = {arXiv}
+    }
+  bibtex_confirmed: false
+- title: AI Assistance Reduces Persistence and Hurts Independent Performance
+  link: https://arxiv.org/abs/2604.04721
+  authors:
+  - Grace Liu
+  - Brian Christian
+  - Tsvetomira Dumbalska
+  - Michiel A. Bakker
+  - Rachit Dubey
+  institutions:
+  - CMU
+  - U. Oxford
+  - MIT
+  - UCLA
+  date: '2026-04-06'
+  publisher: arXiv
+  envs:
+  - Longitudinal HCI Studies
+  - Mutual Adaptation
+  keywords:
+  - persistence
+  - independent performance
+  - RCT
+  - math reasoning
+  - reading
+  tldr: |-
+    RCTs with 1,222 participants; AI assistance improves immediate performance but reduces persistence and impairs independent performance after AI removal.
+  arxiv_id: '2604.04721'
+  sources:
+    arxiv: https://arxiv.org/abs/2604.04721
+  bibtex: |-
+    @misc{liu2026persistence,
+      title = {{AI} Assistance Reduces Persistence and Hurts Independent Performance},
+      author = {Liu, Grace and Christian, Brian and Dumbalska, Tsvetomira and Bakker, Michiel A. and Dubey, Rachit},
+      year = {2026},
+      eprint = {2604.04721},
+      archivePrefix = {arXiv}
+    }
+  bibtex_confirmed: false
+- title: 'The Augmentation Trap: AI Productivity and the Cost of Cognitive Offloading'
+  link: https://arxiv.org/abs/2604.03501
+  authors:
+  - Michael Caosun
+  - Sinan Aral
+  institutions:
+  - MIT
+  date: '2026-04-03'
+  publisher: arXiv
+  envs:
+  - Longitudinal HCI Studies
+  - Position & Survey
+  keywords:
+  - augmentation trap
+  - cognitive offloading
+  - skill erosion
+  - dynamic model
+  tldr: |-
+    Dynamic model of AI usage intensity vs. worker skill erosion; identifies "steady-state loss" and "augmentation trap" regimes where rational AI adoption nonetheless lowers worker productivity in the long run.
+  arxiv_id: '2604.03501'
+  sources:
+    arxiv: https://arxiv.org/abs/2604.03501
+  bibtex: |-
+    @misc{caosun2026augmentation,
+      title = {The Augmentation Trap: {AI} Productivity and the Cost of Cognitive Offloading},
+      author = {Caosun, Michael and Aral, Sinan},
+      year = {2026},
+      eprint = {2604.03501},
+      archivePrefix = {arXiv}
+    }
+  bibtex_confirmed: false
+- title: 'Reactive Writers: How Co-Writing with AI Changes How We Engage with Ideas'
+  link: https://arxiv.org/abs/2603.10374
+  authors:
+  - Advait Bhat
+  - Marianne Aubin Le Quéré
+  - Mor Naaman
+  - Maurice Jakesch
+  institutions:
+  - Cornell Tech
+  date: '2026-03-11'
+  publisher: arXiv
+  envs:
+  - Mutual Adaptation
+  keywords:
+  - reactive writing
+  - suggestion-led writing
+  - ideation
+  - evaluation-first
+  tldr: |-
+    N=19 interviews + 1,291 sessions; AI suggestions shift writing from ideation-first to evaluation-first ("reactive writing"), with users unaware of the influence.
+  arxiv_id: '2603.10374'
+  sources:
+    arxiv: https://arxiv.org/abs/2603.10374
+  bibtex: |-
+    @misc{bhat2026reactive,
+      title = {Reactive Writers: How Co-Writing with {AI} Changes How We Engage with Ideas},
+      author = {Bhat, Advait and Aubin Le Qu{\'e}r{\'e}, Marianne and Naaman, Mor and Jakesch, Maurice},
+      year = {2026},
+      eprint = {2603.10374},
+      archivePrefix = {arXiv}
+    }
+  bibtex_confirmed: false
+- title: 'Personality and Personal AI Agents: A Co-Evolutionary Framework (PACE)'
+  link: https://ijonses.net/index.php/ijonses/article/view/5801
+  authors:
+  - Oluwatoyosi Ogunsola
+  institutions:
+  - Ball State University
+  date: '2026-03-07'
+  publisher: International Journal on Social and Education Sciences 2026
+  envs:
+  - Position & Survey
+  - Mutual Adaptation
+  keywords:
+  - personality
+  - AI agents
+  - co-evolution
+  - personalization
+  - identity
+  tldr: |-
+    Proposes a co-evolutionary framework where user personality shapes AI agent personalization, while the agent's interaction style reciprocally influences users' personality expression over time.
+  sources:
+    publisher_page: https://ijonses.net/index.php/ijonses/article/view/5801
+  bibtex: |-
+    @article{ogunsola2026personality,
+      title = {Personality and Personal {AI} Agents: A Co-Evolutionary Framework},
+      author = {Ogunsola, Oluwatoyosi},
+      journal = {International Journal on Social and Education Sciences},
+      volume = {8},
+      number = {2},
+      year = {2026},
+      doi = {10.46328/ijonses.5801}
+    }
+  bibtex_confirmed: false
+- title: 'The Path to Conversational AI Tutors: Integrating Tutoring Best Practices and Targeted Technologies to Produce Scalable
+    AI Agents'
+  link: https://arxiv.org/abs/2602.19303
+  authors:
+  - Kirk Vanacore
+  - Ryan S. Baker
+  - Avery H. Closser
+  - Jeremy Roschelle
+  institutions:
+  - WPI
+  - U. Penn
+  - Worcester State
+  - Digital Promise
+  date: '2026-02-22'
+  publisher: arXiv
+  envs:
+  - Collaboration & Co-Creation
+  - Longitudinal HCI Studies
+  keywords:
+  - conversational tutors
+  - knowledge tracing
+  - affect detection
+  - GenAI tutoring
+  tldr: |-
+    Argues GenAI tutors can simulate high-quality human tutoring; integrates established practices (knowledge tracing, affect detection) with new dynamic content generation.
+  arxiv_id: '2602.19303'
+  sources:
+    arxiv: https://arxiv.org/abs/2602.19303
+  bibtex: |-
+    @misc{vanacore2026tutors,
+      title = {The Path to Conversational {AI} Tutors: Integrating Tutoring Best Practices and Targeted Technologies to Produce Scalable {AI} Agents},
+      author = {Vanacore, Kirk and Baker, Ryan S. and Closser, Avery H. and Roschelle, Jeremy},
+      year = {2026},
+      eprint = {2602.19303},
+      archivePrefix = {arXiv}
+    }
+  bibtex_confirmed: false
+- title: Modeling Distinct Human Interaction in Web Agents
+  link: https://arxiv.org/abs/2602.17588
+  authors:
+  - Faria Huq
+  - Zora Zhiruo Wang
+  - Zhanqiu Guo
+  - Venu Arvind Arangarajan
+  - Tianyue Ou
+  - Frank Xu
+  - Shuyan Zhou
+  - Graham Neubig
+  - Jeffrey P. Bigham
+  institutions:
+  - CMU
+  date: '2026-02-19'
+  publisher: arXiv
+  envs:
+  - Collaboration & Co-Creation
+  - Human Feedback Loops
+  keywords:
+  - web agents
+  - intervention modeling
+  - CowCorpus
+  - human-in-the-loop
+  tldr: |-
+    Introduces CowCorpus (400 user trajectories with 4,200+ interactions) and four interaction patterns; modeling distinct interaction styles yields 26.5% improvement in user-rated agent usefulness.
+  arxiv_id: '2602.17588'
+  sources:
+    arxiv: https://arxiv.org/abs/2602.17588
+  bibtex: |-
+    @misc{huq2026webagents,
+      title = {Modeling Distinct Human Interaction in Web Agents},
+      author = {Huq, Faria and Wang, Zora Zhiruo and Guo, Zhanqiu and Arangarajan, Venu Arvind and Ou, Tianyue and Xu, Frank and Zhou, Shuyan and Neubig, Graham and Bigham, Jeffrey P.},
+      year = {2026},
+      eprint = {2602.17588},
+      archivePrefix = {arXiv}
+    }
+  bibtex_confirmed: false
+- title: 'Impacts of Generative AI on Agile Teams'' Productivity: A Multi-Case Longitudinal Study'
+  link: https://arxiv.org/abs/2602.13766
+  authors:
+  - Rafael Tomaz
+  - Paloma Guenes
+  - Allysson Allex Araújo
+  - Maria Teresa Baldassarre
+  - Marcos Kalinowski
+  institutions:
+  - PUC-Rio
+  - Universidade Federal do Cariri
+  - U. Bari
+  date: '2026-02-14'
+  publisher: FORGE 2026
+  envs:
+  - Longitudinal HCI Studies
+  keywords:
+  - GenAI
+  - agile teams
+  - SPACE framework
+  - longitudinal
+  - productivity
+  tldr: |-
+    Three agile teams over ~13 months; GenAI increases value density (Performance/Efficiency) without raising raw Activity volume.
+  arxiv_id: '2602.13766'
+  sources:
+    arxiv: https://arxiv.org/abs/2602.13766
+  bibtex: |-
+    @inproceedings{tomaz2026agile,
+      title = {Impacts of Generative {AI} on Agile Teams' Productivity: A Multi-Case Longitudinal Study},
+      author = {Tomaz, Rafael and Guenes, Paloma and Ara{\'u}jo, Allysson Allex and Baldassarre, Maria Teresa and Kalinowski, Marcos},
+      booktitle = {Proceedings of the IEEE/ACM Conference on AI Foundation Models and Software Engineering (FORGE)},
+      year = {2026}
+    }
+  bibtex_confirmed: false
+- title: Discovering Differences in Strategic Behavior Between Humans and LLMs
+  link: https://arxiv.org/abs/2602.10324
+  authors:
+  - Caroline Wang
+  - Daniel Kasenberg
+  - Kim Stachenfeld
+  - Pablo Samuel Castro
+  institutions:
+  - Google DeepMind
+  - UT Austin
+  date: '2026-02-10'
+  publisher: arXiv
+  envs:
+  - Collaboration & Co-Creation
+  keywords:
+  - AlphaEvolve
+  - strategic behavior
+  - RPS
+  - behavioral game theory
+  tldr: |-
+    Uses AlphaEvolve to discover interpretable models of human and LLM strategic behavior from data; on iterated rock-paper-scissors finds frontier LLMs (Gemini 2.5 Pro) display deeper strategic behavior than humans.
+  arxiv_id: '2602.10324'
+  sources:
+    arxiv: https://arxiv.org/abs/2602.10324
+  bibtex: |-
+    @misc{wang2026strategic,
+      title = {Discovering Differences in Strategic Behavior Between Humans and {LLMs}},
+      author = {Wang, Caroline and Kasenberg, Daniel and Stachenfeld, Kim and Castro, Pablo Samuel},
+      year = {2026},
+      eprint = {2602.10324},
+      archivePrefix = {arXiv}
+    }
+  bibtex_confirmed: false
+- title: Belief Offloading in Human-AI Interaction
+  link: https://arxiv.org/abs/2602.08754
+  authors:
+  - Rose E. Guingrich
+  - Dvija Mehta
+  - Umang Bhatt
+  institutions:
+  - Princeton
+  - Cambridge
+  date: '2026-02-09'
+  publisher: arXiv
+  envs:
+  - Human Feedback Loops
+  - Mutual Adaptation
+  keywords:
+  - belief offloading
+  - cognitive offloading
+  - sycophancy
+  - epistemic agency
+  tldr: |-
+    Defines "belief offloading" — users delegate forming/upholding beliefs to AI — drawing from philosophy, psychology, and CS. Provides taxonomy and normative considerations.
+  arxiv_id: '2602.08754'
+  sources:
+    arxiv: https://arxiv.org/abs/2602.08754
+  bibtex: |-
+    @misc{guingrich2026belief,
+      title = {Belief Offloading in Human-{AI} Interaction},
+      author = {Guingrich, Rose E. and Mehta, Dvija and Bhatt, Umang},
+      year = {2026},
+      eprint = {2602.08754},
+      archivePrefix = {arXiv}
+    }
+  bibtex_confirmed: false
+- title: 'AI-Augmented Strategic Decision-Making Under Time Constraints: An Experimental Study on Mental Representations and
+    Strategic Foresight'
+  link: https://pubsonline.informs.org/doi/10.1287/stsc.2025.0442
+  authors:
+  - Tim Kanis
+  - Justus Emanuel Mann
+  - Jutta Stumpf-Wollersheim
+  institutions: []
+  date: '2026-02-04'
+  publisher: Strategy Science 2026
+  envs:
+  - Mutual Adaptation
+  - Collaboration & Co-Creation
+  keywords:
+  - strategic decision-making
+  - mental representations
+  - LLM
+  - time constraints
+  - foresight
+  tldr: |-
+    Experimental study (N=348); LLM use broadens representation breadth but decreases depth and increases information overload, without improving foresight.
+  bibtex: |-
+    @article{kanis2026strategic,
+      title = {{AI}-Augmented Strategic Decision-Making Under Time Constraints: An Experimental Study on Mental Representations and Strategic Foresight},
+      author = {Kanis, Tim and Mann, Justus Emanuel and Stumpf-Wollersheim, Jutta},
+      journal = {Strategy Science},
+      year = {2026},
+      doi = {10.1287/stsc.2025.0442}
+    }
+  bibtex_confirmed: false
+- title: 'From Crafting Text to Crafting Thought: Grounding AI Writing Support to Writing Center Pedagogy'
+  link: https://arxiv.org/abs/2602.04047
+  authors:
+  - Yijun Liu
+  - John Gallagher
+  - Sarah Sterman
+  - Tal August
+  institutions:
+  - UIUC
+  date: '2026-02-03'
+  publisher: arXiv
+  envs:
+  - Collaboration & Co-Creation
+  keywords:
+  - Writor
+  - writing center pedagogy
+  - non-directive feedback
+  - agency
+  tldr: |-
+    Interviews with 10 writing tutors yield design guidelines; Writor prototype provides non-directive feedback on goals and engages without generating text verbatim. 30-expert evaluation tests pedagogical alignment.
+  arxiv_id: '2602.04047'
+  sources:
+    arxiv: https://arxiv.org/abs/2602.04047
+  bibtex: |-
+    @misc{liu2026writor,
+      title = {From Crafting Text to Crafting Thought: Grounding {AI} Writing Support to Writing Center Pedagogy},
+      author = {Liu, Yijun and Gallagher, John and Sterman, Sarah and August, Tal},
+      year = {2026},
+      eprint = {2602.04047},
+      archivePrefix = {arXiv}
+    }
+  bibtex_confirmed: false
+- title: How RLHF Amplifies Sycophancy
+  link: https://arxiv.org/abs/2602.01002
+  authors:
+  - Itai Shapira
+  - Gerdus Benade
+  - Ariel D. Procaccia
+  institutions:
+  - Harvard
+  - Boston University
+  date: '2026-02-01'
+  publisher: arXiv
+  envs:
+  - Human Feedback Loops
+  keywords:
+  - sycophancy
+  - RLHF
+  - covariance condition
+  - preference training
+  tldr: |-
+    Formal analysis showing how preference-based post-training amplifies sycophancy via a covariance condition between belief endorsement and learned reward; proposes a closed-form correction.
+  arxiv_id: '2602.01002'
+  sources:
+    arxiv: https://arxiv.org/abs/2602.01002
+  bibtex: |-
+    @misc{shapira2026rlhf,
+      title = {How {RLHF} Amplifies Sycophancy},
+      author = {Shapira, Itai and Benade, Gerdus and Procaccia, Ariel D.},
+      year = {2026},
+      eprint = {2602.01002},
+      archivePrefix = {arXiv}
+    }
+  bibtex_confirmed: false
+- title: 'From Future of Work to Future of Workers: Addressing Asymptomatic AI Harms for Dignified Human-AI Interaction'
+  link: https://arxiv.org/abs/2601.21920
+  authors:
+  - Upol Ehsan
+  - Samir Passi
+  - Koustuv Saha
+  - Todd McNutt
+  - Mark O. Riedl
+  - Sara Alcorn
+  institutions:
+  - Georgia Tech
+  - Microsoft
+  - UIUC
+  - Johns Hopkins
+  date: '2026-01-29'
+  publisher: CHI 2026
+  envs:
+  - Longitudinal HCI Studies
+  keywords:
+  - intuition rust
+  - asymptomatic harms
+  - oncology
+  - expertise erosion
+  - dignity
+  tldr: |-
+    Year-long study of cancer specialists using AI reveals "intuition rust" — gradual dulling of expert judgment masked by short-term operational gains. Proposes sociotechnical immunity framework.
+  arxiv_id: '2601.21920'
+  sources:
+    arxiv: https://arxiv.org/abs/2601.21920
+  bibtex: |-
+    @inproceedings{ehsan2026workers,
+      title = {From Future of Work to Future of Workers: Addressing Asymptomatic {AI} Harms for Dignified Human-{AI} Interaction},
+      author = {Ehsan, Upol and Passi, Samir and Saha, Koustuv and McNutt, Todd and Riedl, Mark O. and Alcorn, Sara},
+      booktitle = {Proceedings of the 2026 CHI Conference on Human Factors in Computing Systems},
+      year = {2026}
+    }
+  bibtex_confirmed: false
+- title: 'Human-AI perception: not much different, but some distinct novelties'
+  link: https://www.emerald.com/bl/article/doi/10.1108/BL-08-2025-0181/1337901/Human-AI-perception-not-much-different-but-some
+  authors:
+  - Michael Leyer
+  - Johannes Wichmann
+  - Wieland Müller
+  - Lilian Tai Do Khac
+  - Alexander Richter
+  institutions:
+  - University of Rostock
+  date: '2026-01-29'
+  publisher: The Bottom Line 2026
+  envs:
+  - Position & Survey
+  - Mutual Adaptation
+  keywords:
+  - AI perception
+  - GenAI
+  - viewpoint
+  - methodology
+  - user research
+  tldr: |-
+    Argues research on human-AI perception must explicitly specify AI characteristics (probabilistic, conversational, adaptive) rather than treating "AI" as a generic category — to capture distinct novelties of GenAI.
+  sources:
+    publisher_page: https://www.emerald.com/bl/article/doi/10.1108/BL-08-2025-0181/1337901/Human-AI-perception-not-much-different-but-some
+  bibtex: |-
+    @article{leyer2026perception,
+      title = {Human-{AI} perception: not much different, but some distinct novelties},
+      author = {Leyer, Michael and Wichmann, Johannes and M{\"u}ller, Wieland and Do Khac, Lilian Tai and Richter, Alexander},
+      journal = {The Bottom Line},
+      year = {2026},
+      doi = {10.1108/BL-08-2025-0181}
+    }
+  bibtex_confirmed: false
+- title: How AI Impacts Skill Formation
+  link: https://arxiv.org/abs/2601.20245
+  authors:
+  - Judy Hanwen Shen
+  - Alex Tamkin
+  institutions:
+  - Stanford
+  - Anthropic
+  date: '2026-01-28'
+  publisher: arXiv
+  envs:
+  - Mutual Adaptation
+  - Longitudinal HCI Studies
+  keywords:
+  - skill atrophy
+  - AI assistance
+  - developer learning
+  - RCT
+  tldr: |-
+    RCT with 52 engineers learning a new Python library; AI-assisted group scores 17% lower on comprehension/debugging without significant productivity gain.
+  arxiv_id: '2601.20245'
+  sources:
+    arxiv: https://arxiv.org/abs/2601.20245
+  bibtex: |-
+    @misc{shen2026skill,
+      title = {How {AI} Impacts Skill Formation},
+      author = {Shen, Judy Hanwen and Tamkin, Alex},
+      year = {2026},
+      eprint = {2601.20245},
+      archivePrefix = {arXiv}
+    }
+  bibtex_confirmed: false
+- title: 'Learning to Live with AI: How Students Develop AI Literacy Through Naturalistic ChatGPT Interaction'
+  link: https://arxiv.org/abs/2601.20749
+  authors:
+  - Tawfiq Ammari
+  - Meilun Chen
+  - S. M. Mehedi Zaman
+  - Kiran Garimella
+  institutions:
+  - Rutgers
+  date: '2026-01-28'
+  publisher: arXiv
+  envs:
+  - Longitudinal HCI Studies
+  keywords:
+  - AI literacy
+  - repair literacy
+  - genres
+  - undergraduate
+  - longitudinal
+  tldr: |-
+    Analyzes 10,536 ChatGPT messages from 36 undergraduates over an academic year; identifies 5 use genres and introduces the concept of "repair literacy".
+  arxiv_id: '2601.20749'
+  sources:
+    arxiv: https://arxiv.org/abs/2601.20749
+  bibtex: |-
+    @misc{ammari2026literacy,
+      title = {Learning to Live with {AI}: How Students Develop {AI} Literacy Through Naturalistic {ChatGPT} Interaction},
+      author = {Ammari, Tawfiq and Chen, Meilun and Zaman, S. M. Mehedi and Garimella, Kiran},
+      year = {2026},
+      eprint = {2601.20749},
+      archivePrefix = {arXiv}
+    }
+  bibtex_confirmed: false
+- title: 'CooperBench: Why Coding Agents Cannot be Your Teammates Yet'
+  link: https://arxiv.org/abs/2601.13295
+  authors:
+  - Arpandeep Khatua
+  - Hao Zhu
+  - Peter Tran
+  - Arya Prabhudesai
+  - Frederic Sadrieh
+  - Johann K. Lieberwirth
+  - Xinkai Yu
+  - Yicheng Fu
+  - Michael J. Ryan
+  - Jiaxin Pei
+  - Diyi Yang
+  institutions:
+  - Stanford
+  date: '2026-01-19'
+  publisher: arXiv
+  envs:
+  - Collaboration & Co-Creation
+  keywords:
+  - coding agents
+  - cooperation
+  - benchmark
+  - multi-agent
+  - communication
+  tldr: |-
+    600+ collaborative coding tasks across 12 libraries / 4 languages; agents achieve 30% lower success rates when working together vs. solo.
+  arxiv_id: '2601.13295'
+  sources:
+    arxiv: https://arxiv.org/abs/2601.13295
+  bibtex: |-
+    @misc{khatua2026cooperbench,
+      title = {{CooperBench}: Why Coding Agents Cannot be Your Teammates Yet},
+      author = {Khatua, Arpandeep and Zhu, Hao and Tran, Peter and Prabhudesai, Arya and Sadrieh, Frederic and Lieberwirth, Johann K. and Yu, Xinkai and Fu, Yicheng and Ryan, Michael J. and Pei, Jiaxin and Yang, Diyi},
+      year = {2026},
+      eprint = {2601.13295},
+      archivePrefix = {arXiv}
+    }
+  bibtex_confirmed: false
+- title: 'Human-Human-AI Triadic Programming: Uncovering the Role of AI Agent and the Value of Human Partner in Collaborative
+    Learning'
+  link: https://arxiv.org/abs/2601.12134
+  authors:
+  - Taufiq Daryanto
+  - Xiaohan Ding
+  - Kaike Ping
+  - Lance T. Wilhelm
+  - Yan Chen
+  - Chris Brown
+  - Eugenia H. Rho
+  institutions:
+  - Virginia Tech
+  date: '2026-01-17'
+  publisher: CHI 2026
+  envs:
+  - Collaboration & Co-Creation
+  keywords:
+  - triadic programming
+  - peer collaboration
+  - AI reliance
+  - learning
+  tldr: |-
+    N=20 within-subjects study; triadic (human-human-AI) collaboration produces less reliance on AI-generated code and more critical evaluation than dyadic (human-AI), through socially shared regulation of learning.
+  arxiv_id: '2601.12134'
+  sources:
+    arxiv: https://arxiv.org/abs/2601.12134
+  bibtex: |-
+    @inproceedings{daryanto2026triadic,
+      title = {Human-Human-{AI} Triadic Programming: Uncovering the Role of {AI} Agent and the Value of Human Partner in Collaborative Learning},
+      author = {Daryanto, Taufiq and Ding, Xiaohan and Ping, Kaike and Wilhelm, Lance T. and Chen, Yan and Brown, Chris and Rho, Eugenia H.},
+      booktitle = {Proceedings of the 2026 CHI Conference on Human Factors in Computing Systems},
+      year = {2026},
+      doi = {10.1145/3772318.3791773}
+    }
+  bibtex_confirmed: false
+- title: 'Evolving with AI: A Longitudinal Analysis of Developer Logs'
+  link: https://arxiv.org/abs/2601.10258
+  authors:
+  - Agnia Sergeyuk
+  - Eric Huang
+  - Dariia Karaeva
+  - Anastasiia Serova
+  - Yaroslav Golubev
+  - Iftekhar Ahmed
+  institutions:
+  - JetBrains Research
+  - UC Irvine
+  date: '2026-01-15'
+  publisher: arXiv
+  envs:
+  - Mutual Adaptation
+  - Longitudinal HCI Studies
+  keywords:
+  - developer telemetry
+  - longitudinal
+  - Cursor
+  - JetBrains AI
+  - productivity
+  tldr: |-
+    Two-year telemetry from 800 developers + 62 surveys: AI users produce more code but delete more; perceived productivity rises while context switching changes.
+  arxiv_id: '2601.10258'
+  sources:
+    arxiv: https://arxiv.org/abs/2601.10258
+  bibtex: |-
+    @misc{sergeyuk2026evolving,
+      title = {Evolving with {AI}: A Longitudinal Analysis of Developer Logs},
+      author = {Sergeyuk, Agnia and Huang, Eric and Karaeva, Dariia and Serova, Anastasiia and Golubev, Yaroslav and Ahmed, Iftekhar},
+      year = {2026},
+      eprint = {2601.10258},
+      archivePrefix = {arXiv}
+    }
+  bibtex_confirmed: false
+- title: 'Becoming human in the age of AI: cognitive co-evolutionary processes'
+  link: https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2025.1734048/full
+  authors:
+  - Anders Högberg
+  institutions:
+  - Linnaeus University
+  - University of Johannesburg
+  date: '2026-01-14'
+  publisher: Frontiers in Psychology 2026
+  envs:
+  - Position & Survey
+  keywords:
+  - cognitive archaeology
+  - embodied cognition
+  - futures studies
+  - co-evolution
+  tldr: |-
+    Theoretical perspective challenging the "Stone Age brain" idea, arguing human cognition co-evolves with AI through embodied cognition and futures-oriented engagement.
+  sources:
+    publisher_page: https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2025.1734048/full
+  bibtex: |-
+    @article{hogberg2026becoming,
+      title = {Becoming human in the age of {AI}: cognitive co-evolutionary processes},
+      author = {H{\"o}gberg, Anders},
+      journal = {Frontiers in Psychology},
+      volume = {16},
+      year = {2026},
+      doi = {10.3389/fpsyg.2025.1734048}
+    }
+  bibtex_confirmed: false
+- title: 'AI in the classroom: Exploring students'' interaction with ChatGPT in programming learning'
+  link: https://link.springer.com/article/10.1007/s10639-025-13337-7
+  authors:
+  - Hacer Güner
+  - Erkan Er
+  institutions:
+  - METU
+  date: '2025-12-31'
+  publisher: Education and Information Technologies 2025
+  envs:
+  - Longitudinal HCI Studies
+  keywords:
+  - programming learning
+  - prompting
+  - instructional intervention
+  - ChatGPT
+  tldr: |-
+    Three-session study with progressive scaffolding; identifies 5 AI interaction profiles in programming learning.
+  bibtex: |-
+    @article{guner2025classroom,
+      title = {{AI} in the classroom: Exploring students' interaction with {ChatGPT} in programming learning},
+      author = {G{\"u}ner, Hacer and Er, Erkan},
+      journal = {Education and Information Technologies},
+      volume = {30},
+      pages = {12681--12707},
+      year = {2025},
+      doi = {10.1007/s10639-025-13337-7}
+    }
+  bibtex_confirmed: false
+- title: Adaptive Human-Robot Collaboration using Type-Based IRL
+  link: https://openreview.net/forum?id=6PXtHF77Ll
+  authors:
+  - Prasanth Sengadu Suresh
+  - Prashant Doshi
+  - Bikramjit Banerjee
+  institutions:
+  - University of Georgia
+  - University of Southern Mississippi
+  date: '2025-12-31'
+  publisher: UAI 2025
+  envs:
+  - Mutual Adaptation
+  keywords:
+  - type-based IRL
+  - HRC
+  - fatigue
+  - trust
+  - multi-agent decision-making
+  tldr: |-
+    Models latent human factors (fatigue, trust) using type-based IRL for adaptive robot policies in HRC.
+  sources:
+    openreview: https://openreview.net/forum?id=6PXtHF77Ll
+    publisher_page: https://proceedings.mlr.press/v286/sengadu-suresh25a.html
+  bibtex: |-
+    @inproceedings{sengadusuresh2025typeirl,
+      title = {Adaptive Human-Robot Collaboration using Type-Based {IRL}},
+      author = {Sengadu Suresh, Prasanth and Doshi, Prashant and Banerjee, Bikramjit},
+      booktitle = {Proceedings of the 41st Conference on Uncertainty in Artificial Intelligence},
+      year = {2025}
+    }
+  bibtex_confirmed: false
+- title: 'Human-AI Collaboration in Software Development: A Mixed-Methods Study of Developers'' Use of GitHub Copilot and
+    ChatGPT'
+  link: https://doi.org/10.1145/3696630.3730566
+  authors:
+  - Viktoria Stray
+  - Astri Barbala
+  - Viggo Tellefsen Wivestad
+  institutions:
+  - University of Oslo
+  - SINTEF
+  date: '2025-12-31'
+  publisher: FSE Companion 2025
+  envs:
+  - Collaboration & Co-Creation
+  keywords:
+  - Copilot
+  - ChatGPT
+  - mixed methods
+  - HACAF
+  - organizational
+  tldr: |-
+    Mixed-methods study (13 interviews + 114 survey) of GenAI tool adoption in a public-sector software org, using HACAF framework.
+  bibtex: |-
+    @inproceedings{stray2025collaboration,
+      title = {Human-{AI} Collaboration in Software Development: A Mixed-Methods Study of Developers' Use of {GitHub} {Copilot} and {ChatGPT}},
+      author = {Stray, Viktoria and Barbala, Astri and Wivestad, Viggo Tellefsen},
+      booktitle = {Companion Proceedings of the 33rd ACM SIGSOFT International Symposium on the Foundations of Software Engineering},
+      year = {2025},
+      doi = {10.1145/3696630.3730566}
+    }
+  bibtex_confirmed: false
+- title: 'Interactions with generative AI chatbots: unveiling dialogic dynamics, students'' perceptions, and practical competencies
+    in creative problem-solving'
+  link: https://doi.org/10.1186/s41239-025-00508-2
+  authors:
+  - Yu Song
+  - Longchao Huang
+  - Lanqin Zheng
+  - Mengya Fan
+  - Zehao Liu
+  institutions:
+  - Beijing Normal University
+  date: '2025-12-31'
+  publisher: International Journal of Educational Technology in Higher Education 2025
+  envs:
+  - Collaboration & Co-Creation
+  - Longitudinal HCI Studies
+  keywords:
+  - dialogic dynamics
+  - creative problem-solving
+  - GenAI chatbots
+  - perception
+  tldr: |-
+    Interaction-centered study of dialogic dynamics with GenAI chatbots in creative problem-solving.
+  bibtex: |-
+    @article{song2025dialogic,
+      title = {Interactions with generative {AI} chatbots: unveiling dialogic dynamics, students' perceptions, and practical competencies in creative problem-solving},
+      author = {Song, Yu and Huang, Longchao and Zheng, Lanqin and Fan, Mengya and Liu, Zehao},
+      journal = {International Journal of Educational Technology in Higher Education},
+      volume = {22},
+      pages = {12},
+      year = {2025},
+      doi = {10.1186/s41239-025-00508-2}
+    }
+  bibtex_confirmed: false
+- title: 'Mapping the evolution of AI in education: Toward a co-adaptive and human-centered paradigm'
+  link: https://doi.org/10.1016/j.caeai.2025.100513
+  authors:
+  - Shihui Feng
+  - Huilin Zhang
+  - Dragan Gašević
+  institutions:
+  - Monash University
+  - U. Hong Kong
+  date: 2025-12
+  publisher: 'Computers and Education: Artificial Intelligence 2025'
+  envs:
+  - Position & Survey
+  - Mutual Adaptation
+  keywords:
+  - AIED
+  - co-adaptive
+  - scientometric
+  - learning analytics
+  tldr: |-
+    Scientometric analysis of 2,398 AIED articles 2020–2024, identifying four emerging frontiers (LLMs, GenAI, multimodal learning analytics, human-AI collaboration) and arguing for "co-adaptive and human-centered" framing.
+  bibtex: |-
+    @article{feng2025aied,
+      title = {Mapping the evolution of {AI} in education: Toward a co-adaptive and human-centered paradigm},
+      author = {Feng, Shihui and Zhang, Huilin and Ga{\v{s}}evi{\'c}, Dragan},
+      journal = {Computers and Education: Artificial Intelligence},
+      volume = {9},
+      year = {2025},
+      doi = {10.1016/j.caeai.2025.100513}
+    }
+  bibtex_confirmed: false
+- title: 'Personalization capabilities of current technology chatbots in a learning environment: An analysis of student-tutor
+    bot interactions'
+  link: https://link.springer.com/article/10.1007/s10639-025-13369-z
+  authors:
+  - Chee-Kit Looi
+  - Fenglin Jia
+  institutions: []
+  date: '2025-12-31'
+  publisher: Education and Information Technologies 2025
+  envs:
+  - Mutual Adaptation
+  - Longitudinal HCI Studies
+  keywords:
+  - personalization
+  - chatbots
+  - student-tutor interaction
+  - scaffolding
+  tldr: |-
+    Examines how current chatbots implement personalization features in actual student-tutor bot interactions.
+  bibtex: |-
+    @article{looi2025personalization,
+      title = {Personalization capabilities of current technology chatbots in a learning environment: An analysis of student-tutor bot interactions},
+      author = {Looi, Chee-Kit and Jia, Fenglin},
+      journal = {Education and Information Technologies},
+      volume = {30},
+      pages = {14165--14195},
+      year = {2025},
+      doi = {10.1007/s10639-025-13369-z}
+    }
+  bibtex_confirmed: false
+- title: 'Developer Productivity With and Without GitHub Copilot: A Longitudinal Mixed-Methods Case Study'
+  link: https://arxiv.org/abs/2509.20353
+  authors:
+  - Viktoria Stray
+  - Elias Goldmann Brandtzæg
+  - Viggo Tellefsen Wivestad
+  - Astri Barbala
+  - Nils Brede Moe
+  institutions:
+  - University of Oslo
+  - SINTEF
+  - NAV IT
+  date: '2025-09-24'
+  publisher: arXiv
+  envs:
+  - Longitudinal HCI Studies
+  keywords:
+  - GitHub Copilot
+  - longitudinal
+  - NAV IT
+  - commit telemetry
+  - agile
+  tldr: |-
+    Two-year mixed-methods study of 26,317 commits from 39 developers; Copilot users were already more active pre-adoption; perceived productivity rose without statistically significant commit-volume change.
+  arxiv_id: '2509.20353'
+  sources:
+    arxiv: https://arxiv.org/abs/2509.20353
+  bibtex: |-
+    @misc{stray2025productivity,
+      title = {Developer Productivity With and Without {GitHub} {Copilot}: A Longitudinal Mixed-Methods Case Study},
+      author = {Stray, Viktoria and Brandtz{\ae}g, Elias Goldmann and Wivestad, Viggo Tellefsen and Barbala, Astri and Moe, Nils Brede},
+      year = {2025},
+      eprint = {2509.20353},
+      archivePrefix = {arXiv}
+    }
+  bibtex_confirmed: false
+- title: 'Monoculture or Multiplicity: Which Is It?'
+  link: https://openreview.net/forum?id=DO5LtJc80w
+  authors:
+  - Mila Gorecki
+  - Moritz Hardt
+  institutions:
+  - Max Planck Institute
+  - ETH Zurich
+  date: '2025-09-18'
+  publisher: NeurIPS 2025
+  envs:
+  - Position & Survey
+  - Human Feedback Loops
+  keywords:
+  - monoculture
+  - model similarity
+  - recourse
+  - LLM evaluation
+  tldr: |-
+    Empirically tests algorithmic monoculture vs. multiplicity claims across 50 LLMs (1B–141B parameters). Finds reality is a middle ground — model similarity is real but variations in prompts produce some diversity.
+  sources:
+    openreview: https://openreview.net/forum?id=DO5LtJc80w
+  bibtex: |-
+    @inproceedings{gorecki2025monoculture,
+      title = {Monoculture or Multiplicity: Which Is It?},
+      author = {Gorecki, Mila and Hardt, Moritz},
+      booktitle = {Advances in Neural Information Processing Systems},
+      year = {2025}
+    }
+  bibtex_confirmed: false
+- title: Collaborative Document Editing with Multiple Users and AI Agents
+  link: https://arxiv.org/abs/2509.11826
+  authors:
+  - Florian Lehmann
+  - Krystsina Shauchenka
+  - Daniel Buschek
+  institutions:
+  - University of Bayreuth
+  date: '2025-09-15'
+  publisher: CHI 2026
+  envs:
+  - Collaboration & Co-Creation
+  - Longitudinal HCI Studies
+  keywords:
+  - collaborative editing
+  - AI agents
+  - shared documents
+  - team norms
+  tldr: |-
+    Prototype with shared user-defined agent profiles; user study with 30 participants in 14 teams reveals teams treat agent profiles as personal but outputs as shared resources, integrated into existing norms.
+  arxiv_id: '2509.11826'
+  sources:
+    arxiv: https://arxiv.org/abs/2509.11826
+  bibtex: |-
+    @inproceedings{lehmann2026collaborative,
+      title = {Collaborative Document Editing with Multiple Users and {AI} Agents},
+      author = {Lehmann, Florian and Shauchenka, Krystsina and Buschek, Daniel},
+      booktitle = {Proceedings of the 2026 CHI Conference on Human Factors in Computing Systems},
+      year = {2026}
+    }
+  bibtex_confirmed: false
+- title: 'AI Hasn''t Fixed Teamwork, But It Shifted Collaborative Culture: A Longitudinal Study in a Project-Based Software
+    Development Organization (2023-2025)'
+  link: https://arxiv.org/abs/2509.10956
+  authors:
+  - Qing Xiao
+  - Xinlan Emily Hu
+  - Mark E. Whiting
+  - Arvind Karunakaran
+  - Hong Shen
+  - Hancheng Cao
+  institutions:
+  - CMU
+  - U. Pennsylvania
+  - Stanford
+  date: '2025-09-13'
+  publisher: arXiv
+  envs:
+  - Longitudinal HCI Studies
+  - Mutual Adaptation
+  keywords:
+  - longitudinal
+  - collaborative culture
+  - software org
+  - expectations vs. usage
+  tldr: |-
+    Two-wave (N=15) interview study; AI did not solve core collaboration issues but shifted norms toward efficiency and transparency.
+  arxiv_id: '2509.10956'
+  sources:
+    arxiv: https://arxiv.org/abs/2509.10956
+  bibtex: |-
+    @misc{xiao2025teamwork,
+      title = {{AI} Hasn't Fixed Teamwork, But It Shifted Collaborative Culture: A Longitudinal Study in a Project-Based Software Development Organization (2023-2025)},
+      author = {Xiao, Qing and Hu, Xinlan Emily and Whiting, Mark E. and Karunakaran, Arvind and Shen, Hong and Cao, Hancheng},
+      year = {2025},
+      eprint = {2509.10956},
+      archivePrefix = {arXiv}
+    }
+  bibtex_confirmed: false
+- title: 'Artificial intelligence in adaptive strategy creation and implementation: Toward enhanced attentional control in
+    strategy processes'
+  link: https://www.sciencedirect.com/science/article/pii/S0024630125000640
+  authors:
+  - Tomi Laamanen
+  - Ann-Kristin Weiser
+  - Georg von Krogh
+  - William Ocasio
+  institutions:
+  - University of St. Gallen
+  - ETH Zurich
+  - Northwestern
+  date: 2025-06
+  publisher: Long Range Planning 2025
+  envs:
+  - Mutual Adaptation
+  - Collaboration & Co-Creation
+  keywords:
+  - strategy
+  - proprietary AI
+  - attention-based view
+  - organizational
+  tldr: |-
+    Identifies three contributions of AI in strategy: broadening attention, democratizing strategy processes, accelerating feedback loops; uses attention-based view as theoretical frame.
+  bibtex: |-
+    @article{laamanen2025strategy,
+      title = {Artificial intelligence in adaptive strategy creation and implementation: Toward enhanced attentional control in strategy processes},
+      author = {Laamanen, Tomi and Weiser, Ann-Kristin and von Krogh, Georg and Ocasio, William},
+      journal = {Long Range Planning},
+      year = {2025},
+      doi = {10.1016/j.lrp.2025.102561}
+    }
+  bibtex_confirmed: false
+- title: 'Your Brain on ChatGPT: Accumulation of Cognitive Debt when Using an AI Assistant for Essay Writing Task'
+  link: https://arxiv.org/abs/2506.08872
+  authors:
+  - Nataliya Kosmyna
+  - Eugene Hauptmann
+  - Ye Tong Yuan
+  - Jessica Situ
+  - Xian-Hao Liao
+  - Ashly Vivian Beresnitzky
+  - Iris Braunstein
+  - Pattie Maes
+  institutions:
+  - MIT Media Lab
+  date: '2025-06-10'
+  publisher: arXiv
+  envs:
+  - Longitudinal HCI Studies
+  - Mutual Adaptation
+  keywords:
+  - EEG
+  - cognitive debt
+  - neural connectivity
+  - ownership
+  - recall
+  tldr: |-
+    EEG study (54+18 participants); LLM users show weakest neural connectivity, weakest ownership, weakest recall — effects persist when AI is removed.
+  arxiv_id: '2506.08872'
+  sources:
+    arxiv: https://arxiv.org/abs/2506.08872
+  bibtex: |-
+    @misc{kosmyna2025brain,
+      title = {Your Brain on {ChatGPT}: Accumulation of Cognitive Debt when Using an {AI} Assistant for Essay Writing Task},
+      author = {Kosmyna, Nataliya and Hauptmann, Eugene and Yuan, Ye Tong and Situ, Jessica and Liao, Xian-Hao and Beresnitzky, Ashly Vivian and Braunstein, Iris and Maes, Pattie},
+      year = {2025},
+      eprint = {2506.08872},
+      archivePrefix = {arXiv}
+    }
+  bibtex_confirmed: false
+- title: 'When Models Know More Than They Can Explain: Quantifying Knowledge Transfer in Human-AI Collaboration'
+  link: https://arxiv.org/abs/2506.05579
+  authors:
+  - Quan Shi
+  - Carlos E. Jimenez
+  - Shunyu Yao
+  - Nick Haber
+  - Diyi Yang
+  - Karthik Narasimhan
+  institutions:
+  - Princeton
+  - Stanford
+  date: '2025-06-05'
+  publisher: NeurIPS 2025
+  envs:
+  - Mutual Adaptation
+  keywords:
+  - knowledge transfer
+  - KITE
+  - model explanations
+  - human-AI collaboration
+  tldr: |-
+    KITE framework + N=118 human study to measure knowledge transfer; model benchmark performance correlates inconsistently with collaborative outcomes.
+  arxiv_id: '2506.05579'
+  sources:
+    arxiv: https://arxiv.org/abs/2506.05579
+    openreview: https://openreview.net/forum?id=9V2SVEl1vP
+  bibtex: |-
+    @inproceedings{shi2025kite,
+      title = {When Models Know More Than They Can Explain: Quantifying Knowledge Transfer in Human-{AI} Collaboration},
+      author = {Shi, Quan and Jimenez, Carlos E. and Yao, Shunyu and Haber, Nick and Yang, Diyi and Narasimhan, Karthik},
+      booktitle = {Advances in Neural Information Processing Systems},
+      year = {2025}
+    }
+  bibtex_confirmed: false
+- title: '''ChatGPT is like a study buddy, a teacher and sometimes just a friend'': a longitudinal exploration of students''
+    interactions, perception and acceptance'
+  link: https://www.tandfonline.com/doi/full/10.1080/10494820.2025.2509276
+  authors:
+  - Ahmet Durgungoz
+  - Ahmed Kharrufa
+  institutions:
+  - Newcastle University
+  date: '2025-06-04'
+  publisher: Interactive Learning Environments 2025
+  envs:
+  - Longitudinal HCI Studies
+  keywords:
+  - ChatGPT
+  - longitudinal
+  - AI literacy
+  - English learners
+  - perception
+  tldr: |-
+    Year-long study showing both productive scaffolding and growing concerns about over-reliance.
+  bibtex: |-
+    @article{durgungoz2025studybuddy,
+      title = {{``}{ChatGPT} is like a study buddy, a teacher and sometimes just a friend{''}: a longitudinal exploration of students' interactions, perception and acceptance},
+      author = {Durgungoz, Ahmet and Kharrufa, Ahmed},
+      journal = {Interactive Learning Environments},
+      year = {2025},
+      doi = {10.1080/10494820.2025.2509276}
+    }
+  bibtex_confirmed: false
+- title: 'How Students (Really) Use ChatGPT: Uncovering Experiences Among Undergraduate Students'
+  link: https://arxiv.org/abs/2505.24126
+  authors:
+  - Tawfiq Ammari
+  - Meilun Chen
+  - S. M. Mehedi Zaman
+  - Kiran Garimella
+  institutions:
+  - Rutgers
+  date: '2025-05-30'
+  publisher: arXiv
+  envs:
+  - Longitudinal HCI Studies
+  keywords:
+  - undergraduates
+  - ChatGPT
+  - naturalistic logs
+  - repair
+  - prompt refinement
+  tldr: |-
+    Categorizes five use patterns: information seeking, content generation, language refinement, metacognitive engagement, and conversational repair.
+  arxiv_id: '2505.24126'
+  sources:
+    arxiv: https://arxiv.org/abs/2505.24126
+  bibtex: |-
+    @misc{ammari2025students,
+      title = {How Students (Really) Use {ChatGPT}: Uncovering Experiences Among Undergraduate Students},
+      author = {Ammari, Tawfiq and Chen, Meilun and Zaman, S. M. Mehedi and Garimella, Kiran},
+      year = {2025},
+      eprint = {2505.24126},
+      archivePrefix = {arXiv}
+    }
+  bibtex_confirmed: false
+- title: 'The Impact of Generative AI on Critical Thinking: Self-Reported Reductions in Cognitive Effort and Confidence Effects
+    From a Survey of Knowledge Workers'
+  link: https://doi.org/10.1145/3706598.3713778
+  authors:
+  - Hao-Ping (Hank) Lee
+  - Advait Sarkar
+  - Lev Tankelevitch
+  - Ian Drosos
+  - Sean Rintel
+  - Richard Banks
+  - Nicholas Wilson
+  institutions:
+  - CMU
+  - Microsoft Research
+  date: 2025-04
+  publisher: CHI 2025
+  envs:
+  - Longitudinal HCI Studies
+  - Mutual Adaptation
+  keywords:
+  - critical thinking
+  - knowledge workers
+  - GenAI confidence
+  - cognitive effort
+  tldr: |-
+    Survey of 319 knowledge workers and 936 task examples; higher confidence in GenAI predicts less critical-thinking effort.
+  bibtex: |-
+    @inproceedings{lee2025criticalthinking,
+      title = {The Impact of Generative {AI} on Critical Thinking: Self-Reported Reductions in Cognitive Effort and Confidence Effects From a Survey of Knowledge Workers},
+      author = {Lee, Hao-Ping and Sarkar, Advait and Tankelevitch, Lev and Drosos, Ian and Rintel, Sean and Banks, Richard and Wilson, Nicholas},
+      booktitle = {Proceedings of the 2025 CHI Conference on Human Factors in Computing Systems},
+      year = {2025},
+      doi = {10.1145/3706598.3713778}
+    }
+  bibtex_confirmed: false
+- title: Understanding and supporting how developers prompt for LLM-powered code editing in practice
+  link: https://arxiv.org/abs/2504.20196
+  authors:
+  - Daye Nam
+  - Ahmed Omran
+  - Ambar Murillo
+  - Saksham Thakur
+  - Abner Araujo
+  - Marcel Blistein
+  - Alexander Frömmgen
+  - Vincent Hellendoorn
+  - Satish Chandra
+  institutions:
+  - Google
+  date: '2025-04-28'
+  publisher: arXiv
+  envs:
+  - Collaboration & Co-Creation
+  keywords:
+  - LLM code editing
+  - prompt struggles
+  - AutoPrompter
+  - developer telemetry
+  tldr: |-
+    Telemetry analysis of frequent re-prompting as a struggle indicator; proposes AutoPrompter for context-aware prompt enhancement, achieving 27% edit-correctness improvement.
+  arxiv_id: '2504.20196'
+  sources:
+    arxiv: https://arxiv.org/abs/2504.20196
+  bibtex: |-
+    @misc{nam2025prompt,
+      title = {Understanding and supporting how developers prompt for {LLM}-powered code editing in practice},
+      author = {Nam, Daye and Omran, Ahmed and Murillo, Ambar and Thakur, Saksham and Araujo, Abner and Blistein, Marcel and Fr{\"o}mmgen, Alexander and Hellendoorn, Vincent and Chandra, Satish},
+      year = {2025},
+      eprint = {2504.20196},
+      archivePrefix = {arXiv}
+    }
+  bibtex_confirmed: false
+- title: Strategyproof Reinforcement Learning from Human Feedback
+  link: https://arxiv.org/abs/2503.09561
+  authors:
+  - Thomas Kleine Buening
+  - Jiarui Gan
+  - Debmalya Mandal
+  - Marta Kwiatkowska
+  institutions:
+  - Alan Turing Institute
+  - U. Oxford
+  - U. Warwick
+  date: '2025-03-12'
+  publisher: NeurIPS 2025
+  envs:
+  - Human Feedback Loops
+  keywords:
+  - strategyproof
+  - RLHF
+  - manipulation
+  - mechanism design
+  tldr: |-
+    Shows existing RLHF is not strategyproof; even one strategic labeler can cause major misalignment. Proposes "Pessimistic Median of MLEs" achieving approximate strategyproofness.
+  arxiv_id: '2503.09561'
+  sources:
+    arxiv: https://arxiv.org/abs/2503.09561
+  bibtex: |-
+    @inproceedings{kleinebuening2025strategyproof,
+      title = {Strategyproof Reinforcement Learning from Human Feedback},
+      author = {Kleine Buening, Thomas and Gan, Jiarui and Mandal, Debmalya and Kwiatkowska, Marta},
+      booktitle = {Advances in Neural Information Processing Systems},
+      year = {2025}
+    }
+  bibtex_confirmed: false
+- title: 'Human-AI experience in integrated development environments: a systematic literature review'
+  link: https://link.springer.com/article/10.1007/s10664-025-10793-0
+  authors:
+  - Agnia Sergeyuk
+  - Ilya Zakharov
+  - Ekaterina Koshchenko
+  - Maliheh Izadi
+  institutions:
+  - JetBrains Research
+  - TU Delft
+  date: '2025-03-08'
+  publisher: Empirical Software Engineering 2026
+  envs:
+  - Position & Survey
+  - Collaboration & Co-Creation
+  keywords:
+  - in-IDE HAX
+  - systematic review
+  - AI coding tools
+  - developer experience
+  - automation bias
+  tldr: |-
+    PRISMA systematic review of 89 studies on Human-AI Experience inside IDEs, mapping productivity gains, verification overhead, and over-reliance especially among novice developers.
+  arxiv_id: '2503.06195'
+  sources:
+    arxiv: https://arxiv.org/abs/2503.06195
+    publisher_page: https://link.springer.com/article/10.1007/s10664-025-10793-0
+  bibtex: |-
+    @article{sergeyuk2026hax,
+      title = {Human-{AI} experience in integrated development environments: a systematic literature review},
+      author = {Sergeyuk, Agnia and Zakharov, Ilya and Koshchenko, Ekaterina and Izadi, Maliheh},
+      journal = {Empirical Software Engineering},
+      volume = {31},
+      number = {3},
+      pages = {55},
+      year = {2026},
+      doi = {10.1007/s10664-025-10793-0}
+    }
+  bibtex_confirmed: false
+- title: How Scientists Use Large Language Models to Program
+  link: https://doi.org/10.1145/3706598.3713668
+  authors:
+  - Gabrielle K. O'Brien
+  institutions:
+  - University of Michigan
+  date: '2025-02-24'
+  publisher: CHI 2025
+  envs:
+  - Collaboration & Co-Creation
+  keywords:
+  - scientists
+  - programming
+  - LLM
+  - verification
+  - scientific software
+  tldr: |-
+    Interviews scientists at a research university; finds verification largely depends on running code and visual inspection, with circular reliance on LLM explanations.
+  arxiv_id: '2502.17348'
+  sources:
+    arxiv: https://arxiv.org/abs/2502.17348
+    publisher_page: https://doi.org/10.1145/3706598.3713668
+  bibtex: |-
+    @inproceedings{obrien2025scientists,
+      title = {How Scientists Use Large Language Models to Program},
+      author = {O'Brien, Gabrielle K.},
+      booktitle = {Proceedings of the 2025 CHI Conference on Human Factors in Computing Systems},
+      year = {2025},
+      doi = {10.1145/3706598.3713668}
+    }
+  bibtex_confirmed: false
+- title: 'Creativity in Human-AI Co-Creation: A Two-Stage Model and the Da Vinci Score'
+  link: https://scholarspace.manoa.hawaii.edu/items/d2b58c60-9b25-4d36-95fb-715fff6a6ddf
+  authors:
+  - Ling Jiang
+  - Christian Wagner
+  institutions:
+  - York University
+  - City University of Hong Kong
+  date: '2024-12-31'
+  publisher: HICSS 2024
+  envs:
+  - Collaboration & Co-Creation
+  keywords:
+  - Da Vinci Score
+  - two-stage model
+  - creativity
+  - ideation
+  - GenAI
+  tldr: |-
+    Two-stage model (AI-seeded ideation, human-enhanced ideation) with "Da Vinci Score" composite creativity metric for human-AI co-creation.
+  bibtex: |-
+    @inproceedings{jiang2024davinci,
+      title = {Creativity in Human-{AI} Co-Creation: A Two-Stage Model and the Da Vinci Score},
+      author = {Jiang, Ling and Wagner, Christian},
+      booktitle = {Proceedings of the 57th Hawaii International Conference on System Sciences},
+      year = {2024}
+    }
+  bibtex_confirmed: false
+- title: 'The Effects of Generative AI on High-Skilled Work: Evidence from Three Field Experiments with Software Developers'
+  link: https://pubsonline.informs.org/doi/10.1287/mnsc.2025.00535
+  authors:
+  - Zheyuan (Kevin) Cui
+  - Mert Demirer
+  - Sonia Jaffe
+  - Leon Musolff
+  - Sida Peng
+  - Tobias Salz
+  institutions:
+  - Microsoft Research
+  - MIT
+  - Princeton
+  - Wharton
+  date: '2024-12-31'
+  publisher: Management Science 2026
+  envs:
+  - Longitudinal HCI Studies
+  keywords:
+  - field experiments
+  - Copilot
+  - productivity
+  - less-experienced
+  tldr: |-
+    Three RCTs (Microsoft, Accenture, Fortune-100, 4,867 devs combined) show 26.08% increase in completed tasks; gains larger for less-experienced developers.
+  sources:
+    homepage: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4945566
+    publisher_page: https://www.microsoft.com/en-us/research/publication/the-effects-of-generative-ai-on-high-skilled-work-evidence-from-three-field-experiments-with-software-developers/
+  bibtex: |-
+    @article{cui2026highskilled,
+      title = {The Effects of Generative {AI} on High-Skilled Work: Evidence from Three Field Experiments with Software Developers},
+      author = {Cui, Zheyuan (Kevin) and Demirer, Mert and Jaffe, Sonia and Musolff, Leon and Peng, Sida and Salz, Tobias},
+      journal = {Management Science},
+      year = {2026},
+      doi = {10.1287/mnsc.2025.00535}
+    }
+  bibtex_confirmed: false
+- title: How human-AI feedback loops alter human perceptual, emotional and social judgements
+  link: https://www.nature.com/articles/s41562-024-02077-2
+  authors:
+  - Moshe Glickman
+  - Tali Sharot
+  institutions:
+  - UCL
+  - Max Planck UCL Centre
+  - MIT
+  - Bar-Ilan
+  date: '2024-12-18'
+  publisher: Nature Human Behaviour 2025
+  envs:
+  - Human Feedback Loops
+  - Mutual Adaptation
+  keywords:
+  - feedback loops
+  - bias amplification
+  - perception
+  - social judgement
+  tldr: |-
+    Across experiments with 1,401 participants, AI trained on human judgments amplifies subtle biases that humans then internalize, producing snowballing perceptual/social bias loop.
+  bibtex: |-
+    @article{glickman2025feedback,
+      title = {How human-{AI} feedback loops alter human perceptual, emotional and social judgements},
+      author = {Glickman, Moshe and Sharot, Tali},
+      journal = {Nature Human Behaviour},
+      volume = {9},
+      pages = {345--359},
+      year = {2025},
+      doi = {10.1038/s41562-024-02077-2}
+    }
+  bibtex_confirmed: false
+- title: '''It was 80% me, 20% AI'': Seeking Authenticity in Co-Writing with Large Language Models'
+  link: https://arxiv.org/abs/2411.13032
+  authors:
+  - Angel Hsing-Chi Hwang
+  - Q. Vera Liao
+  - Su Lin Blodgett
+  - Alexandra Olteanu
+  - Adam Trischler
+  institutions:
+  - Cornell Tech
+  - Microsoft Research
+  date: '2024-11-20'
+  publisher: CSCW 2025
+  envs:
+  - Collaboration & Co-Creation
+  - Mutual Adaptation
+  keywords:
+  - authenticity
+  - professional writers
+  - LLM personalization
+  - co-writing
+  tldr: |-
+    Interviews with 19 professional writers + 30-reader survey; authenticity concerns focus on the construction process, not just output. Personalization should target writers' growth.
+  arxiv_id: '2411.13032'
+  sources:
+    arxiv: https://arxiv.org/abs/2411.13032
+  bibtex: |-
+    @article{hwang2025authenticity,
+      title = {{``}It was 80\% me, 20\% {AI}{''}: Seeking Authenticity in Co-Writing with Large Language Models},
+      author = {Hwang, Angel Hsing-Chi and Liao, Q. Vera and Blodgett, Su Lin and Olteanu, Alexandra and Trischler, Adam},
+      journal = {Proceedings of the ACM on Human-Computer Interaction},
+      year = {2025},
+      doi = {10.1145/3711020}
+    }
+  bibtex_confirmed: false
+- title: 'Homogenizing effect of large language models (LLMs) on creative diversity: An empirical comparison of human and
+    ChatGPT writing'
+  link: https://www.sciencedirect.com/science/article/pii/S294988212500091X
+  authors:
+  - Kibum Moon
+  - Adam E. Green
+  - Kostadin Kushlev
+  institutions:
+  - Georgetown University
+  date: 2024-09
+  publisher: ScienceDirect 2025
+  envs:
+  - Human Feedback Loops
+  - Collaboration & Co-Creation
+  keywords:
+  - homogenization
+  - creative diversity
+  - GPT-4
+  - essays
+  - novelty rate
+  tldr: |-
+    Three studies analyzing 2,200 essays; quantifies "homogenizing effect" — each additional human essay contributes more new ideas than additional GPT-4 essays.
+  sources:
+    publisher_page: https://www.sciencedirect.com/science/article/pii/S294988212500091X
+    homepage: https://www.kushlev.com/latest-news/2024/9/12/do-large-language-models-llms-have-a-homogenizing-effect-on-creative-diversity
+  bibtex: |-
+    @article{moon2025homogenizing,
+      title = {Homogenizing effect of large language models ({LLMs}) on creative diversity: An empirical comparison of human and {ChatGPT} writing},
+      author = {Moon, Kibum and Green, Adam E. and Kushlev, Kostadin},
+      journal = {Acta Psychologica},
+      year = {2025}
+    }
+  bibtex_confirmed: false
+- title: 'When Stereotypes GTG: The Impact of Predictive Text Suggestions on Gender Bias in Human-AI Co-Writing'
+  link: https://arxiv.org/abs/2409.20390
+  authors:
+  - Connor Baumler
+  - Hal Daumé III
+  institutions:
+  - University of Maryland
+  date: '2024-09-30'
+  publisher: CHI 2026
+  envs:
+  - Human Feedback Loops
+  - Collaboration & Co-Creation
+  keywords:
+  - debiasing
+  - predictive text
+  - gender bias
+  - co-writing
+  tldr: |-
+    Tests whether anti-stereotypical text suggestions debias users' writing in 414 participants; finds the effect is unreliable while stereotypical suggestions do bias output.
+  arxiv_id: '2409.20390'
+  sources:
+    arxiv: https://arxiv.org/abs/2409.20390
+  bibtex: |-
+    @inproceedings{baumler2026stereotypes,
+      title = {When Stereotypes {GTG}: The Impact of Predictive Text Suggestions on Gender Bias in Human-{AI} Co-Writing},
+      author = {Baumler, Connor and Daum{\'e} III, Hal},
+      booktitle = {Proceedings of the 2026 CHI Conference on Human Factors in Computing Systems},
+      year = {2026}
+    }
+  bibtex_confirmed: false
+- title: AI Suggestions Homogenize Writing Toward Western Styles and Diminish Cultural Nuances
+  link: https://arxiv.org/abs/2409.11360
+  authors:
+  - Dhruv Agarwal
+  - Mor Naaman
+  - Aditya Vashistha
+  institutions:
+  - Cornell
+  - Cornell Tech
+  date: '2024-09-17'
+  publisher: CHI 2025
+  envs:
+  - Mutual Adaptation
+  - Longitudinal HCI Studies
+  keywords:
+  - cultural homogenization
+  - Western style
+  - AI suggestions
+  - India-US
+  tldr: |-
+    Cross-cultural controlled experiment with 118 participants; AI's Western-centric suggestions led Indian participants to adopt Western writing styles, diminishing cultural nuances.
+  arxiv_id: '2409.11360'
+  sources:
+    arxiv: https://arxiv.org/abs/2409.11360
+  bibtex: |-
+    @inproceedings{agarwal2025homogenize,
+      title = {{AI} Suggestions Homogenize Writing Toward Western Styles and Diminish Cultural Nuances},
+      author = {Agarwal, Dhruv and Naaman, Mor and Vashistha, Aditya},
+      booktitle = {Proceedings of the 2025 CHI Conference on Human Factors in Computing Systems},
+      year = {2025},
+      doi = {10.1145/3706598.3713564}
+    }
+  bibtex_confirmed: false
+- title: Oh, Behave! Country Representation Dynamics Created by Feedback Loops in Music Recommender Systems
+  link: https://arxiv.org/abs/2408.11565
+  authors:
+  - Oleg Lesota
+  - Jonas Geiger
+  - Max Walder
+  - Dominik Kowald
+  - Markus Schedl
+  institutions:
+  - JKU Linz
+  - Know-Center
+  date: '2024-08-21'
+  publisher: RecSys 2024
+  envs:
+  - Human Feedback Loops
+  keywords:
+  - music recommender
+  - country representation
+  - US dominance
+  - simulation
+  tldr: |-
+    Simulates feedback loops in LFM-2b; recommendation models reduce proportion of local music; US over-representation amplified for underrepresented countries.
+  arxiv_id: '2408.11565'
+  sources:
+    arxiv: https://arxiv.org/abs/2408.11565
+  bibtex: |-
+    @inproceedings{lesota2024music,
+      title = {Oh, Behave! Country Representation Dynamics Created by Feedback Loops in Music Recommender Systems},
+      author = {Lesota, Oleg and Geiger, Jonas and Walder, Max and Kowald, Dominik and Schedl, Markus},
+      booktitle = {Proceedings of the 18th ACM Conference on Recommender Systems},
+      year = {2024},
+      doi = {10.1145/3640457.3688187}
+    }
+  bibtex_confirmed: false
+- title: Generative AI Without Guardrails Can Harm Learning
+  link: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4895486
+  authors:
+  - Hamsa Bastani
+  - Osbert Bastani
+  - Alp Sungu
+  - Haosen Ge
+  - Özge Kabakcı
+  - Rei Mariman
+  institutions:
+  - Wharton
+  - U. Penn
+  date: 2024-07
+  publisher: PNAS 2025
+  envs:
+  - Longitudinal HCI Studies
+  - Mutual Adaptation
+  keywords:
+  - education
+  - GPT tutor
+  - high school math
+  - learning
+  - RCT
+  tldr: |-
+    Field experiment with ~1,000 high schoolers; "GPT Base" hurts unassisted exam performance vs. control by 17%; guarded "GPT Tutor" essentially eliminates harm.
+  sources:
+    publisher_page: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4895486
+  bibtex: |-
+    @article{bastani2025guardrails,
+      title = {Generative {AI} Without Guardrails Can Harm Learning: Evidence from High School Mathematics},
+      author = {Bastani, Hamsa and Bastani, Osbert and Sungu, Alp and Ge, Haosen and Kabakc{\i}, {\"O}zge and Mariman, Rei},
+      journal = {Proceedings of the National Academy of Sciences},
+      year = {2025},
+      doi = {10.1073/pnas.2422633122}
+    }
+  bibtex_confirmed: false
+- title: Generative AI enhances individual creativity but reduces the collective diversity of novel content
+  link: https://www.science.org/doi/10.1126/sciadv.adn5290
+  authors:
+  - Anil R. Doshi
+  - Oliver P. Hauser
+  institutions:
+  - UCL School of Management
+  - U. Exeter
+  date: '2024-07-12'
+  publisher: Science Advances 2024
+  envs:
+  - Mutual Adaptation
+  keywords:
+  - creativity
+  - individual vs collective
+  - novelty
+  - stories
+  - AI ideas
+  tldr: |-
+    Online experiment; AI ideas raise individual story creativity (especially for less creative writers) but make stories collectively more similar.
+  arxiv_id: '2312.00506'
+  sources:
+    arxiv: https://arxiv.org/abs/2312.00506
+    publisher_page: https://www.science.org/doi/10.1126/sciadv.adn5290
+  bibtex: |-
+    @article{doshi2024creativity,
+      title = {Generative {AI} enhances individual creativity but reduces the collective diversity of novel content},
+      author = {Doshi, Anil R. and Hauser, Oliver P.},
+      journal = {Science Advances},
+      volume = {10},
+      number = {28},
+      pages = {eadn5290},
+      year = {2024},
+      doi = {10.1126/sciadv.adn5290}
+    }
+  bibtex_confirmed: false
+- title: 'Position: Towards Bidirectional Human-AI Alignment'
+  link: https://arxiv.org/abs/2406.09264
+  authors:
+  - Hua Shen
+  - Tiffany Knearem
+  - Reshmi Ghosh
+  - Kenan Alkiek
+  - Kundan Krishna
+  - Yachuan Liu
+  - Ziqiao Ma
+  - Savvas Petridis
+  - Yi-Hao Peng
+  - Li Qiwei
+  - Sushrita Rakshit
+  - Chenglei Si
+  - Yutong Xie
+  - Jeffrey P. Bigham
+  - Frank Bentley
+  - Joyce Chai
+  - Zachary Lipton
+  - Qiaozhu Mei
+  - Rada Mihalcea
+  - Michael Terry
+  - Diyi Yang
+  - Meredith Ringel Morris
+  - Paul Resnick
+  - David Jurgens
+  institutions:
+  - U. Washington
+  - Microsoft
+  - CMU
+  - U. Michigan
+  - Princeton
+  - Stanford
+  - Google
+  date: '2024-06-13'
+  publisher: ICML 2024
+  envs:
+  - Position & Survey
+  - Mutual Adaptation
+  keywords:
+  - bidirectional alignment
+  - mutual adaptation
+  - alignment
+  - sociotechnical
+  - position paper
+  tldr: |-
+    Reviews 400+ papers across HCI/NLP/ML and proposes a bidirectional alignment framework: alignment encompasses both "Aligning AI to Humans" and "Aligning Humans to AI" (cognitive/behavioral adaptation to advancing AI).
+  arxiv_id: '2406.09264'
+  sources:
+    arxiv: https://arxiv.org/abs/2406.09264
+    homepage: https://hua-shen.org/
+  bibtex: |-
+    @inproceedings{shen2024bidirectional,
+      title = {Position: Towards Bidirectional Human-{AI} Alignment},
+      author = {Shen, Hua and Knearem, Tiffany and Ghosh, Reshmi and Alkiek, Kenan and Krishna, Kundan and Liu, Yachuan and Ma, Ziqiao and Petridis, Savvas and Peng, Yi-Hao and Qiwei, Li and Rakshit, Sushrita and Si, Chenglei and Xie, Yutong and Bigham, Jeffrey P. and Bentley, Frank and Chai, Joyce and Lipton, Zachary and Mei, Qiaozhu and Mihalcea, Rada and Terry, Michael and Yang, Diyi and Morris, Meredith Ringel and Resnick, Paul and Jurgens, David},
+      booktitle = {Proceedings of the 41st International Conference on Machine Learning (ICML)},
+      year = {2024}
+    }
+  bibtex_confirmed: false
+- title: A Study on Developer Behaviors for Validating and Repairing LLM-Generated Code Using Eye Tracking and IDE Actions
+  link: https://arxiv.org/abs/2405.16081
+  authors:
+  - Ningzhi Tang
+  - Meng Chen
+  - Zheng Ning
+  - Aakash Bansal
+  - Yu Huang
+  - Collin McMillan
+  - Toby Jia-Jun Li
+  institutions:
+  - Notre Dame
+  - Vanderbilt
+  date: '2024-05-25'
+  publisher: VL/HCC 2024
+  envs:
+  - Collaboration & Co-Creation
+  - Mutual Adaptation
+  keywords:
+  - eye tracking
+  - code validation
+  - LLM
+  - Copilot
+  - IDE telemetry
+  tldr: |-
+    28-participant study with eye tracking and IDE telemetry; developers exhibit LLM-specific behaviors (frequent code-comment switching, deletion-and-rewrite); awareness of LLM origin improves performance but increases workload.
+  arxiv_id: '2405.16081'
+  sources:
+    arxiv: https://arxiv.org/abs/2405.16081
+  bibtex: |-
+    @inproceedings{tang2024eyetracking,
+      title = {A Study on Developer Behaviors for Validating and Repairing {LLM}-Generated Code Using Eye Tracking and {IDE} Actions},
+      author = {Tang, Ningzhi and Chen, Meng and Ning, Zheng and Bansal, Aakash and Huang, Yu and McMillan, Collin and Li, Toby Jia-Jun},
+      booktitle = {2024 IEEE Symposium on Visual Languages and Human-Centric Computing (VL/HCC)},
+      year = {2024}
+    }
+  bibtex_confirmed: false
+- title: 'Complementarity in Human-AI Collaboration: Concept, Sources, and Evidence'
+  link: https://arxiv.org/abs/2404.00029
+  authors:
+  - Patrick Hemmer
+  - Max Schemmer
+  - Niklas Kühl
+  - Michael Vössing
+  - Gerhard Satzger
+  institutions:
+  - KIT
+  - U. Bayreuth
+  date: '2024-03-21'
+  publisher: European Journal of Information Systems 2025
+  envs:
+  - Position & Survey
+  - Collaboration & Co-Creation
+  keywords:
+  - complementarity
+  - decision-making
+  - asymmetry
+  - human-AI teams
+  tldr: |-
+    Formalizes complementary team performance, identifying information and capability asymmetry as the key sources of complementarity in decision-making contexts.
+  arxiv_id: '2404.00029'
+  sources:
+    arxiv: https://arxiv.org/abs/2404.00029
+    publisher_page: https://www.tandfonline.com/doi/full/10.1080/0960085X.2025.2475962
+  bibtex: |-
+    @article{hemmer2025complementarity,
+      title = {Complementarity in Human-{AI} Collaboration: Concept, Sources, and Evidence},
+      author = {Hemmer, Patrick and Schemmer, Max and K{\"u}hl, Niklas and V{\"o}ssing, Michael and Satzger, Gerhard},
+      journal = {European Journal of Information Systems},
+      year = {2025},
+      doi = {10.1080/0960085X.2025.2475962}
+    }
+  bibtex_confirmed: false
+- title: An empirical study on developers' shared conversations with ChatGPT in GitHub pull requests and issues
+  link: https://arxiv.org/abs/2403.10468
+  authors:
+  - Huizi Hao
+  - Kazi Amit Hasan
+  - Hong Qin
+  - Marcos Macedo
+  - Yuan Tian
+  - Steven H. H. Ding
+  - Ahmed E. Hassan
+  institutions:
+  - Queen's University
+  date: '2024-03-15'
+  publisher: Empirical Software Engineering 2024
+  envs:
+  - Collaboration & Co-Creation
+  keywords:
+  - ChatGPT
+  - GitHub PRs
+  - multi-turn
+  - OSS
+  - sharing
+  tldr: |-
+    Analyzes 210+370 dev-ChatGPT shared conversations in PRs/issues across 16 SE inquiry types; multi-turn accounts for ~33-37% of conversations.
+  arxiv_id: '2403.10468'
+  sources:
+    arxiv: https://arxiv.org/abs/2403.10468
+  bibtex: |-
+    @article{hao2024chatgpt,
+      title = {An empirical study on developers' shared conversations with {ChatGPT} in {GitHub} pull requests and issues},
+      author = {Hao, Huizi and Hasan, Kazi Amit and Qin, Hong and Macedo, Marcos and Tian, Yuan and Ding, Steven H. H. and Hassan, Ahmed E.},
+      journal = {Empirical Software Engineering},
+      volume = {29},
+      pages = {150},
+      year = {2024},
+      doi = {10.1007/s10664-024-10540-x}
+    }
+  bibtex_confirmed: false
+- title: 'RECIPE4U: Student-ChatGPT Interaction Dataset in EFL Writing Education'
+  link: https://arxiv.org/abs/2403.08272
+  authors:
+  - Jieun Han
+  - Haneul Yoo
+  - Junho Myung
+  - Minsun Kim
+  - Tak Yeon Lee
+  - So-Yeon Ahn
+  - Alice Oh
+  institutions:
+  - KAIST
+  date: '2024-03-13'
+  publisher: arXiv
+  envs:
+  - Longitudinal HCI Studies
+  keywords:
+  - RECIPE4U
+  - EFL
+  - student-ChatGPT
+  - dataset
+  - intent labels
+  tldr: |-
+    Semester-long dataset of 212 students with 13 intent-labeled utterances and edit histories.
+  arxiv_id: '2403.08272'
+  sources:
+    arxiv: https://arxiv.org/abs/2403.08272
+  bibtex: |-
+    @misc{han2024recipe4u,
+      title = {{RECIPE4U}: Student-{ChatGPT} Interaction Dataset in {EFL} Writing Education},
+      author = {Han, Jieun and Yoo, Haneul and Myung, Junho and Kim, Minsun and Lee, Tak Yeon and Ahn, So-Yeon and Oh, Alice},
+      year = {2024},
+      eprint = {2403.08272},
+      archivePrefix = {arXiv}
+    }
+  bibtex_confirmed: false
+- title: 'Monitoring AI-Modified Content at Scale: A Case Study on the Impact of ChatGPT on AI Conference Peer Reviews'
+  link: https://arxiv.org/abs/2403.07183
+  authors:
+  - Weixin Liang
+  - Zachary Izzo
+  - Yaohui Zhang
+  - Haley Lepp
+  - Hancheng Cao
+  - Xuandong Zhao
+  - Lingjiao Chen
+  - Haotian Ye
+  - Sheng Liu
+  - Zhi Huang
+  - Daniel A. McFarland
+  - James Y. Zou
+  institutions:
+  - Stanford
+  - NEC Labs
+  date: '2024-03-11'
+  publisher: ICML 2024
+  envs:
+  - Mutual Adaptation
+  keywords:
+  - AI-modified text
+  - peer review
+  - ICLR
+  - NeurIPS
+  - large-scale estimation
+  tldr: |-
+    Estimates 6.5–16.9% of peer-review text at top AI conferences post-ChatGPT shows substantial LLM modification.
+  arxiv_id: '2403.07183'
+  sources:
+    arxiv: https://arxiv.org/abs/2403.07183
+    publisher_page: https://proceedings.mlr.press/v235/liang24b.html
+  bibtex: |-
+    @inproceedings{liang2024monitoring,
+      title = {Monitoring {AI}-Modified Content at Scale: A Case Study on the Impact of {ChatGPT} on {AI} Conference Peer Reviews},
+      author = {Liang, Weixin and Izzo, Zachary and Zhang, Yaohui and Lepp, Haley and Cao, Hancheng and Zhao, Xuandong and Chen, Lingjiao and Ye, Haotian and Liu, Sheng and Huang, Zhi and McFarland, Daniel A. and Zou, James Y.},
+      booktitle = {Proceedings of the 41st International Conference on Machine Learning},
+      year = {2024}
+    }
+  bibtex_confirmed: false
+- title: A Survey on Human-AI Teaming with Large Pre-Trained Models
+  link: https://arxiv.org/abs/2403.04931
+  authors:
+  - Vanshika Vats
+  - Marzia Binta Nizam
+  - Minghao Liu
+  - Ziyuan Wang
+  - Richard Ho
+  - Mohnish Sai Prasad
+  - Vincent Titterton
+  - Sai Venkat Malreddy
+  - Riya Aggarwal
+  - Yanwen Xu
+  - Lei Ding
+  - Jay Mehta
+  - Nathan Grinnell
+  - Li Liu
+  - Sijia Zhong
+  - Devanathan Nallur Gandamani
+  - Xinyi Tang
+  - Rohan Ghosalkar
+  - Celeste Shen
+  - Rachel Shen
+  - Nafisa Hussain
+  - Kesav Ravichandran
+  - James Davis
+  institutions:
+  - UC Santa Cruz
+  date: '2024-03-07'
+  publisher: arXiv
+  envs:
+  - Position & Survey
+  keywords:
+  - survey
+  - foundation models
+  - teaming
+  - RLHF
+  - HITL
+  tldr: |-
+    Surveys human-AI teaming with foundation models across four pillars: human-guided model development, collaborative design, ethical/governance frameworks, and high-stakes applications.
+  arxiv_id: '2403.04931'
+  sources:
+    arxiv: https://arxiv.org/abs/2403.04931
+  bibtex: |-
+    @misc{vats2024teaming,
+      title = {A Survey on Human-{AI} Teaming with Large Pre-Trained Models},
+      author = {Vats, Vanshika and Nizam, Marzia Binta and Liu, Minghao and Wang, Ziyuan and Ho, Richard and Prasad, Mohnish Sai and Titterton, Vincent and Malreddy, Sai Venkat and Aggarwal, Riya and Xu, Yanwen and Ding, Lei and Mehta, Jay and Grinnell, Nathan and Liu, Li and Zhong, Sijia and Gandamani, Devanathan Nallur and Tang, Xinyi and Ghosalkar, Rohan and Shen, Celeste and Shen, Rachel and Hussain, Nafisa and Ravichandran, Kesav and Davis, James},
+      year = {2024},
+      eprint = {2403.04931},
+      archivePrefix = {arXiv}
+    }
+  bibtex_confirmed: false
+- title: Towards Understanding Sycophancy in Language Models
+  link: https://arxiv.org/abs/2310.13548
+  authors:
+  - Mrinank Sharma
+  - Meg Tong
+  - Tomasz Korbak
+  - David Duvenaud
+  - Amanda Askell
+  - Samuel R. Bowman
+  - Newton Cheng
+  - Esin Durmus
+  - Zac Hatfield-Dodds
+  - Scott R. Johnston
+  - Shauna Kravec
+  - Timothy Maxwell
+  - Sam McCandlish
+  - Kamal Ndousse
+  - Oliver Rausch
+  - Nicholas Schiefer
+  - Da Yan
+  - Miranda Zhang
+  - Ethan Perez
+  institutions:
+  - Anthropic
+  date: '2023-10-20'
+  publisher: ICLR 2024
+  envs:
+  - Human Feedback Loops
+  keywords:
+  - sycophancy
+  - RLHF
+  - preference data bias
+  tldr: |-
+    Demonstrates that five RLHF assistants exhibit sycophancy and traces it to human preference data favoring agreeable responses.
+  arxiv_id: '2310.13548'
+  sources:
+    arxiv: https://arxiv.org/abs/2310.13548
+    openreview: https://openreview.net/forum?id=tvhaxkMKAn
+  bibtex: |-
+    @inproceedings{sharma2024sycophancy,
+      title = {Towards Understanding Sycophancy in Language Models},
+      author = {Sharma, Mrinank and Tong, Meg and Korbak, Tomasz and Duvenaud, David and Askell, Amanda and Bowman, Samuel R. and Cheng, Newton and Durmus, Esin and Hatfield-Dodds, Zac and Johnston, Scott R. and Kravec, Shauna and Maxwell, Timothy and McCandlish, Sam and Ndousse, Kamal and Rausch, Oliver and Schiefer, Nicholas and Yan, Da and Zhang, Miranda and Perez, Ethan},
+      booktitle = {International Conference on Learning Representations},
+      year = {2024}
+    }
+  bibtex_confirmed: false
+- title: 'Steroids, Sneakers, Coach: The Spectrum of Human-AI Relationships'
+  link: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4578180
+  authors:
+  - Jake M. Hofman
+  - Daniel G. Goldstein
+  - David M. Rothschild
+  institutions:
+  - Microsoft Research
+  date: '2023-09-20'
+  publisher: SSRN
+  envs:
+  - Position & Survey
+  keywords:
+  - human-AI relationships
+  - taxonomy
+  - skill formation
+  - augmentation
+  tldr: |-
+    Three-category framework — steroids (short-term boost, long-term cost), sneakers (augment without long-term harm), coach (build human capabilities) — for thinking about AI's downstream effect on human skills.
+  sources:
+    homepage: http://jakehofman.com/publication/steroids-sneakers-coach/
+    publisher_page: https://hbr.org/2023/12/a-sports-analogy-for-understanding-different-ways-to-use-ai
+  bibtex: |-
+    @misc{hofman2023steroids,
+      title = {Steroids, Sneakers, Coach: The Spectrum of Human-{AI} Relationships},
+      author = {Hofman, Jake M. and Goldstein, Daniel G. and Rothschild, David M.},
+      year = {2023},
+      howpublished = {SSRN preprint 4578180}
+    }
+  bibtex_confirmed: false
+- title: 'Navigating the Jagged Technological Frontier: Field Experimental Evidence of the Effects of AI on Knowledge Worker
+    Productivity and Quality'
+  link: https://pubsonline.informs.org/doi/10.1287/orsc.2025.21838
+  authors:
+  - Fabrizio Dell'Acqua
+  - Edward McFowland III
+  - Ethan R. Mollick
+  - Hila Lifshitz-Assaf
+  - Katherine C. Kellogg
+  - Saran Rajendran
+  - Lisa Krayer
+  - François Candelon
+  - Karim R. Lakhani
+  institutions:
+  - Harvard Business School
+  - BCG
+  - Wharton
+  - MIT Sloan
+  - Warwick
+  date: '2023-09-15'
+  publisher: Organization Science 2026
+  envs:
+  - Collaboration & Co-Creation
+  - Mutual Adaptation
+  keywords:
+  - BCG
+  - GPT-4
+  - consultants
+  - jagged frontier
+  - centaur
+  - cyborg
+  tldr: |-
+    Pre-registered RCT with 758 BCG consultants and GPT-4: +12.2% tasks, +25% speed, +40% quality inside frontier; -19pp correctness outside it.
+  sources:
+    homepage: https://d3.harvard.edu/navigating-the-jagged-technological-frontier/
+    publisher_page: https://www.hbs.edu/ris/Publication%20Files/24-013_d9b45b68-9e74-42d6-a1c6-c72fb70c7282.pdf
+  bibtex: |-
+    @article{dellacqua2026jagged,
+      title = {Navigating the Jagged Technological Frontier: Field Experimental Evidence of the Effects of {AI} on Knowledge Worker Productivity and Quality},
+      author = {Dell'Acqua, Fabrizio and McFowland III, Edward and Mollick, Ethan R. and Lifshitz-Assaf, Hila and Kellogg, Katherine C. and Rajendran, Saran and Krayer, Lisa and Candelon, Fran{\c{c}}ois and Lakhani, Karim R.},
+      journal = {Organization Science},
+      year = {2026},
+      doi = {10.1287/orsc.2025.21838}
+    }
+  bibtex_confirmed: false
+- title: Does Writing with Language Models Reduce Content Diversity?
+  link: https://arxiv.org/abs/2309.05196
+  authors:
+  - Vishakh Padmakumar
+  - He He
+  institutions:
+  - NYU
+  date: '2023-09-11'
+  publisher: ICLR 2024
+  envs:
+  - Human Feedback Loops
+  - Collaboration & Co-Creation
+  - Mutual Adaptation
+  keywords:
+  - content diversity
+  - InstructGPT
+  - co-writing
+  - homogenization
+  tldr: |-
+    Controlled essay experiment; writing with InstructGPT (but not GPT-3) results in statistically significant reduction in content diversity.
+  arxiv_id: '2309.05196'
+  sources:
+    arxiv: https://arxiv.org/abs/2309.05196
+  bibtex: |-
+    @inproceedings{padmakumar2024diversity,
+      title = {Does Writing with Language Models Reduce Content Diversity?},
+      author = {Padmakumar, Vishakh and He, He},
+      booktitle = {International Conference on Learning Representations},
+      year = {2024}
+    }
+  bibtex_confirmed: false
+- title: 'Sea Change in Software Development: Economic and Productivity Analysis of the AI-Powered Developer Lifecycle'
+  link: https://arxiv.org/abs/2306.15033
+  authors:
+  - Thomas Dohmke
+  - Marco Iansiti
+  - Greg Richards
+  institutions:
+  - GitHub
+  - Harvard Business School
+  - Keystone.AI
+  date: '2023-06-26'
+  publisher: arXiv
+  envs:
+  - Longitudinal HCI Studies
+  keywords:
+  - Copilot
+  - acceptance
+  - GDP impact
+  - less-experienced
+  tldr: |-
+    Telemetry from ~935K Copilot users; ~30% acceptance rate, productivity benefit growing over time, largest for less-experienced developers.
+  arxiv_id: '2306.15033'
+  sources:
+    arxiv: https://arxiv.org/abs/2306.15033
+  bibtex: |-
+    @misc{dohmke2023seachange,
+      title = {Sea Change in Software Development: Economic and Productivity Analysis of the {AI}-Powered Developer Lifecycle},
+      author = {Dohmke, Thomas and Iansiti, Marco and Richards, Greg},
+      year = {2023},
+      eprint = {2306.15033},
+      archivePrefix = {arXiv}
+    }
+  bibtex_confirmed: false
+- title: Human-AI Coevolution
+  link: https://www.sciencedirect.com/science/article/pii/S0004370224001802
+  authors:
+  - Dino Pedreschi
+  - Luca Pappalardo
+  - Emanuele Ferragina
+  - Ricardo Baeza-Yates
+  - Albert-László Barabási
+  - Frank Dignum
+  - Virginia Dignum
+  - Tina Eliassi-Rad
+  - Fosca Giannotti
+  - János Kertész
+  - Alistair Knott
+  - Yannis Ioannidis
+  - Paul Lukowicz
+  - Andrea Passarella
+  - Alex Sandy Pentland
+  - John Shawe-Taylor
+  - Alessandro Vespignani
+  institutions:
+  - U. Pisa
+  - CNR-ISTI
+  - Scuola Normale Superiore
+  - Sciences Po
+  - UPF
+  - Northeastern
+  - Umeå
+  - CEU
+  - Victoria U. Wellington
+  - U. Athens
+  - DFKI
+  - MIT Connection Science
+  - UCL
+  date: '2023-06-23'
+  publisher: Artificial Intelligence 2025
+  envs:
+  - Position & Survey
+  - Mutual Adaptation
+  keywords:
+  - coevolution
+  - recommender systems
+  - complexity science
+  - feedback loops
+  - sociotechnical
+  tldr: |-
+    Frames human-AI coevolution as a continuous feedback loop where user choices generate data that retrains AI, which then reshapes user preferences. Proposes "Coevolution AI" as an interdisciplinary field combining complexity science and AI.
+  arxiv_id: '2306.13723'
+  sources:
+    arxiv: https://arxiv.org/abs/2306.13723
+    publisher_page: https://www.sciencedirect.com/science/article/pii/S0004370224001802
+  bibtex: |-
+    @article{pedreschi2024coevolution,
+      title = {Human-{AI} Coevolution},
+      author = {Pedreschi, Dino and Pappalardo, Luca and Ferragina, Emanuele and Baeza-Yates, Ricardo and Barab{\'a}si, Albert-L{\'a}szl{\'o} and Dignum, Frank and Dignum, Virginia and Eliassi-Rad, Tina and Giannotti, Fosca and Kert{\'e}sz, J{\'a}nos and Knott, Alistair and Ioannidis, Yannis and Lukowicz, Paul and Passarella, Andrea and Pentland, Alex Sandy and Shawe-Taylor, John and Vespignani, Alessandro},
+      journal = {Artificial Intelligence},
+      year = {2025},
+      doi = {10.1016/j.artint.2024.104244}
+    }
+  bibtex_confirmed: false
+- title: 'The Curse of Recursion: Training on Generated Data Makes Models Forget'
+  link: https://arxiv.org/abs/2305.17493
+  authors:
+  - Ilia Shumailov
+  - Zakhar Shumaylov
+  - Yiren Zhao
+  - Yarin Gal
+  - Nicolas Papernot
+  - Ross Anderson
+  institutions:
+  - Oxford
+  - Cambridge
+  - Imperial
+  - Toronto
+  date: '2023-05-27'
+  publisher: Nature 2024
+  envs:
+  - Position & Survey
+  keywords:
+  - model collapse
+  - recursive training
+  - distribution shift
+  - AI on AI
+  tldr: |-
+    Demonstrates that training on model-generated content causes irreversible distribution-tail collapse across VAEs, GMMs, and LLMs.
+  arxiv_id: '2305.17493'
+  sources:
+    arxiv: https://arxiv.org/abs/2305.17493
+  bibtex: |-
+    @article{shumailov2024curse,
+      title = {The Curse of Recursion: Training on Generated Data Makes Models Forget},
+      author = {Shumailov, Ilia and Shumaylov, Zakhar and Zhao, Yiren and Gal, Yarin and Papernot, Nicolas and Anderson, Ross},
+      journal = {Nature},
+      volume = {631},
+      pages = {755--759},
+      year = {2024},
+      doi = {10.1038/s41586-024-07566-y}
+    }
+  bibtex_confirmed: false
+- title: Artificial intelligence in communication impacts language and social relationships
+  link: https://www.nature.com/articles/s41598-023-30938-9
+  authors:
+  - Jess Hohenstein
+  - Rene F. Kizilcec
+  - Dominic DiFranzo
+  - Zhila Aghajari
+  - Hannah Mieczkowski
+  - Karen Levy
+  - Mor Naaman
+  - Jeffrey T. Hancock
+  - Malte F. Jung
+  institutions:
+  - Cornell
+  - Stanford
+  - Lehigh
+  date: 2023-04
+  publisher: Scientific Reports 2023
+  envs:
+  - Mutual Adaptation
+  keywords:
+  - smart replies
+  - AIMC
+  - social relationships
+  - positivity
+  tldr: |-
+    Field-style experiments show AI suggestions skew message sentiment positive and alter how humans perceive each other's emotions; people are evaluated more negatively if suspected of using AI.
+  bibtex: |-
+    @article{hohenstein2023communication,
+      title = {Artificial intelligence in communication impacts language and social relationships},
+      author = {Hohenstein, Jess and Kizilcec, Rene F. and DiFranzo, Dominic and Aghajari, Zhila and Mieczkowski, Hannah and Levy, Karen and Naaman, Mor and Hancock, Jeffrey T. and Jung, Malte F.},
+      journal = {Scientific Reports},
+      volume = {13},
+      pages = {5487},
+      year = {2023},
+      doi = {10.1038/s41598-023-30938-9}
+    }
+  bibtex_confirmed: false
+- title: Generative AI at Work
+  link: https://arxiv.org/abs/2304.11771
+  authors:
+  - Erik Brynjolfsson
+  - Danielle Li
+  - Lindsey Raymond
+  institutions:
+  - Stanford
+  - MIT Sloan
+  date: '2023-04-23'
+  publisher: Quarterly Journal of Economics 2025
+  envs:
+  - Human Feedback Loops
+  - Longitudinal HCI Studies
+  keywords:
+  - customer support
+  - productivity
+  - GPT
+  - novice
+  - knowledge transfer
+  tldr: |-
+    Field deployment of GPT-based assistant to 5,172 support agents shows ~15% productivity gains, concentrated in novices, with knowledge diffusion from top performers via the assistant.
+  arxiv_id: '2304.11771'
+  sources:
+    arxiv: https://arxiv.org/abs/2304.11771
+    publisher_page: https://academic.oup.com/qje/article/140/2/889/7990658
+    homepage: https://www.nber.org/papers/w31161
+  bibtex: |-
+    @article{brynjolfsson2025genai,
+      title = {Generative {AI} at Work},
+      author = {Brynjolfsson, Erik and Li, Danielle and Raymond, Lindsey},
+      journal = {Quarterly Journal of Economics},
+      volume = {140},
+      number = {2},
+      pages = {889},
+      year = {2025}
+    }
+  bibtex_confirmed: false
+- title: 'The AI Ghostwriter Effect: When Users Do Not Perceive Ownership of AI-Generated Text But Self-Declare as Authors'
+  link: https://arxiv.org/abs/2303.03283
+  authors:
+  - Fiona Draxler
+  - Anna Werner
+  - Florian Lehmann
+  - Matthias Hoppe
+  - Albrecht Schmidt
+  - Daniel Buschek
+  - Robin Welsch
+  institutions:
+  - LMU Munich
+  - U. Bayreuth
+  - Aalto
+  date: '2023-03-06'
+  publisher: ACM TOCHI 2024
+  envs:
+  - Collaboration & Co-Creation
+  keywords:
+  - authorship
+  - ownership
+  - ghostwriter
+  - personalization
+  tldr: |-
+    Two empirical studies (n=30, n=96); users do not perceive ownership of AI-generated text yet self-declare authorship; personalization does not eliminate the gap.
+  arxiv_id: '2303.03283'
+  sources:
+    arxiv: https://arxiv.org/abs/2303.03283
+  bibtex: |-
+    @article{draxler2024ghostwriter,
+      title = {The {AI} Ghostwriter Effect: When Users Do Not Perceive Ownership of {AI}-Generated Text But Self-Declare as Authors},
+      author = {Draxler, Fiona and Werner, Anna and Lehmann, Florian and Hoppe, Matthias and Schmidt, Albrecht and Buschek, Daniel and Welsch, Robin},
+      journal = {ACM Transactions on Computer-Human Interaction},
+      volume = {31},
+      number = {2},
+      year = {2024},
+      doi = {10.1145/3637875}
+    }
+  bibtex_confirmed: false
+- title: Experimental evidence on the productivity effects of generative artificial intelligence
+  link: https://www.science.org/doi/10.1126/science.adh2586
+  authors:
+  - Shakked Noy
+  - Whitney Zhang
+  institutions:
+  - MIT
+  date: '2023-03-01'
+  publisher: Science 2023
+  envs:
+  - Longitudinal HCI Studies
+  - Mutual Adaptation
+  keywords:
+  - ChatGPT
+  - RCT
+  - professional writing
+  - productivity
+  - inequality
+  tldr: |-
+    RCT with 453 college-educated professionals on writing tasks; ChatGPT cuts time 40%, raises quality 18%; weaker workers benefit most. 2 weeks/2 months later, exposed workers are 2x/1.6x as likely to use ChatGPT in their job.
+  bibtex: |-
+    @article{noy2023productivity,
+      title = {Experimental evidence on the productivity effects of generative artificial intelligence},
+      author = {Noy, Shakked and Zhang, Whitney},
+      journal = {Science},
+      volume = {381},
+      number = {6654},
+      pages = {187--192},
+      year = {2023},
+      doi = {10.1126/science.adh2586}
+    }
+  bibtex_confirmed: false
+- title: 'The Impact of AI on Developer Productivity: Evidence from GitHub Copilot'
+  link: https://arxiv.org/abs/2302.06590
+  authors:
+  - Sida Peng
+  - Eirini Kalliamvakou
+  - Peter Cihon
+  - Mert Demirer
+  institutions:
+  - Microsoft Research
+  - GitHub
+  - MIT
+  date: '2023-02-13'
+  publisher: arXiv
+  envs:
+  - Longitudinal HCI Studies
+  - Collaboration & Co-Creation
+  keywords:
+  - Copilot
+  - RCT
+  - productivity
+  - HTTP server task
+  - novices
+  tldr: |-
+    RCT with 95 developers shows Copilot users finish HTTP-server task 55.8% faster.
+  arxiv_id: '2302.06590'
+  sources:
+    arxiv: https://arxiv.org/abs/2302.06590
+  bibtex: |-
+    @misc{peng2023copilot,
+      title = {The Impact of {AI} on Developer Productivity: Evidence from {GitHub} {Copilot}},
+      author = {Peng, Sida and Kalliamvakou, Eirini and Cihon, Peter and Demirer, Mert},
+      year = {2023},
+      eprint = {2302.06590},
+      archivePrefix = {arXiv}
+    }
+  bibtex_confirmed: false
+- title: Co-Writing with Opinionated Language Models Affects Users' Views
+  link: https://arxiv.org/abs/2302.00560
+  authors:
+  - Maurice Jakesch
+  - Advait Bhat
+  - Daniel Buschek
+  - Lior Zalmanson
+  - Mor Naaman
+  institutions:
+  - Cornell Tech
+  - Microsoft Research
+  - U. Bayreuth
+  - Tel Aviv U.
+  date: '2023-02-01'
+  publisher: CHI 2023
+  envs:
+  - Mutual Adaptation
+  - Human Feedback Loops
+  keywords:
+  - opinionated assistant
+  - opinion shift
+  - attitude change
+  - social media essays
+  tldr: |-
+    N=1,506 online experiment; writing with opinionated AI shifts both produced text and post-task attitudes.
+  arxiv_id: '2302.00560'
+  sources:
+    arxiv: https://arxiv.org/abs/2302.00560
+  bibtex: |-
+    @inproceedings{jakesch2023opinionated,
+      title = {Co-Writing with Opinionated Language Models Affects Users' Views},
+      author = {Jakesch, Maurice and Bhat, Advait and Buschek, Daniel and Zalmanson, Lior and Naaman, Mor},
+      booktitle = {Proceedings of the 2023 CHI Conference on Human Factors in Computing Systems},
+      year = {2023},
+      doi = {10.1145/3544548.3581196}
+    }
+  bibtex_confirmed: false
+- title: A Mental Model Based Theory of Trust
+  link: https://arxiv.org/abs/2301.12569
+  authors:
+  - Zahra Zahedi
+  - Sarath Sreedharan
+  - Subbarao Kambhampati
+  institutions:
+  - ASU
+  - Colorado State University
+  date: '2023-01-29'
+  publisher: arXiv
+  envs:
+  - Position & Survey
+  - Mutual Adaptation
+  keywords:
+  - trust
+  - mental models
+  - reliance
+  - calibration
+  tldr: |-
+    Proposes a mental-model based theory of trust enabling trust inference and calibration in human-AI decision systems, validated against the Muir trust scale.
+  arxiv_id: '2301.12569'
+  sources:
+    arxiv: https://arxiv.org/abs/2301.12569
+  bibtex: |-
+    @misc{zahedi2023trust,
+      title = {A Mental Model Based Theory of Trust},
+      author = {Zahedi, Zahra and Sreedharan, Sarath and Kambhampati, Subbarao},
+      year = {2023},
+      eprint = {2301.12569},
+      archivePrefix = {arXiv}
+    }
+  bibtex_confirmed: false
+- title: Modeling the Interplay between Human Trust and Monitoring
+  link: https://ieeexplore.ieee.org/document/9889475/
+  authors:
+  - Zahra Zahedi
+  - Sarath Sreedharan
+  - Mudit Verma
+  - Subbarao Kambhampati
+  institutions:
+  - ASU
+  - Colorado State
+  date: '2022-12-31'
+  publisher: HRI 2022
+  envs:
+  - Mutual Adaptation
+  keywords:
+  - trust
+  - monitoring
+  - supervisor
+  - HRI
+  tldr: |-
+    Models how human trust changes monitoring behavior, while system behavior must account for changing monitoring patterns.
+  bibtex: |-
+    @inproceedings{zahedi2022monitoring,
+      title = {Modeling the Interplay between Human Trust and Monitoring},
+      author = {Zahedi, Zahra and Sreedharan, Sarath and Verma, Mudit and Kambhampati, Subbarao},
+      booktitle = {Proceedings of the 2022 ACM/IEEE International Conference on Human-Robot Interaction},
+      year = {2022},
+      doi = {10.1109/HRI53351.2022.9889475}
+    }
+  bibtex_confirmed: false
+- title: 'Wordcraft: Story Writing With Large Language Models'
+  link: https://doi.org/10.1145/3490099.3511105
+  authors:
+  - Ann Yuan
+  - Andy Coenen
+  - Emily Reif
+  - Daphne Ippolito
+  institutions:
+  - Google Research
+  date: '2022-12-31'
+  publisher: IUI 2022
+  envs:
+  - Collaboration & Co-Creation
+  keywords:
+  - Wordcraft
+  - story writing
+  - IUI
+  - co-writing
+  tldr: |-
+    Web-based human-LLM co-writing editor for stories; user study shows novel co-writing experiences.
+  bibtex: |-
+    @inproceedings{yuan2022wordcraft,
+      title = {{Wordcraft}: Story Writing With Large Language Models},
+      author = {Yuan, Ann and Coenen, Andy and Reif, Emily and Ippolito, Daphne},
+      booktitle = {Proceedings of the 27th International Conference on Intelligent User Interfaces},
+      year = {2022},
+      doi = {10.1145/3490099.3511105}
+    }
+  bibtex_confirmed: false
+- title: 'Constitutional AI: Harmlessness from AI Feedback'
+  link: https://arxiv.org/abs/2212.08073
+  authors:
+  - Yuntao Bai
+  - Saurav Kadavath
+  - Sandipan Kundu
+  - Amanda Askell
+  - Jackson Kernion
+  - Andy Jones
+  - Anna Chen
+  - Anna Goldie
+  - Azalia Mirhoseini
+  - Cameron McKinnon
+  - Carol Chen
+  - Catherine Olsson
+  - Christopher Olah
+  - Danny Hernandez
+  - Dawn Drain
+  - Deep Ganguli
+  - Dustin Li
+  - Eli Tran-Johnson
+  - Ethan Perez
+  - Jamie Kerr
+  - Jared Mueller
+  - Jeffrey Ladish
+  - Joshua Landau
+  - Kamal Ndousse
+  - Kamile Lukosuite
+  - Liane Lovitt
+  - Michael Sellitto
+  - Nelson Elhage
+  - Nicholas Schiefer
+  - Noemi Mercado
+  - Nova DasSarma
+  - Robert Lasenby
+  - Robin Larson
+  - Sam Ringer
+  - Scott Johnston
+  - Shauna Kravec
+  - Sheer El Showk
+  - Stanislav Fort
+  - Tamera Lanham
+  - Timothy Telleen-Lawton
+  - Tom Conerly
+  - Tom Henighan
+  - Tristan Hume
+  - Samuel R. Bowman
+  - Zac Hatfield-Dodds
+  - Ben Mann
+  - Dario Amodei
+  - Nicholas Joseph
+  - Sam McCandlish
+  - Tom Brown
+  - Jared Kaplan
+  institutions:
+  - Anthropic
+  date: '2022-12-15'
+  publisher: arXiv
+  envs:
+  - Human Feedback Loops
+  keywords:
+  - constitutional AI
+  - RLAIF
+  - harmlessness
+  - principles
+  tldr: |-
+    Replaces some human harmlessness labels with AI feedback grounded in a written human "constitution" — demonstrates the loop from principles to AI critiques to preference model to policy.
+  arxiv_id: '2212.08073'
+  sources:
+    arxiv: https://arxiv.org/abs/2212.08073
+  bibtex: |-
+    @misc{bai2022constitutional,
+      title = {Constitutional {AI}: Harmlessness from {AI} Feedback},
+      author = {Bai, Yuntao and Kadavath, Saurav and Kundu, Sandipan and Askell, Amanda and others},
+      year = {2022},
+      eprint = {2212.08073},
+      archivePrefix = {arXiv}
+    }
+  bibtex_confirmed: false
+- title: Do Users Write More Insecure Code with AI Assistants?
+  link: https://arxiv.org/abs/2211.03622
+  authors:
+  - Neil Perry
+  - Megha Srivastava
+  - Deepak Kumar
+  - Dan Boneh
+  institutions:
+  - Stanford
+  date: '2022-11-07'
+  publisher: ACM CCS 2023
+  envs:
+  - Mutual Adaptation
+  - Collaboration & Co-Creation
+  keywords:
+  - code security
+  - AI assistance
+  - false confidence
+  - vulnerabilities
+  tldr: |-
+    User study (n=47): developers with AI assistance produce significantly less secure code while believing it's safer.
+  arxiv_id: '2211.03622'
+  sources:
+    arxiv: https://arxiv.org/abs/2211.03622
+  bibtex: |-
+    @inproceedings{perry2023insecure,
+      title = {Do Users Write More Insecure Code with {AI} Assistants?},
+      author = {Perry, Neil and Srivastava, Megha and Kumar, Deepak and Boneh, Dan},
+      booktitle = {Proceedings of the 2023 ACM SIGSAC Conference on Computer and Communications Security},
+      year = {2023},
+      doi = {10.1145/3576915.3623157}
+    }
+  bibtex_confirmed: false
+- title: 'Reading Between the Lines: Modeling User Behavior and Costs in AI-Assisted Programming'
+  link: https://arxiv.org/abs/2210.14306
+  authors:
+  - Hussein Mozannar
+  - Gagan Bansal
+  - Adam Fourney
+  - Eric Horvitz
+  institutions:
+  - MIT
+  - Microsoft Research
+  date: '2022-10-25'
+  publisher: CHI 2024
+  envs:
+  - Collaboration & Co-Creation
+  - Mutual Adaptation
+  keywords:
+  - CUPS
+  - programmer activities
+  - telemetry
+  - Copilot
+  - taxonomy
+  tldr: |-
+    12-state CUPS taxonomy from 21 programmers labeling Copilot sessions, revealing hidden costs of suggestion review.
+  arxiv_id: '2210.14306'
+  sources:
+    arxiv: https://arxiv.org/abs/2210.14306
+    code: https://github.com/microsoft/coderec_programming_states
+  bibtex: |-
+    @inproceedings{mozannar2024cups,
+      title = {Reading Between the Lines: Modeling User Behavior and Costs in {AI}-Assisted Programming},
+      author = {Mozannar, Hussein and Bansal, Gagan and Fourney, Adam and Horvitz, Eric},
+      booktitle = {Proceedings of the 2024 CHI Conference on Human Factors in Computing Systems},
+      year = {2024}
+    }
+  bibtex_confirmed: false
+- title: 'Co-Writing Screenplays and Theatre Scripts with Language Models: An Evaluation by Industry Professionals'
+  link: https://arxiv.org/abs/2209.14958
+  authors:
+  - Piotr Mirowski
+  - Kory W. Mathewson
+  - Jaylen Pittman
+  - Richard Evans
+  institutions:
+  - Google DeepMind
+  date: '2022-09-29'
+  publisher: CHI 2023
+  envs:
+  - Collaboration & Co-Creation
+  - Longitudinal HCI Studies
+  keywords:
+  - Dramatron
+  - hierarchical prompting
+  - screenplays
+  - professional writers
+  tldr: |-
+    Dramatron uses hierarchical prompt chaining to generate scripts with structural elements; evaluated with 15 industry professionals.
+  arxiv_id: '2209.14958'
+  sources:
+    arxiv: https://arxiv.org/abs/2209.14958
+  bibtex: |-
+    @inproceedings{mirowski2023dramatron,
+      title = {Co-Writing Screenplays and Theatre Scripts with Language Models: An Evaluation by Industry Professionals},
+      author = {Mirowski, Piotr and Mathewson, Kory W. and Pittman, Jaylen and Evans, Richard},
+      booktitle = {Proceedings of the 2023 CHI Conference on Human Factors in Computing Systems},
+      year = {2023},
+      doi = {10.1145/3544548.3581225}
+    }
+  bibtex_confirmed: false
+- title: Breaking Feedback Loops in Recommender Systems with Causal Inference
+  link: https://arxiv.org/abs/2207.01616
+  authors:
+  - Karl Krauth
+  - Yixin Wang
+  - Michael I. Jordan
+  institutions:
+  - UC Berkeley
+  - U. Michigan
+  date: '2022-07-04'
+  publisher: ACM TORS 2025
+  envs:
+  - Human Feedback Loops
+  keywords:
+  - causal inference
+  - CAFL
+  - feedback loops
+  - intervention distribution
+  tldr: |-
+    CAFL algorithm provably breaks feedback loops via causal inference; applies to any recommender that optimizes a training loss.
+  arxiv_id: '2207.01616'
+  sources:
+    arxiv: https://arxiv.org/abs/2207.01616
+  bibtex: |-
+    @article{krauth2025causal,
+      title = {Breaking Feedback Loops in Recommender Systems with Causal Inference},
+      author = {Krauth, Karl and Wang, Yixin and Jordan, Michael I.},
+      journal = {ACM Transactions on Recommender Systems},
+      volume = {4},
+      number = {1},
+      pages = {4},
+      year = {2025},
+      doi = {10.1145/3728372}
+    }
+  bibtex_confirmed: false
+- title: 'Grounded Copilot: How Programmers Interact with Code-Generating Models'
+  link: https://arxiv.org/abs/2206.15000
+  authors:
+  - Shraddha Barke
+  - Michael B. James
+  - Nadia Polikarpova
+  institutions:
+  - UC San Diego
+  date: '2022-06-30'
+  publisher: OOPSLA 2023
+  envs:
+  - Collaboration & Co-Creation
+  - Mutual Adaptation
+  keywords:
+  - Copilot
+  - grounded theory
+  - acceleration
+  - exploration
+  - bimodal
+  tldr: |-
+    Grounded theory of 20 programmers identifies bimodal interaction (acceleration vs. exploration) with Copilot.
+  arxiv_id: '2206.15000'
+  sources:
+    arxiv: https://arxiv.org/abs/2206.15000
+  bibtex: |-
+    @article{barke2023grounded,
+      title = {Grounded {Copilot}: How Programmers Interact with Code-Generating Models},
+      author = {Barke, Shraddha and James, Michael B. and Polikarpova, Nadia},
+      journal = {Proceedings of the ACM on Programming Languages},
+      volume = {7},
+      number = {OOPSLA1},
+      year = {2023},
+      doi = {10.1145/3586030}
+    }
+  bibtex_confirmed: false
+- title: Productivity Assessment of Neural Code Completion
+  link: https://arxiv.org/abs/2205.06537
+  authors:
+  - Albert Ziegler
+  - Eirini Kalliamvakou
+  - Shawn Simister
+  - Ganesh Sittampalam
+  - Alice Li
+  - Andrew Rice
+  - Devon Rifkin
+  - Edward Aftandilian
+  institutions:
+  - GitHub
+  date: '2022-05-13'
+  publisher: MAPS 2022
+  envs:
+  - Longitudinal HCI Studies
+  - Human Feedback Loops
+  keywords:
+  - Copilot telemetry
+  - acceptance rate
+  - productivity perception
+  tldr: |-
+    Telemetry + 2,631 surveys; suggestion-acceptance rate is the strongest predictor of perceived productivity.
+  arxiv_id: '2205.06537'
+  sources:
+    arxiv: https://arxiv.org/abs/2205.06537
+  bibtex: |-
+    @inproceedings{ziegler2022productivity,
+      title = {Productivity Assessment of Neural Code Completion},
+      author = {Ziegler, Albert and Kalliamvakou, Eirini and Simister, Shawn and Sittampalam, Ganesh and Li, Alice and Rice, Andrew and Rifkin, Devon and Aftandilian, Edward},
+      booktitle = {Proceedings of the 6th ACM SIGPLAN International Symposium on Machine Programming},
+      year = {2022},
+      doi = {10.1145/3520312.3534864}
+    }
+  bibtex_confirmed: false
+- title: 'Expectation vs. Experience: Evaluating the Usability of Code Generation Tools Powered by Large Language Models'
+  link: https://doi.org/10.1145/3491101.3519665
+  authors:
+  - Priyan Vaithilingam
+  - Tianyi Zhang
+  - Elena L. Glassman
+  institutions:
+  - Harvard SEAS
+  - Purdue
+  date: '2022-04-27'
+  publisher: CHI 2022 EA
+  envs:
+  - Collaboration & Co-Creation
+  keywords:
+  - Copilot
+  - usability
+  - within-subjects
+  - task completion
+  tldr: |-
+    24-participant within-subjects study; Copilot does not always speed up task completion but most prefer it as a starting point.
+  bibtex: |-
+    @inproceedings{vaithilingam2022expectation,
+      title = {Expectation vs. Experience: Evaluating the Usability of Code Generation Tools Powered by Large Language Models},
+      author = {Vaithilingam, Priyan and Zhang, Tianyi and Glassman, Elena L.},
+      booktitle = {Extended Abstracts of the 2022 CHI Conference on Human Factors in Computing Systems},
+      year = {2022},
+      doi = {10.1145/3491101.3519665}
+    }
+  bibtex_confirmed: false
+- title: Training Language Models to Follow Instructions with Human Feedback
+  link: https://arxiv.org/abs/2203.02155
+  authors:
+  - Long Ouyang
+  - Jeff Wu
+  - Xu Jiang
+  - Diogo Almeida
+  - Carroll L. Wainwright
+  - Pamela Mishkin
+  - Chong Zhang
+  - Sandhini Agarwal
+  - Katarina Slama
+  - Alex Ray
+  - John Schulman
+  - Jacob Hilton
+  - Fraser Kelton
+  - Luke Miller
+  - Maddie Simens
+  - Amanda Askell
+  - Peter Welinder
+  - Paul Christiano
+  - Jan Leike
+  - Ryan Lowe
+  institutions:
+  - OpenAI
+  date: '2022-03-04'
+  publisher: NeurIPS 2022
+  envs:
+  - Human Feedback Loops
+  keywords:
+  - RLHF
+  - instruction tuning
+  - alignment
+  - InstructGPT
+  tldr: |-
+    Uses labeler demonstrations and ranked preferences to fine-tune GPT-3 into InstructGPT; the 1.3B InstructGPT is preferred to the 175B GPT-3.
+  arxiv_id: '2203.02155'
+  sources:
+    arxiv: https://arxiv.org/abs/2203.02155
+  bibtex: |-
+    @inproceedings{ouyang2022instructgpt,
+      title = {Training Language Models to Follow Instructions with Human Feedback},
+      author = {Ouyang, Long and Wu, Jeff and Jiang, Xu and Almeida, Diogo and Wainwright, Carroll L. and Mishkin, Pamela and Zhang, Chong and Agarwal, Sandhini and Slama, Katarina and Ray, Alex and Schulman, John and Hilton, Jacob and Kelton, Fraser and Miller, Luke and Simens, Maddie and Askell, Amanda and Welinder, Peter and Christiano, Paul and Leike, Jan and Lowe, Ryan},
+      booktitle = {Advances in Neural Information Processing Systems},
+      year = {2022}
+    }
+  bibtex_confirmed: false
+- title: A Mental-Model Centric Landscape of Human-AI Symbiosis
+  link: https://arxiv.org/abs/2202.09447
+  authors:
+  - Zahra Zahedi
+  - Sarath Sreedharan
+  - Subbarao Kambhampati
+  institutions:
+  - ASU
+  - Colorado State University
+  date: '2022-02-18'
+  publisher: arXiv
+  envs:
+  - Position & Survey
+  keywords:
+  - mental models
+  - human-aware AI
+  - collaboration framework
+  tldr: |-
+    Proposes Generalized Human-AI Interaction (GHAI) framework organizing the field around six mental-model types.
+  arxiv_id: '2202.09447'
+  sources:
+    arxiv: https://arxiv.org/abs/2202.09447
+  bibtex: |-
+    @misc{zahedi2022landscape,
+      title = {A Mental-Model Centric Landscape of Human-{AI} Symbiosis},
+      author = {Zahedi, Zahra and Sreedharan, Sarath and Kambhampati, Subbarao},
+      year = {2022},
+      eprint = {2202.09447},
+      archivePrefix = {arXiv}
+    }
+  bibtex_confirmed: false
+- title: 'CoAuthor: Designing a Human-AI Collaborative Writing Dataset for Exploring Language Model Capabilities'
+  link: https://arxiv.org/abs/2201.06796
+  authors:
+  - Mina Lee
+  - Percy Liang
+  - Qian Yang
+  institutions:
+  - Stanford
+  - Cornell
+  date: '2022-01-18'
+  publisher: CHI 2022
+  envs:
+  - Collaboration & Co-Creation
+  keywords:
+  - CoAuthor
+  - GPT-3
+  - dataset
+  - co-writing
+  - capabilities
+  tldr: |-
+    Releases 1,445-session dataset of 63 writers with 4 GPT-3 instances; replayable via CoAuthor interface.
+  arxiv_id: '2201.06796'
+  sources:
+    arxiv: https://arxiv.org/abs/2201.06796
+    homepage: https://coauthor.stanford.edu
+  bibtex: |-
+    @inproceedings{lee2022coauthor,
+      title = {{CoAuthor}: Designing a Human-{AI} Collaborative Writing Dataset for Exploring Language Model Capabilities},
+      author = {Lee, Mina and Liang, Percy and Yang, Qian},
+      booktitle = {Proceedings of the 2022 CHI Conference on Human Factors in Computing Systems},
+      year = {2022},
+      doi = {10.1145/3491102.3502030}
+    }
+  bibtex_confirmed: false
+- title: 'AI-Mediated Communication: Language Use and Interpersonal Effects in a Referential Communication Task'
+  link: https://doi.org/10.1145/3449091
+  authors:
+  - Hannah Mieczkowski
+  - Jeffrey T. Hancock
+  - Mor Naaman
+  - Malte Jung
+  - Jess Hohenstein
+  institutions:
+  - Stanford
+  - Cornell
+  - Cornell Tech
+  date: '2021-12-31'
+  publisher: CSCW 2021
+  envs:
+  - Mutual Adaptation
+  keywords:
+  - smart reply
+  - positivity bias
+  - AIMC
+  - referential task
+  tldr: |-
+    Between-subjects task showing smart-reply use produces more positive language and influences interpersonal perceptions.
+  bibtex: |-
+    @article{mieczkowski2021aimc,
+      title = {{AI}-Mediated Communication: Language Use and Interpersonal Effects in a Referential Communication Task},
+      author = {Mieczkowski, Hannah and Hancock, Jeffrey T. and Naaman, Mor and Jung, Malte and Hohenstein, Jess},
+      journal = {Proceedings of the ACM on Human-Computer Interaction},
+      volume = {5},
+      number = {CSCW1},
+      year = {2021},
+      doi = {10.1145/3449091}
+    }
+  bibtex_confirmed: false
+- title: Asleep at the Keyboard? Assessing the Security of GitHub Copilot's Code Contributions
+  link: https://arxiv.org/abs/2108.09293
+  authors:
+  - Hammond Pearce
+  - Baleegh Ahmad
+  - Benjamin Tan
+  - Brendan Dolan-Gavitt
+  - Ramesh Karri
+  institutions:
+  - NYU
+  date: '2021-08-20'
+  publisher: IEEE S&P 2022
+  envs:
+  - Collaboration & Co-Creation
+  keywords:
+  - Copilot security
+  - CWE
+  - vulnerabilities
+  tldr: |-
+    Across 89 CWE scenarios and 1,689 generated programs, ~40% of Copilot completions are vulnerable.
+  arxiv_id: '2108.09293'
+  sources:
+    arxiv: https://arxiv.org/abs/2108.09293
+    publisher_page: https://ieeexplore.ieee.org/document/9833571/
+  bibtex: |-
+    @inproceedings{pearce2022asleep,
+      title = {Asleep at the Keyboard? Assessing the Security of {GitHub} {Copilot}'s Code Contributions},
+      author = {Pearce, Hammond and Ahmad, Baleegh and Tan, Benjamin and Dolan-Gavitt, Brendan and Karri, Ramesh},
+      booktitle = {2022 IEEE Symposium on Security and Privacy (SP)},
+      year = {2022}
+    }
+  bibtex_confirmed: false
+- title: 'Trust-Aware Planning: Modeling Trust Evolution in Iterated Human-Robot Interaction'
+  link: https://arxiv.org/abs/2105.01220
+  authors:
+  - Zahra Zahedi
+  - Mudit Verma
+  - Sarath Sreedharan
+  - Subbarao Kambhampati
+  institutions:
+  - ASU
+  - Colorado State
+  date: '2021-05-03'
+  publisher: HRI 2023
+  envs:
+  - Mutual Adaptation
+  keywords:
+  - trust evolution
+  - longitudinal HRI
+  - planning
+  - supervisor
+  tldr: |-
+    Trust-aware planning framework; robot's planning incorporates evolving human trust to maximize team goal.
+  arxiv_id: '2105.01220'
+  sources:
+    arxiv: https://arxiv.org/abs/2105.01220
+  bibtex: |-
+    @inproceedings{zahedi2023trustaware,
+      title = {Trust-Aware Planning: Modeling Trust Evolution in Iterated Human-Robot Interaction},
+      author = {Zahedi, Zahra and Verma, Mudit and Sreedharan, Sarath and Kambhampati, Subbarao},
+      booktitle = {Proceedings of the 2023 ACM/IEEE International Conference on Human-Robot Interaction},
+      year = {2023},
+      doi = {10.1145/3568162.3578628}
+    }
+  bibtex_confirmed: false
+- title: 'Human-AI Symbiosis: A Survey of Current Approaches'
+  link: https://arxiv.org/abs/2103.09990
+  authors:
+  - Zahra Zahedi
+  - Subbarao Kambhampati
+  institutions:
+  - ASU
+  date: '2021-03-18'
+  publisher: arXiv
+  envs:
+  - Position & Survey
+  keywords:
+  - human-AI symbiosis
+  - survey
+  - taxonomy
+  - collaboration
+  tldr: |-
+    Comprehensive taxonomy of human-AI collaboration along dimensions including flow of complementing, task horizon, model representation, knowledge level, and teaming goal.
+  arxiv_id: '2103.09990'
+  sources:
+    arxiv: https://arxiv.org/abs/2103.09990
+  bibtex: |-
+    @misc{zahedi2021symbiosis,
+      title = {Human-{AI} Symbiosis: A Survey of Current Approaches},
+      author = {Zahedi, Zahra and Kambhampati, Subbarao},
+      year = {2021},
+      eprint = {2103.09990},
+      archivePrefix = {arXiv}
+    }
+  bibtex_confirmed: false
+- title: The Impact of Multiple Parallel Phrase Suggestions on Email Input and Composition Behaviour of Native and Non-Native
+    English Writers
+  link: https://arxiv.org/abs/2101.09157
+  authors:
+  - Daniel Buschek
+  - Martin Zürn
+  - Malin Eiband
+  institutions:
+  - U. Bayreuth
+  - LMU Munich
+  date: '2021-01-22'
+  publisher: CHI 2021
+  envs:
+  - Collaboration & Co-Creation
+  - Mutual Adaptation
+  keywords:
+  - phrase suggestions
+  - email composition
+  - non-native
+  - ideation
+  tldr: |-
+    N=156 study comparing 0/1/3/6 parallel phrase suggestions; multiple suggestions help ideation at cost of efficiency, stronger benefits for non-native writers.
+  arxiv_id: '2101.09157'
+  sources:
+    arxiv: https://arxiv.org/abs/2101.09157
+  bibtex: |-
+    @inproceedings{buschek2021phrase,
+      title = {The Impact of Multiple Parallel Phrase Suggestions on Email Input and Composition Behaviour of Native and Non-Native English Writers},
+      author = {Buschek, Daniel and Z{\"u}rn, Martin and Eiband, Malin},
+      booktitle = {Proceedings of the 2021 CHI Conference on Human Factors in Computing Systems},
+      year = {2021},
+      doi = {10.1145/3411764.3445372}
+    }
+  bibtex_confirmed: false
+- title: Learning to summarize from human feedback
+  link: https://arxiv.org/abs/2009.01325
+  authors:
+  - Nisan Stiennon
+  - Long Ouyang
+  - Jeff Wu
+  - Daniel M. Ziegler
+  - Ryan Lowe
+  - Chelsea Voss
+  - Alec Radford
+  - Dario Amodei
+  - Paul Christiano
+  institutions:
+  - OpenAI
+  date: '2020-09-02'
+  publisher: NeurIPS 2020
+  envs:
+  - Human Feedback Loops
+  keywords:
+  - RLHF
+  - summarization
+  - preference learning
+  - reward model
+  tldr: |-
+    Trains summarization policies against a reward model fit to human comparisons. Resulting summaries beat reference summaries and supervised models 10x larger.
+  arxiv_id: '2009.01325'
+  sources:
+    arxiv: https://arxiv.org/abs/2009.01325
+    publisher_page: https://proceedings.neurips.cc/paper/2020/hash/1f89885d556929e98d3ef9b86448f951-Abstract.html
+  bibtex: |-
+    @inproceedings{stiennon2020summarize,
+      title = {Learning to summarize from human feedback},
+      author = {Stiennon, Nisan and Ouyang, Long and Wu, Jeff and Ziegler, Daniel M. and Lowe, Ryan and Voss, Chelsea and Radford, Alec and Amodei, Dario and Christiano, Paul},
+      booktitle = {Advances in Neural Information Processing Systems},
+      year = {2020}
+    }
+  bibtex_confirmed: false
+- title: Feedback Loop and Bias Amplification in Recommender Systems
+  link: https://arxiv.org/abs/2007.13019
+  authors:
+  - Masoud Mansoury
+  - Himan Abdollahpouri
+  - Mykola Pechenizkiy
+  - Bamshad Mobasher
+  - Robin Burke
+  institutions:
+  - Eindhoven
+  - CU Boulder
+  - DePaul
+  date: '2020-07-25'
+  publisher: CIKM 2020
+  envs:
+  - Human Feedback Loops
+  keywords:
+  - popularity bias
+  - feedback amplification
+  - minority disadvantage
+  tldr: |-
+    Simulates user-recommender feedback loops; popularity bias amplifies, aggregate diversity declines, minority groups disadvantaged more.
+  arxiv_id: '2007.13019'
+  sources:
+    arxiv: https://arxiv.org/abs/2007.13019
+  bibtex: |-
+    @inproceedings{mansoury2020feedback,
+      title = {Feedback Loop and Bias Amplification in Recommender Systems},
+      author = {Mansoury, Masoud and Abdollahpouri, Himan and Pechenizkiy, Mykola and Mobasher, Bamshad and Burke, Robin},
+      booktitle = {Proceedings of the 29th ACM International Conference on Information \& Knowledge Management},
+      year = {2020},
+      doi = {10.1145/3340531.3412152}
+    }
+  bibtex_confirmed: false
+- title: Predictive Text Encourages Predictable Writing
+  link: https://doi.org/10.1145/3377325.3377523
+  authors:
+  - Kenneth C. Arnold
+  - Krysta Chauncey
+  - Krzysztof Z. Gajos
+  institutions:
+  - Harvard SEAS
+  - Tufts
+  date: 2020-03
+  publisher: IUI 2020
+  envs:
+  - Mutual Adaptation
+  keywords:
+  - predictive text
+  - predictability
+  - lexical diversity
+  - image captions
+  tldr: |-
+    Compares writing with/without predictive suggestions; users gravitate toward words the system would predict, reducing lexical diversity.
+  bibtex: |-
+    @inproceedings{arnold2020predictive,
+      title = {Predictive Text Encourages Predictable Writing},
+      author = {Arnold, Kenneth C. and Chauncey, Krysta and Gajos, Krzysztof Z.},
+      booktitle = {Proceedings of the 25th International Conference on Intelligent User Interfaces},
+      year = {2020},
+      doi = {10.1145/3377325.3377523}
+    }
+  bibtex_confirmed: false
+- title: 'AI-Mediated Communication: Definition, Research Agenda, and Ethical Considerations'
+  link: https://academic.oup.com/jcmc/article/25/1/89/5714020
+  authors:
+  - Jeffrey T. Hancock
+  - Mor Naaman
+  - Karen Levy
+  institutions:
+  - Stanford
+  - Cornell Tech
+  - Cornell
+  date: '2020-01-24'
+  publisher: Journal of Computer-Mediated Communication 2020
+  envs:
+  - Position & Survey
+  keywords:
+  - AI-mediated communication
+  - AI-MC
+  - definition
+  - research agenda
+  tldr: |-
+    Defines AI-MC as "mediated communication between people in which a computational agent operates on behalf of a communicator by modifying, augmenting, or generating messages" and proposes a 5-dimension framework.
+  sources:
+    publisher_page: https://academic.oup.com/jcmc/article/25/1/89/5714020
+  bibtex: |-
+    @article{hancock2020aimc,
+      title = {{AI}-Mediated Communication: Definition, Research Agenda, and Ethical Considerations},
+      author = {Hancock, Jeffrey T. and Naaman, Mor and Levy, Karen},
+      journal = {Journal of Computer-Mediated Communication},
+      volume = {25},
+      number = {1},
+      pages = {89--100},
+      year = {2020},
+      doi = {10.1093/jcmc/zmz022}
+    }
+  bibtex_confirmed: false
+- title: Guidelines for Human-AI Interaction
+  link: https://doi.org/10.1145/3290605.3300233
+  authors:
+  - Saleema Amershi
+  - Daniel Weld
+  - Mihaela Vorvoreanu
+  - Adam Fourney
+  - Besmira Nushi
+  - Penny Collisson
+  - Jina Suh
+  - Shamsi Iqbal
+  - Paul N. Bennett
+  - Kori Inkpen
+  - Jaime Teevan
+  - Ruth Kikin-Gil
+  - Eric Horvitz
+  institutions:
+  - Microsoft Research
+  - U. Washington
+  date: 2019-05
+  publisher: CHI 2019
+  envs:
+  - Position & Survey
+  - Collaboration & Co-Creation
+  keywords:
+  - design guidelines
+  - human-AI interaction
+  - CHI
+  - adaptive UI
+  tldr: |-
+    Proposes 18 design guidelines for AI-infused interfaces, including "learn from user behavior" and "update and adapt cautiously."
+  bibtex: |-
+    @inproceedings{amershi2019guidelines,
+      title = {Guidelines for Human-{AI} Interaction},
+      author = {Amershi, Saleema and Weld, Daniel and Vorvoreanu, Mihaela and Fourney, Adam and Nushi, Besmira and Collisson, Penny and Suh, Jina and Iqbal, Shamsi and Bennett, Paul N. and Inkpen, Kori and Teevan, Jaime and Kikin-Gil, Ruth and Horvitz, Eric},
+      booktitle = {Proceedings of the 2019 CHI Conference on Human Factors in Computing Systems},
+      year = {2019},
+      doi = {10.1145/3290605.3300233}
+    }
+  bibtex_confirmed: false
+- title: 'Deep TAMER: Interactive Agent Shaping in High-Dimensional State Spaces'
+  link: https://ojs.aaai.org/index.php/AAAI/article/view/11485
+  authors:
+  - Garrett Warnell
+  - Nicholas Waytowich
+  - Vernon Lawhern
+  - Peter Stone
+  institutions:
+  - ARL
+  - UT Austin
+  date: '2018-12-31'
+  publisher: AAAI 2018
+  envs:
+  - Human Feedback Loops
+  keywords:
+  - TAMER
+  - interactive RL
+  - scalar feedback
+  - Atari
+  tldr: |-
+    Extends TAMER framework with deep neural networks; uses 15 minutes of human scalar feedback to train above-human performance on Atari Bowling.
+  bibtex: |-
+    @inproceedings{warnell2018deeptamer,
+      title = {Deep {TAMER}: Interactive Agent Shaping in High-Dimensional State Spaces},
+      author = {Warnell, Garrett and Waytowich, Nicholas and Lawhern, Vernon and Stone, Peter},
+      booktitle = {Proceedings of the AAAI Conference on Artificial Intelligence},
+      year = {2018},
+      doi = {10.1609/aaai.v32i1.11485}
+    }
+  bibtex_confirmed: false
+- title: Sentiment Bias in Predictive Text Recommendations Results in Biased Writing
+  link: https://doi.org/10.20380/GI2018.07
+  authors:
+  - Kenneth C. Arnold
+  - Krysta Chauncey
+  - Krzysztof Z. Gajos
+  institutions:
+  - Harvard SEAS
+  date: '2018-12-31'
+  publisher: Graphics Interface 2018
+  envs:
+  - Mutual Adaptation
+  keywords:
+  - sentiment bias
+  - predictive text
+  - biased writing
+  - restaurant reviews
+  tldr: |-
+    Skewed-sentiment phrase suggestions shift human-written restaurant reviews in the corresponding direction.
+  bibtex: |-
+    @inproceedings{arnold2018sentiment,
+      title = {Sentiment Bias in Predictive Text Recommendations Results in Biased Writing},
+      author = {Arnold, Kenneth C. and Chauncey, Krysta and Gajos, Krzysztof Z.},
+      booktitle = {Proceedings of Graphics Interface 2018},
+      year = {2018},
+      doi = {10.20380/GI2018.07}
+    }
+  bibtex_confirmed: false
+- title: Reward learning from human preferences and demonstrations in Atari
+  link: https://arxiv.org/abs/1811.06521
+  authors:
+  - Borja Ibarz
+  - Jan Leike
+  - Tobias Pohlen
+  - Geoffrey Irving
+  - Shane Legg
+  - Dario Amodei
+  institutions:
+  - DeepMind
+  date: '2018-11-15'
+  publisher: NeurIPS 2018
+  envs:
+  - Human Feedback Loops
+  keywords:
+  - preferences
+  - demonstrations
+  - Atari
+  - reward modeling
+  tldr: |-
+    Combines demonstrations and preferences in deep RL; reaches superhuman performance on 2/9 Atari games without ground-truth rewards.
+  arxiv_id: '1811.06521'
+  sources:
+    arxiv: https://arxiv.org/abs/1811.06521
+  bibtex: |-
+    @inproceedings{ibarz2018atari,
+      title = {Reward learning from human preferences and demonstrations in {Atari}},
+      author = {Ibarz, Borja and Leike, Jan and Pohlen, Tobias and Irving, Geoffrey and Legg, Shane and Amodei, Dario},
+      booktitle = {Advances in Neural Information Processing Systems},
+      year = {2018}
+    }
+  bibtex_confirmed: false
+- title: How Algorithmic Confounding in Recommendation Systems Increases Homogeneity and Decreases Utility
+  link: https://arxiv.org/abs/1710.11214
+  authors:
+  - Allison J. B. Chaney
+  - Brandon M. Stewart
+  - Barbara E. Engelhardt
+  institutions:
+  - Princeton
+  - Duke
+  date: '2017-10-30'
+  publisher: RecSys 2018
+  envs:
+  - Human Feedback Loops
+  keywords:
+  - algorithmic confounding
+  - recommender feedback
+  - homogeneity
+  - simulation
+  tldr: |-
+    Simulation studies show that data collected under algorithmic recommendations is confounded — homogenizes user behavior without increasing utility.
+  arxiv_id: '1710.11214'
+  sources:
+    arxiv: https://arxiv.org/abs/1710.11214
+  bibtex: |-
+    @inproceedings{chaney2018confounding,
+      title = {How Algorithmic Confounding in Recommendation Systems Increases Homogeneity and Decreases Utility},
+      author = {Chaney, Allison J. B. and Stewart, Brandon M. and Engelhardt, Barbara E.},
+      booktitle = {Proceedings of the 12th ACM Conference on Recommender Systems},
+      year = {2018},
+      doi = {10.1145/3240323.3240370}
+    }
+  bibtex_confirmed: false
+- title: 'Human-robot mutual adaptation in collaborative tasks: Models and experiments'
+  link: https://journals.sagepub.com/doi/10.1177/0278364917690593
+  authors:
+  - Stefanos Nikolaidis
+  - David Hsu
+  - Siddhartha Srinivasa
+  institutions:
+  - USC
+  - NUS
+  - CMU
+  date: 2017-06
+  publisher: International Journal of Robotics Research 2017
+  envs:
+  - Mutual Adaptation
+  keywords:
+  - mutual adaptation
+  - IJRR
+  - collaborative tasks
+  - bounded memory
+  tldr: |-
+    Extends mutual adaptation model into repeated collaborative tasks with measured trust.
+  bibtex: |-
+    @article{nikolaidis2017ijrr,
+      title = {Human-robot mutual adaptation in collaborative tasks: Models and experiments},
+      author = {Nikolaidis, Stefanos and Hsu, David and Srinivasa, Siddhartha},
+      journal = {International Journal of Robotics Research},
+      volume = {36},
+      number = {5-7},
+      pages = {618--634},
+      year = {2017},
+      doi = {10.1177/0278364917690593}
+    }
+  bibtex_confirmed: false
+- title: Deep Reinforcement Learning from Human Preferences
+  link: https://arxiv.org/abs/1706.03741
+  authors:
+  - Paul F. Christiano
+  - Jan Leike
+  - Tom B. Brown
+  - Miljan Martic
+  - Shane Legg
+  - Dario Amodei
+  institutions:
+  - OpenAI
+  - DeepMind
+  date: '2017-06-12'
+  publisher: NeurIPS 2017
+  envs:
+  - Human Feedback Loops
+  keywords:
+  - RLHF
+  - preference learning
+  - reward modeling
+  - deep RL
+  tldr: |-
+    Seminal RLHF paper introducing learning from pairwise human preferences over agent trajectories. Achieves Atari/locomotion task learning with feedback on under 1% of agent interactions, establishing the canonical training-from-use loop.
+  arxiv_id: '1706.03741'
+  sources:
+    arxiv: https://arxiv.org/abs/1706.03741
+    publisher_page: https://papers.nips.cc/paper/2017/hash/d5e2c0adad503c91f91df240d0cd4e49-Abstract.html
+  bibtex: |-
+    @inproceedings{christiano2017preferences,
+      title = {Deep Reinforcement Learning from Human Preferences},
+      author = {Christiano, Paul F. and Leike, Jan and Brown, Tom B. and Martic, Miljan and Legg, Shane and Amodei, Dario},
+      booktitle = {Advances in Neural Information Processing Systems},
+      year = {2017}
+    }
+  bibtex_confirmed: false
+- title: Human-Robot Mutual Adaptation in Shared Autonomy
+  link: https://arxiv.org/abs/1701.07851
+  authors:
+  - Stefanos Nikolaidis
+  - Yu Xiang Zhu
+  - David Hsu
+  - Siddhartha Srinivasa
+  institutions:
+  - CMU
+  - NUS
+  date: '2017-01-26'
+  publisher: HRI 2017
+  envs:
+  - Mutual Adaptation
+  keywords:
+  - mutual adaptation
+  - shared autonomy
+  - bounded-memory model
+  - trust
+  tldr: |-
+    Bounded-Memory Adaptation Model integrated into decision framework; robot guides human toward effective strategy while maintaining trust.
+  arxiv_id: '1701.07851'
+  sources:
+    arxiv: https://arxiv.org/abs/1701.07851
+  bibtex: |-
+    @inproceedings{nikolaidis2017mutual,
+      title = {Human-Robot Mutual Adaptation in Shared Autonomy},
+      author = {Nikolaidis, Stefanos and Zhu, Yu Xiang and Hsu, David and Srinivasa, Siddhartha},
+      booktitle = {Proceedings of the 2017 ACM/IEEE International Conference on Human-Robot Interaction},
+      year = {2017},
+      doi = {10.1145/2909824.3020252}
+    }
+  bibtex_confirmed: false
+- title: Interactive Learning from Policy-Dependent Human Feedback
+  link: https://arxiv.org/abs/1701.06049
+  authors:
+  - James MacGlashan
+  - Mark K. Ho
+  - Robert Loftin
+  - Bei Peng
+  - Guan Wang
+  - David Roberts
+  - Matthew E. Taylor
+  - Michael L. Littman
+  institutions:
+  - Brown
+  - MIT
+  - NCSU
+  - Washington State
+  - Cogitai
+  date: '2017-01-21'
+  publisher: ICML 2017
+  envs:
+  - Human Feedback Loops
+  keywords:
+  - policy-dependent feedback
+  - COACH
+  - actor-critic
+  - interactive RL
+  tldr: |-
+    Empirically shows human feedback is policy-dependent; introduces COACH (Convergent Actor-Critic by Humans) algorithm.
+  arxiv_id: '1701.06049'
+  sources:
+    arxiv: https://arxiv.org/abs/1701.06049
+    publisher_page: https://proceedings.mlr.press/v70/macglashan17a.html
+  bibtex: |-
+    @inproceedings{macglashan2017coach,
+      title = {Interactive Learning from Policy-Dependent Human Feedback},
+      author = {MacGlashan, James and Ho, Mark K. and Loftin, Robert and Peng, Bei and Wang, Guan and Roberts, David and Taylor, Matthew E. and Littman, Michael L.},
+      booktitle = {Proceedings of the 34th International Conference on Machine Learning},
+      year = {2017}
+    }
+  bibtex_confirmed: false
+- title: 'Policy Shaping: Integrating Human Feedback with Reinforcement Learning'
+  link: https://proceedings.neurips.cc/paper/2013/hash/e034fb6b66aacc1d48f445ddfb08da98-Abstract.html
+  authors:
+  - Shane Griffith
+  - Kaushik Subramanian
+  - Jonathan Scholz
+  - Charles L. Isbell
+  - Andrea L. Thomaz
+  institutions:
+  - Georgia Tech
+  date: '2013-12-31'
+  publisher: NeurIPS 2013
+  envs:
+  - Human Feedback Loops
+  keywords:
+  - policy shaping
+  - Bayesian feedback
+  - ADVISE
+  tldr: |-
+    Treats human feedback as direct policy labels; introduces Advise, a Bayesian approach robust to infrequent and inconsistent feedback.
+  bibtex: |-
+    @inproceedings{griffith2013policy,
+      title = {Policy Shaping: Integrating Human Feedback with Reinforcement Learning},
+      author = {Griffith, Shane and Subramanian, Kaushik and Scholz, Jonathan and Isbell, Charles L. and Thomaz, Andrea L.},
+      booktitle = {Advances in Neural Information Processing Systems},
+      year = {2013}
+    }
+  bibtex_confirmed: false

@@ -1,0 +1,11 @@
+[project]
+name = "human-ai-coevolution-paper-list"
+version = "0.1.0"
+description = "Curated list of papers on Human-AI coevolution: collaboration, mutual adaptation, and feedback loops."
+requires-python = ">=3.13"
+dependencies = [
+    "kaleido>=1.2.0",
+    "pandas>=3.0.2",
+    "plotly>=6.7.0",
+    "pyyaml>=6.0.3",
+]
