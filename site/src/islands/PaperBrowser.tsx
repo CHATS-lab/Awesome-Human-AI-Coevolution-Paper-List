@@ -33,11 +33,11 @@ interface Props {
 }
 
 const ENV_ICON: Record<string, string> = {
-  'Collaboration & Co-Creation': '🤝',
-  'Mutual Adaptation': '🔄',
-  'Human Feedback Loops': '🎯',
-  'Longitudinal HCI Studies': '📊',
-  'Position & Survey': '📚',
+  'Collaboration & Co-Creation': '01',
+  'Mutual Adaptation': '02',
+  'Human Feedback Loops': '03',
+  'Longitudinal HCI Studies': '04',
+  'Position & Survey': '05',
 };
 
 type SortKey = 'date-desc' | 'date-asc' | 'title-asc' | 'title-desc' | 'random' | 'relevance';
@@ -606,7 +606,7 @@ export default function PaperBrowser(props: Props) {
             </Show>
             <For each={Array.from(envs())}>{(v) => (
               <button class="chip chip-active" onClick={() => toggle(envs, setEnvs, v)}>
-                {ENV_ICON[v] ?? '·'} {v} <span class="ml-1">×</span>
+                <span class="font-mono mr-1.5 opacity-70">{ENV_ICON[v] ?? '·'}</span>{v} <span class="ml-1">×</span>
               </button>
             )}</For>
             <For each={Array.from(keys())}>{(v) => (
@@ -1091,13 +1091,13 @@ function escapeBibValue(s: string): string {
 // Ordered set of source-link labels rendered on the expanded card.
 // The first populated entry becomes the primary "Open paper" call to
 // action; the rest render as secondary outline pills.
-const SOURCE_LABELS: Array<{ key: string; label: string; glyph: string }> = [
-  { key: 'arxiv',          label: 'arXiv',      glyph: '📄' },
-  { key: 'publisher_page', label: 'Publisher',  glyph: '📑' },
-  { key: 'openreview',     label: 'OpenReview', glyph: '🔍' },
-  { key: 'homepage',       label: 'Homepage',   glyph: '🌐' },
-  { key: 'code',           label: 'Code',       glyph: '⌨' },
-  { key: 'dataset',        label: 'Dataset',    glyph: '🗂' },
+const SOURCE_LABELS: Array<{ key: string; label: string }> = [
+  { key: 'arxiv',          label: 'arXiv' },
+  { key: 'publisher_page', label: 'Publisher' },
+  { key: 'openreview',     label: 'OpenReview' },
+  { key: 'homepage',       label: 'Homepage' },
+  { key: 'code',           label: 'Code' },
+  { key: 'dataset',        label: 'Dataset' },
 ];
 
 function buildBibtex(p: BrowserPaper): string {
@@ -1181,7 +1181,7 @@ function PaperCardClient(props: CardProps) {
   // primary "Open paper" CTA; the rest become outline pills. If no
   // sources are populated we fall back to the contributor-supplied
   // `link:` so the card always has at least one open-paper option.
-  const actionItems = (): Array<{ key: string; label: string; glyph: string; url: string }> => {
+  const actionItems = (): Array<{ key: string; label: string; url: string }> => {
     const present = SOURCE_LABELS
       .filter((s) => p.sources[s.key])
       .map((s) => ({ ...s, url: p.sources[s.key]! }));
@@ -1234,7 +1234,7 @@ function PaperCardClient(props: CardProps) {
         </div>
         <div class="shrink-0 flex items-center gap-2">
           <For each={p.envs}>{(env) => (
-            <span class="text-base" title={env} aria-label={env}>{ENV_ICON[env] ?? '🖼️'}</span>
+            <span class="font-mono text-[10.5px] uppercase tracking-[0.08em] text-accent dark:text-accent-dark" title={env} aria-label={env}>{ENV_ICON[env] ?? '—'}</span>
           )}</For>
           <Show when={p.source === 'adjacent'}>
             <span class="text-[10px] uppercase tracking-wider px-1.5 py-0.5 rounded bg-paper-200 dark:bg-ink-700 text-ink-500 dark:text-ink-200 border border-paper-300/60 dark:border-ink-600/60">adj</span>
@@ -1287,14 +1287,13 @@ function PaperCardClient(props: CardProps) {
               <a
                 class={
                   i() === 0
-                    ? 'inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-md bg-accent text-paper-50 dark:bg-accent-dark dark:text-ink-900 hover:opacity-90 font-medium'
-                    : 'inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-md border border-paper-300/80 dark:border-ink-600/60 hover:bg-paper-200/60 dark:hover:bg-ink-700/40'
+                    ? 'inline-flex items-center gap-1.5 px-3 py-1.5 rounded-sm bg-accent text-paper-100 dark:bg-accent-dark dark:text-ink-900 hover:opacity-90 font-medium tracking-wide'
+                    : 'inline-flex items-center gap-1.5 px-3 py-1.5 rounded-sm border border-paper-300/80 dark:border-ink-600/60 hover:border-ink-500 dark:hover:border-ink-300 transition-colors'
                 }
                 href={s.url}
                 target="_blank"
                 rel="noopener"
               >
-                <span aria-hidden="true">{s.glyph}</span>
                 <span>{s.label}</span>
                 <Show when={i() === 0}><span aria-hidden="true">↗</span></Show>
               </a>

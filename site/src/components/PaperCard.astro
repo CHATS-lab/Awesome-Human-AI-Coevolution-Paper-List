@@ -8,41 +8,55 @@ const isAdj = paper.source === 'adjacent';
 const linkIsArxiv = /arxiv\.org/.test(paper.link);
 const showArxiv = !linkIsArxiv && !!paper.arxivId;
 ---
-<article class={`card p-5 group ${isAdj ? 'opacity-95' : ''}`}>
+<article class={`card p-6 ${isAdj ? 'opacity-95' : ''}`}>
   <div class="flex items-start gap-3">
     <div class="flex-1 min-w-0">
-      <h3 class="text-base sm:text-lg font-semibold leading-snug text-ink-700 dark:text-ink-50">
+      <h3 class="font-display text-lg sm:text-[1.2rem] font-medium leading-snug text-ink-700 dark:text-ink-50 tracking-tight">
         <a href={paper.link} target="_blank" rel="noopener" class="hover:text-accent dark:hover:text-accent-dark transition-colors">
           {paper.title}
         </a>
       </h3>
-      <p class="mt-1 text-sm text-ink-500 dark:text-ink-200">
+      <p class="mt-2 text-[13px] text-ink-500 dark:text-ink-200">
         {paper.authors.slice(0, 4).join(', ')}{moreAuthors > 0 ? ` +${moreAuthors} more` : ''}
       </p>
     </div>
     {isAdj && (
-      <span class="shrink-0 text-[10px] uppercase tracking-wider px-1.5 py-0.5 rounded bg-paper-200 dark:bg-ink-700 text-ink-500 dark:text-ink-200 border border-paper-300/60 dark:border-ink-600/60">adjacent</span>
+      <span class="shrink-0 font-mono text-[10px] uppercase tracking-[0.08em] px-1.5 py-0.5 border border-paper-300 dark:border-ink-600/60 text-ink-500 dark:text-ink-300">adjacent</span>
     )}
   </div>
 
-  <div class="mt-3 grid sm:grid-cols-2 gap-x-6 gap-y-1 text-xs text-ink-500 dark:text-ink-200">
+  <dl class="mt-4 grid sm:grid-cols-2 gap-x-8 gap-y-1.5 text-[12.5px] text-ink-600 dark:text-ink-200">
     {paper.institutions.length > 0 && (
-      <div class="flex items-start gap-1.5"><span aria-hidden="true">🏛</span><span>{paper.institutions.join(' · ')}</span></div>
+      <div class="flex items-baseline gap-2">
+        <dt class="font-mono text-[10px] uppercase tracking-[0.08em] text-ink-400 dark:text-ink-300 w-[60px] shrink-0">Inst.</dt>
+        <dd class="min-w-0">{paper.institutions.join(' · ')}</dd>
+      </div>
     )}
-    <div class="flex items-start gap-1.5"><span aria-hidden="true">📅</span><span>{paper.date}</span></div>
-    <div class="flex items-start gap-1.5"><span aria-hidden="true">📑</span><span>{paper.publisher}</span></div>
-    <div class="flex items-start gap-1.5">
-      {paper.envs.map((env) => (
-        <span class="inline-flex items-center gap-1">
-          <span aria-hidden="true">{ENV_EMOJI[env] ?? '🖼️'}</span>
-          <span>{env}</span>
-        </span>
-      ))}
+    <div class="flex items-baseline gap-2">
+      <dt class="font-mono text-[10px] uppercase tracking-[0.08em] text-ink-400 dark:text-ink-300 w-[60px] shrink-0">Date</dt>
+      <dd>{paper.date}</dd>
     </div>
-  </div>
+    <div class="flex items-baseline gap-2">
+      <dt class="font-mono text-[10px] uppercase tracking-[0.08em] text-ink-400 dark:text-ink-300 w-[60px] shrink-0">Venue</dt>
+      <dd>{paper.publisher}</dd>
+    </div>
+    {paper.envs.length > 0 && (
+      <div class="flex items-baseline gap-2">
+        <dt class="font-mono text-[10px] uppercase tracking-[0.08em] text-ink-400 dark:text-ink-300 w-[60px] shrink-0">Cat.</dt>
+        <dd class="flex flex-wrap gap-x-3 gap-y-1">
+          {paper.envs.map((env) => (
+            <span class="inline-flex items-baseline gap-1.5">
+              <span class="sec-idx text-[11px]">{ENV_EMOJI[env] ?? '—'}</span>
+              <span>{env}</span>
+            </span>
+          ))}
+        </dd>
+      </div>
+    )}
+  </dl>
 
   {paper.keywords.length > 0 && (
-    <div class="mt-3 flex flex-wrap gap-1.5">
+    <div class="mt-4 flex flex-wrap gap-1.5">
       {paper.keywords.slice(0, compact ? 5 : 10).map((kw) => (
         <a class="chip" href={`${base}/papers?key=${encodeURIComponent(kw)}`}>{kw}</a>
       ))}
@@ -50,10 +64,10 @@ const showArxiv = !linkIsArxiv && !!paper.arxivId;
   )}
 
   {!compact && paper.tldr && (
-    <p class="mt-3 text-sm text-ink-600 dark:text-ink-100 leading-relaxed clamp-3">{paper.tldr}</p>
+    <p class="mt-4 text-[13.5px] text-ink-600 dark:text-ink-100 leading-relaxed clamp-3">{paper.tldr}</p>
   )}
 
-  <div class="mt-4 flex items-center gap-3 text-xs">
+  <div class="mt-5 flex items-center gap-4 text-[12px]">
     <a class="link" href={`${base}/papers/${paper.slug}`}>Details →</a>
     {showArxiv && (
       <a class="link" href={`https://arxiv.org/abs/${paper.arxivId}`} target="_blank" rel="noopener">arXiv</a>

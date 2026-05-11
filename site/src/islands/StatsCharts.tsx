@@ -20,45 +20,45 @@ function paperColors() {
     ? {
         bg: 'transparent',
         text: '#e9e6df',
-        muted: '#a39e92',
+        muted: '#9a978d',
         faint: 'rgba(255,255,255,0.04)',
-        bar: '#6b8cf0',                 // accent dark
-        barAlt: '#9ab0d4',
-        line: '#8aa5e8',
-        envColors: {                    // for the trend chart by env
-          'Collaboration & Co-Creation': '#6b8cf0',
-          'Mutual Adaptation': '#d49363',
-          'Human Feedback Loops': '#7fb39a',
-          'Longitudinal HCI Studies': '#c79bd0',
-          'Position & Survey': '#9aa0d4',
+        bar: '#7c9ec9',                 // navy on dark
+        barAlt: '#a5bdd4',
+        line: '#7c9ec9',
+        envColors: {                    // navy + brass family on dark
+          'Collaboration & Co-Creation': '#7c9ec9',
+          'Mutual Adaptation': '#cdb89f',
+          'Human Feedback Loops': '#9ab0a0',
+          'Longitudinal HCI Studies': '#b89a78',
+          'Position & Survey': '#a8a8b8',
         } as Record<string, string>,
-        donut: ['#6b8cf0', '#7fb39a', '#d49363', '#c79bd0', '#9aa0d4'],
-        treemapTones: ['#3a4878', '#43547e', '#4d5f84', '#576b8b', '#617791', '#6c8298', '#778d9e', '#8198a4'],
+        donut: ['#7c9ec9', '#cdb89f', '#9ab0a0', '#b89a78', '#a8a8b8'],
+        treemapTones: ['#283a52', '#2f4258', '#374b5f', '#3f5466', '#475d6d', '#506674', '#586f7a', '#617881'],
         cardBorder: 'rgba(233,230,223,0.08)',
-        tooltipBg: '#1a1f29',
+        tooltipBg: '#171b23',
         tooltipBorder: 'rgba(255,255,255,0.08)',
       }
     : {
         bg: 'transparent',
-        text: '#33312a',
-        muted: '#8a8472',
+        text: '#2f2d28',
+        muted: '#6e6c64',
         faint: 'rgba(0,0,0,0.04)',
-        bar: '#3057c4',
-        barAlt: '#7388be',
-        line: '#3057c4',
-        envColors: {
-          'Collaboration & Co-Creation': '#3057c4',
-          'Mutual Adaptation': '#a6622b',
-          'Human Feedback Loops': '#3f7a55',
-          'Longitudinal HCI Studies': '#8a527e',
-          'Position & Survey': '#5c6f99',
+        bar: '#1e3a5f',
+        barAlt: '#516b85',
+        line: '#1e3a5f',
+        envColors: {                    // navy + brass + olive family on light
+          'Collaboration & Co-Creation': '#1e3a5f',
+          'Mutual Adaptation': '#a0826d',
+          'Human Feedback Loops': '#5b7461',
+          'Longitudinal HCI Studies': '#7d5e47',
+          'Position & Survey': '#6b6b87',
         } as Record<string, string>,
-        donut: ['#3057c4', '#3f7a55', '#a6622b', '#8a527e', '#5c6f99'],
-        // single-hue earthy treemap progression (dark → light terracotta)
-        treemapTones: ['#5e3a2a', '#6e4530', '#7e5037', '#8e5b3e', '#9e6745', '#ad734d', '#bb8056', '#c98e62'],
-        cardBorder: 'rgba(35,33,28,0.08)',
-        tooltipBg: '#fbf6ec',
-        tooltipBorder: 'rgba(35,33,28,0.12)',
+        donut: ['#1e3a5f', '#a0826d', '#5b7461', '#7d5e47', '#6b6b87'],
+        // single-hue navy treemap progression
+        treemapTones: ['#1e3a5f', '#2a466b', '#365176', '#425d82', '#4f6a8d', '#5b7799', '#6884a4', '#7591b0'],
+        cardBorder: 'rgba(31,29,26,0.08)',
+        tooltipBg: '#faf9f5',
+        tooltipBorder: 'rgba(31,29,26,0.12)',
       };
 }
 

@@ -14,18 +14,18 @@ const lite = canonical.map((p) => ({
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 <Base
-  title="GUI agent research trends and statistics"
-  description={`Quarterly publication trends, top keywords, environment splits, top institutions and authors, and venue breakdowns across ${canonical.length}+ GUI agent papers.`}
+  title="Statistics — human-AI coevolution research"
+  description={`Quarterly publication trends, top keywords, category splits, top institutions and authors across ${canonical.length}+ papers.`}
 >
-  <section class="mx-auto max-w-7xl px-4 sm:px-6 py-10 reveal-stagger">
-    <p class="heading-eyebrow">Stats</p>
-    <h1 class="display-lg mt-2 text-ink-700 dark:text-ink-50">
-      Trends across <span class="tabular-nums">{canonical.length}</span> papers
+  <section class="mx-auto max-w-7xl px-6 pt-14 pb-16 reveal-stagger">
+    <p class="heading-eyebrow">Statistics</p>
+    <h1 class="display-lg mt-5 text-ink-700 dark:text-ink-50">
+      Trends across <span class="font-mono tabular-nums">{canonical.length}</span> papers
     </h1>
-    <p class="text-ink-500 dark:text-ink-200 mt-3 max-w-2xl">
-      Stats reflect canonical entries only — adjacent papers are excluded so the picture stays scoped to direct GUI-agent research.
+    <p class="text-ink-600 dark:text-ink-200 mt-4 max-w-2xl text-[15px] leading-relaxed">
+      Stats reflect canonical entries only — adjacent papers are excluded so the picture stays scoped to direct human-AI coevolution research.
     </p>
-    <div class="mt-10">
+    <div class="mt-12">
       <StatsCharts client:only="solid-js" papers={lite} basePath={base} />
       <noscript>
         <p class="text-sm text-ink-500 dark:text-ink-200">

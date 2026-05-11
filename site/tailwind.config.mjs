@@ -5,41 +5,46 @@ export default {
   theme: {
     extend: {
       colors: {
-        // warm paper palette (light)
+        // ivory paper palette (light)
         paper: {
-          50: '#fbf6ec',
-          100: '#f7efdf',
-          200: '#ede4d0',
-          300: '#e0d5bc',
-          400: '#c9bb9c',
+          50: '#ffffff',
+          100: '#faf9f5',   // ivory — main background
+          200: '#f2f0e8',
+          300: '#e6e3d8',
+          400: '#d1cdbf',
         },
         ink: {
           50: '#f5f3ee',
           100: '#e9e6df',
           200: '#cfcbc1',
-          300: '#a39e92',
-          400: '#6b6759',
-          500: '#4a473d',
-          600: '#33312a',
-          700: '#23211c',
+          300: '#9a978d',
+          400: '#6e6c64',
+          500: '#4a473f',
+          600: '#2f2d28',
+          700: '#1f1d1a',
           800: '#181712',
           900: '#0f0e0a',
         },
-        // dark theme background — matches the screenshot
+        // dark theme background — kept for the toggle, slightly cooler
         nightbg: {
-          DEFAULT: '#0f1217',
-          soft: '#161a21',
+          DEFAULT: '#10131a',
+          soft: '#171b23',
         },
-        // accent: muted cobalt that reads on both warm paper and dark navy
+        // accent: deep navy
         accent: {
-          DEFAULT: '#3057c4',
-          dark: '#6b8cf0',
+          DEFAULT: '#1e3a5f',
+          dark: '#7c9ec9',  // legible navy on dark bg
+        },
+        // brass secondary — used sparingly for emphasis chips, indices, etc.
+        brass: {
+          DEFAULT: '#a0826d',
+          soft: '#cdb89f',
         },
         chip: {
-          light: '#ece2cf',
-          'light-hover': '#e1d3b6',
-          dark: '#222732',
-          'dark-hover': '#2c3240',
+          light: '#ece9dd',
+          'light-hover': '#dfdbcb',
+          dark: '#1f242e',
+          'dark-hover': '#2a3140',
         },
       },
       fontFamily: {

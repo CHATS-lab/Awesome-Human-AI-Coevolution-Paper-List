@@ -44,59 +44,77 @@ const jsonLd = [
     keywords: 'human-AI coevolution, human-AI collaboration, RLHF, mutual adaptation, feedback loops, longitudinal HCI, position paper',
   },
 ];
+
+// Short one-line glosses for each category — used in the category grid.
+const categoryGloss: Record<string, string> = {
+  'Collaboration & Co-Creation': 'Humans and AI working jointly; how each reshapes the other within and across sessions.',
+  'Mutual Adaptation': 'Both human and AI behavior measurably change in response to each other over time.',
+  'Human Feedback Loops': 'RLHF, preference learning, training-from-use — feedback that becomes future training data.',
+  'Longitudinal HCI Studies': 'Field deployments measuring shifts in human behavior, skill, and norms around AI.',
+  'Position & Survey': 'Framing pieces and surveys that argue for or characterize the coevolutionary lens.',
+};
 ---
 <Base
   title="A curated list of human-AI coevolution research"
   description={description}
   jsonLd={jsonLd}
 >
-  {/* Hero */}
-  <section class="mx-auto max-w-5xl px-4 sm:px-6 pt-20 sm:pt-28 pb-12 reveal-stagger">
-    <p class="heading-eyebrow">A curated paper list</p>
-    <h1 class="display-xl mt-4 text-ink-700 dark:text-ink-50 max-w-4xl">
-      Research on <span class="text-accent dark:text-accent-dark">human–AI coevolution</span>, kept up to date and easy to search.
+  {/* Hero — editorial masthead */}
+  <header class="mx-auto max-w-6xl px-6 pt-20 sm:pt-28 pb-14 border-b border-paper-300/70 dark:border-ink-600/60 reveal-stagger">
+    <p class="heading-eyebrow">A curated paper list <span class="text-paper-400 dark:text-ink-600">/</span> {canonical.length} entries</p>
+    <h1 class="display-xl mt-6 text-ink-700 dark:text-ink-50 max-w-[20ch]">
+      Research on <em class="text-accent dark:text-accent-dark not-italic font-display italic">human–AI coevolution</em>,
+      kept current and easy to search.
     </h1>
-    <p class="mt-6 max-w-2xl text-lg text-ink-500 dark:text-ink-200 leading-relaxed">
-      <strong class="tabular-nums text-ink-700 dark:text-ink-50">{canonical.length}</strong> papers on how humans and AI continuously shape each other — through collaboration, feedback, mutual adaptation, longitudinal deployment, and the position pieces that frame it all.
+    <p class="mt-7 max-w-[58ch] text-[16.5px] text-ink-600 dark:text-ink-200 leading-relaxed">
+      Papers where humans and AI demonstrably <strong class="text-ink-700 dark:text-ink-50">shape each other</strong> — through training feedback, longitudinal deployment, joint creation, and the position pieces that frame the loop. Curated bidirectionally: pure capability and pure UX papers live elsewhere.
     </p>
-
-    <div class="mt-8 flex flex-wrap items-center gap-3">
-      <a href={`${base}/papers`} class="btn-primary text-base px-5 py-2.5">Browse all papers →</a>
-      <a href={`${base}/stats`} class="btn-ghost border border-paper-300/80 dark:border-ink-600/60 px-4 py-2.5 text-base">View stats</a>
+    <div class="mt-9 flex flex-wrap items-center gap-3">
+      <a href={`${base}/papers`} class="btn-primary">Browse all papers →</a>
+      <a href={`${base}/stats`} class="btn-ghost">View statistics</a>
+      <a href={`${base}/about`} class="btn-ghost">About the list</a>
     </div>
-  </section>
+  </header>
 
-  {/* Browse-by-category */}
-  <section class="mx-auto max-w-5xl px-4 sm:px-6 pb-12 reveal" style="animation-delay:560ms">
-    <div class="flex items-center justify-between mb-5">
-      <h2 class="heading-eyebrow">Browse by category</h2>
-      <div class="flex-1 mx-4 rule"></div>
+  {/* Browse-by-category — five editorial blocks numbered 01..05 */}
+  <section class="mx-auto max-w-6xl px-6 mt-16 reveal">
+    <div class="flex items-baseline gap-4 mb-8">
+      <span class="sec-idx">§</span>
+      <h2 class="font-display text-[26px] font-medium text-ink-700 dark:text-ink-50 tracking-tight">Browse by category</h2>
+      <div class="flex-1 rule"></div>
     </div>
-    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+
+    <ol class="grid sm:grid-cols-2 gap-x-10 gap-y-2 list-none p-0">
       {ENV_ORDER.map((env) => (
-        <a
-          href={`${base}/papers?env=${encodeURIComponent(env)}`}
-          class="card p-5 group hover:border-accent/60 dark:hover:border-accent-dark/60 flex items-baseline gap-4"
-        >
-          <span aria-hidden="true" class="text-2xl shrink-0 self-center">{ENV_EMOJI[env]}</span>
-          <div class="min-w-0 flex-1">
-            <div class="font-semibold text-ink-700 dark:text-ink-50">{env}</div>
-            <div class="text-sm text-ink-400 dark:text-ink-300 mt-0.5 tabular-nums">{envCount[env] ?? 0} papers</div>
-          </div>
-          <span aria-hidden="true" class="text-ink-300 dark:text-ink-400 group-hover:text-accent dark:group-hover:text-accent-dark transition-colors">→</span>
-        </a>
+        <li>
+          <a
+            href={`${base}/papers?env=${encodeURIComponent(env)}`}
+            class="group block py-5 border-t border-paper-300/70 dark:border-ink-600/60 hover:border-accent dark:hover:border-accent-dark transition-colors"
+          >
+            <div class="grid grid-cols-[36px_1fr_auto] gap-x-4 items-baseline">
+              <span class="sec-idx">{ENV_EMOJI[env]}</span>
+              <div class="min-w-0">
+                <div class="font-display text-[20px] leading-tight text-ink-700 dark:text-ink-50 group-hover:text-accent dark:group-hover:text-accent-dark transition-colors">{env}</div>
+                <div class="mt-1.5 text-[13px] text-ink-500 dark:text-ink-300 max-w-[48ch]">{categoryGloss[env]}</div>
+              </div>
+              <div class="font-mono text-[11px] uppercase tracking-[0.08em] text-ink-400 dark:text-ink-300 tabular-nums whitespace-nowrap">
+                {envCount[env] ?? 0} {(envCount[env] ?? 0) === 1 ? 'paper' : 'papers'}
+              </div>
+            </div>
+          </a>
+        </li>
       ))}
-    </div>
+    </ol>
   </section>
 
-  {/* Star CTA */}
-  <section class="mx-auto max-w-5xl px-4 sm:px-6 pb-12">
-    <div class="surface rounded-lg px-6 py-5 flex flex-col sm:flex-row items-start sm:items-center gap-4">
-      <div class="shrink-0 w-10 h-10 rounded-md bg-accent/10 dark:bg-accent-dark/15 flex items-center justify-center text-accent dark:text-accent-dark">
-        <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 2l2.96 6.55 7.04.74-5.27 4.84 1.55 6.97L12 17.77 5.72 21.1l1.55-6.97L2 9.29l7.04-.74L12 2z"/></svg>
-      </div>
-      <div class="flex-1 text-sm text-ink-600 dark:text-ink-100 leading-relaxed">
-        Maintained openly on GitHub. If this list helps your work, <strong>star the repo</strong> so others can find it too.
+  {/* Star strip — flat, no decorative icon */}
+  <section class="mx-auto max-w-6xl px-6 mt-16 reveal">
+    <div class="border-t border-b border-paper-300/70 dark:border-ink-600/60 py-7 grid sm:grid-cols-[1fr_auto] gap-6 items-center">
+      <div>
+        <p class="eyebrow-plain">Open source</p>
+        <p class="mt-2 text-[14.5px] text-ink-600 dark:text-ink-100 max-w-[64ch] leading-relaxed">
+          Maintained openly on GitHub. If this list helps your work, starring the repo is the simplest signal that helps others find it.
+        </p>
       </div>
       <a href={REPO_URL} target="_blank" rel="noopener" class="btn-primary shrink-0">
         {stars != null ? `Star · ${stars >= 1000 ? (stars/1000).toFixed(1).replace(/\.0$/, '') + 'k' : stars}` : 'Star on GitHub'}
@@ -105,10 +123,9 @@ const jsonLd = [
   </section>
 
   {/* Year-to-date strip */}
-  <section class="mx-auto max-w-5xl px-4 sm:px-6 pb-20">
-    <p class="text-sm text-ink-400 dark:text-ink-300 text-center">
-      <strong class="text-ink-600 dark:text-ink-100">{thisYear}</strong> papers added so far in {lastYear} ·
-      <a class="link" href={`${base}/stats`}>see breakdown by quarter →</a>
+  <section class="mx-auto max-w-6xl px-6 mt-10 pb-24">
+    <p class="text-[13px] text-ink-400 dark:text-ink-300 text-center">
+      <span class="font-mono text-ink-600 dark:text-ink-100 tabular-nums">{thisYear}</span> added so far in {lastYear} · <a class="link" href={`${base}/stats`}>breakdown by quarter →</a>
     </p>
   </section>
 </Base>

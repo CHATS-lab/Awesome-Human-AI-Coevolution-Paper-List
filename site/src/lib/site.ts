@@ -13,10 +13,15 @@ export const ENV_ORDER = [
   'Longitudinal HCI Studies',
   'Position & Survey',
 ] as const;
+
+/**
+ * Numeric indices used in place of emoji throughout the UI.
+ * Kept named `ENV_EMOJI` so existing imports continue to work.
+ */
 export const ENV_EMOJI: Record<string, string> = {
-  'Collaboration & Co-Creation': '🤝',
-  'Mutual Adaptation': '🔄',
-  'Human Feedback Loops': '🎯',
-  'Longitudinal HCI Studies': '📊',
-  'Position & Survey': '📚',
+  'Collaboration & Co-Creation': '01',
+  'Mutual Adaptation': '02',
+  'Human Feedback Loops': '03',
+  'Longitudinal HCI Studies': '04',
+  'Position & Survey': '05',
 };

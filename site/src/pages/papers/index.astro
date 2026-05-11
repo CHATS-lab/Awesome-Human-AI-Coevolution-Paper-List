@@ -17,24 +17,22 @@ const lite = all.map((p) => ({
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 <Base
-  title="Browse all GUI agent papers"
-  description={`Search and filter ${canonical.length}+ GUI agent papers by environment (web, mobile, desktop, general GUI), keyword, author, institution, year, and venue. Includes computer-use agents, GUI grounding, benchmarks, and datasets.`}
+  title="Browse all human-AI coevolution papers"
+  description={`Search and filter ${canonical.length}+ papers on human-AI coevolution by category, keyword, author, institution, year, and venue.`}
 >
-  <section class="mx-auto max-w-7xl px-4 sm:px-6 py-8 reveal-stagger">
-    <div class="mb-8 flex flex-wrap items-end gap-4 justify-between">
-      <div>
-        <p class="heading-eyebrow">Browse</p>
-        <h1 class="display-lg mt-2 text-ink-700 dark:text-ink-50">All papers</h1>
-        <p class="text-ink-500 dark:text-ink-200 mt-2 max-w-2xl">
-          <strong class="tabular-nums text-ink-700 dark:text-ink-50">{canonical.length}</strong>
-          canonical papers — search across titles, authors, institutions, TLDRs, and keywords. Click any chip to drill in.
-        </p>
-      </div>
+  <section class="mx-auto max-w-7xl px-6 pt-14 pb-10 reveal-stagger">
+    <div class="mb-10 max-w-3xl">
+      <p class="heading-eyebrow">Browse</p>
+      <h1 class="display-lg mt-5 text-ink-700 dark:text-ink-50">All papers</h1>
+      <p class="text-ink-600 dark:text-ink-200 mt-4 text-[15px] leading-relaxed">
+        <span class="font-mono tabular-nums text-ink-700 dark:text-ink-50">{canonical.length}</span>
+        canonical entries — search across titles, authors, institutions, TLDRs, and keywords; or filter by category, keyword, year, venue.
+      </p>
     </div>
 
     <PaperBrowser client:only="solid-js" papers={lite} basePath={base} repoBlobUrl={REPO_RAW_BLOB} />
     <noscript>
-      <div class="surface rounded-lg p-6 mt-4 text-sm text-ink-600 dark:text-ink-100">
+      <div class="surface rounded-md p-6 mt-4 text-sm text-ink-600 dark:text-ink-100">
         The interactive browser needs JavaScript. You can still view the
         <a class="link" href="https://github.com/xli04/Awesome-Human-AI-Coevolution-Paper-List/blob/main/papers.yaml">full structured list on GitHub</a>.
       </div>

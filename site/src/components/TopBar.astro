@@ -19,13 +19,13 @@ const currentPath = Astro.url.pathname.replace(/\/$/, '');
 ---
 <header
   id="site-topbar"
-  class="sticky top-0 z-40 transition-[backdrop-filter,background-color,box-shadow,border-color,height] duration-200 ease-out backdrop-blur-md bg-paper-100/60 dark:bg-nightbg/60 border-b border-transparent"
+  class="sticky top-0 z-40 transition-[backdrop-filter,background-color,box-shadow,border-color,height] duration-200 ease-out backdrop-blur-md bg-paper-100/70 dark:bg-nightbg/70 border-b border-transparent"
   data-scrolled="false"
 >
   <div class="mx-auto max-w-7xl px-4 sm:px-6 h-14 flex items-center gap-3">
-    <a href={`${base}/`} class="flex items-center gap-2 group">
-      <span aria-hidden="true" class="inline-flex items-center justify-center w-7 h-7 rounded-md bg-accent text-paper-50 dark:bg-accent-dark dark:text-ink-900 font-bold text-sm leading-none">G</span>
-      <span class="font-semibold tracking-tight text-ink-700 dark:text-ink-50 group-hover:text-accent dark:group-hover:text-accent-dark transition-colors">{SITE_TITLE}</span>
+    <a href={`${base}/`} class="flex items-center gap-2.5 group">
+      <span aria-hidden="true" class="font-mono text-[11px] uppercase tracking-[0.14em] text-ink-400 dark:text-ink-300">HAI ·</span>
+      <span class="font-display text-[15px] font-medium tracking-tight text-ink-700 dark:text-ink-50 group-hover:text-accent dark:group-hover:text-accent-dark transition-colors">{SITE_TITLE}</span>
     </a>
 
     <nav class="hidden md:flex items-center gap-1 ml-4">
@@ -77,12 +77,12 @@ const currentPath = Astro.url.pathname.replace(/\/$/, '');
 
 <style>
   #site-topbar[data-scrolled="true"] {
-    background-color: rgba(247, 239, 223, 0.86);
-    border-bottom-color: rgba(35, 33, 28, 0.08);
-    box-shadow: 0 6px 18px -10px rgba(35, 33, 28, 0.10);
+    background-color: rgba(250, 249, 245, 0.90);
+    border-bottom-color: rgba(31, 29, 26, 0.10);
+    box-shadow: 0 6px 18px -12px rgba(31, 29, 26, 0.08);
   }
   :global(html.dark) #site-topbar[data-scrolled="true"] {
-    background-color: rgba(15, 18, 23, 0.78);
+    background-color: rgba(16, 19, 26, 0.82);
     border-bottom-color: rgba(255, 255, 255, 0.04);
     box-shadow: 0 6px 18px -8px rgba(0, 0, 0, 0.45);
   }
