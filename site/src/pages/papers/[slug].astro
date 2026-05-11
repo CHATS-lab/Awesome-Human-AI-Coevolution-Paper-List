@@ -166,75 +166,91 @@ const reportUrl = `${REPO_URL}/issues/new?` + new URLSearchParams({
   ogType="article"
   jsonLd={jsonLd}
 >
-  <article class="mx-auto max-w-reading px-4 sm:px-6 py-10" itemscope itemtype="https://schema.org/ScholarlyArticle">
-    <nav class="text-xs text-ink-400 dark:text-ink-300" aria-label="Breadcrumb">
-      <a class="link" href={`${base}/papers`}>← Browse all papers</a>
-    </nav>
+  <article class="mx-auto max-w-[1180px] px-6 pt-14 pb-16" itemscope itemtype="https://schema.org/ScholarlyArticle">
 
-    <h1 class="display-lg mt-4 text-ink-700 dark:text-ink-50 leading-[1.08]" itemprop="headline">
-      <a href={paper.link} target="_blank" rel="noopener" class="hover:text-accent dark:hover:text-accent-dark">{paper.title}</a>
-    </h1>
+    <div class="grid lg:grid-cols-[200px_minmax(0,1fr)] gap-x-16 gap-y-8">
 
-    <p class="mt-4 text-ink-500 dark:text-ink-200 leading-relaxed">{paper.authors.join(', ')}</p>
+      {/* Left rail — issue plate for the paper */}
+      <aside class="lg:border-r border-paper-300 dark:border-ink-600 lg:pr-6 lg:sticky lg:top-6 lg:self-start">
+        <nav class="mb-6" aria-label="Breadcrumb">
+          <a class="action-link action-link--ghost" href={`${base}/papers`}><span class="font-mono">←</span>Index</a>
+        </nav>
 
-    <dl class="mt-8 grid grid-cols-[88px_1fr] gap-x-6 gap-y-3 text-[14px]">
-      <dt class="font-mono text-[10.5px] uppercase tracking-[0.08em] text-ink-400 dark:text-ink-300 pt-1">Institutions</dt>
-      <dd class="text-ink-700 dark:text-ink-50">{paper.institutions.join(', ') || '—'}</dd>
+        <dl class="space-y-4 text-[12.5px]">
+          <div>
+            <dt class="meta-label">Date</dt>
+            <dd class="meta-value mt-0.5">{paper.date}</dd>
+          </div>
+          <div>
+            <dt class="meta-label">Venue</dt>
+            <dd class="meta-value mt-0.5">{paper.publisher || '—'}</dd>
+          </div>
+          <div>
+            <dt class="meta-label">Category</dt>
+            <dd class="mt-1 flex flex-wrap gap-x-2 gap-y-1">
+              {paper.envs.map((env) => (
+                <a class="topic-marker" href={`${base}/papers?env=${encodeURIComponent(env)}`} title={env}>{ENV_EMOJI[env] ?? '—'}</a>
+              ))}
+            </dd>
+          </div>
+          <div>
+            <dt class="meta-label">Institutions</dt>
+            <dd class="text-[12.5px] text-ink-700 dark:text-ink-50 mt-0.5">{paper.institutions.join(', ') || '—'}</dd>
+          </div>
+          {paper.arxivId && (
+            <div>
+              <dt class="meta-label">arXiv</dt>
+              <dd class="meta-value mt-0.5 tabular-nums">{paper.arxivId}</dd>
+            </div>
+          )}
+        </dl>
+      </aside>
 
-      <dt class="font-mono text-[10.5px] uppercase tracking-[0.08em] text-ink-400 dark:text-ink-300 pt-1">Date</dt>
-      <dd class="text-ink-700 dark:text-ink-50">{paper.date}</dd>
+      {/* Main column — paper detail */}
+      <div>
+        <p class="heading-eyebrow">Entry</p>
 
-      <dt class="font-mono text-[10.5px] uppercase tracking-[0.08em] text-ink-400 dark:text-ink-300 pt-1">Venue</dt>
-      <dd class="text-ink-700 dark:text-ink-50">{paper.publisher}</dd>
+        <h1 class="kicker-lg mt-4 text-ink-700 dark:text-ink-50 leading-[1.12] max-w-[28ch]" itemprop="headline">
+          <a href={paper.link} target="_blank" rel="noopener" class="hover:text-accent dark:hover:text-accent-dark transition-colors">{paper.title}</a>
+        </h1>
 
-      <dt class="font-mono text-[10.5px] uppercase tracking-[0.08em] text-ink-400 dark:text-ink-300 pt-1">Category</dt>
-      <dd class="text-ink-700 dark:text-ink-50 flex flex-wrap gap-x-4 gap-y-1.5">
-        {paper.envs.map((env) => (
-          <span class="inline-flex items-baseline gap-1.5">
-            <span class="sec-idx text-[11px]">{ENV_EMOJI[env] ?? '—'}</span>
-            <a class="link" href={`${base}/papers?env=${encodeURIComponent(env)}`}>{env}</a>
-          </span>
-        ))}
-      </dd>
+        <p class="mt-5 text-[15px] text-ink-600 dark:text-ink-200 leading-relaxed max-w-[60ch]">{paper.authors.join(', ')}</p>
 
-      <dt class="font-mono text-[10.5px] uppercase tracking-[0.08em] text-ink-400 dark:text-ink-300 pt-1">Keywords</dt>
-      <dd>
-        <div class="flex flex-wrap gap-1.5">
-          {paper.keywords.map((kw) => (
-            <a class="chip" href={`${base}/papers?key=${encodeURIComponent(kw)}`}>{kw}</a>
-          ))}
-        </div>
-      </dd>
-    </dl>
+        {paper.tldr && (
+          <section class="mt-10">
+            <p class="meta-label">Synopsis</p>
+            <p class="mt-2 text-[16px] leading-[1.7] text-ink-700 dark:text-ink-50 max-w-[60ch]">{paper.tldr}</p>
+          </section>
+        )}
 
-    {paper.tldr && (
-      <section class="mt-8">
-        <div class="heading-eyebrow mb-2">TLDR</div>
-        <p class="text-base leading-relaxed text-ink-700 dark:text-ink-50">{paper.tldr}</p>
-      </section>
-    )}
+        {paper.keywords.length > 0 && (
+          <section class="mt-8">
+            <p class="meta-label mb-2">Keywords</p>
+            <p class="text-[13.5px] text-ink-600 dark:text-ink-200 flex flex-wrap gap-x-3 gap-y-1.5 max-w-[60ch]">
+              {paper.keywords.map((kw) => (
+                <a class="hover:text-accent dark:hover:text-accent-dark transition-colors" href={`${base}/papers?key=${encodeURIComponent(kw)}`}>
+                  <span class="text-paper-400 dark:text-ink-600 mr-0.5">·</span>{kw}
+                </a>
+              ))}
+            </p>
+          </section>
+        )}
 
-    <section class="mt-8 flex flex-wrap items-center gap-3">
-      <a href={paper.link} target="_blank" rel="noopener" class="btn-primary">
-        <span>Open paper</span><span aria-hidden="true">↗</span>
-      </a>
-      {paper.arxivId && (
-        <a href={`https://arxiv.org/abs/${paper.arxivId}`} target="_blank" rel="noopener" class="btn-ghost border border-paper-300/80 dark:border-ink-600/60">arXiv</a>
-      )}
-      <button
+        <section class="mt-10 pt-6 border-t border-paper-300 dark:border-ink-600 flex flex-wrap items-baseline gap-x-8 gap-y-3 text-[12px] font-mono uppercase tracking-[0.08em]">
+          <a href={paper.link} target="_blank" rel="noopener" class="text-accent dark:text-accent-dark hover:underline underline-offset-[3px]">Open paper ↗</a>
+          {paper.arxivId && (
+            <a href={`https://arxiv.org/abs/${paper.arxivId}`} target="_blank" rel="noopener" class="text-ink-500 dark:text-ink-300 hover:text-accent dark:hover:text-accent-dark">arXiv ↗</a>
+          )}
+          <button
         type="button"
         id="copy-bib-btn"
         data-bib={bibtex}
-        class="btn-ghost border border-paper-300/80 dark:border-ink-600/60 inline-flex items-center gap-1.5"
+        class="text-ink-500 dark:text-ink-300 hover:text-accent dark:hover:text-accent-dark"
         aria-label="Copy BibTeX to clipboard"
       >
-        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
         <span id="copy-bib-label">Copy BibTeX</span>
       </button>
-      <a href={reportUrl} target="_blank" rel="noopener" class="btn-ghost border border-paper-300/80 dark:border-ink-600/60">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="14" height="14" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>
-        Report issue
-      </a>
+      <a href={reportUrl} target="_blank" rel="noopener" class="text-ink-500 dark:text-ink-300 hover:text-accent dark:hover:text-accent-dark">Report issue ↗</a>
     </section>
 
     <script is:inline>
@@ -265,19 +281,21 @@ const reportUrl = `${REPO_URL}/issues/new?` + new URLSearchParams({
     </script>
 
     {related.length > 0 && (
-      <section class="mt-12">
-        <div class="heading-eyebrow mb-3">Related papers</div>
-        <ul class="grid sm:grid-cols-2 gap-3">
+      <section class="mt-16">
+        <p class="meta-label mb-4">Related entries</p>
+        <ul class="grid sm:grid-cols-2 gap-x-8 gap-y-4 list-none p-0 max-w-[60ch]">
           {related.map((p) => (
-            <li>
-              <a href={`${base}/papers/${p.slug}`} class="block card p-4 hover:border-accent/60 dark:hover:border-accent-dark/60">
-                <div class="text-sm font-medium text-ink-700 dark:text-ink-50 line-clamp-2">{p.title}</div>
-                <div class="mt-1 text-xs text-ink-400 dark:text-ink-300">{p.date} · {p.publisher}</div>
+            <li class="border-t border-paper-300 dark:border-ink-600 pt-4">
+              <a href={`${base}/papers/${p.slug}`} class="block hover:text-accent dark:hover:text-accent-dark transition-colors">
+                <div class="font-display text-[15px] text-ink-700 dark:text-ink-50 leading-snug">{p.title}</div>
+                <div class="mt-1.5 text-[11.5px] font-mono text-ink-400 dark:text-ink-300 uppercase tracking-[0.06em]">{p.date} · {p.publisher}</div>
               </a>
             </li>
           ))}
         </ul>
       </section>
     )}
+      </div>
+    </div>
   </article>
 </Base>

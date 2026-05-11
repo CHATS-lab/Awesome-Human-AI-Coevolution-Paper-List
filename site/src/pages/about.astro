@@ -1,83 +1,106 @@
 ---
 import Base from '../layouts/Base.astro';
-import { REPO_URL, REPO_RAW_BLOB, ENV_ORDER, ENV_EMOJI } from '../lib/site';
+import { REPO_URL, REPO_RAW_BLOB, ENV_ORDER, ENV_ABBREV } from '../lib/site';
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
-const categories: Array<{ name: string; gloss: string }> = [
-  { name: 'Collaboration & Co-Creation', gloss: 'Humans and AI working jointly on a task — how human strategy and AI outputs reshape each other within and across sessions.' },
-  { name: 'Mutual Adaptation',           gloss: 'Both human and AI behavior measurably change in response to each other over time.' },
-  { name: 'Human Feedback Loops',        gloss: 'RLHF, preference learning, training-from-use, with explicit treatment of how the trained model reshapes future inputs.' },
-  { name: 'Longitudinal HCI Studies',    gloss: 'Real-world deployments over weeks or months measuring shifts in human behavior, skill, and norms around AI.' },
-  { name: 'Position & Survey',           gloss: 'Framing pieces, surveys, and theoretical frameworks that argue for or characterize the coevolutionary lens.' },
-];
+const categories: Record<string, string> = {
+  'Collaboration & Co-Creation': 'Humans and AI working jointly on a task — how human strategy and AI outputs reshape each other within and across sessions.',
+  'Mutual Adaptation':           'Both human and AI behavior measurably change in response to each other over time.',
+  'Human Feedback Loops':        'RLHF, preference learning, training-from-use, with explicit treatment of how the trained model reshapes future inputs.',
+  'Longitudinal HCI Studies':    'Real-world deployments over weeks or months measuring shifts in human behavior, skill, and norms around AI.',
+  'Position & Survey':           'Framing pieces, surveys, and theoretical frameworks that argue for or characterize the coevolutionary lens.',
+};
 ---
-<Base
-  title="About the Human-AI Coevolution Paper List"
-  description="An openly maintained, curated index of research on human-AI coevolution — what's included, how papers are added, and how to contribute."
->
-  <article class="mx-auto max-w-[42rem] px-6 py-16 reveal-stagger">
-    <p class="heading-eyebrow">About</p>
-    <h1 class="display-lg mt-5 text-ink-700 dark:text-ink-50">About this list</h1>
+<Base title="About the index" description="What's included in this index, how papers are added, and how to contribute.">
 
-    <div class="mt-10 text-[16px] text-ink-700 dark:text-ink-100 leading-[1.75] space-y-6">
-      <p>
-        The <a class="link" href={REPO_URL} target="_blank" rel="noopener">Human-AI Coevolution Paper List</a> is a curated, openly maintained index of research on the process by which humans and AI systems continuously shape and reshape each other.
-      </p>
-      <p>
-        This site is a <strong class="text-ink-700 dark:text-ink-50">presentation layer</strong>: every paper, link, author, and tag here lives in <a class="link" href={`${REPO_RAW_BLOB}/papers.yaml`} target="_blank" rel="noopener"><code class="font-mono text-[14px] text-accent dark:text-accent-dark">papers.yaml</code></a>. The site adds search, filters, and visualizations, but the source of truth is the structured YAML file in the repo. Each entry carries an auto-generated BibTeX block and optional source links (OpenReview, publisher page, homepage, code, dataset).
-      </p>
+  <article class="mx-auto max-w-[1180px] px-6 pt-14 pb-16 reveal-stagger">
 
-      <div class="flex items-baseline gap-3 pt-6">
-        <span class="sec-idx">§ 01</span>
-        <h2 class="font-display text-[22px] font-medium text-ink-700 dark:text-ink-50 tracking-tight">Scope</h2>
+    {/* Two-column page like the front: left = mono ID block, right = body */}
+    <div class="grid lg:grid-cols-[200px_minmax(0,1fr)] gap-x-16 gap-y-10">
+
+      <aside class="lg:border-r border-paper-300 dark:border-ink-600 lg:pr-6">
+        <p class="meta-label">Page</p>
+        <p class="kicker mt-2 text-ink-700 dark:text-ink-50">Colophon</p>
+        <p class="mt-6 text-[12.5px] text-ink-500 dark:text-ink-300 leading-relaxed max-w-[14em]">
+          What's included, what's excluded, and how to suggest entries.
+        </p>
+      </aside>
+
+      <div>
+        <p class="heading-eyebrow">About</p>
+        <h1 class="kicker-lg mt-5 text-ink-700 dark:text-ink-50 max-w-[20ch]">A bidirectional index, openly maintained.</h1>
+
+        <div class="mt-10 text-[15.5px] text-ink-700 dark:text-ink-100 leading-[1.78] space-y-6 max-w-[62ch]">
+          <p>
+            The <a class="a-text" href={REPO_URL} target="_blank" rel="noopener">Human–AI Coevolution Index</a> is a curated, openly maintained list of research on the process by which humans and AI systems continuously shape and reshape each other. The site is a <strong class="text-ink-700 dark:text-ink-50">presentation layer</strong> — every paper, link, author, and tag lives in <a class="a-text" href={`${REPO_RAW_BLOB}/papers.yaml`} target="_blank" rel="noopener"><code class="font-mono text-[14px]">papers.yaml</code></a>; the site adds search, filters, and visualisations.
+          </p>
+
+          <h2 class="kicker text-ink-700 dark:text-ink-50 pt-6 flex items-baseline gap-3 not-prose">
+            <span class="meta-value text-accent dark:text-accent-dark tabular-nums">§01</span>
+            <span>Scope</span>
+          </h2>
+          <p>
+            The canonical index includes only papers where <em class="italic">both directions of influence</em> are studied or argued for: humans changing AI (data, feedback, preferences, deployment, prompts) <strong>and</strong> AI changing humans (skill, behaviour, cognition, language, workflows, downstream data distributions). One-way capability papers and pure one-shot UX studies belong elsewhere.
+          </p>
+          <p>
+            Papers that materially inform the area but do not satisfy the bidirectional bar — foundational RLHF method papers, single-direction behavioural studies later cited by coevolution work, related theoretical frameworks — go into <a class="a-text" href={`${base}/adjacent`}>adjacent papers</a>. Adjacent entries are excluded from the main browse, stats, and per-category groupings so the canonical signal stays scoped.
+          </p>
+
+          <h2 class="kicker text-ink-700 dark:text-ink-50 pt-6 flex items-baseline gap-3 not-prose">
+            <span class="meta-value text-accent dark:text-accent-dark tabular-nums">§02</span>
+            <span>Categories</span>
+          </h2>
+          <p class="text-[14px] text-ink-500 dark:text-ink-300">
+            Each paper carries one or more category tags. The 2-letter codes (<span class="font-mono">CC</span>, <span class="font-mono">MA</span>, <span class="font-mono">HF</span>, <span class="font-mono">LH</span>, <span class="font-mono">PS</span>) are used as compact labels throughout the site.
+          </p>
+
+          <dl class="not-prose grid gap-y-3 grid-cols-[48px_1fr] mt-4">
+            {ENV_ORDER.map((env) => (
+              <>
+                <dt class="meta-value text-accent dark:text-accent-dark tabular-nums pt-0.5">{ENV_ABBREV[env]}</dt>
+                <dd>
+                  <a class="font-display text-[16.5px] text-ink-700 dark:text-ink-50 hover:text-accent dark:hover:text-accent-dark transition-colors" href={`${base}/papers?env=${encodeURIComponent(env)}`}>{env}</a>
+                  <span class="block text-[13.5px] text-ink-500 dark:text-ink-300 mt-1 leading-relaxed max-w-[58ch]">{categories[env]}</span>
+                </dd>
+              </>
+            ))}
+          </dl>
+
+          <h2 class="kicker text-ink-700 dark:text-ink-50 pt-6 flex items-baseline gap-3 not-prose">
+            <span class="meta-value text-accent dark:text-accent-dark tabular-nums">§03</span>
+            <span>Adding a paper</span>
+          </h2>
+          <p>
+            Each entry is a YAML object with a fixed structure: <code class="font-mono text-[13.5px]">title · link · authors · institutions · date · publisher · category · keywords · TLDR</code>. The <a class="a-text" href={`${REPO_RAW_BLOB}/CLAUDE.md`} target="_blank" rel="noopener">repository's contribution guide</a> documents the canonical formatting rules; a local pipeline regenerates the README, per-category and per-keyword groupings, and the statistics figures whenever the source changes.
+          </p>
+          <p>
+            For dates, we always use the <strong>earliest known public release</strong> (arXiv v1 over the camera-ready), so the date reflects the work's true age.
+          </p>
+
+          <h2 class="kicker text-ink-700 dark:text-ink-50 pt-6 flex items-baseline gap-3 not-prose">
+            <span class="meta-value text-accent dark:text-accent-dark tabular-nums">§04</span>
+            <span>Contribute</span>
+          </h2>
+          <ul class="space-y-2.5 list-none p-0">
+            <li class="flex items-baseline gap-3">
+              <span class="meta-label">01</span>
+              <span><strong class="text-ink-700 dark:text-ink-50">Suggest a paper</strong> — <a class="a-text" href={`${REPO_URL}/issues/new`} target="_blank" rel="noopener">open an issue</a> with the title, link, and any relevant details.</span>
+            </li>
+            <li class="flex items-baseline gap-3">
+              <span class="meta-label">02</span>
+              <span><strong class="text-ink-700 dark:text-ink-50">Fix metadata</strong> — every paper entry has an "Edit on GitHub" link that goes to the entry's exact line in the YAML source.</span>
+            </li>
+            <li class="flex items-baseline gap-3">
+              <span class="meta-label">03</span>
+              <span><strong class="text-ink-700 dark:text-ink-50">Submit directly</strong> — edit <code class="font-mono text-[13.5px]">papers.yaml</code>, run <code class="font-mono text-[13.5px]">bash scripts/update_repo.sh</code>, and open a PR with the regenerated diff.</span>
+            </li>
+          </ul>
+
+          <p class="text-[13.5px] text-ink-400 dark:text-ink-300 mt-16 pt-6 border-t border-paper-300 dark:border-ink-600">
+            If this list helps your work, please consider <a class="a-text" href={REPO_URL} target="_blank" rel="noopener">starring the repo</a> — it's the simplest signal that helps others find it.
+          </p>
+        </div>
       </div>
-      <p>
-        The canonical list only includes papers where <em class="font-display italic">both directions of influence</em> are studied or argued for: humans changing AI (data, feedback, preferences, deployment, prompts) <strong class="text-ink-700 dark:text-ink-50">and</strong> AI changing humans (skill, behavior, cognition, language, workflows, downstream data distributions). One-way capability papers and pure one-shot UX studies belong elsewhere.
-      </p>
-      <p>
-        Papers that are useful supporting context but not directly bidirectional — for instance, foundational RLHF method papers, single-direction behavioral studies later cited by coevolution work, related theoretical frameworks — go into a separate list, <a class="link" href={`${base}/adjacent`}>adjacent papers</a>. They are intentionally excluded from browse defaults and stats so the main signal stays scoped.
-      </p>
-
-      <div class="flex items-baseline gap-3 pt-6">
-        <span class="sec-idx">§ 02</span>
-        <h2 class="font-display text-[22px] font-medium text-ink-700 dark:text-ink-50 tracking-tight">The five categories</h2>
-      </div>
-      <dl class="not-prose grid gap-x-6 gap-y-3 grid-cols-[44px_1fr]">
-        {categories.map((c) => (
-          <>
-            <dt class="sec-idx pt-0.5">{ENV_EMOJI[c.name]}</dt>
-            <dd>
-              <span class="font-display text-[17px] text-ink-700 dark:text-ink-50">{c.name}</span>
-              <span class="block text-[14.5px] text-ink-600 dark:text-ink-200 mt-1 leading-relaxed">{c.gloss}</span>
-            </dd>
-          </>
-        ))}
-      </dl>
-
-      <div class="flex items-baseline gap-3 pt-6">
-        <span class="sec-idx">§ 03</span>
-        <h2 class="font-display text-[22px] font-medium text-ink-700 dark:text-ink-50 tracking-tight">How papers are added</h2>
-      </div>
-      <p>
-        Each entry has a fixed nine-field structure: <code class="font-mono text-[13.5px] text-ink-600 dark:text-ink-200">title · link · authors · institutions · date · publisher · category · keywords · TLDR</code>. The repository's <a class="link" href={`${REPO_RAW_BLOB}/CLAUDE.md`} target="_blank" rel="noopener">contribution guide</a> documents the canonical formatting rules. A local pipeline regenerates the README, per-category and per-keyword groupings, and the statistics figures whenever the source changes.
-      </p>
-      <p>
-        For dates, we always use the <strong class="text-ink-700 dark:text-ink-50">earliest known public release</strong> — arXiv v1 over the later camera-ready — so the date reflects the work's true age rather than its latest revision.
-      </p>
-
-      <div class="flex items-baseline gap-3 pt-6">
-        <span class="sec-idx">§ 04</span>
-        <h2 class="font-display text-[22px] font-medium text-ink-700 dark:text-ink-50 tracking-tight">Contribute</h2>
-      </div>
-      <ul class="space-y-2 list-none pl-0">
-        <li><span class="font-mono text-[11px] uppercase tracking-[0.08em] text-ink-400 dark:text-ink-300 mr-2">→</span><strong class="text-ink-700 dark:text-ink-50">Suggest a paper</strong> — <a class="link" href={`${REPO_URL}/issues/new`} target="_blank" rel="noopener">open an issue</a> with the title, link, and any relevant details.</li>
-        <li><span class="font-mono text-[11px] uppercase tracking-[0.08em] text-ink-400 dark:text-ink-300 mr-2">→</span><strong class="text-ink-700 dark:text-ink-50">Fix metadata</strong> — every paper card has an "Edit on GitHub" link that goes to the entry's exact line in the YAML source.</li>
-        <li><span class="font-mono text-[11px] uppercase tracking-[0.08em] text-ink-400 dark:text-ink-300 mr-2">→</span><strong class="text-ink-700 dark:text-ink-50">Add yourself</strong> — edit <code class="font-mono text-[13.5px] text-ink-600 dark:text-ink-200">papers.yaml</code>, run <code class="font-mono text-[13.5px] text-ink-600 dark:text-ink-200">bash scripts/update_repo.sh</code>, and submit a PR with the regenerated diff.</li>
-      </ul>
-
-      <p class="text-[13.5px] text-ink-400 dark:text-ink-300 mt-16 pt-8 border-t border-paper-300/70 dark:border-ink-600/60">
-        If this list helps your work, please consider <a class="link" href={REPO_URL} target="_blank" rel="noopener">starring the repo</a> — it's the simplest signal that helps others find it.
-      </p>
     </div>
   </article>
 </Base>

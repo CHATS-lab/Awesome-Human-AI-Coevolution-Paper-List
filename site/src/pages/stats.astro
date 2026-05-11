@@ -17,22 +17,34 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
   title="Statistics — human-AI coevolution research"
   description={`Quarterly publication trends, top keywords, category splits, top institutions and authors across ${canonical.length}+ papers.`}
 >
-  <section class="mx-auto max-w-7xl px-6 pt-14 pb-16 reveal-stagger">
-    <p class="heading-eyebrow">Statistics</p>
-    <h1 class="display-lg mt-5 text-ink-700 dark:text-ink-50">
-      Trends across <span class="font-mono tabular-nums">{canonical.length}</span> papers
-    </h1>
-    <p class="text-ink-600 dark:text-ink-200 mt-4 max-w-2xl text-[15px] leading-relaxed">
-      Stats reflect canonical entries only — adjacent papers are excluded so the picture stays scoped to direct human-AI coevolution research.
-    </p>
-    <div class="mt-12">
-      <StatsCharts client:only="solid-js" papers={lite} basePath={base} />
-      <noscript>
-        <p class="text-sm text-ink-500 dark:text-ink-200">
-          Interactive charts need JavaScript. You can still browse the full list on the
-          <a class="link" href={`${base}/papers`}>papers page</a>.
+  <article class="mx-auto max-w-[1180px] px-6 pt-14 pb-20 reveal-stagger">
+
+    <div class="grid lg:grid-cols-[200px_minmax(0,1fr)] gap-x-16 gap-y-8">
+
+      <aside class="lg:border-r border-paper-300 dark:border-ink-600 lg:pr-6">
+        <p class="meta-label">Page</p>
+        <p class="kicker mt-2 text-ink-700 dark:text-ink-50">Statistics</p>
+        <p class="mt-6 text-[12.5px] text-ink-500 dark:text-ink-300 leading-relaxed max-w-[14em]">
+          Canonical entries only. Adjacent papers are excluded so the picture stays scoped.
         </p>
-      </noscript>
+      </aside>
+
+      <div>
+        <p class="heading-eyebrow">Statistics</p>
+        <h1 class="kicker-lg mt-5 text-ink-700 dark:text-ink-50">
+          Trends across <span class="font-mono tabular-nums">{canonical.length}</span> papers
+        </h1>
+
+        <div class="mt-10">
+          <StatsCharts client:only="solid-js" papers={lite} basePath={base} />
+          <noscript>
+            <p class="text-[14px] text-ink-500 dark:text-ink-200">
+              Interactive charts need JavaScript. You can still browse the full list on the
+              <a class="a-text" href={`${base}/papers`}>papers page</a>.
+            </p>
+          </noscript>
+        </div>
+      </div>
     </div>
-  </section>
+  </article>
 </Base>

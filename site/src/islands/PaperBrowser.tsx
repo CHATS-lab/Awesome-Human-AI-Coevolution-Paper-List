@@ -33,11 +33,11 @@ interface Props {
 }
 
 const ENV_ICON: Record<string, string> = {
-  'Collaboration & Co-Creation': '01',
-  'Mutual Adaptation': '02',
-  'Human Feedback Loops': '03',
-  'Longitudinal HCI Studies': '04',
-  'Position & Survey': '05',
+  'Collaboration & Co-Creation': 'CC',
+  'Mutual Adaptation': 'MA',
+  'Human Feedback Loops': 'HF',
+  'Longitudinal HCI Studies': 'LH',
+  'Position & Survey': 'PS',
 };
 
 type SortKey = 'date-desc' | 'date-asc' | 'title-asc' | 'title-desc' | 'random' | 'relevance';
@@ -652,7 +652,7 @@ export default function PaperBrowser(props: Props) {
           </div>
         </Show>
 
-        <ul class="grid gap-4">
+        <ul class="border-b border-paper-300 dark:border-ink-600">
           <For each={filtered().slice(0, showLimit())}>
             {(p) => <li class="card-enter"><PaperCardClient
               paper={p}
@@ -661,6 +661,7 @@ export default function PaperBrowser(props: Props) {
               onChip={(kw) => toggle(keys, setKeys, kw)}
               onInstitution={(inst) => toggle(institutions, setInstitutions, inst)}
               onAuthor={(a) => toggle(authors, setAuthors, a)}
+              onEnv={(env) => toggle(envs, setEnvs, env)}
               onToast={showToast}
               query={q().trim()}
             /></li>}
@@ -1041,6 +1042,7 @@ interface CardProps {
   onChip: (kw: string) => void;
   onInstitution?: (inst: string) => void;
   onAuthor?: (author: string) => void;
+  onEnv?: (env: string) => void;
   onToast?: (msg: string) => void;
   query?: string;
 }
@@ -1212,123 +1214,117 @@ function PaperCardClient(props: CardProps) {
     }
   }
 
+  const yearTag = (p.year && p.year > 1900) ? String(p.year) : (p.date || '—');
+
   return (
-    <article class={`card p-5 ${p.source === 'adjacent' ? 'opacity-95' : ''}`}>
-      <div class="flex items-start gap-3">
-        <div class="flex-1 min-w-0">
-          <h3 class="text-base sm:text-[17px] font-semibold leading-snug text-ink-700 dark:text-ink-50 tracking-[-0.005em]">
-            <a href={detailHref} class="hover:text-accent dark:hover:text-accent-dark transition-colors">{highlight(p.title, props.query)}</a>
-          </h3>
-          <p class="mt-1 text-sm text-ink-500 dark:text-ink-200 break-words">
-            <For each={p.authors}>{(author, i) => (
-              <>
-                <Show when={i() > 0}><span class="text-ink-300/60 dark:text-ink-400/60">, </span></Show>
-                <button
-                  class="hover:text-accent dark:hover:text-accent-dark transition-colors cursor-pointer"
-                  onClick={() => props.onAuthor?.(author)}
-                  title={`Filter by author: ${author}`}
-                >{highlight(author, props.query)}</button>
-              </>
-            )}</For>
-          </p>
-        </div>
-        <div class="shrink-0 flex items-center gap-2">
+    <article class={`entry-row ${p.source === 'adjacent' ? 'opacity-90' : ''}`}>
+
+      {/* Left rail: year, category abbreviations, adjacent badge */}
+      <div class="space-y-2">
+        <div class="font-mono text-[12px] text-ink-700 dark:text-ink-50 tabular-nums">{yearTag}</div>
+        <div class="flex flex-wrap gap-x-2 gap-y-1">
           <For each={p.envs}>{(env) => (
-            <span class="font-mono text-[10.5px] uppercase tracking-[0.08em] text-accent dark:text-accent-dark" title={env} aria-label={env}>{ENV_ICON[env] ?? '—'}</span>
+            <button
+              class="topic-marker"
+              onClick={() => props.onEnv?.(env)}
+              title={env}
+            >
+              {ENV_ICON[env] ?? '—'}
+            </button>
           )}</For>
-          <Show when={p.source === 'adjacent'}>
-            <span class="text-[10px] uppercase tracking-wider px-1.5 py-0.5 rounded bg-paper-200 dark:bg-ink-700 text-ink-500 dark:text-ink-200 border border-paper-300/60 dark:border-ink-600/60">adj</span>
-          </Show>
         </div>
+        <Show when={p.source === 'adjacent'}>
+          <div class="font-mono text-[10px] uppercase tracking-[0.08em] text-ink-400 dark:text-ink-300">[adjacent]</div>
+        </Show>
       </div>
 
-      <p class="mt-2 text-xs text-ink-400 dark:text-ink-300 tabular-nums">
-        <span>{p.date}</span>
-        <span class="mx-1.5 text-ink-300/60 dark:text-ink-400/60">·</span>
-        <span>{p.publisher}</span>
-        <Show when={p.institutions.length > 0}>
-          <span class="mx-1.5 text-ink-300/60 dark:text-ink-400/60">·</span>
-          <For each={p.institutions}>{(inst, i) => (
+      {/* Main column */}
+      <div>
+        <h3 class="font-display text-[18px] sm:text-[20px] font-medium leading-snug text-ink-700 dark:text-ink-50 tracking-tight">
+          <a href={detailHref} class="hover:text-accent dark:hover:text-accent-dark transition-colors">
+            {highlight(p.title, props.query)}
+          </a>
+        </h3>
+
+        <p class="mt-2 text-[13.5px] text-ink-500 dark:text-ink-200 break-words">
+          <For each={p.authors}>{(author, i) => (
             <>
-              <Show when={i() > 0}><span class="text-ink-300/60 dark:text-ink-400/60">, </span></Show>
+              <Show when={i() > 0}><span class="text-paper-400 dark:text-ink-600">, </span></Show>
               <button
-                class="text-ink-500 dark:text-ink-200 hover:text-accent dark:hover:text-accent-dark transition-colors cursor-pointer"
-                onClick={() => props.onInstitution?.(inst)}
-                title={`Filter by institution: ${inst}`}
-              >{inst}</button>
+                class="hover:text-accent dark:hover:text-accent-dark transition-colors cursor-pointer"
+                onClick={() => props.onAuthor?.(author)}
+                title={`Filter by author: ${author}`}
+              >{highlight(author, props.query)}</button>
             </>
           )}</For>
-        </Show>
-      </p>
-
-      <Show when={p.tldr}>
-        <p class="mt-2.5 text-sm text-ink-600 dark:text-ink-100 leading-relaxed">
-          {highlight(p.tldr, props.query)}
         </p>
-      </Show>
 
-      <Show when={p.keywords.length > 0}>
-        <div class="mt-3 flex flex-wrap gap-1.5">
-          <For each={p.keywords}>{(kw) => (
-            <button class="chip" onClick={() => props.onChip(kw)}>{kw}</button>
-          )}</For>
-        </div>
-      </Show>
-
-      <div class={`mt-4 pt-4 border-t border-paper-300/60 dark:border-ink-600/60 ${bibCopied() ? 'copy-pulse copy-glow-source' : ''} rounded-md`}>
-          {/* Single consolidated action row.
-              The "Sources" pills cover every off-site destination
-              (arXiv / OpenReview / Publisher / Homepage / Code /
-              Dataset). The first one is highlighted as primary
-              ("Open paper") since most readers want it. The utility
-              actions (Copy BibTeX, Report issue) sit at the right. */}
-          <div class="flex flex-wrap items-center gap-2 text-xs">
-            <For each={actionItems()}>{(s, i) => (
-              <a
-                class={
-                  i() === 0
-                    ? 'inline-flex items-center gap-1.5 px-3 py-1.5 rounded-sm bg-accent text-paper-100 dark:bg-accent-dark dark:text-ink-900 hover:opacity-90 font-medium tracking-wide'
-                    : 'inline-flex items-center gap-1.5 px-3 py-1.5 rounded-sm border border-paper-300/80 dark:border-ink-600/60 hover:border-ink-500 dark:hover:border-ink-300 transition-colors'
-                }
-                href={s.url}
-                target="_blank"
-                rel="noopener"
-              >
-                <span>{s.label}</span>
-                <Show when={i() === 0}><span aria-hidden="true">↗</span></Show>
-              </a>
+        <p class="mt-1 text-[12.5px] text-ink-400 dark:text-ink-300">
+          <span class="font-mono">{p.publisher || '—'}</span>
+          <Show when={p.institutions.length > 0}>
+            <span class="mx-2 text-paper-400 dark:text-ink-600">·</span>
+            <For each={p.institutions}>{(inst, i) => (
+              <>
+                <Show when={i() > 0}><span class="text-paper-400 dark:text-ink-600">, </span></Show>
+                <button
+                  class="text-ink-500 dark:text-ink-300 hover:text-accent dark:hover:text-accent-dark transition-colors cursor-pointer"
+                  onClick={() => props.onInstitution?.(inst)}
+                  title={`Filter by institution: ${inst}`}
+                >{inst}</button>
+              </>
             )}</For>
+          </Show>
+        </p>
 
-            <span class="ml-auto flex flex-wrap items-center gap-2">
-              <button
-                type="button"
-                class={`inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-md border transition-colors ${
-                  bibCopied()
-                    ? 'border-accent/60 dark:border-accent-dark/60 text-accent dark:text-accent-dark bg-accent/5 dark:bg-accent-dark/10'
-                    : 'border-paper-300/80 dark:border-ink-600/60 hover:bg-paper-200/60 dark:hover:bg-ink-700/40'
-                }`}
-                onClick={copyBibtex}
-                aria-label={p.bibtexConfirmed ? 'Copy verified BibTeX to clipboard' : 'Copy auto-generated BibTeX to clipboard'}
-                title={p.bibtexConfirmed ? 'Verified — copied from official source' : 'Auto-generated — please verify before citing'}
-              >
-                <Show when={bibCopied()} fallback={
-                  <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-                }>
-                  <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                    <path class="copied-check" d="M5 12l5 5L20 7"/>
-                  </svg>
-                </Show>
-                <span>{bibCopied() ? 'BibTeX copied' : 'Copy BibTeX'}</span>
-                <Show when={p.bibtexConfirmed}>
-                  <span class="text-[9px] uppercase tracking-wider px-1 rounded bg-accent/10 dark:bg-accent-dark/15 text-accent dark:text-accent-dark">verified</span>
-                </Show>
+        <Show when={p.tldr}>
+          <p class="mt-3 text-[14px] text-ink-600 dark:text-ink-100 leading-relaxed max-w-[68ch]">
+            {highlight(p.tldr, props.query)}
+          </p>
+        </Show>
+
+        <Show when={p.keywords.length > 0}>
+          <p class="mt-3 text-[12.5px] text-ink-500 dark:text-ink-300 flex flex-wrap gap-x-3 gap-y-1">
+            <For each={p.keywords}>{(kw) => (
+              <button class="hover:text-accent dark:hover:text-accent-dark transition-colors" onClick={() => props.onChip(kw)}>
+                <span class="text-paper-400 dark:text-ink-600 mr-0.5">·</span>{kw}
               </button>
-              <a class="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-md border border-paper-300/80 dark:border-ink-600/60 hover:bg-paper-200/60 dark:hover:bg-ink-700/40" href={reportUrl} target="_blank" rel="noopener">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="12" height="12" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>
-                Report issue
-              </a>
-            </span>
-          </div>
+            )}</For>
+          </p>
+        </Show>
+
+        {/* Action row — text links, no buttons */}
+        <div class={`mt-4 flex flex-wrap items-baseline gap-x-6 gap-y-2 text-[11.5px] font-mono uppercase tracking-[0.08em] ${bibCopied() ? 'copy-pulse copy-glow-source' : ''}`}>
+          <a class="text-accent dark:text-accent-dark hover:underline underline-offset-[3px]" href={detailHref}>
+            Read entry →
+          </a>
+          <For each={actionItems()}>{(s, i) => (
+            <a
+              class={i() === 0
+                ? 'text-accent dark:text-accent-dark hover:underline underline-offset-[3px]'
+                : 'text-ink-500 dark:text-ink-300 hover:text-accent dark:hover:text-accent-dark transition-colors'}
+              href={s.url}
+              target="_blank"
+              rel="noopener"
+            >
+              {s.label} ↗
+            </a>
+          )}</For>
+          <button
+            type="button"
+            class="text-ink-500 dark:text-ink-300 hover:text-accent dark:hover:text-accent-dark transition-colors"
+            onClick={copyBibtex}
+            aria-label={p.bibtexConfirmed ? 'Copy verified BibTeX to clipboard' : 'Copy auto-generated BibTeX to clipboard'}
+            title={p.bibtexConfirmed ? 'Verified — copied from official source' : 'Auto-generated — please verify before citing'}
+          >
+            <span>{bibCopied() ? 'BibTeX copied' : 'Copy BibTeX'}</span>
+            <Show when={p.bibtexConfirmed}>
+              <span class="ml-1 text-accent dark:text-accent-dark">·verified</span>
+            </Show>
+          </button>
+          <a class="text-ink-500 dark:text-ink-300 hover:text-accent dark:hover:text-accent-dark transition-colors" href={reportUrl} target="_blank" rel="noopener">
+            Report issue ↗
+          </a>
+        </div>
       </div>
     </article>
   );

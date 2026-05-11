@@ -17,25 +17,34 @@ const lite = all.map((p) => ({
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 <Base
-  title="Browse all human-AI coevolution papers"
-  description={`Search and filter ${canonical.length}+ papers on human-AI coevolution by category, keyword, author, institution, year, and venue.`}
+  title="Browse — Human–AI Coevolution Index"
+  description={`Search and filter ${canonical.length}+ papers on human–AI coevolution by category, keyword, author, institution, year, and venue.`}
 >
-  <section class="mx-auto max-w-7xl px-6 pt-14 pb-10 reveal-stagger">
-    <div class="mb-10 max-w-3xl">
-      <p class="heading-eyebrow">Browse</p>
-      <h1 class="display-lg mt-5 text-ink-700 dark:text-ink-50">All papers</h1>
-      <p class="text-ink-600 dark:text-ink-200 mt-4 text-[15px] leading-relaxed">
-        <span class="font-mono tabular-nums text-ink-700 dark:text-ink-50">{canonical.length}</span>
-        canonical entries — search across titles, authors, institutions, TLDRs, and keywords; or filter by category, keyword, year, venue.
-      </p>
-    </div>
+  <article class="mx-auto max-w-[1180px] px-6 pt-14 pb-16 reveal-stagger">
+
+    <header class="grid lg:grid-cols-[200px_minmax(0,1fr)] gap-x-16 gap-y-6 pb-10 border-b border-paper-300 dark:border-ink-600">
+      <aside class="lg:border-r border-paper-300 dark:border-ink-600 lg:pr-6">
+        <p class="meta-label">Page</p>
+        <p class="kicker mt-2 text-ink-700 dark:text-ink-50">Index</p>
+        <p class="mt-6 text-[12.5px] text-ink-500 dark:text-ink-300 leading-relaxed max-w-[14em]">
+          Search across titles, authors, institutions, TLDRs, and keywords. Filter by category, keyword, year, venue.
+        </p>
+      </aside>
+
+      <div>
+        <p class="heading-eyebrow">All entries</p>
+        <h1 class="kicker-lg mt-5 text-ink-700 dark:text-ink-50">
+          <span class="font-mono tabular-nums">{canonical.length}</span> papers, openly listed.
+        </h1>
+      </div>
+    </header>
 
     <PaperBrowser client:only="solid-js" papers={lite} basePath={base} repoBlobUrl={REPO_RAW_BLOB} />
     <noscript>
-      <div class="surface rounded-md p-6 mt-4 text-sm text-ink-600 dark:text-ink-100">
+      <div class="frame px-6 py-6 mt-6 text-[14px] text-ink-600 dark:text-ink-100">
         The interactive browser needs JavaScript. You can still view the
-        <a class="link" href="https://github.com/xli04/Awesome-Human-AI-Coevolution-Paper-List/blob/main/papers.yaml">full structured list on GitHub</a>.
+        <a class="a-text" href="https://github.com/xli04/Awesome-Human-AI-Coevolution-Paper-List/blob/main/papers.yaml">full structured list on GitHub</a>.
       </div>
     </noscript>
-  </section>
+  </article>
 </Base>

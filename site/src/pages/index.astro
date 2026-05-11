@@ -1,7 +1,7 @@
 ---
 import Base from '../layouts/Base.astro';
 import { loadAllPapers } from '../lib/parsePapers';
-import { ENV_ORDER, ENV_EMOJI, REPO_URL } from '../lib/site';
+import { ENV_ORDER, ENV_ABBREV, REPO_URL } from '../lib/site';
 import { getStarCount } from '../lib/star';
 
 const { canonical } = loadAllPapers();
@@ -9,123 +9,148 @@ const envCount: Record<string, number> = {};
 for (const p of canonical) for (const e of p.envs) envCount[e] = (envCount[e] ?? 0) + 1;
 
 const lastYear = new Date().getFullYear();
-const thisYear = canonical.filter((p) => p.year === lastYear).length;
+const lastUpdated = canonical
+  .map((p) => p.dateISO)
+  .filter(Boolean)
+  .sort()
+  .at(-1) ?? '';
 const stars = await getStarCount();
 
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 const siteUrl = (Astro.site ?? new URL('https://xli04.github.io')).toString().replace(/\/$/, '') + base;
 
-const description = `A curated, searchable list of ${canonical.length}+ research papers on human-AI coevolution — collaboration and co-creation, mutual adaptation, RLHF and human-feedback loops, longitudinal HCI deployments, and position/survey work that frames the coevolutionary lens.`;
+const description = `An index of ${canonical.length}+ research papers on human–AI coevolution: collaboration and co-creation, mutual adaptation, RLHF and feedback loops, longitudinal HCI deployments, and position pieces.`;
 
 const jsonLd = [
   {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
-    name: 'Human-AI Coevolution Papers',
-    alternateName: 'Human-AI Coevolution Paper List',
+    name: 'Human–AI Coevolution Index',
     url: siteUrl + '/',
     description,
     inLanguage: 'en',
     potentialAction: {
       '@type': 'SearchAction',
-      target: {
-        '@type': 'EntryPoint',
-        urlTemplate: `${siteUrl}/papers/?q={search_term_string}`,
-      },
+      target: { '@type': 'EntryPoint', urlTemplate: `${siteUrl}/papers/?q={search_term_string}` },
       'query-input': 'required name=search_term_string',
     },
   },
-  {
-    '@context': 'https://schema.org',
-    '@type': 'DataCatalog',
-    name: 'Human-AI Coevolution Paper List',
-    description,
-    url: siteUrl + '/',
-    keywords: 'human-AI coevolution, human-AI collaboration, RLHF, mutual adaptation, feedback loops, longitudinal HCI, position paper',
-  },
 ];
 
-// Short one-line glosses for each category — used in the category grid.
 const categoryGloss: Record<string, string> = {
-  'Collaboration & Co-Creation': 'Humans and AI working jointly; how each reshapes the other within and across sessions.',
+  'Collaboration & Co-Creation': 'Humans and AI working jointly on a task; how each reshapes the other within and across sessions.',
   'Mutual Adaptation': 'Both human and AI behavior measurably change in response to each other over time.',
   'Human Feedback Loops': 'RLHF, preference learning, training-from-use — feedback that becomes future training data.',
   'Longitudinal HCI Studies': 'Field deployments measuring shifts in human behavior, skill, and norms around AI.',
   'Position & Survey': 'Framing pieces and surveys that argue for or characterize the coevolutionary lens.',
 };
 ---
-<Base
-  title="A curated list of human-AI coevolution research"
-  description={description}
-  jsonLd={jsonLd}
->
-  {/* Hero — editorial masthead */}
-  <header class="mx-auto max-w-6xl px-6 pt-20 sm:pt-28 pb-14 border-b border-paper-300/70 dark:border-ink-600/60 reveal-stagger">
-    <p class="heading-eyebrow">A curated paper list <span class="text-paper-400 dark:text-ink-600">/</span> {canonical.length} entries</p>
-    <h1 class="display-xl mt-6 text-ink-700 dark:text-ink-50 max-w-[20ch]">
-      Research on <em class="text-accent dark:text-accent-dark not-italic font-display italic">human–AI coevolution</em>,
-      kept current and easy to search.
-    </h1>
-    <p class="mt-7 max-w-[58ch] text-[16.5px] text-ink-600 dark:text-ink-200 leading-relaxed">
-      Papers where humans and AI demonstrably <strong class="text-ink-700 dark:text-ink-50">shape each other</strong> — through training feedback, longitudinal deployment, joint creation, and the position pieces that frame the loop. Curated bidirectionally: pure capability and pure UX papers live elsewhere.
-    </p>
-    <div class="mt-9 flex flex-wrap items-center gap-3">
-      <a href={`${base}/papers`} class="btn-primary">Browse all papers →</a>
-      <a href={`${base}/stats`} class="btn-ghost">View statistics</a>
-      <a href={`${base}/about`} class="btn-ghost">About the list</a>
+<Base title="An index of human–AI coevolution research" description={description} jsonLd={jsonLd}>
+
+  {/* ─── Issue-plate masthead ────────────────────────────
+     Two-column: l-col = mono metadata block (date, count,
+     star, downloads); r-col = serif intro essay.            */}
+  <header class="mx-auto max-w-[1180px] px-6 pt-16 pb-12 reveal-stagger">
+    <div class="grid lg:grid-cols-[200px_minmax(0,1fr)] gap-x-16 gap-y-8">
+
+      {/* Left rail: issue plate */}
+      <aside class="lg:border-r border-paper-300 dark:border-ink-600 lg:pr-6">
+        <p class="meta-label">Index № 01</p>
+        <p class="kicker mt-2 text-ink-700 dark:text-ink-50">v1 · {lastYear}</p>
+
+        <dl class="mt-8 space-y-3 text-[12.5px]">
+          <div>
+            <dt class="meta-label">Entries</dt>
+            <dd class="meta-value mt-0.5 tabular-nums">{canonical.length}</dd>
+          </div>
+          <div>
+            <dt class="meta-label">Categories</dt>
+            <dd class="meta-value mt-0.5 tabular-nums">5</dd>
+          </div>
+          <div>
+            <dt class="meta-label">Last entry</dt>
+            <dd class="meta-value mt-0.5">{lastUpdated.slice(0, 10) || '—'}</dd>
+          </div>
+        </dl>
+
+        <div class="mt-8 space-y-2 text-[12.5px]">
+          <a href={REPO_URL} target="_blank" rel="noopener" class="action-link action-link--ghost">
+            <span class="font-mono">↗</span>{stars != null ? `Star · ${stars}` : 'GitHub'}
+          </a>
+          <div>
+            <a href={`${REPO_URL}/blob/main/papers.yaml`} target="_blank" rel="noopener" class="action-link action-link--ghost">
+              <span class="font-mono">↓</span>papers.yaml
+            </a>
+          </div>
+        </div>
+      </aside>
+
+      {/* Right column: editorial intro */}
+      <div>
+        <p class="heading-eyebrow">Human–AI Coevolution Index</p>
+
+        <h1 class="kicker-xl mt-6 text-ink-700 dark:text-ink-50 max-w-[20ch]">
+          An index of research where humans and AI <em class="text-accent dark:text-accent-dark italic">demonstrably shape each other</em>.
+        </h1>
+
+        <div class="mt-8 text-[16.5px] text-ink-600 dark:text-ink-200 leading-[1.7] max-w-[60ch] space-y-5">
+          <p>
+            A paper enters this index only when <strong class="text-ink-700 dark:text-ink-50">both directions of influence</strong> are present: humans changing AI — through data, feedback, preferences, deployment, or prompting; and AI changing humans — through skill, behaviour, cognition, language, workflow, or the data they next produce.
+          </p>
+          <p>
+            One-way capability papers and pure one-shot interaction studies belong elsewhere. Adjacent works that materially inform the area but do not satisfy the bidirectional bar are listed separately under <a class="a-text" href={`${base}/adjacent`}>adjacent papers</a>.
+          </p>
+        </div>
+
+        <div class="mt-10 flex flex-wrap items-center gap-x-8 gap-y-3">
+          <a href={`${base}/papers`} class="action-link action-link--primary">Browse the index <span class="font-mono">→</span></a>
+          <a href={`${base}/stats`} class="action-link action-link--ghost">Statistics <span class="font-mono">→</span></a>
+          <a href={`${base}/about`} class="action-link action-link--ghost">About <span class="font-mono">→</span></a>
+        </div>
+      </div>
     </div>
   </header>
 
-  {/* Browse-by-category — five editorial blocks numbered 01..05 */}
-  <section class="mx-auto max-w-6xl px-6 mt-16 reveal">
-    <div class="flex items-baseline gap-4 mb-8">
-      <span class="sec-idx">§</span>
-      <h2 class="font-display text-[26px] font-medium text-ink-700 dark:text-ink-50 tracking-tight">Browse by category</h2>
-      <div class="flex-1 rule"></div>
-    </div>
-
-    <ol class="grid sm:grid-cols-2 gap-x-10 gap-y-2 list-none p-0">
-      {ENV_ORDER.map((env) => (
-        <li>
-          <a
-            href={`${base}/papers?env=${encodeURIComponent(env)}`}
-            class="group block py-5 border-t border-paper-300/70 dark:border-ink-600/60 hover:border-accent dark:hover:border-accent-dark transition-colors"
-          >
-            <div class="grid grid-cols-[36px_1fr_auto] gap-x-4 items-baseline">
-              <span class="sec-idx">{ENV_EMOJI[env]}</span>
-              <div class="min-w-0">
-                <div class="font-display text-[20px] leading-tight text-ink-700 dark:text-ink-50 group-hover:text-accent dark:group-hover:text-accent-dark transition-colors">{env}</div>
-                <div class="mt-1.5 text-[13px] text-ink-500 dark:text-ink-300 max-w-[48ch]">{categoryGloss[env]}</div>
-              </div>
-              <div class="font-mono text-[11px] uppercase tracking-[0.08em] text-ink-400 dark:text-ink-300 tabular-nums whitespace-nowrap">
-                {envCount[env] ?? 0} {(envCount[env] ?? 0) === 1 ? 'paper' : 'papers'}
-              </div>
-            </div>
-          </a>
-        </li>
-      ))}
-    </ol>
-  </section>
-
-  {/* Star strip — flat, no decorative icon */}
-  <section class="mx-auto max-w-6xl px-6 mt-16 reveal">
-    <div class="border-t border-b border-paper-300/70 dark:border-ink-600/60 py-7 grid sm:grid-cols-[1fr_auto] gap-6 items-center">
-      <div>
-        <p class="eyebrow-plain">Open source</p>
-        <p class="mt-2 text-[14.5px] text-ink-600 dark:text-ink-100 max-w-[64ch] leading-relaxed">
-          Maintained openly on GitHub. If this list helps your work, starring the repo is the simplest signal that helps others find it.
+  {/* ─── Categories — table of contents style ───────────── */}
+  <section class="mx-auto max-w-[1180px] px-6 mt-20 reveal">
+    <div class="grid lg:grid-cols-[200px_minmax(0,1fr)] gap-x-16">
+      <div class="lg:border-r border-paper-300 dark:border-ink-600 lg:pr-6">
+        <p class="meta-label">Contents</p>
+        <p class="mt-3 text-[13px] text-ink-500 dark:text-ink-300 leading-relaxed max-w-[14em]">
+          Five categories. A paper may sit in more than one.
         </p>
       </div>
-      <a href={REPO_URL} target="_blank" rel="noopener" class="btn-primary shrink-0">
-        {stars != null ? `Star · ${stars >= 1000 ? (stars/1000).toFixed(1).replace(/\.0$/, '') + 'k' : stars}` : 'Star on GitHub'}
-      </a>
+
+      <ol class="list-none p-0 max-w-[60ch]">
+        {ENV_ORDER.map((env, i) => (
+          <li>
+            <a
+              href={`${base}/papers?env=${encodeURIComponent(env)}`}
+              class="grid grid-cols-[48px_1fr_auto] gap-x-5 items-baseline py-6 border-t border-paper-300 dark:border-ink-600 group hover:bg-paper-200/40 dark:hover:bg-ink-700/20 transition-colors"
+            >
+              <span class="meta-value tabular-nums text-accent dark:text-accent-dark">{ENV_ABBREV[env]}</span>
+              <div>
+                <div class="kicker text-ink-700 dark:text-ink-50 group-hover:text-accent dark:group-hover:text-accent-dark transition-colors">{env}</div>
+                <p class="mt-2 text-[13.5px] text-ink-500 dark:text-ink-300 max-w-[48ch] leading-relaxed">{categoryGloss[env]}</p>
+              </div>
+              <span class="meta-label tabular-nums">{envCount[env] ?? 0}</span>
+            </a>
+          </li>
+        ))}
+        <li><div class="border-t border-paper-300 dark:border-ink-600"></div></li>
+      </ol>
     </div>
   </section>
 
-  {/* Year-to-date strip */}
-  <section class="mx-auto max-w-6xl px-6 mt-10 pb-24">
-    <p class="text-[13px] text-ink-400 dark:text-ink-300 text-center">
-      <span class="font-mono text-ink-600 dark:text-ink-100 tabular-nums">{thisYear}</span> added so far in {lastYear} · <a class="link" href={`${base}/stats`}>breakdown by quarter →</a>
-    </p>
+  {/* ─── Colophon strip ──────────────────────────────────── */}
+  <section class="mx-auto max-w-[1180px] px-6 mt-24 pb-20">
+    <div class="grid lg:grid-cols-[200px_minmax(0,1fr)] gap-x-16">
+      <div class="lg:border-r border-paper-300 dark:border-ink-600 lg:pr-6">
+        <p class="meta-label">Colophon</p>
+      </div>
+      <p class="text-[14.5px] text-ink-600 dark:text-ink-200 leading-relaxed max-w-[60ch]">
+        Curated and openly maintained on GitHub. The website is generated from a single YAML source; suggest an entry by opening an issue or PR.
+      </p>
+    </div>
   </section>
 </Base>

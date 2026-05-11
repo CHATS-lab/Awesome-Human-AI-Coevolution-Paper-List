@@ -26,106 +26,162 @@ html {
   font-family: var(--font-sans);
 }
 
-html.dark {
-  color-scheme: dark;
-}
+html.dark { color-scheme: dark; }
 
-/* light = ivory editorial */
 html, body {
   background-color: #faf9f5;
   color: #1f1d1a;
   font-family: var(--font-sans);
 }
-
-/* Display typography — serif headlines, no decorative variation. */
-.font-display, .display-xl, .display-lg, .display-md {
-  font-family: var(--font-display);
-  font-feature-settings: 'ss01';
-  letter-spacing: -0.018em;
-  font-weight: 500;
-}
-.display-xl {
-  font-size: clamp(2.4rem, 5vw, 3.8rem);
-  line-height: 1.06;
-  letter-spacing: -0.022em;
-}
-.display-lg {
-  font-size: clamp(1.8rem, 3.6vw, 2.4rem);
-  line-height: 1.12;
-  letter-spacing: -0.016em;
-}
-.display-md {
-  font-size: 1.25rem;
-  line-height: 1.2;
-  letter-spacing: -0.01em;
-}
-.tabular-nums {
-  font-feature-settings: 'tnum' 1, 'lnum' 1;
-}
-
 html.dark, html.dark body {
   background-color: #10131a;
   color: #e9e6df;
 }
 
+/* ─── Display typography ────────────────────────────── */
+
+.font-display,
+.kicker,
+.kicker-lg,
+.kicker-xl {
+  font-family: var(--font-display);
+  font-feature-settings: 'ss01';
+  font-weight: 500;
+  letter-spacing: -0.018em;
+}
+.kicker-xl {
+  font-size: clamp(2.4rem, 5vw, 3.6rem);
+  line-height: 1.04;
+  letter-spacing: -0.024em;
+}
+.kicker-lg {
+  font-size: clamp(1.6rem, 3.3vw, 2.1rem);
+  line-height: 1.14;
+  letter-spacing: -0.012em;
+}
+.kicker {
+  font-size: clamp(1.15rem, 2.2vw, 1.4rem);
+  line-height: 1.22;
+  letter-spacing: -0.008em;
+}
+
+.tabular-nums { font-feature-settings: 'tnum' 1, 'lnum' 1; }
+
+/* ─── New component primitives — replacing card/chip/btn ───────────────── */
+
 @layer components {
-  .link {
-    @apply text-accent dark:text-accent-dark underline underline-offset-[3px] decoration-paper-300 hover:decoration-accent dark:decoration-ink-600 dark:hover:decoration-accent-dark transition-colors;
+
+  /* Links: navy/brass underline, no hover-color-shift. */
+  .a-text {
+    @apply text-accent dark:text-accent-dark underline underline-offset-[3px] decoration-paper-300 dark:decoration-ink-600 hover:decoration-accent dark:hover:decoration-accent-dark transition-colors;
   }
 
-  .surface {
-    @apply bg-paper-50 dark:bg-nightbg-soft border border-paper-300/70 dark:border-ink-600/60;
+  /* Frame: simple horizontal-rule bracket — used for sections.
+     Two thin rules, no card-like box. */
+  .frame {
+    border-top: 1px solid theme('colors.paper.300');
+    border-bottom: 1px solid theme('colors.paper.300');
+  }
+  :global(html.dark) .frame {
+    border-color: theme('colors.ink.600');
   }
 
+  /* Topic marker: an inline tag that is not a pill.
+     Mono small caps, navy on light. Underline on hover. */
+  .topic-marker {
+    @apply inline-flex items-baseline gap-1 text-accent dark:text-accent-dark hover:underline underline-offset-[3px] cursor-pointer;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  /* Action link: a flat text affordance with right arrow. No filled button. */
+  .action-link {
+    @apply inline-flex items-center gap-1.5 text-[13px] font-medium tracking-wide;
+    font-variant-caps: all-small-caps;
+    letter-spacing: 0.08em;
+  }
+  .action-link--primary {
+    @apply text-accent dark:text-accent-dark underline underline-offset-[5px] decoration-paper-300 dark:decoration-ink-600 hover:decoration-accent dark:hover:decoration-accent-dark transition-colors;
+  }
+  .action-link--ghost {
+    @apply text-ink-600 dark:text-ink-200 underline underline-offset-[5px] decoration-paper-300 dark:decoration-ink-600 hover:decoration-ink-500 dark:hover:decoration-ink-300 transition-colors;
+  }
+
+  /* Section index in mono navy. */
+  .sec-idx {
+    font-family: var(--font-mono);
+    font-size: 13px;
+    color: theme('colors.accent.DEFAULT');
+    font-weight: 500;
+  }
+  :global(html.dark) .sec-idx { color: theme('colors.accent.dark'); }
+
+  /* Tiny mono label — used for left-rail metadata column. */
+  .meta-label {
+    font-family: var(--font-mono);
+    font-size: 10.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: theme('colors.ink.400');
+  }
+  :global(html.dark) .meta-label { color: theme('colors.ink.300'); }
+
+  /* Mono value (for category codes, year, etc.) */
+  .meta-value {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: theme('colors.ink.700');
+  }
+  :global(html.dark) .meta-value { color: theme('colors.ink.50'); }
+
+  /* Entry row — vertical index entry style, replaces .card. */
+  .entry-row {
+    @apply grid gap-x-8 gap-y-2;
+    grid-template-columns: 96px 1fr;
+    padding: 1.5rem 0;
+    border-top: 1px solid theme('colors.paper.300');
+  }
+  @media (max-width: 640px) {
+    .entry-row { grid-template-columns: 1fr; gap-y: 0.5rem; }
+  }
+  :global(html.dark) .entry-row { border-top-color: theme('colors.ink.600'); }
+
+  /* Old-name compat shims — keep .card/.chip/.surface working in case any
+     untouched file still references them. They render minimally so nothing
+     visually regresses; new code should not use them. */
+  .card { @apply block; }
   .chip {
-    @apply inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11.5px] leading-none
-           bg-paper-50 dark:bg-chip-dark text-ink-600 dark:text-ink-100
-           border border-paper-300/80 dark:border-ink-600/60
-           hover:border-ink-400 dark:hover:border-ink-300 transition-colors;
+    @apply inline-flex items-baseline gap-1 text-accent dark:text-accent-dark hover:underline underline-offset-[3px];
+    font-family: var(--font-mono);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+  .chip-active {
+    @apply text-ink-700 dark:text-ink-50 underline decoration-accent dark:decoration-accent-dark;
+  }
+  .surface { @apply block; }
+  .input {
+    @apply w-full px-0 py-2.5 text-[15px]
+           bg-transparent
+           border-0 border-b border-paper-300/80 dark:border-ink-600/60
+           focus:outline-none focus:border-accent dark:focus:border-accent-dark
+           placeholder:text-ink-400/70;
     font-family: var(--font-sans);
   }
-
-  .chip-active {
-    @apply bg-paper-50 text-accent border-accent
-           dark:bg-chip-dark dark:text-accent-dark dark:border-accent-dark;
+  .btn-primary, .btn-ghost {
+    @apply action-link;
   }
+  .btn-primary { @apply action-link--primary; }
+  .btn-ghost { @apply action-link--ghost; }
 
-  .btn-primary {
-    @apply inline-flex items-center gap-2 px-4 py-2 rounded-sm text-[13px] font-medium
-           bg-accent text-paper-100 hover:bg-accent/90
-           dark:bg-accent-dark dark:text-ink-900 dark:hover:bg-accent-dark/90
-           transition-colors tracking-wide;
-  }
-
-  .btn-ghost {
-    @apply inline-flex items-center gap-2 px-3.5 py-2 rounded-sm text-[13px]
-           text-ink-600 dark:text-ink-100 border border-paper-300/80 dark:border-ink-600/60
-           hover:border-ink-500 dark:hover:border-ink-300 transition-colors;
-  }
-
-  .input {
-    @apply w-full px-3 py-2 rounded-sm text-sm
-           bg-paper-50 dark:bg-nightbg-soft
-           border border-paper-300/80 dark:border-ink-600/60
-           focus:outline-none focus:border-accent
-           dark:focus:border-accent-dark
-           placeholder:text-ink-400/70;
-  }
-
-  /* Editorial card — no hover lift, just a border state change. */
-  .card {
-    @apply rounded-md border border-paper-300/70 dark:border-ink-600/60
-           bg-paper-50 dark:bg-nightbg-soft transition-colors duration-150 ease-out;
-  }
-  .card:hover {
-    @apply border-ink-500 dark:border-ink-300;
-  }
-
-  /* Mono eyebrow — small, uppercase, tracked, with leading rule. */
+  /* Eyebrow rule + small-caps mono label */
   .heading-eyebrow {
     @apply text-[11px] uppercase text-ink-400 dark:text-ink-300 inline-flex items-center gap-3;
     font-family: var(--font-mono);
-    letter-spacing: 0.12em;
+    letter-spacing: 0.14em;
   }
   .heading-eyebrow::before {
     content: '';
@@ -138,22 +194,10 @@ html.dark, html.dark body {
     background-color: theme('colors.accent.dark');
   }
 
-  /* Plain eyebrow without the leading rule (for inline use). */
   .eyebrow-plain {
     @apply text-[11px] uppercase text-ink-400 dark:text-ink-300;
     font-family: var(--font-mono);
-    letter-spacing: 0.12em;
-  }
-
-  /* Mono section index — "01", "02" etc. in accent color. */
-  .sec-idx {
-    font-family: var(--font-mono);
-    font-size: 13px;
-    color: theme('colors.accent.DEFAULT');
-    font-weight: 500;
-  }
-  :global(html.dark) .sec-idx {
-    color: theme('colors.accent.dark');
+    letter-spacing: 0.14em;
   }
 
   .clamp-3 {
@@ -164,7 +208,7 @@ html.dark, html.dark body {
   }
 }
 
-/* Subtle decorative rule. */
+/* Decorative rule */
 .rule {
   position: relative;
   height: 1px;
@@ -172,8 +216,15 @@ html.dark, html.dark body {
   opacity: 0.12;
 }
 
-/* Newly-appended infinite-scroll cards fade up briefly so the next
-   page eases into view instead of popping in. */
+/* Hairline rule, full-bleed under section heads. */
+.hairline {
+  height: 1px;
+  background: theme('colors.paper.300');
+  border: 0;
+}
+html.dark .hairline { background: theme('colors.ink.600'); }
+
+/* Newly-appended infinite-scroll cards fade up. */
 @keyframes card-enter {
   from { opacity: 0; transform: translateY(6px); }
   to   { opacity: 1; transform: translateY(0); }
@@ -181,14 +232,10 @@ html.dark, html.dark body {
 .card-enter {
   animation: card-enter 260ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
 }
-@media (prefers-reduced-motion: reduce) {
-  .card-enter { animation: none; }
-}
+@media (prefers-reduced-motion: reduce) { .card-enter { animation: none; } }
 
-/* Animated checkmark on success affordances. */
-@keyframes draw-check {
-  to { stroke-dashoffset: 0; }
-}
+/* Animated checkmark */
+@keyframes draw-check { to { stroke-dashoffset: 0; } }
 .copied-check {
   stroke-dasharray: 24;
   stroke-dashoffset: 24;
@@ -203,9 +250,7 @@ html.dark, html.dark body {
   30%  { box-shadow: 0 0 0 6px var(--glow); }
   100% { box-shadow: 0 0 0 0 rgba(0, 0, 0, 0); }
 }
-.copy-pulse {
-  animation: copy-glow-var 700ms ease-out;
-}
+.copy-pulse { animation: copy-glow-var 700ms ease-out; }
 
 /* Toast */
 @keyframes toast-in {
@@ -243,31 +288,21 @@ mark.search-hl {
   color: #f5f3ee;
 }
 
-/* Page-load entrance — staggered reveal */
-@keyframes rise {
-  from { opacity: 0; transform: translateY(8px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-.reveal,
-.reveal-stagger > * {
+/* Page-load entrance — much subtler (no large translate, no stagger). */
+@keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }
+.reveal, .reveal-stagger > * {
   opacity: 0;
-  animation: rise 600ms cubic-bezier(0.2, 0.7, 0.2, 1) forwards;
+  animation: fade-in 420ms ease-out forwards;
 }
-.reveal { animation-delay: 40ms; }
-.reveal-stagger > *:nth-child(1) { animation-delay: 60ms; }
-.reveal-stagger > *:nth-child(2) { animation-delay: 140ms; }
-.reveal-stagger > *:nth-child(3) { animation-delay: 220ms; }
-.reveal-stagger > *:nth-child(4) { animation-delay: 300ms; }
-.reveal-stagger > *:nth-child(5) { animation-delay: 380ms; }
-.reveal-stagger > *:nth-child(6) { animation-delay: 460ms; }
+.reveal { animation-delay: 30ms; }
+.reveal-stagger > *:nth-child(1) { animation-delay: 30ms; }
+.reveal-stagger > *:nth-child(2) { animation-delay: 90ms; }
+.reveal-stagger > *:nth-child(3) { animation-delay: 150ms; }
+.reveal-stagger > *:nth-child(4) { animation-delay: 210ms; }
+.reveal-stagger > *:nth-child(5) { animation-delay: 270ms; }
 
 @media (prefers-reduced-motion: reduce) {
-  .reveal,
-  .reveal-stagger > * {
-    animation: none;
-    opacity: 1;
-  }
-  .card { transition: none !important; transform: none !important; }
+  .reveal, .reveal-stagger > * { animation: none; opacity: 1; }
 }
 
 /* Dark scrollbar */

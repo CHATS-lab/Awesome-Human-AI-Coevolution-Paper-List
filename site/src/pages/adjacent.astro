@@ -6,20 +6,35 @@ const { adjacent } = loadAllPapers();
 ---
 <Base
   title="Adjacent papers — supporting context for human-AI coevolution"
-  description="Non-canonical entries that materially inform human-AI coevolution research: foundational RLHF method papers, single-direction behavioral studies, related theoretical frameworks."
+  description="Non-canonical entries that materially inform human-AI coevolution research."
 >
-  <section class="mx-auto max-w-5xl px-6 pt-14 pb-16 reveal-stagger">
-    <p class="heading-eyebrow">Adjacent</p>
-    <h1 class="display-lg mt-5 text-ink-700 dark:text-ink-50">Adjacent papers</h1>
-    <p class="text-ink-600 dark:text-ink-200 mt-4 max-w-2xl text-[15px] leading-relaxed">
-      <strong class="text-ink-700 dark:text-ink-50">Non-canonical</strong> entries — useful supporting context like foundational RLHF method papers, single-direction behavioral studies that later inform coevolution work, and related theoretical frameworks. They are intentionally excluded from the main browse, the stats, and the per-category groupings.
-    </p>
-    <p class="font-mono text-[11px] uppercase tracking-[0.08em] text-ink-400 dark:text-ink-300 mt-4 tabular-nums">{adjacent.length} entries</p>
+  <article class="mx-auto max-w-[1180px] px-6 pt-14 pb-20 reveal-stagger">
 
-    <ul class="mt-10 grid gap-4 list-none p-0">
-      {adjacent.map((p) => (
-        <li><PaperCard paper={p} /></li>
-      ))}
-    </ul>
-  </section>
+    <div class="grid lg:grid-cols-[200px_minmax(0,1fr)] gap-x-16 gap-y-10">
+
+      <aside class="lg:border-r border-paper-300 dark:border-ink-600 lg:pr-6">
+        <p class="meta-label">Page</p>
+        <p class="kicker mt-2 text-ink-700 dark:text-ink-50">Adjacent</p>
+        <p class="mt-6 text-[12.5px] text-ink-500 dark:text-ink-300 leading-relaxed max-w-[14em]">
+          Non-canonical entries — useful supporting context, excluded from the main browse and stats.
+        </p>
+        <p class="mt-6 meta-label">Count</p>
+        <p class="meta-value tabular-nums mt-1">{adjacent.length}</p>
+      </aside>
+
+      <div>
+        <p class="heading-eyebrow">Adjacent</p>
+        <h1 class="kicker-lg mt-5 text-ink-700 dark:text-ink-50 max-w-[24ch]">Supporting context, intentionally separate.</h1>
+        <p class="mt-6 text-[15px] text-ink-600 dark:text-ink-200 leading-relaxed max-w-[60ch]">
+          Foundational method papers, single-direction behavioural studies later cited by coevolution work, and related theoretical frameworks. Listed for navigation; excluded from the canonical index.
+        </p>
+
+        <div class="mt-12">
+          {adjacent.map((p) => (
+            <PaperCard paper={p} />
+          ))}
+        </div>
+      </div>
+    </div>
+  </article>
 </Base>

@@ -1,76 +1,78 @@
 ---
 import type { Paper } from '../lib/parsePapers';
-import { ENV_EMOJI } from '../lib/site';
+import { ENV_ABBREV } from '../lib/site';
 const { paper, compact = false } = Astro.props as { paper: Paper; compact?: boolean };
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 const moreAuthors = Math.max(0, paper.authors.length - 4);
 const isAdj = paper.source === 'adjacent';
 const linkIsArxiv = /arxiv\.org/.test(paper.link);
 const showArxiv = !linkIsArxiv && !!paper.arxivId;
+
+// Compact year tag for the left rail: prefer YYYY; fall back to display
+const yearTag = paper.year && paper.year > 1900 ? String(paper.year) : (paper.date || '—');
 ---
-<article class={`card p-6 ${isAdj ? 'opacity-95' : ''}`}>
-  <div class="flex items-start gap-3">
-    <div class="flex-1 min-w-0">
-      <h3 class="font-display text-lg sm:text-[1.2rem] font-medium leading-snug text-ink-700 dark:text-ink-50 tracking-tight">
-        <a href={paper.link} target="_blank" rel="noopener" class="hover:text-accent dark:hover:text-accent-dark transition-colors">
-          {paper.title}
+<article class="entry-row group">
+
+  {/* Left rail — small mono metadata column */}
+  <div class="space-y-2.5">
+    <div class="meta-value tabular-nums">{yearTag}</div>
+    <div class="flex flex-wrap gap-1.5">
+      {paper.envs.map((env) => (
+        <a
+          href={`${base}/papers?env=${encodeURIComponent(env)}`}
+          class="topic-marker"
+          title={env}
+        >
+          {ENV_ABBREV[env] ?? '—'}
         </a>
-      </h3>
-      <p class="mt-2 text-[13px] text-ink-500 dark:text-ink-200">
-        {paper.authors.slice(0, 4).join(', ')}{moreAuthors > 0 ? ` +${moreAuthors} more` : ''}
-      </p>
+      ))}
     </div>
     {isAdj && (
-      <span class="shrink-0 font-mono text-[10px] uppercase tracking-[0.08em] px-1.5 py-0.5 border border-paper-300 dark:border-ink-600/60 text-ink-500 dark:text-ink-300">adjacent</span>
+      <div class="font-mono text-[10px] uppercase tracking-[0.08em] text-ink-400 dark:text-ink-300">[adjacent]</div>
     )}
   </div>
 
-  <dl class="mt-4 grid sm:grid-cols-2 gap-x-8 gap-y-1.5 text-[12.5px] text-ink-600 dark:text-ink-200">
-    {paper.institutions.length > 0 && (
-      <div class="flex items-baseline gap-2">
-        <dt class="font-mono text-[10px] uppercase tracking-[0.08em] text-ink-400 dark:text-ink-300 w-[60px] shrink-0">Inst.</dt>
-        <dd class="min-w-0">{paper.institutions.join(' · ')}</dd>
-      </div>
-    )}
-    <div class="flex items-baseline gap-2">
-      <dt class="font-mono text-[10px] uppercase tracking-[0.08em] text-ink-400 dark:text-ink-300 w-[60px] shrink-0">Date</dt>
-      <dd>{paper.date}</dd>
-    </div>
-    <div class="flex items-baseline gap-2">
-      <dt class="font-mono text-[10px] uppercase tracking-[0.08em] text-ink-400 dark:text-ink-300 w-[60px] shrink-0">Venue</dt>
-      <dd>{paper.publisher}</dd>
-    </div>
-    {paper.envs.length > 0 && (
-      <div class="flex items-baseline gap-2">
-        <dt class="font-mono text-[10px] uppercase tracking-[0.08em] text-ink-400 dark:text-ink-300 w-[60px] shrink-0">Cat.</dt>
-        <dd class="flex flex-wrap gap-x-3 gap-y-1">
-          {paper.envs.map((env) => (
-            <span class="inline-flex items-baseline gap-1.5">
-              <span class="sec-idx text-[11px]">{ENV_EMOJI[env] ?? '—'}</span>
-              <span>{env}</span>
-            </span>
-          ))}
-        </dd>
-      </div>
-    )}
-  </dl>
+  {/* Main column */}
+  <div>
+    <h3 class="font-display text-[18px] sm:text-[20px] font-medium leading-snug text-ink-700 dark:text-ink-50 tracking-tight">
+      <a href={paper.link} target="_blank" rel="noopener" class="hover:text-accent dark:hover:text-accent-dark transition-colors">
+        {paper.title}
+      </a>
+    </h3>
 
-  {paper.keywords.length > 0 && (
-    <div class="mt-4 flex flex-wrap gap-1.5">
-      {paper.keywords.slice(0, compact ? 5 : 10).map((kw) => (
-        <a class="chip" href={`${base}/papers?key=${encodeURIComponent(kw)}`}>{kw}</a>
-      ))}
-    </div>
-  )}
+    <p class="mt-2 text-[13.5px] text-ink-500 dark:text-ink-200">
+      {paper.authors.slice(0, 4).join(', ')}{moreAuthors > 0 ? ` · +${moreAuthors} more` : ''}
+    </p>
 
-  {!compact && paper.tldr && (
-    <p class="mt-4 text-[13.5px] text-ink-600 dark:text-ink-100 leading-relaxed clamp-3">{paper.tldr}</p>
-  )}
+    <p class="mt-1 text-[12.5px] text-ink-400 dark:text-ink-300">
+      <span class="font-mono">{paper.publisher || '—'}</span>
+      {paper.institutions.length > 0 && (
+        <>
+          <span class="mx-2 text-paper-400 dark:text-ink-600">·</span>
+          <span>{paper.institutions.slice(0, 3).join(', ')}</span>
+        </>
+      )}
+    </p>
 
-  <div class="mt-5 flex items-center gap-4 text-[12px]">
-    <a class="link" href={`${base}/papers/${paper.slug}`}>Details →</a>
-    {showArxiv && (
-      <a class="link" href={`https://arxiv.org/abs/${paper.arxivId}`} target="_blank" rel="noopener">arXiv</a>
+    {!compact && paper.tldr && (
+      <p class="mt-3 text-[14px] text-ink-600 dark:text-ink-100 leading-relaxed clamp-3 max-w-[68ch]">{paper.tldr}</p>
     )}
+
+    {paper.keywords.length > 0 && (
+      <p class="mt-3 text-[12.5px] text-ink-500 dark:text-ink-300 flex flex-wrap gap-x-3 gap-y-1">
+        {paper.keywords.slice(0, compact ? 5 : 8).map((kw) => (
+          <a class="hover:text-accent dark:hover:text-accent-dark" href={`${base}/papers?key=${encodeURIComponent(kw)}`}>
+            <span class="text-paper-400 dark:text-ink-600 mr-0.5">·</span>{kw}
+          </a>
+        ))}
+      </p>
+    )}
+
+    <div class="mt-4 flex items-baseline gap-5 text-[12px] font-mono uppercase tracking-[0.08em]">
+      <a class="text-accent dark:text-accent-dark hover:underline underline-offset-[3px]" href={`${base}/papers/${paper.slug}`}>Read entry <span>→</span></a>
+      {showArxiv && (
+        <a class="text-ink-500 dark:text-ink-300 hover:text-accent dark:hover:text-accent-dark" href={`https://arxiv.org/abs/${paper.arxivId}`} target="_blank" rel="noopener">arXiv ↗</a>
+      )}
+    </div>
   </div>
 </article>
