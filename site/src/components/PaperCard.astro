@@ -1,6 +1,6 @@
 ---
 import type { Paper } from '../lib/parsePapers';
-import { ENV_ABBREV } from '../lib/site';
+import { ENV_ABBREV, PHASE_CODE, PHASE_HEADINGS } from '../lib/site';
 const { paper, compact = false } = Astro.props as { paper: Paper; compact?: boolean };
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 const moreAuthors = Math.max(0, paper.authors.length - 4);
@@ -10,17 +10,29 @@ const showArxiv = !linkIsArxiv && !!paper.arxivId;
 
 // Compact year tag for the left rail: prefer YYYY; fall back to display
 const yearTag = paper.year && paper.year > 1900 ? String(paper.year) : (paper.date || '—');
+const phaseTag = paper.phase ?? '';
+const phaseCode = phaseTag ? (PHASE_CODE[phaseTag] ?? '—') : '—';
+const phaseTitle = phaseTag ? (PHASE_HEADINGS[phaseTag]?.title ?? phaseTag) : 'unphased';
 ---
 <article class="entry-row group">
 
   {/* Left rail — small mono metadata column */}
   <div class="space-y-2.5">
     <div class="meta-value tabular-nums">{yearTag}</div>
+    {phaseTag && (
+      <a
+        href={`${base}/papers?phase=${encodeURIComponent(phaseTag)}`}
+        class="topic-marker"
+        title={`${phaseCode} — ${phaseTitle}`}
+      >
+        {phaseCode}
+      </a>
+    )}
     <div class="flex flex-wrap gap-1.5">
       {paper.envs.map((env) => (
         <a
           href={`${base}/papers?env=${encodeURIComponent(env)}`}
-          class="topic-marker"
+          class="font-mono text-[10px] uppercase tracking-[0.08em] text-ink-400 dark:text-ink-300 hover:text-accent dark:hover:text-accent-dark transition-colors"
           title={env}
         >
           {ENV_ABBREV[env] ?? '—'}

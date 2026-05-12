@@ -155,12 +155,43 @@ CATEGORY_KEYS = [
     "Position & Survey",
 ]
 
-CATEGORY_EMOJI = {
-    "Collaboration & Co-Creation": "🤝",
-    "Mutual Adaptation": "🔄",
-    "Human Feedback Loops": "🎯",
-    "Longitudinal HCI Studies": "📊",
-    "Position & Survey": "📚",
+CATEGORY_ABBREV = {
+    "Collaboration & Co-Creation": "CC",
+    "Mutual Adaptation": "MA",
+    "Human Feedback Loops": "HF",
+    "Longitudinal HCI Studies": "LH",
+    "Position & Survey": "PS",
+}
+
+# Phased framework — primary organizational axis.
+PHASE_ORDER = [
+    "phase-1",
+    "emerging-phase-2",
+    "phase-2",
+    "emerging-phase-3",
+    "phase-3",
+    "emerging-phase-4",
+    "phase-4",
+    "framework",
+]
+
+PHASE_HEADINGS = {
+    "phase-1":          ("Phase 1 — AI as Tool",
+                         "Humans use AI to answer questions; the human capability at risk is **critical thinking**. The dominant failure mode is passive acceptance — uncritical absorption of AI-provided knowledge, leading to reasoning atrophy and sycophantic feedback that reinforces existing bias."),
+    "emerging-phase-2": ("Emerging Phase 2 — Tool → Assistant",
+                         "Papers that bridge reasoning-level use with artifact production. AI prompts the human's thinking but begins to produce ideation/draft material."),
+    "phase-2":          ("Phase 2 — AI as Assistant",
+                         "AI produces bounded artifacts (drafts, code snippets, partial implementations); the human capability at risk is **evaluative expertise**. The dominant failure mode is superficial verification — approving polished but flawed work."),
+    "emerging-phase-3": ("Emerging Phase 3 — Assistant → Executor",
+                         "Papers that bridge artifact-level assistance with end-to-end autonomy. Humans still drive the workflow but delegate sequences of steps."),
+    "phase-3":          ("Phase 3 — AI as Executor",
+                         "AI completes end-to-end workflows; humans set goals. The human capability at risk is **metacognitive monitoring**. The dominant failure mode is vigilance loss — undetected drift in autonomous workflows."),
+    "emerging-phase-4": ("Emerging Phase 4 — Executor → Organization",
+                         "Papers that bridge autonomous-agent use with system-level coordination. Ecosystem-level dynamics or limited governance over agent teams."),
+    "phase-4":          ("Phase 4 — AI as Organization",
+                         "AI coordinates systems of work across many agents; the human capability at risk is **systems thinking**. The dominant failure mode is governance opacity. The position paper notes that no domain has fully entered Phase 4 yet."),
+    "framework":        ("Framework & Cross-Cutting Work",
+                         "Position pieces, surveys, and theoretical frameworks that span multiple phases."),
 }
 
 
@@ -175,15 +206,18 @@ def kw_string(keywords: list[str]) -> str:
 
 
 def md_entry_for_readme(p: dict[str, Any]) -> str:
+    cats = p.get("envs", []) or []
+    cat_codes = ", ".join(CATEGORY_ABBREV.get(c, c) for c in cats)
+    cat_str = f"{cat_codes} ({', '.join(cats)})" if cats else "—"
     return (
         f"- [{p['title']}]({p.get('link', '')})\n"
         f"    - {', '.join(p.get('authors', []) or [])}\n"
-        f"    - 🏛️ Institutions: {', '.join(p.get('institutions', []) or [])}\n"
-        f"    - 📅 Date: {p.get('display_date', p.get('date', ''))}\n"
-        f"    - 📑 Publisher: {p.get('publisher', '')}\n"
-        f"    - 🧭 Category: {env_string(p.get('envs', []) or [])}\n"
-        f"    - 🔑 Key: {kw_string(p.get('keywords', []) or [])}\n"
-        f"    - 📖 TLDR: {p.get('tldr', '')}\n"
+        f"    - Institutions: {', '.join(p.get('institutions', []) or []) or '—'}\n"
+        f"    - Date: {p.get('display_date', p.get('date', ''))}\n"
+        f"    - Venue: {p.get('publisher', '')}\n"
+        f"    - Category: {cat_str}\n"
+        f"    - Keywords: {', '.join(p.get('keywords', []) or [])}\n"
+        f"    - TLDR: {p.get('tldr', '')}\n"
     )
 
 
@@ -226,31 +260,73 @@ def emit_yaml(canonical: list[dict[str, Any]], adjacent: list[dict[str, Any]]) -
 
 
 def render_readme(canonical: list[dict[str, Any]]) -> None:
+    """Render README organized by phase. Each phase becomes a section
+    with its own intro and a list of papers (sorted newest-first
+    within the phase). A short colophon and the secondary 5-category
+    index follow after the phase sections.
+    """
     total = len(canonical)
-    max_readme_papers = 500
-    is_truncated = total > max_readme_papers
-    recent = canonical[:max_readme_papers] if is_truncated else canonical
-    paper_entries = "\n".join(md_entry_for_readme(p) for p in recent)
-    if is_truncated:
-        heading = "## Recent Papers (from most recent to oldest)"
-        note = (
-            f"> This README shows the {max_readme_papers} most recent papers. "
-            f"See [`papers.yaml`](papers.yaml) for the full structured source — "
-            f"including BibTeX, OpenReview / publisher / homepage / code / dataset "
-            f"links, and the `bibtex_confirmed` flag. For non-canonical adjacent "
-            f"papers see [`adjacent.yaml`](adjacent.yaml)."
-        )
-    else:
-        heading = "## All Papers (from most recent to oldest)"
-        note = "> For non-canonical adjacent papers see [`adjacent.yaml`](adjacent.yaml)."
-    paper_list_section = f"{heading}\n\n{note}\n\n{paper_entries}"
 
-    # Category counts (replaces GUI's env_groups).
+    # ─── Phase sections ────────────────────────────────────────────
+    # Group by phase, keep within-section newest-first ordering
+    # (canonical is already sorted).
+    by_phase: dict[str, list[dict[str, Any]]] = {tag: [] for tag in PHASE_ORDER}
+    for p in canonical:
+        tag = (p.get("phase") or "").strip()
+        if tag in by_phase:
+            by_phase[tag].append(p)
+        else:
+            # Unknown / missing tag — park in the framework bucket so
+            # nothing is silently dropped.
+            by_phase["framework"].append(p)
+
+    phase_sections: list[str] = []
+    for tag in PHASE_ORDER:
+        papers = by_phase[tag]
+        if not papers:
+            continue
+        title, blurb = PHASE_HEADINGS[tag]
+        body = "\n".join(md_entry_for_readme(p) for p in papers)
+        phase_sections.append(
+            f"### {title}  <sub>({len(papers)} papers)</sub>\n\n"
+            f"_{blurb}_\n\n"
+            f"{body}"
+        )
+    paper_list_section = (
+        "## Papers by Phase\n\n"
+        "> Phases come from the four-phase framework "
+        "(_Tool · Assistant · Executor · Organization_) — "
+        "see [`deep_research/phased_framework.md`](deep_research/phased_framework.md) "
+        "for definitions and the [position paper PDF](deep_research/) for full context. "
+        "Each paper is assigned a single phase (with `emerging-phase-X` for clear bridge cases). "
+        "Within a phase, papers are listed newest-first. "
+        "The secondary 5-category axis (CC/MA/HF/LH/PS) is shown on each entry."
+        "\n\n"
+        + "\n\n".join(phase_sections)
+    )
+
+    # Phase counts strip for the masthead.
+    phase_parts: list[str] = []
+    for tag in PHASE_ORDER:
+        n = len(by_phase[tag])
+        if n == 0:
+            continue
+        title, _ = PHASE_HEADINGS[tag]
+        phase_parts.append(f"**{title.split(' — ')[0]}** ({n})")
+    env_groups = " · ".join(phase_parts)
+
+    # Secondary 5-category strip.
     cat_parts: list[str] = []
     for cat in CATEGORY_KEYS:
         count = sum(1 for p in canonical if cat in (p.get("envs") or []))
-        cat_parts.append(f"{CATEGORY_EMOJI[cat]} **{cat}** ({count})")
-    env_groups = " · ".join(cat_parts)
+        cat_parts.append(f"`{CATEGORY_ABBREV[cat]}` **{cat}** ({count})")
+    secondary_groups = " · ".join(cat_parts)
+    # Append to env_groups under a sub-heading.
+    env_groups = (
+        env_groups
+        + "\n\n### Secondary axis — paper themes\n\n"
+        + secondary_groups
+    )
 
     # Top keywords.
     per_line = 5

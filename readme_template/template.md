@@ -1,16 +1,16 @@
 # Awesome Human-AI Coevolution Paper List
 
-A curated list of **{{insert_paper_count_here}}** research papers on **Human-AI coevolution** — the process by which humans and AI systems continuously influence and reshape each other. Topics span human-AI collaboration, mutual adaptation, RLHF feedback loops, longitudinal deployment studies, and position/survey work that frames the coevolutionary lens.
+A curated index of **{{insert_paper_count_here}}** research papers on **human-AI coevolution**, organized by the four-phase framework — _Tool · Assistant · Executor · Organization_ — for how humans use AI in their work. Each paper is grounded evidence for one phase, illustrating either the human capability empowered or the failure mode that emerges when human evolution lags AI's.
 
-> **What counts as coevolution here?** A paper qualifies when *both directions of influence* are studied or argued for: humans changing AI (data, feedback, preferences, deployment) **and** AI changing humans (skill, behavior, cognition, workflows, downstream data distributions). One-way capability papers belong elsewhere.
+> **Why phases.** As AI advances, the way humans use it shifts from full execution to oversight to governance, and each phase brings distinct impacts on human ability: weakened reasoning, missed flaws, undetected drift, lost goal traceability. The list curates research that **documents these effects or argues about how they should be addressed** — that is, the bidirectional human-AI coevolution literature, viewed through the phased lens.
 
-The structured store [`papers.yaml`](papers.yaml) is the source of truth — the README, statistics, and any future website are auto-generated from it. See [`CLAUDE.md`](CLAUDE.md) for the schema and contribution workflow.
+The structured store [`papers.yaml`](papers.yaml) is the source of truth — the README, statistics, and the website are auto-generated from it. See [`CLAUDE.md`](CLAUDE.md) for the schema and contribution workflow.
 
 ![Quarterly publication trend](readme_template/statistics/quarterly_trend.png)
 
 ![Top 25 research keywords](readme_template/statistics/keyword_bar_chart.png)
 
-## Browse by Category
+## Index by Phase
 {{insert_env_groups_here}}
 
 ## Top Keywords

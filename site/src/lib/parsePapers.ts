@@ -33,6 +33,9 @@ export interface Paper {
   monthOnly: boolean;
   publisher: string;
   envs: string[];          // [] for adjacent papers
+  /** One of the eight phase tags from the four-phase framework.
+   * Examples: 'phase-1', 'emerging-phase-2', 'phase-2', 'framework'. */
+  phase: string | null;
   keywords: string[];
   tldr: string;
   arxivId: string | null;
@@ -53,6 +56,7 @@ interface RawEntry {
   date?: unknown;
   publisher?: unknown;
   envs?: unknown;
+  phase?: unknown;
   keywords?: unknown;
   tldr?: unknown;
   relation?: unknown;
@@ -195,6 +199,7 @@ export function parsePapersYaml(
     const dateInfo = expandDate(String(entry.date ?? ''));
     const publisher = String(entry.publisher ?? '').trim();
     const envs = arrayOfStrings(entry.envs);
+    const phase = typeof entry.phase === 'string' && entry.phase.trim() ? entry.phase.trim() : null;
     const keywords = arrayOfStrings(entry.keywords);
     const tldr = String(entry.tldr ?? '').trim();
     const arxivId = (typeof entry.arxiv_id === 'string' && entry.arxiv_id) || extractArxivId(link);
@@ -222,7 +227,7 @@ export function parsePapersYaml(
       year: dateInfo.year,
       month: dateInfo.month,
       monthOnly: dateInfo.monthOnly,
-      publisher, envs, keywords, tldr,
+      publisher, envs, phase, keywords, tldr,
       arxivId, source,
       sourceLine: lineIndex[i] ?? 1,
       relation: typeof entry.relation === 'string' ? entry.relation : null,

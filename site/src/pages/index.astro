@@ -1,12 +1,18 @@
 ---
 import Base from '../layouts/Base.astro';
 import { loadAllPapers } from '../lib/parsePapers';
-import { ENV_ORDER, ENV_ABBREV, REPO_URL } from '../lib/site';
+import { ENV_ORDER, ENV_ABBREV, PHASE_ORDER, PHASE_CODE, PHASE_HEADINGS, REPO_URL } from '../lib/site';
 import { getStarCount } from '../lib/star';
 
 const { canonical } = loadAllPapers();
 const envCount: Record<string, number> = {};
 for (const p of canonical) for (const e of p.envs) envCount[e] = (envCount[e] ?? 0) + 1;
+
+const phaseCount: Record<string, number> = {};
+for (const p of canonical) {
+  const tag = p.phase ?? 'framework';
+  phaseCount[tag] = (phaseCount[tag] ?? 0) + 1;
+}
 
 const lastYear = new Date().getFullYear();
 const lastUpdated = canonical
@@ -19,7 +25,7 @@ const stars = await getStarCount();
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 const siteUrl = (Astro.site ?? new URL('https://xli04.github.io')).toString().replace(/\/$/, '') + base;
 
-const description = `An index of ${canonical.length}+ research papers on human–AI coevolution: collaboration and co-creation, mutual adaptation, RLHF and feedback loops, longitudinal HCI deployments, and position pieces.`;
+const description = `An index of ${canonical.length}+ research papers on human–AI coevolution, organized by the four-phase framework — Tool, Assistant, Executor, Organization.`;
 
 const jsonLd = [
   {
@@ -36,24 +42,12 @@ const jsonLd = [
     },
   },
 ];
-
-const categoryGloss: Record<string, string> = {
-  'Collaboration & Co-Creation': 'Humans and AI working jointly on a task; how each reshapes the other within and across sessions.',
-  'Mutual Adaptation': 'Both human and AI behavior measurably change in response to each other over time.',
-  'Human Feedback Loops': 'RLHF, preference learning, training-from-use — feedback that becomes future training data.',
-  'Longitudinal HCI Studies': 'Field deployments measuring shifts in human behavior, skill, and norms around AI.',
-  'Position & Survey': 'Framing pieces and surveys that argue for or characterize the coevolutionary lens.',
-};
 ---
 <Base title="An index of human–AI coevolution research" description={description} jsonLd={jsonLd}>
 
-  {/* ─── Issue-plate masthead ────────────────────────────
-     Two-column: l-col = mono metadata block (date, count,
-     star, downloads); r-col = serif intro essay.            */}
   <header class="mx-auto max-w-[1180px] px-6 pt-16 pb-12 reveal-stagger">
     <div class="grid lg:grid-cols-[200px_minmax(0,1fr)] gap-x-16 gap-y-8">
 
-      {/* Left rail: issue plate */}
       <aside class="lg:border-r border-paper-300 dark:border-ink-600 lg:pr-6">
         <p class="meta-label">Index № 01</p>
         <p class="kicker mt-2 text-ink-700 dark:text-ink-50">v1 · {lastYear}</p>
@@ -64,8 +58,8 @@ const categoryGloss: Record<string, string> = {
             <dd class="meta-value mt-0.5 tabular-nums">{canonical.length}</dd>
           </div>
           <div>
-            <dt class="meta-label">Categories</dt>
-            <dd class="meta-value mt-0.5 tabular-nums">5</dd>
+            <dt class="meta-label">Phases</dt>
+            <dd class="meta-value mt-0.5 tabular-nums">4 + 3 emerging</dd>
           </div>
           <div>
             <dt class="meta-label">Last entry</dt>
@@ -85,20 +79,19 @@ const categoryGloss: Record<string, string> = {
         </div>
       </aside>
 
-      {/* Right column: editorial intro */}
       <div>
         <p class="heading-eyebrow">Human–AI Coevolution Index</p>
 
-        <h1 class="kicker-xl mt-6 text-ink-700 dark:text-ink-50 max-w-[20ch]">
-          An index of research where humans and AI <em class="text-accent dark:text-accent-dark italic">demonstrably shape each other</em>.
+        <h1 class="kicker-xl mt-6 text-ink-700 dark:text-ink-50 max-w-[22ch]">
+          An index of research on how <em class="text-accent dark:text-accent-dark italic">humans must evolve</em> as AI evolves.
         </h1>
 
         <div class="mt-8 text-[16.5px] text-ink-600 dark:text-ink-200 leading-[1.7] max-w-[60ch] space-y-5">
           <p>
-            A paper enters this index only when <strong class="text-ink-700 dark:text-ink-50">both directions of influence</strong> are present: humans changing AI — through data, feedback, preferences, deployment, or prompting; and AI changing humans — through skill, behaviour, cognition, language, workflow, or the data they next produce.
+            Grounded in a <strong class="text-ink-700 dark:text-ink-50">four-phase framework</strong> — Tool · Assistant · Executor · Organization — for how humans use AI in their work. As AI takes on more, humans must develop the matching capability to use it well: critical thinking, evaluative expertise, metacognitive monitoring, and systems thinking.
           </p>
           <p>
-            One-way capability papers and pure one-shot interaction studies belong elsewhere. Adjacent works that materially inform the area but do not satisfy the bidirectional bar are listed separately under <a class="a-text" href={`${base}/adjacent`}>adjacent papers</a>.
+            Each entry is grounded evidence for one phase. The list documents how human capabilities are <em class="italic">empowered</em> and <em class="italic">weakened</em> by AI advancement, and what humans and AI systems can do to co-evolve well.
           </p>
         </div>
 
@@ -111,28 +104,64 @@ const categoryGloss: Record<string, string> = {
     </div>
   </header>
 
-  {/* ─── Categories — table of contents style ───────────── */}
+  {/* ─── Primary axis: by phase ──────────────────────────────────── */}
   <section class="mx-auto max-w-[1180px] px-6 mt-20 reveal">
     <div class="grid lg:grid-cols-[200px_minmax(0,1fr)] gap-x-16">
       <div class="lg:border-r border-paper-300 dark:border-ink-600 lg:pr-6">
         <p class="meta-label">Contents</p>
         <p class="mt-3 text-[13px] text-ink-500 dark:text-ink-300 leading-relaxed max-w-[14em]">
-          Five categories. A paper may sit in more than one.
+          Eight tags: four phases, three bridge phases, and a framework bucket for cross-cutting work.
+        </p>
+      </div>
+
+      <ol class="list-none p-0 max-w-[64ch]">
+        {PHASE_ORDER.map((tag) => {
+          const h = PHASE_HEADINGS[tag];
+          const n = phaseCount[tag] ?? 0;
+          if (n === 0) return null;
+          return (
+            <li>
+              <a
+                href={`${base}/papers?phase=${encodeURIComponent(tag)}`}
+                class="grid grid-cols-[56px_1fr_auto] gap-x-5 items-baseline py-6 border-t border-paper-300 dark:border-ink-600 group hover:bg-paper-200/40 dark:hover:bg-ink-700/20 transition-colors"
+              >
+                <span class="meta-value tabular-nums text-accent dark:text-accent-dark font-medium">{PHASE_CODE[tag]}</span>
+                <div>
+                  <div class="kicker text-ink-700 dark:text-ink-50 group-hover:text-accent dark:group-hover:text-accent-dark transition-colors">{h.title}</div>
+                  <p class="mt-1 text-[12px] font-mono uppercase tracking-[0.06em] text-ink-400 dark:text-ink-300">
+                    {h.role} <span class="text-paper-400 dark:text-ink-600">·</span> Capability: <span class="text-ink-500 dark:text-ink-200 normal-case tracking-normal">{h.capability}</span>
+                  </p>
+                  <p class="mt-2 text-[13.5px] text-ink-500 dark:text-ink-300 max-w-[52ch] leading-relaxed">{h.blurb}</p>
+                </div>
+                <span class="meta-label tabular-nums">{n}</span>
+              </a>
+            </li>
+          );
+        })}
+        <li><div class="border-t border-paper-300 dark:border-ink-600"></div></li>
+      </ol>
+    </div>
+  </section>
+
+  {/* ─── Secondary axis: 5 paper themes ──────────────────────────── */}
+  <section class="mx-auto max-w-[1180px] px-6 mt-20 reveal">
+    <div class="grid lg:grid-cols-[200px_minmax(0,1fr)] gap-x-16">
+      <div class="lg:border-r border-paper-300 dark:border-ink-600 lg:pr-6">
+        <p class="meta-label">Secondary axis</p>
+        <p class="mt-3 text-[13px] text-ink-500 dark:text-ink-300 leading-relaxed max-w-[14em]">
+          Cross-cuts the phase axis with five thematic tags. A paper may have one or more.
         </p>
       </div>
 
       <ol class="list-none p-0 max-w-[60ch]">
-        {ENV_ORDER.map((env, i) => (
+        {ENV_ORDER.map((env) => (
           <li>
             <a
               href={`${base}/papers?env=${encodeURIComponent(env)}`}
-              class="grid grid-cols-[48px_1fr_auto] gap-x-5 items-baseline py-6 border-t border-paper-300 dark:border-ink-600 group hover:bg-paper-200/40 dark:hover:bg-ink-700/20 transition-colors"
+              class="grid grid-cols-[48px_1fr_auto] gap-x-5 items-baseline py-4 border-t border-paper-300 dark:border-ink-600 group hover:bg-paper-200/40 dark:hover:bg-ink-700/20 transition-colors"
             >
               <span class="meta-value tabular-nums text-accent dark:text-accent-dark">{ENV_ABBREV[env]}</span>
-              <div>
-                <div class="kicker text-ink-700 dark:text-ink-50 group-hover:text-accent dark:group-hover:text-accent-dark transition-colors">{env}</div>
-                <p class="mt-2 text-[13.5px] text-ink-500 dark:text-ink-300 max-w-[48ch] leading-relaxed">{categoryGloss[env]}</p>
-              </div>
+              <div class="font-display text-[16px] text-ink-700 dark:text-ink-50 group-hover:text-accent dark:group-hover:text-accent-dark transition-colors">{env}</div>
               <span class="meta-label tabular-nums">{envCount[env] ?? 0}</span>
             </a>
           </li>
@@ -142,7 +171,7 @@ const categoryGloss: Record<string, string> = {
     </div>
   </section>
 
-  {/* ─── Colophon strip ──────────────────────────────────── */}
+  {/* ─── Colophon ──────────────────────────────────────────────── */}
   <section class="mx-auto max-w-[1180px] px-6 mt-24 pb-20">
     <div class="grid lg:grid-cols-[200px_minmax(0,1fr)] gap-x-16">
       <div class="lg:border-r border-paper-300 dark:border-ink-600 lg:pr-6">

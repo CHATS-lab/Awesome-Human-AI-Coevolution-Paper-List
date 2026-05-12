@@ -1,7 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
 import { loadAllPapers, type Paper } from '../../lib/parsePapers';
-import { ENV_EMOJI, REPO_URL } from '../../lib/site';
+import { ENV_EMOJI, PHASE_CODE, PHASE_HEADINGS, REPO_URL } from '../../lib/site';
 import { normalizePublisher, bibtexVenueKind } from '../../lib/venues';
 
 interface RelatedLite {
@@ -177,6 +177,17 @@ const reportUrl = `${REPO_URL}/issues/new?` + new URLSearchParams({
         </nav>
 
         <dl class="space-y-4 text-[12.5px]">
+          {paper.phase && (
+            <div>
+              <dt class="meta-label">Phase</dt>
+              <dd class="mt-1">
+                <a class="topic-marker" href={`${base}/papers?phase=${encodeURIComponent(paper.phase)}`} title={PHASE_HEADINGS[paper.phase]?.title ?? paper.phase}>
+                  <span class="font-medium">{PHASE_CODE[paper.phase] ?? '—'}</span>
+                  <span class="ml-1.5 normal-case tracking-normal text-ink-500 dark:text-ink-300">{PHASE_HEADINGS[paper.phase]?.title}</span>
+                </a>
+              </dd>
+            </div>
+          )}
           <div>
             <dt class="meta-label">Date</dt>
             <dd class="meta-value mt-0.5">{paper.date}</dd>
@@ -186,7 +197,7 @@ const reportUrl = `${REPO_URL}/issues/new?` + new URLSearchParams({
             <dd class="meta-value mt-0.5">{paper.publisher || '—'}</dd>
           </div>
           <div>
-            <dt class="meta-label">Category</dt>
+            <dt class="meta-label">Theme</dt>
             <dd class="mt-1 flex flex-wrap gap-x-2 gap-y-1">
               {paper.envs.map((env) => (
                 <a class="topic-marker" href={`${base}/papers?env=${encodeURIComponent(env)}`} title={env}>{ENV_EMOJI[env] ?? '—'}</a>

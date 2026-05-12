@@ -2,6 +2,7 @@
 import { createEffect, createMemo, createSignal, For, Show, onMount, onCleanup, untrack } from 'solid-js';
 import MiniSearch from 'minisearch';
 import { normalizePublisher, bibtexVenueKind } from '../lib/venues';
+import { PHASE_CODE, PHASE_HEADINGS } from '../lib/site';
 import { Select, Toggle } from './UiPrimitives';
 
 export interface BrowserPaper {
@@ -16,6 +17,7 @@ export interface BrowserPaper {
   month: number;
   publisher: string;
   envs: string[];
+  phase: string | null;
   keywords: string[];
   tldr: string;
   arxivId: string | null;
@@ -75,6 +77,7 @@ function coerceMonthStr(raw: string | null): string | null {
 
 function readUrlState(): {
   q: string;
+  phases: Set<string>;
   envs: Set<string>;
   keys: Set<string>;
   authors: Set<string>;
@@ -91,6 +94,7 @@ function readUrlState(): {
     new Set((ps.getAll(k).flatMap((v) => v.split(',')).map((v) => v.trim()).filter(Boolean)));
   return {
     q: ps.get('q') ?? '',
+    phases: csv('phase'),
     envs: csv('env'),
     keys: csv('key'),
     authors: csv('author'),
@@ -112,6 +116,7 @@ function writeUrlState(state: ReturnType<typeof readUrlState>) {
   };
   const join = (s: Set<string>) => Array.from(s).join(',');
   setOrDelete('q', state.q);
+  setOrDelete('phase', join(state.phases));
   setOrDelete('env', join(state.envs));
   setOrDelete('key', join(state.keys));
   setOrDelete('author', join(state.authors));
@@ -135,7 +140,7 @@ function fmtMonth(m: string): string {
 
 export default function PaperBrowser(props: Props) {
   const initial = typeof window !== 'undefined' ? readUrlState() : {
-    q: '', envs: new Set<string>(), keys: new Set<string>(),
+    q: '', phases: new Set<string>(), envs: new Set<string>(), keys: new Set<string>(),
     authors: new Set<string>(), institutions: new Set<string>(),
     publishers: new Set<string>(),
     fromMonth: null as string | null, toMonth: null as string | null,
@@ -144,6 +149,7 @@ export default function PaperBrowser(props: Props) {
   };
 
   const [q, setQ] = createSignal(initial.q);
+  const [phases, setPhases] = createSignal<Set<string>>(initial.phases);
   const [envs, setEnvs] = createSignal<Set<string>>(initial.envs);
   const [keys, setKeys] = createSignal<Set<string>>(initial.keys);
   const [authors, setAuthors] = createSignal<Set<string>>(initial.authors);
@@ -200,7 +206,7 @@ export default function PaperBrowser(props: Props) {
     if (urlSyncTimer != null) window.clearTimeout(urlSyncTimer);
     urlSyncTimer = window.setTimeout(() => {
       writeUrlState({
-        q: q(), envs: envs(), keys: keys(), authors: authors(),
+        q: q(), phases: phases(), envs: envs(), keys: keys(), authors: authors(),
         institutions: institutions(), publishers: publishers(),
         fromMonth: fromMonth(), toMonth: toMonth(), sort: sort(),
         includeAdjacent: includeAdjacent(),
@@ -229,6 +235,7 @@ export default function PaperBrowser(props: Props) {
   };
 
   const filtered = createMemo<BrowserPaper[]>(() => {
+    const phaseSel = phases();
     const envSel = envs();
     const keySel = keys();
     const authorSel = authors();
@@ -247,6 +254,7 @@ export default function PaperBrowser(props: Props) {
     let out = candidates().filter((p) => {
       if (hits && !hits.has(p.slug)) return false;
       if (!adjOn && p.source !== 'canonical') return false;
+      if (phaseSel.size > 0 && !(p.phase && phaseSel.has(p.phase))) return false;
       if (envSel.size > 0 && !p.envs.some((e) => envSel.has(e))) return false;
       if (keySel.size > 0 && !p.keywords.some((k) => keySel.has(k))) return false;
       if (authorSel.size > 0 && !p.authors.some((a) => authorSel.has(a))) return false;
@@ -289,6 +297,13 @@ export default function PaperBrowser(props: Props) {
   });
 
   // facet counts derived from current candidate set (excluding adjacent toggle if off)
+  const allPhases = createMemo(() => {
+    const c = uniqueCount(candidates().map((p) => p.phase).filter((x): x is string => !!x));
+    // Order by PHASE_ORDER from site.ts so the sidebar lists Phase 1 → Framework.
+    const order = ['phase-1', 'emerging-phase-2', 'phase-2', 'emerging-phase-3', 'phase-3', 'emerging-phase-4', 'phase-4', 'framework'];
+    const idx = new Map(order.map((t, i) => [t, i] as const));
+    return Array.from(c.entries()).sort((a, b) => (idx.get(a[0]) ?? 99) - (idx.get(b[0]) ?? 99));
+  });
   const allEnvs = createMemo(() => {
     const c = uniqueCount(candidates().flatMap((p) => p.envs));
     return Array.from(c.entries()).sort((a, b) => b[1] - a[1]);
@@ -332,20 +347,20 @@ export default function PaperBrowser(props: Props) {
     setShowLimit(PAGE_SIZE);
   };
   const clearAll = () => {
-    setQ(''); setEnvs(new Set<string>()); setKeys(new Set<string>()); setAuthors(new Set<string>());
+    setQ(''); setPhases(new Set<string>()); setEnvs(new Set<string>()); setKeys(new Set<string>()); setAuthors(new Set<string>());
     setInstitutions(new Set<string>()); setPublishers(new Set<string>());
     setFromMonth(null); setToMonth(null); setSort('date-desc');
     setShowLimit(PAGE_SIZE);
   };
 
   const activeFilterCount = createMemo(() =>
-    envs().size + keys().size + authors().size + institutions().size + publishers().size +
+    phases().size + envs().size + keys().size + authors().size + institutions().size + publishers().size +
     (fromMonth() != null || toMonth() != null ? 1 : 0)
   );
 
   // Reset the visible-page limit whenever the active filter set / sort changes.
   createEffect(() => {
-    envs(); keys(); authors(); institutions(); publishers();
+    phases(); envs(); keys(); authors(); institutions(); publishers();
     fromMonth(); toMonth(); sort(); includeAdjacent();
     untrack(() => setShowLimit(PAGE_SIZE));
   });
@@ -353,7 +368,7 @@ export default function PaperBrowser(props: Props) {
   // popstate sync (back/forward)
   const onPop = () => {
     const s = readUrlState();
-    setQ(s.q); setEnvs(s.envs); setKeys(s.keys); setAuthors(s.authors);
+    setQ(s.q); setPhases(s.phases); setEnvs(s.envs); setKeys(s.keys); setAuthors(s.authors);
     setInstitutions(s.institutions); setPublishers(s.publishers);
     setFromMonth(s.fromMonth); setToMonth(s.toMonth); setSort(s.sort);
     setIncludeAdjacent(s.includeAdjacent);
@@ -440,6 +455,7 @@ export default function PaperBrowser(props: Props) {
     showSearch = true,
     cap = 12,
     headerExtra: (() => any) | null = null,
+    formatLabel: (key: string) => string = (k) => k,
   ) => {
     const [open, setOpen] = createSignal(true);
     const [showAll, setShowAll] = createSignal(false);
@@ -483,7 +499,7 @@ export default function PaperBrowser(props: Props) {
                         <Show when={selected().has(name)}>
                           <svg viewBox="0 0 16 16" width="11" height="11" fill="currentColor" aria-hidden="true"><path d="M13.5 4.5l-7 7-3-3 1-1 2 2 6-6z"/></svg>
                         </Show>
-                        {name}
+                        {formatLabel(name)}
                       </span>
                       <span class="text-xs text-ink-400 shrink-0">{count}</span>
                     </button>
@@ -528,7 +544,9 @@ export default function PaperBrowser(props: Props) {
           </Show>
         </div>
 
-        {filterSection('Environment', allEnvs as any, envs, setEnvs, () => '', () => {}, false, 8)}
+        {filterSection('Phase', allPhases as any, phases, setPhases, () => '', () => {}, false, 8, null,
+          (k) => `${PHASE_CODE[k] ?? k} — ${PHASE_HEADINGS[k]?.title ?? k}`)}
+        {filterSection('Theme', allEnvs as any, envs, setEnvs, () => '', () => {}, false, 8)}
         {filterSection('Keywords', allKeys as any, keys, setKeys, keyFacetSearch, setKeyFacetSearch, true, 12)}
         {filterSection('Author', allAuthors as any, authors, setAuthors, authorFacetSearch, setAuthorFacetSearch)}
         {filterSection('Institution', allInstitutions as any, institutions, setInstitutions, instFacetSearch, setInstFacetSearch)}
@@ -604,6 +622,11 @@ export default function PaperBrowser(props: Props) {
                 <span class="opacity-70 mr-1">search:</span>“{q().trim()}” <span class="ml-1">×</span>
               </button>
             </Show>
+            <For each={Array.from(phases())}>{(v) => (
+              <button class="chip chip-active" onClick={() => toggle(phases, setPhases, v)}>
+                <span class="font-mono mr-1.5 opacity-70">{PHASE_CODE[v] ?? '·'}</span>{PHASE_HEADINGS[v]?.title ?? v} <span class="ml-1">×</span>
+              </button>
+            )}</For>
             <For each={Array.from(envs())}>{(v) => (
               <button class="chip chip-active" onClick={() => toggle(envs, setEnvs, v)}>
                 <span class="font-mono mr-1.5 opacity-70">{ENV_ICON[v] ?? '·'}</span>{v} <span class="ml-1">×</span>
@@ -662,6 +685,7 @@ export default function PaperBrowser(props: Props) {
               onInstitution={(inst) => toggle(institutions, setInstitutions, inst)}
               onAuthor={(a) => toggle(authors, setAuthors, a)}
               onEnv={(env) => toggle(envs, setEnvs, env)}
+              onPhase={(ph) => toggle(phases, setPhases, ph)}
               onToast={showToast}
               query={q().trim()}
             /></li>}
@@ -1043,6 +1067,7 @@ interface CardProps {
   onInstitution?: (inst: string) => void;
   onAuthor?: (author: string) => void;
   onEnv?: (env: string) => void;
+  onPhase?: (phase: string) => void;
   onToast?: (msg: string) => void;
   query?: string;
 }
@@ -1219,13 +1244,22 @@ function PaperCardClient(props: CardProps) {
   return (
     <article class={`entry-row ${p.source === 'adjacent' ? 'opacity-90' : ''}`}>
 
-      {/* Left rail: year, category abbreviations, adjacent badge */}
+      {/* Left rail: year, phase code, theme abbreviations, adjacent badge */}
       <div class="space-y-2">
         <div class="font-mono text-[12px] text-ink-700 dark:text-ink-50 tabular-nums">{yearTag}</div>
+        <Show when={p.phase}>
+          <button
+            class="topic-marker"
+            onClick={() => props.onPhase?.(p.phase!)}
+            title={`${PHASE_CODE[p.phase!] ?? '—'} — ${PHASE_HEADINGS[p.phase!]?.title ?? ''}`}
+          >
+            {PHASE_CODE[p.phase!] ?? '—'}
+          </button>
+        </Show>
         <div class="flex flex-wrap gap-x-2 gap-y-1">
           <For each={p.envs}>{(env) => (
             <button
-              class="topic-marker"
+              class="font-mono text-[10px] uppercase tracking-[0.08em] text-ink-400 dark:text-ink-300 hover:text-accent dark:hover:text-accent-dark transition-colors"
               onClick={() => props.onEnv?.(env)}
               title={env}
             >

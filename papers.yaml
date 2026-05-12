@@ -15,6 +15,7 @@
   envs:
   - Longitudinal HCI Studies
   - Collaboration & Co-Creation
+  phase: emerging-phase-2
   keywords:
   - ChatGPT
   - essay writing
@@ -43,6 +44,7 @@
   envs:
   - Position & Survey
   - Mutual Adaptation
+  phase: emerging-phase-4
   keywords:
   - trust
   - finance
@@ -69,6 +71,7 @@
   publisher: arXiv
   envs:
   - Position & Survey
+  phase: phase-2
   keywords:
   - agentic AI
   - software engineering
@@ -99,6 +102,7 @@
   envs:
   - Position & Survey
   - Mutual Adaptation
+  phase: emerging-phase-4
   keywords:
   - mutualism
   - governance
@@ -136,6 +140,7 @@
   envs:
   - Longitudinal HCI Studies
   - Collaboration & Co-Creation
+  phase: emerging-phase-3
   keywords:
   - SWE-chat
   - coding agents
@@ -169,6 +174,7 @@
   envs:
   - Collaboration & Co-Creation
   - Mutual Adaptation
+  phase: emerging-phase-2
   keywords:
   - triadic loop
   - livestreaming
@@ -204,6 +210,7 @@
   envs:
   - Human Feedback Loops
   - Collaboration & Co-Creation
+  phase: phase-2
   keywords:
   - monoculture
   - LLM coordination
@@ -241,6 +248,7 @@
   envs:
   - Longitudinal HCI Studies
   - Mutual Adaptation
+  phase: phase-1
   keywords:
   - persistence
   - independent performance
@@ -273,6 +281,7 @@
   envs:
   - Longitudinal HCI Studies
   - Position & Survey
+  phase: emerging-phase-4
   keywords:
   - augmentation trap
   - cognitive offloading
@@ -305,6 +314,7 @@
   publisher: arXiv
   envs:
   - Mutual Adaptation
+  phase: phase-1
   keywords:
   - reactive writing
   - suggestion-led writing
@@ -335,6 +345,7 @@
   envs:
   - Position & Survey
   - Mutual Adaptation
+  phase: phase-3
   keywords:
   - personality
   - AI agents
@@ -374,6 +385,7 @@
   envs:
   - Collaboration & Co-Creation
   - Longitudinal HCI Studies
+  phase: phase-1
   keywords:
   - conversational tutors
   - knowledge tracing
@@ -412,6 +424,7 @@
   envs:
   - Collaboration & Co-Creation
   - Human Feedback Loops
+  phase: emerging-phase-3
   keywords:
   - web agents
   - intervention modeling
@@ -447,6 +460,7 @@
   publisher: FORGE 2026
   envs:
   - Longitudinal HCI Studies
+  phase: phase-2
   keywords:
   - GenAI
   - agile teams
@@ -480,6 +494,7 @@
   publisher: arXiv
   envs:
   - Collaboration & Co-Creation
+  phase: emerging-phase-3
   keywords:
   - AlphaEvolve
   - strategic behavior
@@ -513,6 +528,7 @@
   envs:
   - Human Feedback Loops
   - Mutual Adaptation
+  phase: phase-1
   keywords:
   - belief offloading
   - cognitive offloading
@@ -545,6 +561,7 @@
   envs:
   - Mutual Adaptation
   - Collaboration & Co-Creation
+  phase: phase-1
   keywords:
   - strategic decision-making
   - mental representations
@@ -575,6 +592,7 @@
   publisher: arXiv
   envs:
   - Collaboration & Co-Creation
+  phase: emerging-phase-2
   keywords:
   - Writor
   - writing center pedagogy
@@ -607,6 +625,7 @@
   publisher: arXiv
   envs:
   - Human Feedback Loops
+  phase: phase-1
   keywords:
   - sycophancy
   - RLHF
@@ -644,6 +663,7 @@
   publisher: CHI 2026
   envs:
   - Longitudinal HCI Studies
+  phase: phase-3
   keywords:
   - intuition rust
   - asymptomatic harms
@@ -678,6 +698,7 @@
   envs:
   - Position & Survey
   - Mutual Adaptation
+  phase: phase-1
   keywords:
   - AI perception
   - GenAI
@@ -710,6 +731,7 @@
   envs:
   - Mutual Adaptation
   - Longitudinal HCI Studies
+  phase: phase-1
   keywords:
   - skill atrophy
   - AI assistance
@@ -742,6 +764,7 @@
   publisher: arXiv
   envs:
   - Longitudinal HCI Studies
+  phase: phase-1
   keywords:
   - AI literacy
   - repair literacy
@@ -782,6 +805,7 @@
   publisher: arXiv
   envs:
   - Collaboration & Co-Creation
+  phase: emerging-phase-3
   keywords:
   - coding agents
   - cooperation
@@ -819,6 +843,7 @@
   publisher: CHI 2026
   envs:
   - Collaboration & Co-Creation
+  phase: phase-2
   keywords:
   - triadic programming
   - peer collaboration
@@ -855,6 +880,7 @@
   envs:
   - Mutual Adaptation
   - Longitudinal HCI Studies
+  phase: phase-2
   keywords:
   - developer telemetry
   - longitudinal
@@ -886,6 +912,7 @@
   publisher: Frontiers in Psychology 2026
   envs:
   - Position & Survey
+  phase: framework
   keywords:
   - cognitive archaeology
   - embodied cognition
@@ -916,6 +943,7 @@
   publisher: Education and Information Technologies 2025
   envs:
   - Longitudinal HCI Studies
+  phase: phase-1
   keywords:
   - programming learning
   - prompting
@@ -947,6 +975,7 @@
   publisher: UAI 2025
   envs:
   - Mutual Adaptation
+  phase: phase-3
   keywords:
   - type-based IRL
   - HRC
@@ -980,6 +1009,7 @@
   publisher: FSE Companion 2025
   envs:
   - Collaboration & Co-Creation
+  phase: phase-2
   keywords:
   - Copilot
   - ChatGPT
@@ -1013,6 +1043,7 @@
   envs:
   - Collaboration & Co-Creation
   - Longitudinal HCI Studies
+  phase: phase-1
   keywords:
   - dialogic dynamics
   - creative problem-solving
@@ -1045,6 +1076,7 @@
   envs:
   - Position & Survey
   - Mutual Adaptation
+  phase: framework
   keywords:
   - AIED
   - co-adaptive
@@ -1074,6 +1106,7 @@
   envs:
   - Mutual Adaptation
   - Longitudinal HCI Studies
+  phase: phase-1
   keywords:
   - personalization
   - chatbots
@@ -1108,6 +1141,7 @@
   publisher: arXiv
   envs:
   - Longitudinal HCI Studies
+  phase: phase-2
   keywords:
   - GitHub Copilot
   - longitudinal
@@ -1141,6 +1175,7 @@
   envs:
   - Position & Survey
   - Human Feedback Loops
+  phase: emerging-phase-4
   keywords:
   - monoculture
   - model similarity
@@ -1171,6 +1206,7 @@
   envs:
   - Collaboration & Co-Creation
   - Longitudinal HCI Studies
+  phase: phase-2
   keywords:
   - collaborative editing
   - AI agents
@@ -1208,6 +1244,7 @@
   envs:
   - Longitudinal HCI Studies
   - Mutual Adaptation
+  phase: phase-2
   keywords:
   - longitudinal
   - collaborative culture
@@ -1244,6 +1281,7 @@
   envs:
   - Mutual Adaptation
   - Collaboration & Co-Creation
+  phase: phase-3
   keywords:
   - strategy
   - proprietary AI
@@ -1278,6 +1316,7 @@
   envs:
   - Longitudinal HCI Studies
   - Mutual Adaptation
+  phase: phase-1
   keywords:
   - EEG
   - cognitive debt
@@ -1314,6 +1353,7 @@
   publisher: NeurIPS 2025
   envs:
   - Mutual Adaptation
+  phase: phase-1
   keywords:
   - knowledge transfer
   - KITE
@@ -1345,6 +1385,7 @@
   publisher: Interactive Learning Environments 2025
   envs:
   - Longitudinal HCI Studies
+  phase: phase-1
   keywords:
   - ChatGPT
   - longitudinal
@@ -1375,6 +1416,7 @@
   publisher: arXiv
   envs:
   - Longitudinal HCI Studies
+  phase: phase-1
   keywords:
   - undergraduates
   - ChatGPT
@@ -1414,6 +1456,7 @@
   envs:
   - Longitudinal HCI Studies
   - Mutual Adaptation
+  phase: phase-1
   keywords:
   - critical thinking
   - knowledge workers
@@ -1448,6 +1491,7 @@
   publisher: arXiv
   envs:
   - Collaboration & Co-Creation
+  phase: phase-2
   keywords:
   - LLM code editing
   - prompt struggles
@@ -1482,6 +1526,7 @@
   publisher: NeurIPS 2025
   envs:
   - Human Feedback Loops
+  phase: phase-1
   keywords:
   - strategyproof
   - RLHF
@@ -1515,6 +1560,7 @@
   envs:
   - Position & Survey
   - Collaboration & Co-Creation
+  phase: framework
   keywords:
   - in-IDE HAX
   - systematic review
@@ -1549,6 +1595,7 @@
   publisher: CHI 2025
   envs:
   - Collaboration & Co-Creation
+  phase: phase-2
   keywords:
   - scientists
   - programming
@@ -1582,6 +1629,7 @@
   publisher: HICSS 2024
   envs:
   - Collaboration & Co-Creation
+  phase: phase-2
   keywords:
   - Da Vinci Score
   - two-stage model
@@ -1616,6 +1664,7 @@
   publisher: Management Science 2026
   envs:
   - Longitudinal HCI Studies
+  phase: phase-2
   keywords:
   - field experiments
   - Copilot
@@ -1650,6 +1699,7 @@
   envs:
   - Human Feedback Loops
   - Mutual Adaptation
+  phase: phase-1
   keywords:
   - feedback loops
   - bias amplification
@@ -1684,6 +1734,7 @@
   envs:
   - Collaboration & Co-Creation
   - Mutual Adaptation
+  phase: phase-2
   keywords:
   - authenticity
   - professional writers
@@ -1717,6 +1768,7 @@
   envs:
   - Human Feedback Loops
   - Collaboration & Co-Creation
+  phase: phase-1
   keywords:
   - homogenization
   - creative diversity
@@ -1748,6 +1800,7 @@
   envs:
   - Human Feedback Loops
   - Collaboration & Co-Creation
+  phase: phase-1
   keywords:
   - debiasing
   - predictive text
@@ -1780,6 +1833,7 @@
   envs:
   - Mutual Adaptation
   - Longitudinal HCI Studies
+  phase: phase-1
   keywords:
   - cultural homogenization
   - Western style
@@ -1814,6 +1868,7 @@
   publisher: RecSys 2024
   envs:
   - Human Feedback Loops
+  phase: phase-1
   keywords:
   - music recommender
   - country representation
@@ -1850,6 +1905,7 @@
   envs:
   - Longitudinal HCI Studies
   - Mutual Adaptation
+  phase: phase-1
   keywords:
   - education
   - GPT tutor
@@ -1881,6 +1937,7 @@
   publisher: Science Advances 2024
   envs:
   - Mutual Adaptation
+  phase: phase-1
   keywords:
   - creativity
   - individual vs collective
@@ -1945,6 +2002,7 @@
   envs:
   - Position & Survey
   - Mutual Adaptation
+  phase: framework
   keywords:
   - bidirectional alignment
   - mutual adaptation
@@ -1983,6 +2041,7 @@
   envs:
   - Collaboration & Co-Creation
   - Mutual Adaptation
+  phase: phase-2
   keywords:
   - eye tracking
   - code validation
@@ -2018,6 +2077,7 @@
   envs:
   - Position & Survey
   - Collaboration & Co-Creation
+  phase: framework
   keywords:
   - complementarity
   - decision-making
@@ -2054,6 +2114,7 @@
   publisher: Empirical Software Engineering 2024
   envs:
   - Collaboration & Co-Creation
+  phase: phase-2
   keywords:
   - ChatGPT
   - GitHub PRs
@@ -2092,6 +2153,7 @@
   publisher: arXiv
   envs:
   - Longitudinal HCI Studies
+  phase: emerging-phase-2
   keywords:
   - RECIPE4U
   - EFL
@@ -2134,6 +2196,7 @@
   publisher: ICML 2024
   envs:
   - Mutual Adaptation
+  phase: phase-2
   keywords:
   - AI-modified text
   - peer review
@@ -2186,6 +2249,7 @@
   publisher: arXiv
   envs:
   - Position & Survey
+  phase: framework
   keywords:
   - survey
   - foundation models
@@ -2234,6 +2298,7 @@
   publisher: ICLR 2024
   envs:
   - Human Feedback Loops
+  phase: phase-1
   keywords:
   - sycophancy
   - RLHF
@@ -2264,6 +2329,7 @@
   publisher: SSRN
   envs:
   - Position & Survey
+  phase: framework
   keywords:
   - human-AI relationships
   - taxonomy
@@ -2306,6 +2372,7 @@
   envs:
   - Collaboration & Co-Creation
   - Mutual Adaptation
+  phase: phase-2
   keywords:
   - BCG
   - GPT-4
@@ -2340,6 +2407,7 @@
   - Human Feedback Loops
   - Collaboration & Co-Creation
   - Mutual Adaptation
+  phase: phase-2
   keywords:
   - content diversity
   - InstructGPT
@@ -2372,6 +2440,7 @@
   publisher: arXiv
   envs:
   - Longitudinal HCI Studies
+  phase: phase-2
   keywords:
   - Copilot
   - acceptance
@@ -2430,6 +2499,7 @@
   envs:
   - Position & Survey
   - Mutual Adaptation
+  phase: framework
   keywords:
   - coevolution
   - recommender systems
@@ -2469,6 +2539,7 @@
   publisher: Nature 2024
   envs:
   - Position & Survey
+  phase: phase-4
   keywords:
   - model collapse
   - recursive training
@@ -2510,6 +2581,7 @@
   publisher: Scientific Reports 2023
   envs:
   - Mutual Adaptation
+  phase: phase-1
   keywords:
   - smart replies
   - AIMC
@@ -2542,6 +2614,7 @@
   envs:
   - Human Feedback Loops
   - Longitudinal HCI Studies
+  phase: phase-2
   keywords:
   - customer support
   - productivity
@@ -2584,6 +2657,7 @@
   publisher: ACM TOCHI 2024
   envs:
   - Collaboration & Co-Creation
+  phase: phase-2
   keywords:
   - authorship
   - ownership
@@ -2617,6 +2691,7 @@
   envs:
   - Longitudinal HCI Studies
   - Mutual Adaptation
+  phase: phase-2
   keywords:
   - ChatGPT
   - RCT
@@ -2653,6 +2728,7 @@
   envs:
   - Longitudinal HCI Studies
   - Collaboration & Co-Creation
+  phase: phase-2
   keywords:
   - Copilot
   - RCT
@@ -2691,6 +2767,7 @@
   envs:
   - Mutual Adaptation
   - Human Feedback Loops
+  phase: phase-1
   keywords:
   - opinionated assistant
   - opinion shift
@@ -2724,6 +2801,7 @@
   envs:
   - Position & Survey
   - Mutual Adaptation
+  phase: framework
   keywords:
   - trust
   - mental models
@@ -2757,6 +2835,7 @@
   publisher: HRI 2022
   envs:
   - Mutual Adaptation
+  phase: phase-3
   keywords:
   - trust
   - monitoring
@@ -2786,6 +2865,7 @@
   publisher: IUI 2022
   envs:
   - Collaboration & Co-Creation
+  phase: phase-2
   keywords:
   - Wordcraft
   - story writing
@@ -2862,6 +2942,7 @@
   publisher: arXiv
   envs:
   - Human Feedback Loops
+  phase: phase-4
   keywords:
   - constitutional AI
   - RLAIF
@@ -2895,6 +2976,7 @@
   envs:
   - Mutual Adaptation
   - Collaboration & Co-Creation
+  phase: phase-2
   keywords:
   - code security
   - AI assistance
@@ -2929,6 +3011,7 @@
   envs:
   - Collaboration & Co-Creation
   - Mutual Adaptation
+  phase: phase-2
   keywords:
   - CUPS
   - programmer activities
@@ -2963,6 +3046,7 @@
   envs:
   - Collaboration & Co-Creation
   - Longitudinal HCI Studies
+  phase: phase-2
   keywords:
   - Dramatron
   - hierarchical prompting
@@ -2995,6 +3079,7 @@
   publisher: ACM TORS 2025
   envs:
   - Human Feedback Loops
+  phase: phase-4
   keywords:
   - causal inference
   - CAFL
@@ -3030,6 +3115,7 @@
   envs:
   - Collaboration & Co-Creation
   - Mutual Adaptation
+  phase: phase-2
   keywords:
   - Copilot
   - grounded theory
@@ -3070,6 +3156,7 @@
   envs:
   - Longitudinal HCI Studies
   - Human Feedback Loops
+  phase: phase-2
   keywords:
   - Copilot telemetry
   - acceptance rate
@@ -3101,6 +3188,7 @@
   publisher: CHI 2022 EA
   envs:
   - Collaboration & Co-Creation
+  phase: phase-2
   keywords:
   - Copilot
   - usability
@@ -3146,6 +3234,7 @@
   publisher: NeurIPS 2022
   envs:
   - Human Feedback Loops
+  phase: phase-1
   keywords:
   - RLHF
   - instruction tuning
@@ -3177,6 +3266,7 @@
   publisher: arXiv
   envs:
   - Position & Survey
+  phase: framework
   keywords:
   - mental models
   - human-aware AI
@@ -3208,6 +3298,7 @@
   publisher: CHI 2022
   envs:
   - Collaboration & Co-Creation
+  phase: emerging-phase-2
   keywords:
   - CoAuthor
   - GPT-3
@@ -3245,6 +3336,7 @@
   publisher: CSCW 2021
   envs:
   - Mutual Adaptation
+  phase: phase-1
   keywords:
   - smart reply
   - positivity bias
@@ -3277,6 +3369,7 @@
   publisher: IEEE S&P 2022
   envs:
   - Collaboration & Co-Creation
+  phase: phase-2
   keywords:
   - Copilot security
   - CWE
@@ -3309,6 +3402,7 @@
   publisher: HRI 2023
   envs:
   - Mutual Adaptation
+  phase: phase-3
   keywords:
   - trust evolution
   - longitudinal HRI
@@ -3339,6 +3433,7 @@
   publisher: arXiv
   envs:
   - Position & Survey
+  phase: framework
   keywords:
   - human-AI symbiosis
   - survey
@@ -3373,6 +3468,7 @@
   envs:
   - Collaboration & Co-Creation
   - Mutual Adaptation
+  phase: emerging-phase-2
   keywords:
   - phrase suggestions
   - email composition
@@ -3410,6 +3506,7 @@
   publisher: NeurIPS 2020
   envs:
   - Human Feedback Loops
+  phase: phase-1
   keywords:
   - RLHF
   - summarization
@@ -3445,6 +3542,7 @@
   publisher: CIKM 2020
   envs:
   - Human Feedback Loops
+  phase: phase-1
   keywords:
   - popularity bias
   - feedback amplification
@@ -3476,6 +3574,7 @@
   publisher: IUI 2020
   envs:
   - Mutual Adaptation
+  phase: phase-1
   keywords:
   - predictive text
   - predictability
@@ -3506,6 +3605,7 @@
   publisher: Journal of Computer-Mediated Communication 2020
   envs:
   - Position & Survey
+  phase: framework
   keywords:
   - AI-mediated communication
   - AI-MC
@@ -3551,6 +3651,7 @@
   envs:
   - Position & Survey
   - Collaboration & Co-Creation
+  phase: framework
   keywords:
   - design guidelines
   - human-AI interaction
@@ -3581,6 +3682,7 @@
   publisher: AAAI 2018
   envs:
   - Human Feedback Loops
+  phase: phase-1
   keywords:
   - TAMER
   - interactive RL
@@ -3609,6 +3711,7 @@
   publisher: Graphics Interface 2018
   envs:
   - Mutual Adaptation
+  phase: phase-1
   keywords:
   - sentiment bias
   - predictive text
@@ -3640,6 +3743,7 @@
   publisher: NeurIPS 2018
   envs:
   - Human Feedback Loops
+  phase: phase-1
   keywords:
   - preferences
   - demonstrations
@@ -3671,6 +3775,7 @@
   publisher: RecSys 2018
   envs:
   - Human Feedback Loops
+  phase: phase-1
   keywords:
   - algorithmic confounding
   - recommender feedback
@@ -3704,6 +3809,7 @@
   publisher: International Journal of Robotics Research 2017
   envs:
   - Mutual Adaptation
+  phase: phase-3
   keywords:
   - mutual adaptation
   - IJRR
@@ -3739,6 +3845,7 @@
   publisher: NeurIPS 2017
   envs:
   - Human Feedback Loops
+  phase: phase-1
   keywords:
   - RLHF
   - preference learning
@@ -3772,6 +3879,7 @@
   publisher: HRI 2017
   envs:
   - Mutual Adaptation
+  phase: phase-3
   keywords:
   - mutual adaptation
   - shared autonomy
@@ -3812,6 +3920,7 @@
   publisher: ICML 2017
   envs:
   - Human Feedback Loops
+  phase: phase-1
   keywords:
   - policy-dependent feedback
   - COACH
@@ -3845,6 +3954,7 @@
   publisher: NeurIPS 2013
   envs:
   - Human Feedback Loops
+  phase: phase-1
   keywords:
   - policy shaping
   - Bayesian feedback
