@@ -22,7 +22,7 @@ const phaseTitle = phaseTag ? (PHASE_HEADINGS[phaseTag]?.title ?? phaseTag) : 'u
     {phaseTag && (
       <a
         href={`${base}/papers?phase=${encodeURIComponent(phaseTag)}`}
-        class="topic-marker"
+        class="phase-badge hover:underline underline-offset-[3px]"
         title={`${phaseCode} — ${phaseTitle}`}
       >
         {phaseCode}

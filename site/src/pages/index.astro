@@ -123,11 +123,11 @@ const jsonLd = [
           if (n === 0 && tag !== 'phase-4') return null;
           const isEmpty = n === 0;
           const rowClass = isEmpty
-            ? 'grid grid-cols-[56px_1fr_auto] gap-x-5 items-baseline py-6 border-t border-paper-300 dark:border-ink-600 opacity-70'
-            : 'grid grid-cols-[56px_1fr_auto] gap-x-5 items-baseline py-6 border-t border-paper-300 dark:border-ink-600 group hover:bg-paper-200/40 dark:hover:bg-ink-700/20 transition-colors';
+            ? 'grid grid-cols-[72px_1fr_auto] gap-x-5 items-baseline py-7 border-t border-paper-300 dark:border-ink-600 opacity-70'
+            : 'grid grid-cols-[72px_1fr_auto] gap-x-5 items-baseline py-7 border-t border-paper-300 dark:border-ink-600 group hover:bg-paper-200/40 dark:hover:bg-ink-700/20 transition-colors';
           const inner = (
             <>
-              <span class="meta-value tabular-nums text-accent dark:text-accent-dark font-medium">{PHASE_CODE[tag]}</span>
+              <span class="phase-badge-xl tabular-nums">{PHASE_CODE[tag]}</span>
               <div>
                 <div class={isEmpty
                   ? 'kicker text-ink-500 dark:text-ink-300'

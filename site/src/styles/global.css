@@ -118,6 +118,32 @@ html.dark, html.dark body {
   }
   :global(html.dark) .sec-idx { color: theme('colors.accent.dark'); }
 
+  /* Phase badge — the four-phase framework is the contribution this
+     index is built around, so its codes get a bigger, slightly bolder
+     treatment than the secondary theme abbreviations. */
+  .phase-badge {
+    font-family: var(--font-mono);
+    font-size: 15px;
+    font-weight: 600;
+    color: theme('colors.accent.DEFAULT');
+    letter-spacing: 0.02em;
+    line-height: 1;
+    display: inline-block;
+  }
+  :global(html.dark) .phase-badge { color: theme('colors.accent.dark'); }
+
+  /* Larger phase-badge used in the home-page TOC where it anchors the
+     whole framework. */
+  .phase-badge-xl {
+    font-family: var(--font-mono);
+    font-size: 22px;
+    font-weight: 600;
+    color: theme('colors.accent.DEFAULT');
+    letter-spacing: 0.02em;
+    line-height: 1;
+  }
+  :global(html.dark) .phase-badge-xl { color: theme('colors.accent.dark'); }
+
   /* Tiny mono label — used for left-rail metadata column. */
   .meta-label {
     font-family: var(--font-mono);

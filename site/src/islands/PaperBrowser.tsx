@@ -1249,7 +1249,7 @@ function PaperCardClient(props: CardProps) {
         <div class="font-mono text-[12px] text-ink-700 dark:text-ink-50 tabular-nums">{yearTag}</div>
         <Show when={p.phase}>
           <button
-            class="topic-marker"
+            class="phase-badge hover:underline underline-offset-[3px]"
             onClick={() => props.onPhase?.(p.phase!)}
             title={`${PHASE_CODE[p.phase!] ?? '—'} — ${PHASE_HEADINGS[p.phase!]?.title ?? ''}`}
           >

@@ -180,10 +180,10 @@ const reportUrl = `${REPO_URL}/issues/new?` + new URLSearchParams({
           {paper.phase && (
             <div>
               <dt class="meta-label">Phase</dt>
-              <dd class="mt-1">
-                <a class="topic-marker" href={`${base}/papers?phase=${encodeURIComponent(paper.phase)}`} title={PHASE_HEADINGS[paper.phase]?.title ?? paper.phase}>
-                  <span class="font-medium">{PHASE_CODE[paper.phase] ?? '—'}</span>
-                  <span class="ml-1.5 normal-case tracking-normal text-ink-500 dark:text-ink-300">{PHASE_HEADINGS[paper.phase]?.title}</span>
+              <dd class="mt-1.5">
+                <a class="block hover:underline underline-offset-[3px]" href={`${base}/papers?phase=${encodeURIComponent(paper.phase)}`} title={PHASE_HEADINGS[paper.phase]?.title ?? paper.phase}>
+                  <span class="phase-badge tabular-nums">{PHASE_CODE[paper.phase] ?? '—'}</span>
+                  <span class="block mt-1 text-[12px] text-ink-500 dark:text-ink-300">{PHASE_HEADINGS[paper.phase]?.title}</span>
                 </a>
               </dd>
             </div>
