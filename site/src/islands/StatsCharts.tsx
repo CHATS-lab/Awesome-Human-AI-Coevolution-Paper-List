@@ -204,12 +204,18 @@ export default function StatsCharts(props: Props) {
         axisTick: { show: false },
         splitLine: { lineStyle: { color: c.faint, type: 'solid' } },
       },
+      // Use a top-level color array AND itemStyle.color on each series so
+      // the legend marker, hover swatch, and the rendered band all share
+      // the same color. (Setting only areaStyle.color leaves the legend
+      // marker on ECharts' default rainbow palette.)
+      color: phases.map((ph) => c.phaseColors[ph]),
       series: phases.map((ph) => ({
         name: phaseLabelOf(ph),
         type: 'line' as const,
         stack: 'phase',
         smooth: 0.5,
         symbol: 'none' as const,
+        itemStyle: { color: c.phaseColors[ph] },
         lineStyle: { width: 0, color: c.phaseColors[ph] },
         areaStyle: { color: c.phaseColors[ph], opacity: isDark() ? 0.55 : 0.7 },
         emphasis: { focus: 'series' as const },
