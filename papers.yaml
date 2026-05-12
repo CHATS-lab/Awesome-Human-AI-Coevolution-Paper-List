@@ -10,7 +10,7 @@
   - Hyo-Jeong So
   institutions:
   - Ewha Womans University
-  date: '2026-12-31'
+  date: '2026'
   publisher: The Asia-Pacific Education Researcher 2026
   envs:
   - Longitudinal HCI Studies
@@ -939,7 +939,7 @@
   - Erkan Er
   institutions:
   - METU
-  date: '2025-12-31'
+  date: '2025'
   publisher: Education and Information Technologies 2025
   envs:
   - Longitudinal HCI Studies
@@ -971,7 +971,7 @@
   institutions:
   - University of Georgia
   - University of Southern Mississippi
-  date: '2025-12-31'
+  date: '2025'
   publisher: UAI 2025
   envs:
   - Mutual Adaptation
@@ -1005,7 +1005,7 @@
   institutions:
   - University of Oslo
   - SINTEF
-  date: '2025-12-31'
+  date: '2025'
   publisher: FSE Companion 2025
   envs:
   - Collaboration & Co-Creation
@@ -1038,7 +1038,7 @@
   - Zehao Liu
   institutions:
   - Beijing Normal University
-  date: '2025-12-31'
+  date: '2025'
   publisher: International Journal of Educational Technology in Higher Education 2025
   envs:
   - Collaboration & Co-Creation
@@ -1101,7 +1101,7 @@
   - Chee-Kit Looi
   - Fenglin Jia
   institutions: []
-  date: '2025-12-31'
+  date: '2025'
   publisher: Education and Information Technologies 2025
   envs:
   - Mutual Adaptation
@@ -1625,7 +1625,7 @@
   institutions:
   - York University
   - City University of Hong Kong
-  date: '2024-12-31'
+  date: '2024'
   publisher: HICSS 2024
   envs:
   - Collaboration & Co-Creation
@@ -1660,7 +1660,7 @@
   - MIT
   - Princeton
   - Wharton
-  date: '2024-12-31'
+  date: '2024'
   publisher: Management Science 2026
   envs:
   - Longitudinal HCI Studies
@@ -2831,7 +2831,7 @@
   institutions:
   - ASU
   - Colorado State
-  date: '2022-12-31'
+  date: '2022'
   publisher: HRI 2022
   envs:
   - Mutual Adaptation
@@ -2861,7 +2861,7 @@
   - Daphne Ippolito
   institutions:
   - Google Research
-  date: '2022-12-31'
+  date: '2022'
   publisher: IUI 2022
   envs:
   - Collaboration & Co-Creation
@@ -3332,7 +3332,7 @@
   - Stanford
   - Cornell
   - Cornell Tech
-  date: '2021-12-31'
+  date: '2021'
   publisher: CSCW 2021
   envs:
   - Mutual Adaptation
@@ -3678,7 +3678,7 @@
   institutions:
   - ARL
   - UT Austin
-  date: '2018-12-31'
+  date: '2018'
   publisher: AAAI 2018
   envs:
   - Human Feedback Loops
@@ -3707,7 +3707,7 @@
   - Krzysztof Z. Gajos
   institutions:
   - Harvard SEAS
-  date: '2018-12-31'
+  date: '2018'
   publisher: Graphics Interface 2018
   envs:
   - Mutual Adaptation
@@ -3950,7 +3950,7 @@
   - Andrea L. Thomaz
   institutions:
   - Georgia Tech
-  date: '2013-12-31'
+  date: '2013'
   publisher: NeurIPS 2013
   envs:
   - Human Feedback Loops

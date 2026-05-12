@@ -130,16 +130,34 @@ def display_date(raw: str, ts: pd.Timestamp) -> str:
     if pd.isna(ts):
         return raw or ""
     s = (raw or "").strip()
+    # Year-only: keep as bare "YYYY".
+    if re.match(r"^\d{4}$", s):
+        return f"{ts.year}"
+    # Month-only: keep as "Month YYYY".
     if re.match(r"^(\d{4})-(\d{1,2})$|^[A-Za-z]+\s+\d{4}$", s):
         return f"{ts.strftime('%B')} {ts.year}"
     return ts.strftime("%B %d, %Y")
 
 
 def date_to_iso(raw: str) -> str:
+    """Canonicalize a date string to its narrowest ISO representation,
+    preserving the precision of the input.
+
+    Before: year-only inputs ("2026") fell through to the full
+    YYYY-MM-DD branch because parse_date_string anchors them to
+    Dec 31. That silently rewrote year-only dates to YYYY-12-31 in
+    papers.yaml and made them look like real end-of-year dates in
+    the UI. Fix: detect year-only inputs explicitly and emit just
+    "YYYY".
+    """
     ts = parse_date_string(raw)
     if pd.isna(ts):
         return raw or ""
     s = (raw or "").strip()
+    # Year-only: preserve as bare "YYYY".
+    if re.match(r"^\d{4}$", s):
+        return f"{ts.year:04d}"
+    # Month-only: "YYYY-MM" or "Month YYYY".
     if re.match(r"^(\d{4})-(\d{1,2})$|^[A-Za-z]+\s+\d{4}$", s):
         return f"{ts.year:04d}-{ts.month:02d}"
     return f"{ts.year:04d}-{ts.month:02d}-{ts.day:02d}"

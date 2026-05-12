@@ -123,7 +123,7 @@ _Humans use AI to answer questions; the human capability at risk is **critical t
 - [AI in the classroom: Exploring students' interaction with ChatGPT in programming learning](https://link.springer.com/article/10.1007/s10639-025-13337-7)
     - Hacer Güner, Erkan Er
     - Institutions: METU
-    - Date: December 31, 2025
+    - Date: 2025
     - Venue: Education and Information Technologies 2025
     - Category: LH (Longitudinal HCI Studies)
     - Keywords: programming learning, prompting, instructional intervention, ChatGPT
@@ -132,7 +132,7 @@ _Humans use AI to answer questions; the human capability at risk is **critical t
 - [Interactions with generative AI chatbots: unveiling dialogic dynamics, students' perceptions, and practical competencies in creative problem-solving](https://doi.org/10.1186/s41239-025-00508-2)
     - Yu Song, Longchao Huang, Lanqin Zheng, Mengya Fan, Zehao Liu
     - Institutions: Beijing Normal University
-    - Date: December 31, 2025
+    - Date: 2025
     - Venue: International Journal of Educational Technology in Higher Education 2025
     - Category: CC, LH (Collaboration & Co-Creation, Longitudinal HCI Studies)
     - Keywords: dialogic dynamics, creative problem-solving, GenAI chatbots, perception
@@ -141,7 +141,7 @@ _Humans use AI to answer questions; the human capability at risk is **critical t
 - [Personalization capabilities of current technology chatbots in a learning environment: An analysis of student-tutor bot interactions](https://link.springer.com/article/10.1007/s10639-025-13369-z)
     - Chee-Kit Looi, Fenglin Jia
     - Institutions: —
-    - Date: December 31, 2025
+    - Date: 2025
     - Venue: Education and Information Technologies 2025
     - Category: MA, LH (Mutual Adaptation, Longitudinal HCI Studies)
     - Keywords: personalization, chatbots, student-tutor interaction, scaffolding
@@ -303,7 +303,7 @@ _Humans use AI to answer questions; the human capability at risk is **critical t
 - [AI-Mediated Communication: Language Use and Interpersonal Effects in a Referential Communication Task](https://doi.org/10.1145/3449091)
     - Hannah Mieczkowski, Jeffrey T. Hancock, Mor Naaman, Malte Jung, Jess Hohenstein
     - Institutions: Stanford, Cornell, Cornell Tech
-    - Date: December 31, 2021
+    - Date: 2021
     - Venue: CSCW 2021
     - Category: MA (Mutual Adaptation)
     - Keywords: smart reply, positivity bias, AIMC, referential task
@@ -339,7 +339,7 @@ _Humans use AI to answer questions; the human capability at risk is **critical t
 - [Deep TAMER: Interactive Agent Shaping in High-Dimensional State Spaces](https://ojs.aaai.org/index.php/AAAI/article/view/11485)
     - Garrett Warnell, Nicholas Waytowich, Vernon Lawhern, Peter Stone
     - Institutions: ARL, UT Austin
-    - Date: December 31, 2018
+    - Date: 2018
     - Venue: AAAI 2018
     - Category: HF (Human Feedback Loops)
     - Keywords: TAMER, interactive RL, scalar feedback, Atari
@@ -348,7 +348,7 @@ _Humans use AI to answer questions; the human capability at risk is **critical t
 - [Sentiment Bias in Predictive Text Recommendations Results in Biased Writing](https://doi.org/10.20380/GI2018.07)
     - Kenneth C. Arnold, Krysta Chauncey, Krzysztof Z. Gajos
     - Institutions: Harvard SEAS
-    - Date: December 31, 2018
+    - Date: 2018
     - Venue: Graphics Interface 2018
     - Category: MA (Mutual Adaptation)
     - Keywords: sentiment bias, predictive text, biased writing, restaurant reviews
@@ -393,7 +393,7 @@ _Humans use AI to answer questions; the human capability at risk is **critical t
 - [Policy Shaping: Integrating Human Feedback with Reinforcement Learning](https://proceedings.neurips.cc/paper/2013/hash/e034fb6b66aacc1d48f445ddfb08da98-Abstract.html)
     - Shane Griffith, Kaushik Subramanian, Jonathan Scholz, Charles L. Isbell, Andrea L. Thomaz
     - Institutions: Georgia Tech
-    - Date: December 31, 2013
+    - Date: 2013
     - Venue: NeurIPS 2013
     - Category: HF (Human Feedback Loops)
     - Keywords: policy shaping, Bayesian feedback, ADVISE
@@ -407,7 +407,7 @@ _Papers that bridge reasoning-level use with artifact production. AI prompts the
 - [Examining University Students' Engagement with ChatGPT in English Essay Writing: Interaction Patterns and Perceptions](https://link.springer.com/article/10.1007/s40299-025-01076-9)
     - Hyeji Jang, Lingxi Jin, Hyo-Jeong So
     - Institutions: Ewha Womans University
-    - Date: December 31, 2026
+    - Date: 2026
     - Venue: The Asia-Pacific Education Researcher 2026
     - Category: LH, CC (Longitudinal HCI Studies, Collaboration & Co-Creation)
     - Keywords: ChatGPT, essay writing, engagement, Korean students
@@ -511,7 +511,7 @@ _AI produces bounded artifacts (drafts, code snippets, partial implementations);
 - [Human-AI Collaboration in Software Development: A Mixed-Methods Study of Developers' Use of GitHub Copilot and ChatGPT](https://doi.org/10.1145/3696630.3730566)
     - Viktoria Stray, Astri Barbala, Viggo Tellefsen Wivestad
     - Institutions: University of Oslo, SINTEF
-    - Date: December 31, 2025
+    - Date: 2025
     - Venue: FSE Companion 2025
     - Category: CC (Collaboration & Co-Creation)
     - Keywords: Copilot, ChatGPT, mixed methods, HACAF, organizational
@@ -565,7 +565,7 @@ _AI produces bounded artifacts (drafts, code snippets, partial implementations);
 - [Creativity in Human-AI Co-Creation: A Two-Stage Model and the Da Vinci Score](https://scholarspace.manoa.hawaii.edu/items/d2b58c60-9b25-4d36-95fb-715fff6a6ddf)
     - Ling Jiang, Christian Wagner
     - Institutions: York University, City University of Hong Kong
-    - Date: December 31, 2024
+    - Date: 2024
     - Venue: HICSS 2024
     - Category: CC (Collaboration & Co-Creation)
     - Keywords: Da Vinci Score, two-stage model, creativity, ideation, GenAI
@@ -574,7 +574,7 @@ _AI produces bounded artifacts (drafts, code snippets, partial implementations);
 - [The Effects of Generative AI on High-Skilled Work: Evidence from Three Field Experiments with Software Developers](https://pubsonline.informs.org/doi/10.1287/mnsc.2025.00535)
     - Zheyuan (Kevin) Cui, Mert Demirer, Sonia Jaffe, Leon Musolff, Sida Peng, Tobias Salz
     - Institutions: Microsoft Research, MIT, Princeton, Wharton
-    - Date: December 31, 2024
+    - Date: 2024
     - Venue: Management Science 2026
     - Category: LH (Longitudinal HCI Studies)
     - Keywords: field experiments, Copilot, productivity, less-experienced
@@ -682,7 +682,7 @@ _AI produces bounded artifacts (drafts, code snippets, partial implementations);
 - [Wordcraft: Story Writing With Large Language Models](https://doi.org/10.1145/3490099.3511105)
     - Ann Yuan, Andy Coenen, Emily Reif, Daphne Ippolito
     - Institutions: Google Research
-    - Date: December 31, 2022
+    - Date: 2022
     - Venue: IUI 2022
     - Category: CC (Collaboration & Co-Creation)
     - Keywords: Wordcraft, story writing, IUI, co-writing
@@ -818,7 +818,7 @@ _AI completes end-to-end workflows; humans set goals. The human capability at ri
 - [Adaptive Human-Robot Collaboration using Type-Based IRL](https://openreview.net/forum?id=6PXtHF77Ll)
     - Prasanth Sengadu Suresh, Prashant Doshi, Bikramjit Banerjee
     - Institutions: University of Georgia, University of Southern Mississippi
-    - Date: December 31, 2025
+    - Date: 2025
     - Venue: UAI 2025
     - Category: MA (Mutual Adaptation)
     - Keywords: type-based IRL, HRC, fatigue, trust, multi-agent decision-making
@@ -836,7 +836,7 @@ _AI completes end-to-end workflows; humans set goals. The human capability at ri
 - [Modeling the Interplay between Human Trust and Monitoring](https://ieeexplore.ieee.org/document/9889475/)
     - Zahra Zahedi, Sarath Sreedharan, Mudit Verma, Subbarao Kambhampati
     - Institutions: ASU, Colorado State
-    - Date: December 31, 2022
+    - Date: 2022
     - Venue: HRI 2022
     - Category: MA (Mutual Adaptation)
     - Keywords: trust, monitoring, supervisor, HRI
@@ -1066,6 +1066,4 @@ _Surveys, position pieces, and theoretical frameworks that span multiple phases 
 
 ---
 
-## Acknowledgements
-
-Parts of the repository's design — the YAML-as-source-of-truth pipeline, the auto-generated README, and several visual conventions on the website — are adapted from the excellent [OSU-NLP-Group/GUI-Agents-Paper-List](https://github.com/OSU-NLP-Group/GUI-Agents-Paper-List). The scope and taxonomy here are different (human-AI coevolution rather than GUI agents; four-phase framework rather than env-by-platform), but the underlying scaffolding owes a debt to that project. Thanks to its maintainers for open-sourcing the template.
+Some of the design and scaffolding here is adapted from [OSU-NLP-Group/GUI-Agents-Paper-List](https://github.com/OSU-NLP-Group/GUI-Agents-Paper-List). Thanks for their awesome work!
