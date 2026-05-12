@@ -25,23 +25,23 @@
 
     <!-- title (serif headline) -->
     <text x="64" y="260" font-size="64" font-weight="500" fill="#1f1d1a"
-          letter-spacing="-1.1">Research on <tspan font-style="italic" fill="#1e3a5f">human–AI coevolution</tspan>,</text>
+          letter-spacing="-1.1">How <tspan font-style="italic" fill="#1e3a5f">humans must evolve</tspan></text>
     <text x="64" y="338" font-size="64" font-weight="500" fill="#1f1d1a"
-          letter-spacing="-1.1">kept current and easy to search.</text>
+          letter-spacing="-1.1">to use AI well as AI advances.</text>
 
     <!-- subtitle -->
     <text x="64" y="416" font-size="22" fill="#4a473f"
-          font-family="ui-sans-serif, system-ui, -apple-system, sans-serif">Papers where humans and AI demonstrably shape each other —</text>
+          font-family="ui-sans-serif, system-ui, -apple-system, sans-serif">Research organized by the four-phase framework — Humans Use AI as</text>
     <text x="64" y="448" font-size="22" fill="#4a473f"
-          font-family="ui-sans-serif, system-ui, -apple-system, sans-serif">training feedback, longitudinal deployment, joint creation, position pieces.</text>
+          font-family="ui-sans-serif, system-ui, -apple-system, sans-serif">Tool, Assistant, Executor, Organization.</text>
 
-    <!-- five categories as mono indices, navy -->
+    <!-- four phases as mono indices, navy -->
     <g font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="13" letter-spacing="1.6">
-      <text x="64"  y="510" fill="#1e3a5f">01</text><text x="92"  y="510" fill="#4a473f">COLLABORATION</text>
-      <text x="280" y="510" fill="#1e3a5f">02</text><text x="308" y="510" fill="#4a473f">MUTUAL ADAPTATION</text>
-      <text x="540" y="510" fill="#1e3a5f">03</text><text x="568" y="510" fill="#4a473f">FEEDBACK LOOPS</text>
-      <text x="760" y="510" fill="#1e3a5f">04</text><text x="788" y="510" fill="#4a473f">LONGITUDINAL HCI</text>
-      <text x="990" y="510" fill="#1e3a5f">05</text><text x="1018" y="510" fill="#4a473f">POSITION &amp; SURVEY</text>
+      <text x="64"  y="510" fill="#1e3a5f">P1</text><text x="100" y="510" fill="#4a473f">TOOL</text>
+      <text x="270" y="510" fill="#1e3a5f">P2</text><text x="306" y="510" fill="#4a473f">ASSISTANT</text>
+      <text x="510" y="510" fill="#1e3a5f">P3</text><text x="546" y="510" fill="#4a473f">EXECUTOR</text>
+      <text x="750" y="510" fill="#1e3a5f">P4</text><text x="786" y="510" fill="#4a473f">ORGANIZATION</text>
+      <text x="990" y="510" fill="#1e3a5f">FW</text><text x="1026" y="510" fill="#4a473f">SURVEYS &amp; POSITION</text>
     </g>
 
     <!-- bottom rule -->

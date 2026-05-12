@@ -298,33 +298,27 @@ def render_readme(canonical: list[dict[str, Any]]) -> None:
             # nothing is silently dropped.
             by_phase["framework"].append(p)
 
+    # ─── Phase summaries ──────────────────────────────────────────
+    # We render only the phase summary blurbs (with paper counts), NOT
+    # the individual paper entries — the searchable index at the
+    # website is the right place to browse. The README is a landing
+    # page; papers.yaml is the source of truth.
     phase_sections: list[str] = []
     for tag in PHASE_ORDER:
         papers = by_phase[tag]
         title, blurb = PHASE_HEADINGS[tag]
-        if papers:
-            body = "\n".join(md_entry_for_readme(p) for p in papers)
+        if papers or tag == "phase-4":
             phase_sections.append(
                 f"### {title}  <sub>({len(papers)} papers)</sub>\n\n"
-                f"_{blurb}_\n\n"
-                f"{body}"
-            )
-        elif tag == "phase-4":
-            # Intentionally rendered as an empty section so the
-            # "no domain has fully entered Phase 4" framing is visible.
-            phase_sections.append(
-                f"### {title}  <sub>(0 papers)</sub>\n\n"
                 f"_{blurb}_"
             )
     paper_list_section = (
-        "## Papers by Phase\n\n"
-        "> Phases come from the four-phase framework "
-        "(_Tool · Assistant · Executor · Organization_) — "
-        "see [`deep_research/phased_framework.md`](deep_research/phased_framework.md) "
-        "for definitions and the [position paper PDF](deep_research/) for full context. "
-        "Each paper is assigned a single phase (with `emerging-phase-X` for clear bridge cases). "
-        "Within a phase, papers are listed newest-first. "
-        "The secondary 5-category axis (CC/MA/HF/LH/PS) is shown on each entry."
+        "## Browse the index\n\n"
+        f"> Full searchable index: **<https://xli04.github.io/Awesome-Human-AI-Coevolution-Paper-List/>**. "
+        f"Structured source of truth: [`papers.yaml`](papers.yaml) ({total} entries). "
+        f"Framework definitions: [`deep_research/phased_framework.md`](deep_research/phased_framework.md). "
+        f"Each paper is assigned a single phase, with `emerging-phase-X` for clear bridge cases; "
+        f"the secondary 5-category axis (CC/MA/HF/LH/PS) is also stored per entry."
         "\n\n"
         + "\n\n".join(phase_sections)
     )
