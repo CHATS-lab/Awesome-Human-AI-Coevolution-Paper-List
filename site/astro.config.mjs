@@ -3,7 +3,7 @@ import tailwind from '@astrojs/tailwind';
 import solid from '@astrojs/solid-js';
 import sitemap from '@astrojs/sitemap';
 
-const SITE_URL = process.env.SITE_URL ?? 'https://xli04.github.io';
+const SITE_URL = process.env.SITE_URL ?? 'https://chats-lab.github.io';
 const BASE = process.env.BASE_PATH ?? '/Awesome-Human-AI-Coevolution-Paper-List';
 
 export default defineConfig({

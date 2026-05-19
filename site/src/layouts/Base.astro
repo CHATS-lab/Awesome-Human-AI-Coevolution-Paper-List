@@ -36,8 +36,8 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 // Ensure trailing slash on canonical for directory-format outputs.
 let canonicalPath = Astro.url.pathname;
 if (!canonicalPath.endsWith('/') && !/\.[a-z0-9]+$/i.test(canonicalPath)) canonicalPath += '/';
-const canonical = new URL(canonicalPath, Astro.site ?? 'https://xli04.github.io').toString();
-const ogImageUrl = new URL(ogImage ?? `${base}/og-v4.png`, Astro.site ?? 'https://xli04.github.io').toString();
+const canonical = new URL(canonicalPath, Astro.site ?? 'https://chats-lab.github.io').toString();
+const ogImageUrl = new URL(ogImage ?? `${base}/og-v5.png`, Astro.site ?? 'https://chats-lab.github.io').toString();
 
 const jsonLdArr: unknown[] = jsonLd
   ? Array.isArray(jsonLd) ? jsonLd : [jsonLd]

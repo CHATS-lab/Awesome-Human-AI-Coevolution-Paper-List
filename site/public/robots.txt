@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://xli04.github.io/Awesome-Human-AI-Coevolution-Paper-List/sitemap-index.xml
+Sitemap: https://chats-lab.github.io/Awesome-Human-AI-Coevolution-Paper-List/sitemap-index.xml
