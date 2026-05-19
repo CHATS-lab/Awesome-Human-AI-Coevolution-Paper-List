@@ -9,3 +9,9 @@ readme_template/logs/
 site/node_modules/
 site/dist/
 site/.astro/
+
+# Untracked from remote, kept locally
+.github/workflows/
+deep_research/
+readme_template/
+scripts/
