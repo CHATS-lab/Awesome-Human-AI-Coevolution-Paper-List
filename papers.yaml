@@ -52,7 +52,7 @@
   envs:
   - Collaboration & Co-Creation
   - Longitudinal HCI Studies
-  phase: emerging-phase-2
+  phase: phase-2
   keywords:
   - self-regulated learning
   - RCT
@@ -83,7 +83,7 @@
   envs:
   - Longitudinal HCI Studies
   - Collaboration & Co-Creation
-  phase: emerging-phase-2
+  phase: phase-2
   keywords:
   - ChatGPT
   - essay writing
@@ -100,6 +100,78 @@
       doi = {10.1007/s40299-025-01076-9}
     }
   bibtex_confirmed: false
+- title: 'The Deskilling Effect: Is Artificial Intelligence Eroding Clinical Competence?'
+  link: https://www.acpjournals.org/doi/10.7326/ANNALS-26-00613
+  authors:
+  - Maxim Topaz
+  - Laura Maria Peltonen
+  - Zhihong Zhang
+  institutions:
+  - Columbia University School of Nursing
+  - University of Turku
+  date: '2026-06-02'
+  publisher: Annals of Internal Medicine 2026
+  envs:
+  - Position & Survey
+  phase: phase-3
+  keywords:
+  - clinical deskilling
+  - automation bias
+  - vigilance
+  - aviation analogy
+  - skill preservation
+  tldr: |-
+    Synthesizes cross-specialty evidence (colonoscopy ADR decline, radiology, pathology) on whether AI erodes clinical competence, plus aviation-automation analogies. Argues that what happens when AI is removed or unavailable is the key skill-preservation question. Recommends skill-preserving workflows and AI-off competence monitoring.
+  sources:
+    publisher_page: https://www.acpjournals.org/doi/10.7326/ANNALS-26-00613
+  bibtex: |-
+    @article{topaz2026deskilling,
+      title = {The Deskilling Effect: Is Artificial Intelligence Eroding Clinical Competence?},
+      author = {Topaz, Maxim and Peltonen, Laura Maria and Zhang, Zhihong},
+      journal = {Annals of Internal Medicine},
+      year = {2026},
+      doi = {10.7326/ANNALS-26-00613}
+    }
+  bibtex_confirmed: false
+- title: 'Evaluating Cognitive Biases in AI-Assisted Mammography Interpretation: A Simulation Reader Study of Explainable
+    AI Across Radiologist Experience Levels'
+  link: https://link.springer.com/article/10.1007/s00330-026-12666-6
+  authors:
+  - Filippo Pesapane
+  - Antuono Latronico
+  - Francesca Abbate
+  - Silvia Penco
+  - Anna Rotili
+  - Valeria Dominelli
+  - Luca Nicosia
+  - Enrico Cassano
+  institutions:
+  - IEO European Institute of Oncology IRCCS
+  - University of Milan
+  date: '2026-05-29'
+  publisher: European Radiology 2026
+  envs:
+  - Human Feedback Loops
+  phase: phase-2
+  keywords:
+  - mammography
+  - automation bias
+  - anchoring bias
+  - explainable AI
+  - radiologist experience
+  tldr: |-
+    Monocentric, fully crossed simulation reader study (Mar–Jun 2024) with 6 breast radiologists reviewing 200 mammograms under three conditions (unassisted, AI-assisted, AI-assisted with saliency XAI). In deliberately discordant cases without explanations, automation bias occurred in 36.1% and anchoring bias in 33.9%; XAI roughly halved both (to ~17%). Least-experienced radiologists were most susceptible.
+  sources:
+    publisher_page: https://link.springer.com/article/10.1007/s00330-026-12666-6
+  bibtex: |-
+    @article{pesapane2026mammography,
+      title = {Evaluating Cognitive Biases in {AI}-Assisted Mammography Interpretation: A Simulation Reader Study of Explainable {AI} Across Radiologist Experience Levels},
+      author = {Pesapane, Filippo and Latronico, Antuono and Abbate, Francesca and Penco, Silvia and Rotili, Anna and Dominelli, Valeria and Nicosia, Luca and Cassano, Enrico},
+      journal = {European Radiology},
+      year = {2026},
+      doi = {10.1007/s00330-026-12666-6}
+    }
+  bibtex_confirmed: false
 - title: 'Trust in human-AI collaboration in finance: a bibliometric-systematic literature review'
   link: https://doi.org/10.1007/s00146-026-03049-y
   authors:
@@ -112,7 +184,7 @@
   envs:
   - Position & Survey
   - Mutual Adaptation
-  phase: emerging-phase-4
+  phase: phase-4
   keywords:
   - trust
   - finance
@@ -170,7 +242,7 @@
   envs:
   - Position & Survey
   - Mutual Adaptation
-  phase: emerging-phase-4
+  phase: phase-4
   keywords:
   - mutualism
   - governance
@@ -208,7 +280,7 @@
   envs:
   - Longitudinal HCI Studies
   - Collaboration & Co-Creation
-  phase: emerging-phase-3
+  phase: phase-3
   keywords:
   - SWE-chat
   - coding agents
@@ -242,7 +314,7 @@
   envs:
   - Collaboration & Co-Creation
   - Mutual Adaptation
-  phase: emerging-phase-2
+  phase: phase-2
   keywords:
   - triadic loop
   - livestreaming
@@ -263,6 +335,38 @@
       archivePrefix = {arXiv}
     }
   bibtex_confirmed: false
+- title: 'Intersectional Sycophancy: How Perceived User Demographics Shape False Validation in Large Language Models'
+  link: https://arxiv.org/abs/2604.11609
+  authors:
+  - Benjamin Maltbie
+  - Shivam Raval
+  institutions: []
+  date: '2026-04-13'
+  publisher: arXiv
+  envs:
+  - Human Feedback Loops
+  phase: phase-4
+  keywords:
+  - sycophancy
+  - intersectionality
+  - perceived demographics
+  - false validation
+  - persona conditioning
+  tldr: |-
+    Tests whether sycophancy varies systematically with perceived user demographics across 768 multi-turn conversations spanning 128 personas (race, age, gender, confidence) and three domains. Sycophancy varies sharply by model (GPT-5-nano x̄=2.96 vs Claude Haiku 4.5 x̄=1.74) and domain (philosophy 41% more sycophantic than math). Hispanic personas receive the highest scores; recommends identity-aware adversarial safety evaluation.
+  arxiv_id: '2604.11609'
+  sources:
+    arxiv: https://arxiv.org/abs/2604.11609
+  bibtex: |-
+    @misc{maltbie2026sycophancy,
+      title = {Intersectional Sycophancy: How Perceived User Demographics Shape False Validation in Large Language Models},
+      author = {Maltbie, Benjamin and Raval, Shivam},
+      eprint = {2604.11609},
+      archivePrefix = {arXiv},
+      year = {2026},
+      url = {https://arxiv.org/abs/2604.11609}
+    }
+  bibtex_confirmed: false
 - title: AI Organizations are More Effective but Less Aligned than Individual Agents
   link: https://arxiv.org/abs/2604.10290
   authors:
@@ -281,7 +385,7 @@
   envs:
   - Position & Survey
   - Human Feedback Loops
-  phase: emerging-phase-4
+  phase: phase-4
   keywords:
   - multi-agent
   - AI organizations
@@ -389,7 +493,7 @@
   envs:
   - Longitudinal HCI Studies
   - Position & Survey
-  phase: emerging-phase-4
+  phase: phase-4
   keywords:
   - augmentation trap
   - cognitive offloading
@@ -425,7 +529,7 @@
   envs:
   - Collaboration & Co-Creation
   - Mutual Adaptation
-  phase: emerging-phase-2
+  phase: phase-2
   keywords:
   - AI-mediated negotiation
   - personality
@@ -518,7 +622,7 @@
   publisher: arXiv
   envs:
   - Collaboration & Co-Creation
-  phase: emerging-phase-2
+  phase: phase-2
   keywords:
   - critical thinking
   - LLM access timing
@@ -569,6 +673,69 @@
       number = {2},
       year = {2026},
       doi = {10.46328/ijonses.5801}
+    }
+  bibtex_confirmed: false
+- title: 'Impact of ChatGPT on Learning Outcomes and Performance of Students in Computer Programming Courses: A Mixed-Method
+    Approach'
+  link: https://link.springer.com/article/10.1007/s44217-026-01142-4
+  authors: []
+  institutions:
+  - Obafemi Awolowo University
+  date: 2026-02
+  publisher: Discover Education 2026
+  envs:
+  - Longitudinal HCI Studies
+  phase: phase-1
+  keywords:
+  - programming education
+  - Nigeria
+  - perception-performance divergence
+  - academic integrity
+  - debugging
+  tldr: |-
+    Mixed-methods evaluation in a mandatory undergraduate programming course at Obafemi Awolowo University, Nigeria (analytic N=855 of 1,889 enrolled). Combines student/instructor surveys with course performance data using correlation and regression. Finds a divergence between positive affective/utility perceptions (confidence, motivation, debugging help) and the more complex relationship with actual scores.
+  sources:
+    publisher_page: https://link.springer.com/article/10.1007/s44217-026-01142-4
+  bibtex: |-
+    @article{anon2026programming,
+      title = {Impact of {ChatGPT} on Learning Outcomes and Performance of Students in Computer Programming Courses: A Mixed-Method Approach},
+      journal = {Discover Education},
+      year = {2026},
+      doi = {10.1007/s44217-026-01142-4}
+    }
+  bibtex_confirmed: false
+- title: 'Ask Don''t Tell: Reducing Sycophancy in Large Language Models'
+  link: https://arxiv.org/abs/2602.23971
+  authors:
+  - Magda Dubois
+  - Cozmin Ududec
+  - Christopher Summerfield
+  - Lennart Luettgau
+  institutions: []
+  date: '2026-02-27'
+  publisher: arXiv
+  envs:
+  - Human Feedback Loops
+  phase: phase-1
+  keywords:
+  - sycophancy
+  - epistemic certainty
+  - prompt framing
+  - user-affirming responses
+  - input-level mitigation
+  tldr: |-
+    Nested factorial study of how user input framing (epistemic certainty, I-vs-user perspective, affirmation vs negation) provokes sycophancy. Finds sycophancy substantially higher for non-questions, monotonically rising with stated certainty, and amplified by I-perspective. Converting non-questions into questions before answering reduces sycophancy more reliably than a plain anti-sycophancy prompt.
+  arxiv_id: '2602.23971'
+  sources:
+    arxiv: https://arxiv.org/abs/2602.23971
+  bibtex: |-
+    @misc{dubois2026sycophancy,
+      title = {Ask Don't Tell: Reducing Sycophancy in Large Language Models},
+      author = {Dubois, Magda and Ududec, Cozmin and Summerfield, Christopher and Luettgau, Lennart},
+      eprint = {2602.23971},
+      archivePrefix = {arXiv},
+      year = {2026},
+      url = {https://arxiv.org/abs/2602.23971}
     }
   bibtex_confirmed: false
 - title: 'The Path to Conversational AI Tutors: Integrating Tutoring Best Practices and Targeted Technologies to Produce Scalable
@@ -628,7 +795,7 @@
   envs:
   - Collaboration & Co-Creation
   - Human Feedback Loops
-  phase: emerging-phase-3
+  phase: phase-3
   keywords:
   - web agents
   - intervention modeling
@@ -667,7 +834,7 @@
   publisher: FAccT 2026
   envs:
   - Position & Survey
-  phase: emerging-phase-4
+  phase: phase-4
   keywords:
   - agent index
   - deployed agents
@@ -687,6 +854,39 @@
       year = {2026},
       eprint = {2602.17753},
       archivePrefix = {arXiv}
+    }
+  bibtex_confirmed: false
+- title: A Rational Analysis of the Effects of Sycophantic AI
+  link: https://arxiv.org/abs/2602.14270
+  authors:
+  - Rafael M. Batista
+  - Thomas L. Griffiths
+  institutions:
+  - Princeton University
+  date: '2026-02-15'
+  publisher: arXiv
+  envs:
+  - Human Feedback Loops
+  phase: phase-1
+  keywords:
+  - sycophancy
+  - belief reinforcement
+  - Bayesian rational analysis
+  - Wason 2-4-6 task
+  - epistemic risk
+  tldr: |-
+    A Bayesian rational analysis showing that sampling AI-confirmed evidence makes a rational agent more confident without making progress toward truth — distinct from hallucination because it reinforces existing belief. Empirically tested on the Wason 2-4-6 rule-discovery task (N=557): unmodified LLM feedback suppressed discovery and inflated confidence, while unbiased sampling yielded 5× higher discovery rates.
+  arxiv_id: '2602.14270'
+  sources:
+    arxiv: https://arxiv.org/abs/2602.14270
+  bibtex: |-
+    @misc{batista2026sycophancy,
+      title = {A Rational Analysis of the Effects of Sycophantic {AI}},
+      author = {Batista, Rafael M. and Griffiths, Thomas L.},
+      eprint = {2602.14270},
+      archivePrefix = {arXiv},
+      year = {2026},
+      url = {https://arxiv.org/abs/2602.14270}
     }
   bibtex_confirmed: false
 - title: 'Impacts of Generative AI on Agile Teams'' Productivity: A Multi-Case Longitudinal Study'
@@ -770,7 +970,7 @@
   publisher: arXiv
   envs:
   - Collaboration & Co-Creation
-  phase: emerging-phase-3
+  phase: phase-3
   keywords:
   - AlphaEvolve
   - strategic behavior
@@ -890,6 +1090,44 @@
       url = {https://arxiv.org/abs/2603.29888}
     }
   bibtex_confirmed: false
+- title: Examining Human Reliance on Artificial Intelligence in Decision Making
+  link: https://www.nature.com/articles/s41598-026-34983-y
+  authors:
+  - Joe Pearson
+  - Itiel E. Dror
+  - Emma Jayes
+  - Grace-Rose Whordley
+  - Georgina Mason
+  - Sophie Nightingale
+  institutions:
+  - Lancaster University
+  - Cognitive Consultants International
+  - Defence Science and Technology Laboratory
+  date: '2026-02-05'
+  publisher: Scientific Reports 2026
+  envs:
+  - Human Feedback Loops
+  phase: phase-1
+  keywords:
+  - reliance
+  - metacognitive sensitivity
+  - source labeling
+  - synthetic-face authenticity
+  - AI attitudes
+  tldr: |-
+    N=295 study judging 80 real/AI-synthesized faces alongside guidance (correct only half the time) labeled as from humans or AI. Participants with more positive attitudes toward AI showed poorer discriminability between real and synthetic faces under AI guidance; human guidance did not show the analogous attitude-conditioned effect. Argues for re-examining the assumption that AI guidance is neutral.
+  sources:
+    publisher_page: https://www.nature.com/articles/s41598-026-34983-y
+    pmc: https://pmc.ncbi.nlm.nih.gov/articles/PMC12881489/
+  bibtex: |-
+    @article{pearson2026reliance,
+      title = {Examining Human Reliance on Artificial Intelligence in Decision Making},
+      author = {Pearson, Joe and Dror, Itiel E. and Jayes, Emma and Whordley, Grace-Rose and Mason, Georgina and Nightingale, Sophie},
+      journal = {Scientific Reports},
+      year = {2026},
+      doi = {10.1038/s41598-026-34983-y}
+    }
+  bibtex_confirmed: false
 - title: 'AI-Augmented Strategic Decision-Making Under Time Constraints: An Experimental Study on Mental Representations and
     Strategic Foresight'
   link: https://pubsonline.informs.org/doi/10.1287/stsc.2025.0442
@@ -934,7 +1172,7 @@
   publisher: arXiv
   envs:
   - Collaboration & Co-Creation
-  phase: emerging-phase-2
+  phase: phase-2
   keywords:
   - Writor
   - writing center pedagogy
@@ -952,6 +1190,44 @@
       year = {2026},
       eprint = {2602.04047},
       archivePrefix = {arXiv}
+    }
+  bibtex_confirmed: false
+- title: Boosting Metacognition in Entangled Human-AI Interaction to Navigate Cognitive-Behavioral Drift
+  link: https://arxiv.org/abs/2602.01959
+  authors:
+  - Ezequiel Lopez-Lopez
+  - Christoph M. Abels
+  - Philipp Lorenz-Spreen
+  - Stephan Lewandowsky
+  - Stefan M. Herzog
+  institutions:
+  - Max Planck Institute for Human Development
+  - University of Bristol
+  date: '2026-02-02'
+  publisher: arXiv
+  envs:
+  - Position & Survey
+  - Mutual Adaptation
+  phase: phase-2
+  keywords:
+  - entanglement
+  - cognitive-behavioral drift
+  - metacognition
+  - sustained interaction
+  - boosting
+  tldr: |-
+    Proposes a research framework for cognition in sustained human-AI interaction built on three phenomena (entanglement, drift, metacognition) that interact and scale from individual to population. Identifies four metacognitive intervention points and argues for "boosting" and "self-nudging" as the central interventions. Outlines a research agenda for long-term study.
+  arxiv_id: '2602.01959'
+  sources:
+    arxiv: https://arxiv.org/abs/2602.01959
+  bibtex: |-
+    @misc{lopezlopez2026metacognition,
+      title = {Boosting Metacognition in Entangled Human-{AI} Interaction to Navigate Cognitive-Behavioral Drift},
+      author = {Lopez-Lopez, Ezequiel and Abels, Christoph M. and Lorenz-Spreen, Philipp and Lewandowsky, Stephan and Herzog, Stefan M.},
+      eprint = {2602.01959},
+      archivePrefix = {arXiv},
+      year = {2026},
+      url = {https://arxiv.org/abs/2602.01959}
     }
   bibtex_confirmed: false
 - title: How RLHF Amplifies Sycophancy
@@ -985,6 +1261,40 @@
       year = {2026},
       eprint = {2602.01002},
       archivePrefix = {arXiv}
+    }
+  bibtex_confirmed: false
+- title: 'Trade-offs in Financial AI: Explainability in a Trilemma with Accuracy and Compliance'
+  link: https://arxiv.org/abs/2602.01368
+  authors:
+  - Patricia Marcella Evite
+  - Ekaterina Svetlova
+  - Doina Bucur
+  institutions:
+  - University of Twente
+  date: '2026-02-01'
+  publisher: arXiv
+  envs:
+  - Position & Survey
+  phase: phase-2
+  keywords:
+  - financial AI
+  - explainability
+  - compliance
+  - hygiene factors
+  - adoption trilemma
+  tldr: |-
+    Interview study with 20 finance professionals (executives, developers, regulators across regions) on how XAI is prioritized. Accuracy and compliance act as non-negotiable hygiene factors that must be met before transparency matters. Explainability serves as a "gateway to adoption," determining whether AI tools gain trust and defensibility.
+  arxiv_id: '2602.01368'
+  sources:
+    arxiv: https://arxiv.org/abs/2602.01368
+  bibtex: |-
+    @misc{evite2026explainability,
+      title = {Trade-offs in Financial {AI}: Explainability in a Trilemma with Accuracy and Compliance},
+      author = {Evite, Patricia Marcella and Svetlova, Ekaterina and Bucur, Doina},
+      eprint = {2602.01368},
+      archivePrefix = {arXiv},
+      year = {2026},
+      url = {https://arxiv.org/abs/2602.01368}
     }
   bibtex_confirmed: false
 - title: 'From Future of Work to Future of Workers: Addressing Asymptomatic AI Harms for Dignified Human-AI Interaction'
@@ -1127,6 +1437,41 @@
       archivePrefix = {arXiv}
     }
   bibtex_confirmed: false
+- title: Who Wants to Have an AI Therapist? Acceptance of Using Artificial Intelligence for Mental Health Interventions Among
+    Clinicians, Patients and the General Community
+  link: https://onlinelibrary.wiley.com/doi/10.1002/cpp.70220
+  authors:
+  - Vera Békés
+  - Katie Aafjes-van Doorn
+  institutions:
+  - McGill University
+  - Yeshiva University
+  - New York University Shanghai
+  date: '2026-01-23'
+  publisher: Clinical Psychology & Psychotherapy 2026
+  envs:
+  - Position & Survey
+  phase: phase-3
+  keywords:
+  - AI therapist
+  - technology acceptance
+  - teletherapy comparison
+  - mental health
+  - stakeholder attitudes
+  tldr: |-
+    Survey of clinicians (N=658), patients (N=451), and community members (N=520) on acceptance of AI chatbots, AI avatars, and videoconference teletherapy for mental-health interventions. Community participants are most optimistic about AI-based tools; clinicians are consistently more skeptical, especially about usability. General attitudes toward AI strongly predict acceptance of both AI modalities.
+  sources:
+    publisher_page: https://onlinelibrary.wiley.com/doi/10.1002/cpp.70220
+    pmc: https://pmc.ncbi.nlm.nih.gov/articles/PMC12831102/
+  bibtex: |-
+    @article{bekes2026therapist,
+      title = {Who Wants to Have an {AI} Therapist? Acceptance of Using Artificial Intelligence for Mental Health Interventions Among Clinicians, Patients and the General Community},
+      author = {Békés, Vera and Doorn, Katie Aafjes-van},
+      journal = {Clinical Psychology \\& Psychotherapy},
+      year = {2026},
+      doi = {10.1002/cpp.70220}
+    }
+  bibtex_confirmed: false
 - title: 'Sometimes right, sometimes wrong: Drivers'' responses to inconsistently accurate automated vehicle system confidence
     information'
   link: https://www.sciencedirect.com/science/article/abs/pii/S0001457526000217
@@ -1180,7 +1525,7 @@
   publisher: arXiv
   envs:
   - Collaboration & Co-Creation
-  phase: emerging-phase-3
+  phase: phase-3
   keywords:
   - coding agents
   - cooperation
@@ -1199,6 +1544,44 @@
       year = {2026},
       eprint = {2601.13295},
       archivePrefix = {arXiv}
+    }
+  bibtex_confirmed: false
+- title: Development and Validation of the AI Dependence Scale for Chinese Undergraduates and a Preliminary Exploration
+  link: https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2025.1725393/full
+  authors:
+  - Houyu Wu
+  - Haiyang Ni
+  - Wenfu Luo
+  - Tenglong Wu
+  institutions:
+  - Neijiang Normal University
+  - SEGi University
+  - Nilai University
+  - Xinjiang University of Politics and Law
+  - Zhejiang Pharmaceutical University
+  date: '2026-01-19'
+  publisher: Frontiers in Psychology 2026
+  envs:
+  - Position & Survey
+  phase: phase-1
+  keywords:
+  - AI dependence scale
+  - AIDep-22
+  - psychometrics
+  - emotional dependence
+  - loss of control
+  tldr: |-
+    Develops and validates the 22-item AI Dependence Scale across four dimensions (emotional, functional, cognitive, loss of control) using two independent samples of 400 Chinese undergraduates. EFA/CFA confirm the four-factor structure with strong reliability. Identifies male students, upper-year students, applied-major students, and frequent users as higher-risk populations.
+  sources:
+    publisher_page: https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2025.1725393/full
+    pmc: https://pmc.ncbi.nlm.nih.gov/articles/PMC12862064/
+  bibtex: |-
+    @article{wu2026scale,
+      title = {Development and Validation of the {AI} Dependence Scale for Chinese Undergraduates and a Preliminary Exploration},
+      author = {Wu, Houyu and Ni, Haiyang and Luo, Wenfu and Wu, Tenglong},
+      journal = {Frontiers in Psychology},
+      year = {2026},
+      doi = {10.3389/fpsyg.2025.1725393}
     }
   bibtex_confirmed: false
 - title: 'Human-Human-AI Triadic Programming: Uncovering the Role of AI Agent and the Value of Human Partner in Collaborative
@@ -1256,7 +1639,7 @@
   envs:
   - Position & Survey
   - Human Feedback Loops
-  phase: emerging-phase-4
+  phase: phase-4
   keywords:
   - institutional AI
   - governance graph
@@ -1375,6 +1758,43 @@
       pages = {12681--12707},
       year = {2025},
       doi = {10.1007/s10639-025-13337-7}
+    }
+  bibtex_confirmed: false
+- title: 'AI-Induced Deskilling in Medicine: A Mixed-Method Review and Research Agenda for Healthcare and Beyond'
+  link: https://link.springer.com/article/10.1007/s10462-025-11352-1
+  authors:
+  - Chiara Natali
+  - Luca Marconi
+  - Leslye Denisse Dias Duran
+  - Federico Cabitza
+  institutions:
+  - University of Milano-Bicocca
+  - Dalle Molle Institute for Artificial Intelligence
+  - Ruhr University Bochum
+  - IRCCS Istituto Ortopedico Galeazzi
+  date: '2025'
+  publisher: Artificial Intelligence Review 2025
+  envs:
+  - Position & Survey
+  phase: phase-3
+  keywords:
+  - deskilling
+  - clinical judgment
+  - mixed-method review
+  - upskilling inhibition
+  - cross-specialty
+  tldr: |-
+    Mixed-method literature review combining systematic and narrative synthesis of AI-induced deskilling across radiology, neurosurgery, anesthesiology, oncology, cardiology, and pathology. Catalogues consequences including poorer clinical reasoning, reluctance to give definitive assessments, and erosion of moral skills. Proposes a research agenda for cross-specialty and beyond-medicine extensions.
+  sources:
+    publisher_page: https://link.springer.com/article/10.1007/s10462-025-11352-1
+    preprint: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5166364
+  bibtex: |-
+    @article{natali2025deskilling,
+      title = {{AI}-Induced Deskilling in Medicine: A Mixed-Method Review and Research Agenda for Healthcare and Beyond},
+      author = {Natali, Chiara and Marconi, Luca and Duran, Leslye Denisse Dias and Cabitza, Federico},
+      journal = {Artificial Intelligence Review},
+      year = {2025},
+      doi = {10.1007/s10462-025-11352-1}
     }
   bibtex_confirmed: false
 - title: Adaptive Human-Robot Collaboration using Type-Based IRL
@@ -1567,6 +1987,36 @@
       doi = {10.1016/j.jacr.2025.09.015}
     }
   bibtex_confirmed: false
+- title: Using AI in My Disputes? Clients' Perception and Acceptance of Using AI in Mediation
+  link: https://onlinelibrary.wiley.com/doi/full/10.1002/crq.21483
+  authors:
+  - Yeju Choi
+  institutions:
+  - John Jay College of Criminal Justice, CUNY
+  date: '2025'
+  publisher: Conflict Resolution Quarterly 2025
+  envs:
+  - Position & Survey
+  phase: phase-3
+  keywords:
+  - mediation
+  - UTAUT
+  - trust
+  - responsible AI use
+  - task acceptance
+  tldr: |-
+    UTAUT-grounded study of how potential mediation clients perceive mediators using AI. Combines 12 semi-structured interviews with a 152-participant survey. Identifies three factors influencing acceptance — mediation task/process, task-specific performance expectancy, and trust in mediators' responsible AI use — with higher acceptance for preparation tasks than in-session uses.
+  sources:
+    publisher_page: https://onlinelibrary.wiley.com/doi/full/10.1002/crq.21483
+  bibtex: |-
+    @article{choi2025mediation,
+      title = {Using {AI} in My Disputes? Clients' Perception and Acceptance of Using {AI} in Mediation},
+      author = {Choi, Yeju},
+      journal = {Conflict Resolution Quarterly},
+      year = {2025},
+      doi = {10.1002/crq.21483}
+    }
+  bibtex_confirmed: false
 - title: A Benchmark for Evaluating Outcome-Driven Constraint Violations in Autonomous AI Agents
   link: https://arxiv.org/abs/2512.20798
   authors:
@@ -1583,7 +2033,7 @@
   publisher: arXiv
   envs:
   - Position & Survey
-  phase: emerging-phase-4
+  phase: phase-4
   keywords:
   - benchmark
   - agentic misalignment
@@ -1614,7 +2064,7 @@
   envs:
   - Longitudinal HCI Studies
   - Collaboration & Co-Creation
-  phase: emerging-phase-2
+  phase: phase-2
   keywords:
   - LLM dependence
   - computer engineering education
@@ -1634,6 +2084,143 @@
       doi = {10.1007/s44217-025-01057-6}
     }
   bibtex_confirmed: false
+- title: Generative AI for Analysts
+  link: https://arxiv.org/abs/2512.19705
+  authors:
+  - Jian Xue
+  - Qian Zhang
+  - Wu Zhu
+  institutions: []
+  date: '2025-12-12'
+  publisher: arXiv
+  envs:
+  - Longitudinal HCI Studies
+  - Mutual Adaptation
+  phase: phase-2
+  keywords:
+  - financial analysts
+  - FactSet AI
+  - forecast error
+  - information synthesis
+  - cognitive load
+  tldr: |-
+    Uses the 2023 launch of FactSet's AI platform as a natural experiment. Adoption produces 40% more distinct information sources, 34% broader topical coverage, and 25% more advanced analytical methods, with better timeliness; yet forecast errors rise 59% as analysts struggle to synthesize a more balanced information mix, especially under heavy cognitive load. Placebo tests confirm the effect is unique to FactSet's AI integration.
+  arxiv_id: '2512.19705'
+  sources:
+    arxiv: https://arxiv.org/abs/2512.19705
+  bibtex: |-
+    @misc{xue2025analysts,
+      title = {Generative {AI} for Analysts},
+      author = {Xue, Jian and Zhang, Qian and Zhu, Wu},
+      eprint = {2512.19705},
+      archivePrefix = {arXiv},
+      year = {2025},
+      url = {https://arxiv.org/abs/2512.19705}
+    }
+  bibtex_confirmed: false
+- title: 'The Impact Mechanism of Artificial Intelligence Dependence on College Students'' Innovation Capability: An Empirical
+    Study From China'
+  link: https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2025.1732837/full
+  authors:
+  - Zhixin Yang
+  - Hao Deng
+  - Nan Jiang
+  institutions:
+  - Guangxi Minzu University
+  date: '2025-12-12'
+  publisher: Frontiers in Psychology 2025
+  envs:
+  - Longitudinal HCI Studies
+  phase: phase-1
+  keywords:
+  - AI dependence
+  - cognitive dependence
+  - innovation capability
+  - cognitive flexibility
+  - employment pressure
+  tldr: |-
+    Survey of 1,032 Chinese college students with cognitive rigidity/flexibility as mediator. Cognitive dependence on AI (β = 0.570) has a stronger negative effect on innovation than tool dependence; employment pressure amplifies the harm and cognitive flexibility is essential to all beneficial configurations. Supports the "generate first, think later" interpretation of AI overuse.
+  sources:
+    publisher_page: https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2025.1732837/full
+    pmc: https://pmc.ncbi.nlm.nih.gov/articles/PMC12742215/
+  bibtex: |-
+    @article{yang2025innovation,
+      title = {The Impact Mechanism of Artificial Intelligence Dependence on College Students' Innovation Capability: An Empirical Study From China},
+      author = {Yang, Zhixin and Deng, Hao and Jiang, Nan},
+      journal = {Frontiers in Psychology},
+      year = {2025},
+      doi = {10.3389/fpsyg.2025.1732837}
+    }
+  bibtex_confirmed: false
+- title: 'The Impact of Chinese Undergraduates'' Perceived Acceptance of AI Technology on Academic Achievement: The Mediating
+    Role of Critical Thinking'
+  link: https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2025.1727037/full
+  authors:
+  - Cheng Liu
+  - Kexuan Zhu
+  - Zijing Zhang
+  - Yue Ding
+  institutions:
+  - Harbin Institute of Petroleum
+  - Dhurakij Pundit University
+  - Guizhou University of Traditional Chinese Medicine
+  date: '2025-12-12'
+  publisher: Frontiers in Psychology 2025
+  envs:
+  - Longitudinal HCI Studies
+  phase: phase-1
+  keywords:
+  - AI acceptance
+  - critical thinking
+  - academic achievement
+  - full mediation
+  - Chinese undergraduates
+  tldr: |-
+    Survey of 549 undergraduates at four Chinese universities testing critical thinking as a mediator between perceived AI acceptance and academic achievement. Perceived usefulness of AI positively predicts both critical thinking and achievement; critical thinking fully mediates the usefulness-to-achievement path.
+  sources:
+    publisher_page: https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2025.1727037/full
+    pmc: https://pmc.ncbi.nlm.nih.gov/articles/PMC12741099/
+  bibtex: |-
+    @article{liu2025acceptance,
+      title = {The Impact of Chinese Undergraduates' Perceived Acceptance of {AI} Technology on Academic Achievement: The Mediating Role of Critical Thinking},
+      author = {Liu, Cheng and Zhu, Kexuan and Zhang, Zijing and Ding, Yue},
+      journal = {Frontiers in Psychology},
+      year = {2025},
+      doi = {10.3389/fpsyg.2025.1727037}
+    }
+  bibtex_confirmed: false
+- title: 'The Extended Hollowed Mind: Why Foundational Knowledge Is Indispensable in the Age of AI'
+  link: https://www.frontiersin.org/journals/artificial-intelligence/articles/10.3389/frai.2025.1719019/full
+  authors:
+  - Christian R. Klein
+  - Reinhard Klein
+  institutions:
+  - University Hospital Bonn
+  - University of Bonn
+  date: '2025-12-11'
+  publisher: Frontiers in Artificial Intelligence 2025
+  envs:
+  - Position & Survey
+  phase: framework
+  keywords:
+  - extended mind
+  - cognitive offloading
+  - integrative reasoning
+  - foundational knowledge
+  - fortified mind
+  tldr: |-
+    Argues LLMs mark a qualitative shift from procedural to integrative-reasoning offloading and proposes the "hollowed mind" (dependence emerging when effortless AI answers bypass deep-learning processes) and the "Sovereignty Trap" mechanism. Distinguishes how AI levels novices but amplifies experts (the "Expertise Duality"). Proposes the "Fortified Mind" as the pedagogical goal — resilient cognitive architecture combining domain knowledge, metacognition, and deliberative thinking.
+  sources:
+    publisher_page: https://www.frontiersin.org/journals/artificial-intelligence/articles/10.3389/frai.2025.1719019/full
+  bibtex: |-
+    @article{klein2025hollowed,
+      title = {The Extended Hollowed Mind: Why Foundational Knowledge Is Indispensable in the Age of {AI}},
+      author = {Klein, Christian R. and Klein, Reinhard},
+      journal = {Frontiers in Artificial Intelligence},
+      year = {2025},
+      doi = {10.3389/frai.2025.1719019}
+    }
+  bibtex_confirmed: false
 - title: 'AGENTSAFE: A Unified Framework for Ethical Assurance and Governance in Agentic AI'
   link: https://arxiv.org/abs/2512.03180
   authors:
@@ -1645,7 +2232,7 @@
   publisher: arXiv
   envs:
   - Position & Survey
-  phase: emerging-phase-4
+  phase: phase-4
   keywords:
   - governance
   - ethical assurance
@@ -1695,6 +2282,38 @@
       doi = {10.1007/s43681-025-00855-w}
     }
   bibtex_confirmed: false
+- title: 'Barriers to AI Adoption: Image Concerns at Work'
+  link: https://arxiv.org/abs/2511.18582
+  authors:
+  - David Almog
+  institutions: []
+  date: '2025-11-23'
+  publisher: arXiv
+  envs:
+  - Longitudinal HCI Studies
+  - Mutual Adaptation
+  phase: phase-3
+  keywords:
+  - AI adoption
+  - image concerns
+  - visibility
+  - reliance
+  - online labor market
+  tldr: |-
+    Field experiment with 450 US remote workers doing AI-assisted image categorization, where reliance was made visible or not to an HR evaluator. Workers received fewer contract extensions when reliance was visible; the concern persisted even when evaluators had positive prior-performance information. Workers fear heavy AI reliance signals low confidence in their own judgment.
+  arxiv_id: '2511.18582'
+  sources:
+    arxiv: https://arxiv.org/abs/2511.18582
+  bibtex: |-
+    @misc{almog2025adoption,
+      title = {Barriers to {AI} Adoption: Image Concerns at Work},
+      author = {Almog, David},
+      eprint = {2511.18582},
+      archivePrefix = {arXiv},
+      year = {2025},
+      url = {https://arxiv.org/abs/2511.18582}
+    }
+  bibtex_confirmed: false
 - title: Impact of AI recommendation correctness on diagnostic accuracy in clinical decision-making
   link: https://www.sciencedirect.com/science/article/pii/S138650562500440X
   authors: []
@@ -1721,6 +2340,39 @@
       journal = {International Journal of Medical Informatics},
       year = {2026},
       doi = {10.1016/j.ijmedinf.2025.106223}
+    }
+  bibtex_confirmed: false
+- title: 'Learners'' AI Dependence and Critical Thinking: The Psychological Mechanism of Fatigue and the Social Buffering
+    Role of AI Literacy'
+  link: https://www.sciencedirect.com/science/article/pii/S0001691825010388
+  authors:
+  - Jinrui Tian
+  - Ronghua Zhang
+  institutions:
+  - Wuhan University
+  date: 2025-10
+  publisher: Acta Psychologica 2025
+  envs:
+  - Longitudinal HCI Studies
+  phase: phase-1
+  keywords:
+  - AI dependence
+  - critical thinking
+  - cognitive fatigue
+  - information literacy
+  - moderated mediation
+  tldr: |-
+    Survey of 580 Chinese university students testing how AI dependence relates to critical thinking. Greater AI dependence is associated with lower critical thinking, partially mediated by cognitive fatigue. Information literacy buffers the dependence-CT link but paradoxically intensifies fatigue under heavy reliance.
+  sources:
+    publisher_page: https://www.sciencedirect.com/science/article/pii/S0001691825010388
+    pubmed: https://pubmed.ncbi.nlm.nih.gov/41076923/
+  bibtex: |-
+    @article{tian2025dependence,
+      title = {Learners' {AI} Dependence and Critical Thinking: The Psychological Mechanism of Fatigue and the Social Buffering Role of {AI} Literacy},
+      author = {Tian, Jinrui and Zhang, Ronghua},
+      journal = {Acta Psychologica},
+      year = {2025},
+      doi = {10.1016/j.actpsy.2025.105725}
     }
   bibtex_confirmed: false
 - title: A Survey of AI Scientists
@@ -1752,6 +2404,44 @@
       eprint = {2510.23045},
       archivePrefix = {arXiv},
       url = {https://arxiv.org/abs/2510.23045}
+    }
+  bibtex_confirmed: false
+- title: 'On Controlled Change: Generative AI''s Impact on Professional Authority in Journalism'
+  link: https://arxiv.org/abs/2510.19792
+  authors:
+  - Tomás Dodds
+  - Wang Ngai Yeung
+  - Claudia Mellado
+  - Mathias-Felipe de Lima-Santos
+  institutions:
+  - Leiden University
+  - University of Oxford
+  - Pontificia Universidad Católica de Valparaíso
+  - University of São Paulo
+  date: '2025-10-22'
+  publisher: arXiv
+  envs:
+  - Longitudinal HCI Studies
+  phase: phase-3
+  keywords:
+  - journalism
+  - professional authority
+  - controlled change
+  - Dutch newsrooms
+  - adaptive guidelines
+  tldr: |-
+    Interview study with 13 editors and innovation managers at Dutch newsrooms. Introduces "controlled change" as a framework: journalists adopt adaptive guidelines, experiment to test AI fit, and critically assess AI capabilities, defending professional authority against both other actors and the technology itself. Provides empirical newsroom-side evidence of supervised AI adoption.
+  arxiv_id: '2510.19792'
+  sources:
+    arxiv: https://arxiv.org/abs/2510.19792
+  bibtex: |-
+    @misc{dodds2025journalism,
+      title = {On Controlled Change: Generative {AI}'s Impact on Professional Authority in Journalism},
+      author = {Dodds, Tomás and Yeung, Wang Ngai and Mellado, Claudia and Lima-Santos, Mathias-Felipe de},
+      eprint = {2510.19792},
+      archivePrefix = {arXiv},
+      year = {2025},
+      url = {https://arxiv.org/abs/2510.19792}
     }
   bibtex_confirmed: false
 - title: 'Impact of AI Tools on Learning Outcomes: Decreasing Knowledge and Over-Reliance'
@@ -1817,6 +2507,38 @@
       eprint = {2510.10079},
       archivePrefix = {arXiv},
       url = {https://arxiv.org/abs/2510.10079}
+    }
+  bibtex_confirmed: false
+- title: 'Generative AI and News Report 2025: How People Think About AI''s Role in Journalism and Society'
+  link: https://reutersinstitute.politics.ox.ac.uk/generative-ai-and-news-report-2025-how-people-think-about-ais-role-journalism-and-society
+  authors:
+  - Felix Simon
+  - Rasmus Kleis Nielsen
+  - Richard Fletcher
+  institutions:
+  - Reuters Institute for the Study of Journalism, University of Oxford
+  - University of Copenhagen
+  date: '2025-10-07'
+  publisher: Reuters Institute for the Study of Journalism 2025
+  envs:
+  - Position & Survey
+  phase: framework
+  keywords:
+  - generative AI news
+  - human oversight
+  - public trust
+  - six-country survey
+  - AI labeling
+  tldr: |-
+    Six-country survey (Argentina, Denmark, France, Japan, UK, USA) on public attitudes to AI in news. Weekly AI usage nearly doubled from 18% (2024) to 34% (2025); only 12% are comfortable with news made entirely by AI vs 62% for entirely human-made; only 33% believe journalists "always" or "often" check AI outputs. Quantifies public demand for human-in-the-loop oversight in journalism.
+  sources:
+    homepage: https://reutersinstitute.politics.ox.ac.uk/generative-ai-and-news-report-2025-how-people-think-about-ais-role-journalism-and-society
+  bibtex: |-
+    @misc{simon2025news,
+      title = {Generative {AI} and News Report 2025: How People Think About {AI}'s Role in Journalism and Society},
+      author = {Simon, Felix and Nielsen, Rasmus Kleis and Fletcher, Richard},
+      year = {2025},
+      url = {https://reutersinstitute.politics.ox.ac.uk/generative-ai-and-news-report-2025-how-people-think-about-ais-role-journalism-and-society}
     }
   bibtex_confirmed: false
 - title: 'Human-Robo-advisor collaboration in decision-making: Evidence from a multiphase mixed methods experimental study'
@@ -1970,7 +2692,7 @@
   envs:
   - Position & Survey
   - Human Feedback Loops
-  phase: emerging-phase-4
+  phase: phase-4
   keywords:
   - monoculture
   - model similarity
@@ -2102,7 +2824,7 @@
   publisher: Brookings working paper 2025
   envs:
   - Position & Survey
-  phase: emerging-phase-3
+  phase: phase-3
   keywords:
   - GPT
   - general-purpose technology
@@ -2176,7 +2898,7 @@
   publisher: arXiv
   envs:
   - Position & Survey
-  phase: emerging-phase-4
+  phase: phase-4
   keywords:
   - governance-as-a-service
   - multi-agent
@@ -2278,6 +3000,41 @@
       doi = {10.1016/S2468-1253(25)00133-5}
     }
   bibtex_confirmed: false
+- title: Assessing Medical Students' Attitudes, Performance, and Usage of ChatGPT in Jeddah, Saudi Arabia
+  link: https://www.frontiersin.org/journals/artificial-intelligence/articles/10.3389/frai.2025.1577911/full
+  authors:
+  - Dalia Alammari
+  - Elaf Alamari
+  - Rawan Alamri
+  - Raneem Alharbi
+  - Jumana Felimban
+  - Jana Aljohani
+  institutions:
+  - Ibn Sina National College for Medical Studies
+  date: '2025-07-14'
+  publisher: Frontiers in Artificial Intelligence 2025
+  envs:
+  - Position & Survey
+  phase: phase-1
+  keywords:
+  - medical education
+  - Saudi Arabia
+  - MENA
+  - clinical decision-making
+  - AI attitudes
+  tldr: |-
+    Cross-sectional survey of 420 Saudi medical students (Mar–May 2024); 84.3% had heard of ChatGPT and 74.9% had used it. Higher GPA and senior year correlate with greater awareness and performance. Ethical and data-security concerns remain prominent alongside generally positive attitudes.
+  sources:
+    publisher_page: https://www.frontiersin.org/journals/artificial-intelligence/articles/10.3389/frai.2025.1577911/full
+  bibtex: |-
+    @article{alammari2025jeddah,
+      title = {Assessing Medical Students' Attitudes, Performance, and Usage of {ChatGPT} in Jeddah, Saudi Arabia},
+      author = {Alammari, Dalia and Alamari, Elaf and Alamri, Rawan and Alharbi, Raneem and Felimban, Jumana and Aljohani, Jana},
+      journal = {Frontiers in Artificial Intelligence},
+      year = {2025},
+      doi = {10.3389/frai.2025.1577911}
+    }
+  bibtex_confirmed: false
 - title: Measuring the Impact of Early-2025 AI on Experienced Open-Source Developer Productivity
   link: https://arxiv.org/abs/2507.09089
   authors:
@@ -2293,7 +3050,7 @@
   - Collaboration & Co-Creation
   - Mutual Adaptation
   - Longitudinal HCI Studies
-  phase: emerging-phase-3
+  phase: phase-3
   keywords:
   - METR
   - developer productivity
@@ -2311,6 +3068,43 @@
       eprint = {2507.09089},
       archivePrefix = {arXiv},
       url = {https://arxiv.org/abs/2507.09089}
+    }
+  bibtex_confirmed: false
+- title: 'Better Together: Quantifying the Benefits of AI-Assisted Recruitment'
+  link: https://arxiv.org/abs/2507.08029
+  authors:
+  - Ada Aka
+  - Emil Palikot
+  - Ali Ansari
+  - Nima Yazdani
+  institutions:
+  - Stanford University
+  - micro1
+  - University of Southern California
+  date: '2025-07-08'
+  publisher: arXiv
+  envs:
+  - Mutual Adaptation
+  phase: phase-2
+  keywords:
+  - AI-assisted recruitment
+  - field experiment
+  - algorithm aversion
+  - candidate selection
+  - AI interviewer
+  tldr: |-
+    Randomized trial with ~37,000 junior-developer applicants comparing AI-assisted (structured video interview) vs traditional resume screening. 54% of AI-pipeline candidates passed the final human interview vs 34% from the traditional pipeline (20pp ATE); five months later, 23% of AI-pipeline applicants vs 18% of traditional had new jobs. The AI system tended to select younger, less-credentialed applicants.
+  arxiv_id: '2507.08029'
+  sources:
+    arxiv: https://arxiv.org/abs/2507.08029
+  bibtex: |-
+    @misc{aka2025recruitment,
+      title = {Better Together: Quantifying the Benefits of {AI}-Assisted Recruitment},
+      author = {Aka, Ada and Palikot, Emil and Ansari, Ali and Yazdani, Nima},
+      eprint = {2507.08029},
+      archivePrefix = {arXiv},
+      year = {2025},
+      url = {https://arxiv.org/abs/2507.08029}
     }
   bibtex_confirmed: false
 - title: 'Artificial intelligence in adaptive strategy creation and implementation: Toward enhanced attentional control in
@@ -2391,7 +3185,7 @@
   envs:
   - Collaboration & Co-Creation
   - Longitudinal HCI Studies
-  phase: emerging-phase-2
+  phase: phase-2
   keywords:
   - ChatTutor
   - generative learning
@@ -2569,7 +3363,7 @@
   publisher: arXiv
   envs:
   - Position & Survey
-  phase: emerging-phase-4
+  phase: phase-4
   keywords:
   - TRiSM
   - multi-agent systems
@@ -2621,6 +3415,74 @@
       year = {2025},
       eprint = {2505.24126},
       archivePrefix = {arXiv}
+    }
+  bibtex_confirmed: false
+- title: 'Balancing Risks and Benefits: Clinicians'' Perspectives on the Use of Generative AI Chatbots in Mental Healthcare'
+  link: https://www.frontiersin.org/journals/digital-health/articles/10.3389/fdgth.2025.1606291/full
+  authors:
+  - Lyndsey Hipgrave
+  - Jessie Goldie
+  - Simon Dennis
+  - Amanda Coleman
+  institutions:
+  - University of Melbourne
+  - Monash University
+  date: '2025-05-29'
+  publisher: Frontiers in Digital Health 2025
+  envs:
+  - Position & Survey
+  phase: phase-3
+  keywords:
+  - mental health chatbots
+  - clinician perspectives
+  - over-reliance
+  - regulation
+  - therapeutic cues
+  tldr: |-
+    Interviews with 23 mental-health clinicians, including a chatbot capability demonstration. Identifies benefits (accessibility, multilingual support, 24/7 availability) and risks (lack of regulation, client over-reliance, inability to detect subtle communication cues). No significant evidence that participants viewed either risks or benefits as outweighing the other.
+  sources:
+    pmc: https://pmc.ncbi.nlm.nih.gov/articles/PMC12158938/
+  bibtex: |-
+    @article{hipgrave2025chatbots,
+      title = {Balancing Risks and Benefits: Clinicians' Perspectives on the Use of Generative {AI} Chatbots in Mental Healthcare},
+      author = {Hipgrave, Lyndsey and Goldie, Jessie and Dennis, Simon and Coleman, Amanda},
+      journal = {Frontiers in Digital Health},
+      year = {2025},
+      doi = {10.3389/fdgth.2025.1606291}
+    }
+  bibtex_confirmed: false
+- title: AI-Mediated Dispute Resolution
+  link: https://ojs.aaai.org/index.php/AAAI-SS/article/view/35558
+  authors:
+  - James Hale
+  - HanMoe Kim
+  - Ahyoung Choi
+  - Jonathan Gratch
+  institutions:
+  - University of Southern California
+  - Gachon University
+  date: '2025-05-28'
+  publisher: AAAI Symposium Series 2025
+  envs:
+  - Collaboration & Co-Creation
+  phase: phase-3
+  keywords:
+  - dispute resolution
+  - LLM mediation
+  - intervention timing
+  - KODIS corpus
+  - GPT mediator
+  tldr: |-
+    Uses the KODIS dispute resolution corpus to evaluate LLM mediation. GPT picks up salient dispute signals such as frustration and intervenes more frequently in high-frustration cases. In user studies vs novice human mediators, participants rated GPT mediations more likely to resolve, better positioned in dialogue, and more effective overall.
+  sources:
+    publisher_page: https://ojs.aaai.org/index.php/AAAI-SS/article/view/35558
+  bibtex: |-
+    @inproceedings{hale2025dispute,
+      title = {{AI}-Mediated Dispute Resolution},
+      author = {Hale, James and Kim, HanMoe and Choi, Ahyoung and Gratch, Jonathan},
+      booktitle = {Proceedings of the AAAI Symposium Series},
+      year = {2025},
+      doi = {10.1609/aaaiss.v5i1.35558}
     }
   bibtex_confirmed: false
 - title: 'The Impact of Generative AI on Critical Thinking: Self-Reported Reductions in Cognitive Effort and Confidence Effects
@@ -2716,7 +3578,7 @@
   publisher: arXiv
   envs:
   - Position & Survey
-  phase: emerging-phase-4
+  phase: phase-4
   keywords:
   - AI Scientist v2
   - agentic tree search
@@ -2764,6 +3626,40 @@
       journal = {Journal of Medical Internet Research},
       year = {2025},
       doi = {10.2196/58660}
+    }
+  bibtex_confirmed: false
+- title: 'Collaborating with AI Agents: Field Experiments on Teamwork, Productivity, and Performance'
+  link: https://arxiv.org/abs/2503.18238
+  authors:
+  - Harang Ju
+  - Sinan Aral
+  institutions:
+  - Johns Hopkins Carey Business School
+  - MIT Sloan School of Management
+  date: '2025-03-23'
+  publisher: arXiv
+  envs:
+  - Collaboration & Co-Creation
+  phase: phase-3
+  keywords:
+  - human-AI teams
+  - delegation
+  - diversity collapse
+  - jagged frontier
+  - task-oriented communication
+  tldr: |-
+    N=2,234 participants randomized to human-human or human-AI teams produce 11,024 ads; human ratings + X field experiment (~5M impressions). Human-AI teams produce 50% more ads per worker and higher text quality but homogeneous output; mechanisms include 25% more task-focused messaging and 17% more delegation, with a jagged frontier (text gains, image quality flat).
+  arxiv_id: '2503.18238'
+  sources:
+    arxiv: https://arxiv.org/abs/2503.18238
+  bibtex: |-
+    @misc{ju2025teams,
+      title = {Collaborating with {AI} Agents: Field Experiments on Teamwork, Productivity, and Performance},
+      author = {Ju, Harang and Aral, Sinan},
+      eprint = {2503.18238},
+      archivePrefix = {arXiv},
+      year = {2025},
+      url = {https://arxiv.org/abs/2503.18238}
     }
   bibtex_confirmed: false
 - title: 'How AI and Human Behaviors Shape Psychosocial Effects of Extended Chatbot Use: A Longitudinal Randomized Controlled
@@ -2841,6 +3737,40 @@
       author = {Kleine Buening, Thomas and Gan, Jiarui and Mandal, Debmalya and Kwiatkowska, Marta},
       booktitle = {Advances in Neural Information Processing Systems},
       year = {2025}
+    }
+  bibtex_confirmed: false
+- title: 'Embracing AI Advisors for Making (Complex) Financial Decisions: An Experimental Investigation of the Role of a Maximizing
+    Decision-Making Style'
+  link: https://www.emerald.com/ijbm/article/43/6/1325/1263399
+  authors:
+  - Dietrich Silber
+  - Arvid Hoffmann
+  - Alex Belli
+  institutions:
+  - University of Adelaide
+  - University of Melbourne
+  date: '2025-03-11'
+  publisher: International Journal of Bank Marketing 2025
+  envs:
+  - Mutual Adaptation
+  phase: phase-2
+  keywords:
+  - robo-advice
+  - maximizing style
+  - algorithm aversion
+  - retirement portfolios
+  - financial decision-making
+  tldr: |-
+    Experimental study priming a maximizing decision style and measuring willingness to use AI advisors for retirement-portfolio construction. Maximizing tendencies increase perceived algorithmic effectiveness, which reduces algorithm aversion, ultimately boosting AI-advisor use. Suggests that "optimization" messaging can shift client uptake of AI advice.
+  sources:
+    publisher_page: https://www.emerald.com/ijbm/article/43/6/1325/1263399
+  bibtex: |-
+    @article{silber2025advisors,
+      title = {Embracing {AI} Advisors for Making (Complex) Financial Decisions: An Experimental Investigation of the Role of a Maximizing Decision-Making Style},
+      author = {Silber, Dietrich and Hoffmann, Arvid and Belli, Alex},
+      journal = {International Journal of Bank Marketing},
+      year = {2025},
+      doi = {10.1108/IJBM-10-2024-0647}
     }
   bibtex_confirmed: false
 - title: 'Human-AI experience in integrated development environments: a systematic literature review'
@@ -2948,6 +3878,43 @@
       doi = {10.1371/journal.pone.0318500}
     }
   bibtex_confirmed: false
+- title: 'Higher Education Students'' Perceptions of ChatGPT: A Global Study of Early Reactions'
+  link: https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0315011
+  authors:
+  - Dejan Ravšelj
+  - Damijana Keržič
+  - Nina Tomaževič
+  - Lan Umek
+  - Nejc Brezovar
+  - Noorminshah A. Iahad
+  institutions:
+  - University of Ljubljana
+  date: '2025-02-05'
+  publisher: PLOS ONE 2025
+  envs:
+  - Position & Survey
+  - Longitudinal HCI Studies
+  phase: phase-1
+  keywords:
+  - ChatGPT perceptions
+  - global survey
+  - 109 countries
+  - academic integrity
+  - cross-cultural
+  tldr: |-
+    Survey of 23,218 students across 109 countries and territories on perceived ChatGPT use and concerns. Primary uses are brainstorming, summarizing, and finding articles. Establishes the most geographically diverse early-2024 student perception dataset to date.
+  sources:
+    publisher_page: https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0315011
+    pubmed: https://pubmed.ncbi.nlm.nih.gov/39908277/
+  bibtex: |-
+    @article{ravselj2025global,
+      title = {Higher Education Students' Perceptions of {ChatGPT}: A Global Study of Early Reactions},
+      author = {Ravšelj, Dejan and Keržič, Damijana and Tomaževič, Nina and Umek, Lan and Brezovar, Nejc and Iahad, Noorminshah A.},
+      journal = {PLOS ONE},
+      year = {2025},
+      doi = {10.1371/journal.pone.0315011}
+    }
+  bibtex_confirmed: false
 - title: The AI Agent Index
   link: https://arxiv.org/abs/2502.01635
   authors:
@@ -2973,7 +3940,7 @@
   publisher: arXiv
   envs:
   - Position & Survey
-  phase: emerging-phase-4
+  phase: phase-4
   keywords:
   - agentic AI
   - transparency
@@ -3038,6 +4005,58 @@
       journal = {Insights into Imaging},
       year = {2025},
       doi = {10.1186/s13244-024-01893-4}
+    }
+  bibtex_confirmed: false
+- title: 'Widespread Use of ChatGPT and Other Artificial Intelligence Tools Among Medical Students in Uganda: A Cross-Sectional
+    Study'
+  link: https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0313776
+  authors:
+  - Elizabeth Ajalo
+  - David Mukunya
+  - Ritah Nantale
+  - Frank Kayemba
+  - Kennedy Pangholi
+  - Jonathan Babuya
+  - Suzan Langoya Akuu
+  - Amelia Margaret Namiiro
+  - Yakobo Baddokwaya Nsubuga
+  - Joseph Luwaga Mpagi
+  - Milton W. Musaba
+  - Faith Oguttu
+  - Job Kuteesa
+  - Aloysius Gonzaga Mubuuke
+  - Ian Guyton Munabi
+  - Sarah Kiguli
+  institutions:
+  - Busitema University
+  - Mbarara University of Science and Technology
+  - Makerere University
+  - Gulu University
+  - Mulago Hospital
+  date: '2025-01-09'
+  publisher: PLOS ONE 2025
+  envs:
+  - Position & Survey
+  - Longitudinal HCI Studies
+  phase: phase-1
+  keywords:
+  - medical students
+  - ChatGPT use
+  - sub-Saharan Africa
+  - AI literacy
+  - cross-sectional
+  tldr: |-
+    Cross-sectional survey of 564 medical students at four Ugandan public universities. 93% had heard of AI tools and 75.7% had used them, with ChatGPT dominant at 72.2%. Younger students adopt at significantly higher rates; tool use spans academic and non-academic purposes.
+  sources:
+    publisher_page: https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0313776
+    pmc: https://pmc.ncbi.nlm.nih.gov/articles/PMC11717177/
+  bibtex: |-
+    @article{ajalo2025uganda,
+      title = {Widespread Use of {ChatGPT} and Other Artificial Intelligence Tools Among Medical Students in Uganda: A Cross-Sectional Study},
+      author = {Ajalo, Elizabeth and Mukunya, David and Nantale, Ritah and Kayemba, Frank and Pangholi, Kennedy and Babuya, Jonathan and Akuu, Suzan Langoya and Namiiro, Amelia Margaret and Nsubuga, Yakobo Baddokwaya and Mpagi, Joseph Luwaga and Musaba, Milton W. and Oguttu, Faith and Kuteesa, Job and Mubuuke, Aloysius Gonzaga and Munabi, Ian Guyton and Kiguli, Sarah},
+      journal = {PLOS ONE},
+      year = {2025},
+      doi = {10.1371/journal.pone.0313776}
     }
   bibtex_confirmed: false
 - title: 'Creativity in Human-AI Co-Creation: A Two-Stage Model and the Da Vinci Score'
@@ -3168,6 +4187,40 @@
       pages = {345--359},
       year = {2025},
       doi = {10.1038/s41562-024-02077-2}
+    }
+  bibtex_confirmed: false
+- title: 'ChatGPT Versus Expert Feedback on Clinical Reasoning Questions and Their Effect on Learning: A Randomized Controlled
+    Trial'
+  link: https://academic.oup.com/pmj/article/101/1195/458/7917102
+  authors:
+  - Feray Ekin Çiçek
+  - Müşerref Ülker
+  - Menekşe Özer
+  - Yavuz Selim Kıyak
+  institutions:
+  - Gazi University
+  date: '2024-12-05'
+  publisher: Postgraduate Medical Journal 2025
+  envs:
+  - Longitudinal HCI Studies
+  phase: phase-2
+  keywords:
+  - clinical reasoning
+  - AI feedback
+  - expert feedback
+  - RCT
+  - medical education
+  tldr: |-
+    RCT with 129 first-year medical students across three formative urinary-tract-infection tests comparing AI vs expert feedback. Overall performance was comparable, though expert feedback proved superior for complicated cases. The AI-exposed group also exhibited a significantly more critical stance toward AI after the experiment.
+  sources:
+    publisher_page: https://academic.oup.com/pmj/article/101/1195/458/7917102
+  bibtex: |-
+    @article{cicek2024feedback,
+      title = {{ChatGPT} Versus Expert Feedback on Clinical Reasoning Questions and Their Effect on Learning: A Randomized Controlled Trial},
+      author = {Çiçek, Feray Ekin and Ülker, Müşerref and Özer, Menekşe and Kıyak, Yavuz Selim},
+      journal = {Postgraduate Medical Journal},
+      year = {2024},
+      doi = {10.1093/postmj/qgae170}
     }
   bibtex_confirmed: false
 - title: 'Effective Human Oversight of AI-Based Systems: A Signal Detection Perspective on the Detection of Inaccurate and
@@ -3328,7 +4381,7 @@
   publisher: arXiv
   envs:
   - Position & Survey
-  phase: emerging-phase-4
+  phase: phase-4
   keywords:
   - generative agents
   - simulation
@@ -3364,7 +4417,7 @@
   envs:
   - Collaboration & Co-Creation
   - Position & Survey
-  phase: emerging-phase-4
+  phase: phase-4
   keywords:
   - Virtual Lab
   - multi-agent science
@@ -3384,6 +4437,43 @@
       journal = {Nature},
       year = {2025},
       doi = {10.1038/s41586-025-09442-9}
+    }
+  bibtex_confirmed: false
+- title: Automation Bias in AI-Assisted Medical Decision-Making Under Time Pressure in Computational Pathology
+  link: https://arxiv.org/abs/2411.00998
+  authors:
+  - Emely Rosbach
+  - Jonathan Ganz
+  - Jonas Ammeling
+  - Andreas Riener
+  - Marc Aubreville
+  institutions:
+  - Technische Hochschule Ingolstadt
+  - Flensburg University of Applied Sciences
+  date: '2024-11-01'
+  publisher: arXiv
+  envs:
+  - Human Feedback Loops
+  phase: phase-2
+  keywords:
+  - computational pathology
+  - automation bias
+  - time pressure
+  - tumor cell estimation
+  - CDSS
+  tldr: |-
+    Web-based experiment with 28 pathology experts estimating tumor-cell percentages with AI advice. AI integration significantly improved overall performance, but produced a 7% automation-bias rate where initially correct evaluations were overturned by erroneous AI consultations. Time pressure increased the severity but not the frequency of automation bias.
+  arxiv_id: '2411.00998'
+  sources:
+    arxiv: https://arxiv.org/abs/2411.00998
+  bibtex: |-
+    @misc{rosbach2024pathology,
+      title = {Automation Bias in {AI}-Assisted Medical Decision-Making Under Time Pressure in Computational Pathology},
+      author = {Rosbach, Emely and Ganz, Jonathan and Ammeling, Jonas and Riener, Andreas and Aubreville, Marc},
+      eprint = {2411.00998},
+      archivePrefix = {arXiv},
+      year = {2024},
+      url = {https://arxiv.org/abs/2411.00998}
     }
   bibtex_confirmed: false
 - title: 'Large Language Model Influence on Diagnostic Reasoning: A Randomized Clinical Trial'
@@ -3454,7 +4544,7 @@
   envs:
   - Human Feedback Loops
   - Position & Survey
-  phase: emerging-phase-4
+  phase: phase-4
   keywords:
   - alignment
   - public will
@@ -3704,7 +4794,7 @@
   envs:
   - Collaboration & Co-Creation
   - Longitudinal HCI Studies
-  phase: emerging-phase-2
+  phase: phase-2
   keywords:
   - debugging
   - help-seeking
@@ -3739,7 +4829,7 @@
   publisher: arXiv
   envs:
   - Position & Survey
-  phase: emerging-phase-4
+  phase: phase-4
   keywords:
   - AI Scientist
   - Sakana
@@ -3942,7 +5032,7 @@
   envs:
   - Human Feedback Loops
   - Position & Survey
-  phase: emerging-phase-4
+  phase: phase-4
   keywords:
   - Constitutional AI
   - public input
@@ -3963,6 +5053,44 @@
       doi = {10.1145/3630106.3658979},
       eprint = {2406.07814},
       archivePrefix = {arXiv}
+    }
+  bibtex_confirmed: false
+- title: Hallucination-Free? Assessing the Reliability of Leading AI Legal Research Tools
+  link: https://onlinelibrary.wiley.com/doi/10.1111/jels.12413
+  authors:
+  - Varun Magesh
+  - Faiz Surani
+  - Matthew Dahl
+  - Mirac Suzgun
+  - Christopher D. Manning
+  - Daniel E. Ho
+  institutions:
+  - Stanford University
+  - Yale Law School
+  date: '2024-05-30'
+  publisher: Journal of Empirical Legal Studies 2025
+  envs:
+  - Position & Survey
+  phase: phase-2
+  keywords:
+  - legal research
+  - retrieval-augmented generation
+  - hallucination
+  - verification burden
+  - preregistered evaluation
+  tldr: |-
+    First preregistered empirical evaluation of commercial AI legal-research tools claiming to "eliminate" hallucinations. Lexis+ AI, Westlaw AI-Assisted Research, and Ask Practical Law AI each hallucinate 17–33% of the time. Quantifies the verification burden falling on attorneys when AI is sold as authoritative.
+  arxiv_id: '2405.20362'
+  sources:
+    arxiv: https://arxiv.org/abs/2405.20362
+    publisher_page: https://onlinelibrary.wiley.com/doi/10.1111/jels.12413
+  bibtex: |-
+    @article{magesh2024hallucination,
+      title = {Hallucination-Free? Assessing the Reliability of Leading {AI} Legal Research Tools},
+      author = {Magesh, Varun and Surani, Faiz and Dahl, Matthew and Suzgun, Mirac and Manning, Christopher D. and Ho, Daniel E.},
+      journal = {Journal of Empirical Legal Studies},
+      year = {2024},
+      doi = {10.1111/jels.12413}
     }
   bibtex_confirmed: false
 - title: A Study on Developer Behaviors for Validating and Repairing LLM-Generated Code Using Eye Tracking and IDE Actions
@@ -4021,7 +5149,7 @@
   publisher: NeurIPS 2024
   envs:
   - Position & Survey
-  phase: emerging-phase-4
+  phase: phase-4
   keywords:
   - GovSim
   - multi-agent cooperation
@@ -4060,7 +5188,7 @@
   publisher: FAccT 2024
   envs:
   - Position & Survey
-  phase: emerging-phase-4
+  phase: phase-4
   keywords:
   - human oversight
   - EU AI Act
@@ -4096,7 +5224,7 @@
   publisher: arXiv
   envs:
   - Position & Survey
-  phase: emerging-phase-4
+  phase: phase-4
   keywords:
   - algorithmic collusion
   - oligopoly
@@ -4269,7 +5397,7 @@
   publisher: arXiv
   envs:
   - Longitudinal HCI Studies
-  phase: emerging-phase-2
+  phase: phase-2
   keywords:
   - RECIPE4U
   - EFL
@@ -4400,7 +5528,7 @@
   envs:
   - Collaboration & Co-Creation
   - Mutual Adaptation
-  phase: emerging-phase-2
+  phase: phase-2
   keywords:
   - ChatGPT
   - programming
@@ -4436,7 +5564,7 @@
   publisher: NeurIPS 2024
   envs:
   - Position & Survey
-  phase: emerging-phase-4
+  phase: phase-4
   keywords:
   - secret collusion
   - steganography
@@ -4481,7 +5609,7 @@
   publisher: FAccT 2024
   envs:
   - Position & Survey
-  phase: emerging-phase-4
+  phase: phase-4
   keywords:
   - AI agents
   - governance
@@ -4502,6 +5630,46 @@
       doi = {10.1145/3630106.3658948},
       eprint = {2401.13138},
       archivePrefix = {arXiv}
+    }
+  bibtex_confirmed: false
+- title: The Metacognitive Demands and Opportunities of Generative AI
+  link: https://dl.acm.org/doi/10.1145/3613904.3642902
+  authors:
+  - Lev Tankelevitch
+  - Viktor Kewenig
+  - Auste Simkute
+  - Ava Elizabeth Scott
+  - Advait Sarkar
+  - Abigail Sellen
+  - Sean Rintel
+  institutions:
+  - Microsoft Research
+  date: '2023-12-18'
+  publisher: CHI 2024 (Best Paper Award)
+  envs:
+  - Position & Survey
+  phase: phase-2
+  keywords:
+  - metacognition
+  - self-regulation
+  - prompt formulation
+  - confidence calibration
+  - overreliance
+  tldr: |-
+    Argues that GenAI imposes metacognitive demands across prompting, output evaluation, and workflow integration — and that metacognition (monitor + control) is the right design lens to address overreliance. Recommends embedding metacognitive scaffolding into GenAI through enhanced explainability and customizability. Best Paper at CHI 2024.
+  arxiv_id: '2312.10893'
+  sources:
+    arxiv: https://arxiv.org/abs/2312.10893
+    publisher_page: https://dl.acm.org/doi/10.1145/3613904.3642902
+    homepage: https://www.microsoft.com/en-us/research/publication/the-metacognitive-demands-and-opportunities-of-generative-ai/
+  bibtex: |-
+    @inproceedings{tankelevitch2023metacognition,
+      title = {The Metacognitive Demands and Opportunities of Generative {AI}},
+      author = {Tankelevitch, Lev and Kewenig, Viktor and Simkute, Auste and Scott, Ava Elizabeth and Sarkar, Advait and Sellen, Abigail and Rintel, Sean},
+      booktitle = {Proceedings of the 2024 CHI Conference on Human Factors in Computing Systems},
+      year = {2023},
+      doi = {10.1145/3613904.3642902},
+      eprint = {2312.10893}
     }
   bibtex_confirmed: false
 - title: Practices for Governing Agentic AI Systems
@@ -4529,7 +5697,7 @@
   publisher: OpenAI white paper 2023
   envs:
   - Position & Survey
-  phase: emerging-phase-4
+  phase: phase-4
   keywords:
   - agentic AI
   - governance
@@ -4852,7 +6020,7 @@
   publisher: Nature 2024
   envs:
   - Position & Survey
-  phase: emerging-phase-4
+  phase: phase-4
   keywords:
   - model collapse
   - recursive training
@@ -5255,7 +6423,7 @@
   publisher: arXiv
   envs:
   - Human Feedback Loops
-  phase: emerging-phase-4
+  phase: phase-4
   keywords:
   - constitutional AI
   - RLAIF
@@ -5426,7 +6594,7 @@
   publisher: ACM TORS 2025
   envs:
   - Human Feedback Loops
-  phase: emerging-phase-4
+  phase: phase-4
   keywords:
   - causal inference
   - CAFL
@@ -5677,7 +6845,7 @@
   publisher: CHI 2022
   envs:
   - Collaboration & Co-Creation
-  phase: emerging-phase-2
+  phase: phase-2
   keywords:
   - CoAuthor
   - GPT-3
@@ -5833,6 +7001,39 @@
       doi = {10.1145/3568162.3578628}
     }
   bibtex_confirmed: false
+- title: 'Street-Level Algorithms and AI in Bureaucratic Decision-Making: A Caseworker Perspective'
+  link: https://dl.acm.org/doi/10.1145/3449114
+  authors:
+  - Asbjørn Ammitzbøll Flügge
+  - Thomas Hildebrandt
+  - Naja Holten Møller
+  institutions:
+  - University of Copenhagen
+  date: 2021-04
+  publisher: Proc. ACM HCI CSCW 2021
+  envs:
+  - Position & Survey
+  - Longitudinal HCI Studies
+  phase: phase-4
+  keywords:
+  - street-level bureaucracy
+  - caseworkers
+  - job placement
+  - documentation
+  - discretion
+  tldr: |-
+    Participatory workshop with 35 caseworkers and interviews with 5 job-placement specialists studying how AI integrates into a public-employment-service bureaucracy. Reports on collaborative documentation practices and elaborates the analogy between AI and bureaucracies. Provides early empirical grounding for designing AI in street-level decision systems.
+  sources:
+    publisher_page: https://dl.acm.org/doi/10.1145/3449114
+  bibtex: |-
+    @article{flugge2021streetlevel,
+      title = {Street-Level Algorithms and {AI} in Bureaucratic Decision-Making: A Caseworker Perspective},
+      author = {Flügge, Asbjørn Ammitzbøll and Hildebrandt, Thomas and Møller, Naja Holten},
+      journal = {Proceedings of the ACM on Human-Computer Interaction (CSCW1)},
+      year = {2021},
+      doi = {10.1145/3449114}
+    }
+  bibtex_confirmed: false
 - title: 'Human-AI Symbiosis: A Survey of Current Approaches'
   link: https://arxiv.org/abs/2103.09990
   authors:
@@ -5879,7 +7080,7 @@
   envs:
   - Collaboration & Co-Creation
   - Mutual Adaptation
-  phase: emerging-phase-2
+  phase: phase-2
   keywords:
   - phrase suggestions
   - email composition
@@ -6092,7 +7293,7 @@
   envs:
   - Position & Survey
   - Mutual Adaptation
-  phase: emerging-phase-4
+  phase: phase-4
   keywords:
   - algorithmic audit
   - Gender Shades

@@ -13,6 +13,24 @@ const year = new Date().getFullYear();
         <p class="mt-3 text-[12.5px] text-ink-500 dark:text-ink-300 leading-relaxed max-w-[14em]">
           Generated from a single YAML source. Set in Fraunces and IBM Plex.
         </p>
+
+        <p class="meta-label mt-8">Affiliated lab</p>
+        <a
+          href={MAINTAINER_URL}
+          target="_blank"
+          rel="noopener"
+          class="mt-3 inline-block rounded-lg bg-white p-2.5 ring-1 ring-paper-300 dark:ring-ink-600 hover:ring-accent/50 dark:hover:ring-accent-dark/50 transition"
+          aria-label="CHATS Lab — Conversation, Human-AI Tech, Safety"
+        >
+          <img
+            src={`${base}/chats-lab-logo.png`}
+            alt="CHATS Lab — Conversation, Human-AI Tech, Safety"
+            width="146"
+            height="110"
+            loading="lazy"
+            decoding="async"
+          />
+        </a>
       </div>
 
       <div class="grid sm:grid-cols-3 gap-x-8 gap-y-6 text-[13px]">
@@ -22,7 +40,7 @@ const year = new Date().getFullYear();
           <ul class="mt-3 space-y-1.5">
             {ENV_ORDER.map((env) => (
               <li>
-                <a class="text-ink-600 dark:text-ink-200 hover:text-accent dark:hover:text-accent-dark transition-colors" href={`${base}/papers?env=${encodeURIComponent(env)}`}>
+                <a class="text-ink-600 dark:text-ink-200 hover:text-accent dark:hover:text-accent-dark transition-colors" href={`${base}/?env=${encodeURIComponent(env)}`}>
                   <span class="font-mono text-[10.5px] text-accent dark:text-accent-dark mr-1.5 tabular-nums">{ENV_ABBREV[env]}</span>{env}
                 </a>
               </li>
@@ -33,10 +51,8 @@ const year = new Date().getFullYear();
         <div>
           <p class="meta-label">Pages</p>
           <ul class="mt-3 space-y-1.5">
-            <li><a class="text-ink-600 dark:text-ink-200 hover:text-accent dark:hover:text-accent-dark transition-colors" href={`${base}/papers`}>Browse all</a></li>
-            <li><a class="text-ink-600 dark:text-ink-200 hover:text-accent dark:hover:text-accent-dark transition-colors" href={`${base}/blog/`}>Blog</a></li>
-            <li><a class="text-ink-600 dark:text-ink-200 hover:text-accent dark:hover:text-accent-dark transition-colors" href={`${base}/stats`}>Statistics</a></li>
-            <li><a class="text-ink-600 dark:text-ink-200 hover:text-accent dark:hover:text-accent-dark transition-colors" href={`${base}/about`}>About</a></li>
+            <li><a class="text-ink-600 dark:text-ink-200 hover:text-accent dark:hover:text-accent-dark transition-colors" href={`${base}/`}>Browse all</a></li>
+            <li><a class="text-ink-600 dark:text-ink-200 hover:text-accent dark:hover:text-accent-dark transition-colors" href="https://human-ai-coevolution.github.io/blog/">Blog</a></li>
           </ul>
         </div>
 

@@ -21,7 +21,7 @@ const phaseTitle = phaseTag ? (PHASE_HEADINGS[phaseTag]?.title ?? phaseTag) : 'u
     <div class="meta-value tabular-nums">{yearTag}</div>
     {phaseTag && (
       <a
-        href={`${base}/papers?phase=${encodeURIComponent(phaseTag)}`}
+        href={`${base}/?phase=${encodeURIComponent(phaseTag)}`}
         class="phase-badge hover:underline underline-offset-[3px]"
         title={`${phaseCode} — ${phaseTitle}`}
       >
@@ -31,7 +31,7 @@ const phaseTitle = phaseTag ? (PHASE_HEADINGS[phaseTag]?.title ?? phaseTag) : 'u
     <div class="flex flex-wrap gap-1.5">
       {paper.envs.map((env) => (
         <a
-          href={`${base}/papers?env=${encodeURIComponent(env)}`}
+          href={`${base}/?env=${encodeURIComponent(env)}`}
           class="font-mono text-[10px] uppercase tracking-[0.08em] text-ink-400 dark:text-ink-300 hover:text-accent dark:hover:text-accent-dark transition-colors"
           title={env}
         >
@@ -73,7 +73,7 @@ const phaseTitle = phaseTag ? (PHASE_HEADINGS[phaseTag]?.title ?? phaseTag) : 'u
     {paper.keywords.length > 0 && (
       <p class="mt-3 text-[12.5px] text-ink-500 dark:text-ink-300 flex flex-wrap gap-x-3 gap-y-1">
         {paper.keywords.slice(0, compact ? 5 : 8).map((kw) => (
-          <a class="hover:text-accent dark:hover:text-accent-dark" href={`${base}/papers?key=${encodeURIComponent(kw)}`}>
+          <a class="hover:text-accent dark:hover:text-accent-dark" href={`${base}/?key=${encodeURIComponent(kw)}`}>
             <span class="text-paper-400 dark:text-ink-600 mr-0.5">·</span>{kw}
           </a>
         ))}

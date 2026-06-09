@@ -1,5 +1,5 @@
-/* Webfonts — variable Fraunces (opsz axis) + IBM Plex Sans/Mono */
-@import "@fontsource-variable/fraunces/index.css";
+/* Webfonts — Fraunces (variable display serif, optical sizing) + IBM Plex Sans/Mono */
+@import "@fontsource-variable/fraunces/opsz.css";
 @import "@fontsource-variable/fraunces/opsz-italic.css";
 @import "@fontsource/ibm-plex-sans/400.css";
 @import "@fontsource/ibm-plex-sans/500.css";
@@ -40,29 +40,32 @@ html.dark, html.dark body {
 
 /* ─── Display typography ────────────────────────────── */
 
+/* Cormorant Garamond is a delicate, small-x-height face — it wants
+   near-zero tracking and is set a step larger than a Fraunces
+   equivalent would be. Held at medium (500) so the high-contrast
+   strokes still read with weight at display sizes. */
 .font-display,
 .kicker,
 .kicker-lg,
 .kicker-xl {
   font-family: var(--font-display);
-  font-feature-settings: 'ss01';
   font-weight: 500;
-  letter-spacing: -0.018em;
+  letter-spacing: 0;
+  font-variant-numeric: lining-nums;
 }
 .kicker-xl {
-  font-size: clamp(2.4rem, 5vw, 3.6rem);
-  line-height: 1.04;
-  letter-spacing: -0.024em;
-}
-.kicker-lg {
-  font-size: clamp(1.6rem, 3.3vw, 2.1rem);
-  line-height: 1.14;
+  font-size: clamp(2.9rem, 6vw, 4.6rem);
+  line-height: 1.06;
   letter-spacing: -0.012em;
 }
+.kicker-lg {
+  font-size: clamp(1.95rem, 3.9vw, 2.7rem);
+  line-height: 1.12;
+  letter-spacing: -0.005em;
+}
 .kicker {
-  font-size: clamp(1.15rem, 2.2vw, 1.4rem);
-  line-height: 1.22;
-  letter-spacing: -0.008em;
+  font-size: clamp(1.35rem, 2.5vw, 1.62rem);
+  line-height: 1.2;
 }
 
 .tabular-nums { font-feature-settings: 'tnum' 1, 'lnum' 1; }
@@ -154,6 +157,9 @@ html.dark, html.dark body {
     color: theme('colors.ink.400');
   }
   :global(html.dark) .meta-label { color: theme('colors.ink.300'); }
+  /* section markers (§01 …) — larger than a plain meta-label */
+  .section-no { font-size: 20px; letter-spacing: 0.04em; color: theme('colors.ink.500'); }
+  :global(html.dark) .section-no { color: theme('colors.ink.200'); }
 
   /* Mono value (for category codes, year, etc.) */
   .meta-value {
@@ -270,8 +276,8 @@ html.dark .hairline { background: theme('colors.ink.600'); }
 }
 
 /* Copy-success pulse */
-:global(html.dark) .copy-glow-source { --glow: rgba(124, 158, 201, 0.22); }
-.copy-glow-source { --glow: rgba(30, 58, 95, 0.16); }
+:global(html.dark) .copy-glow-source { --glow: rgba(118, 189, 182, 0.24); }
+.copy-glow-source { --glow: rgba(46, 107, 104, 0.16); }
 @keyframes copy-glow-var {
   0%   { box-shadow: 0 0 0 0 rgba(0, 0, 0, 0); }
   30%  { box-shadow: 0 0 0 6px var(--glow); }

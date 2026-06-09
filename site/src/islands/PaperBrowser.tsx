@@ -300,7 +300,7 @@ export default function PaperBrowser(props: Props) {
   const allPhases = createMemo(() => {
     const c = uniqueCount(candidates().map((p) => p.phase).filter((x): x is string => !!x));
     // Order by PHASE_ORDER from site.ts so the sidebar lists Phase 1 → Framework.
-    const order = ['phase-1', 'emerging-phase-2', 'phase-2', 'emerging-phase-3', 'phase-3', 'emerging-phase-4', 'phase-4', 'framework'];
+    const order = ['phase-1', 'phase-2', 'phase-3', 'phase-4', 'framework'];
     const idx = new Map(order.map((t, i) => [t, i] as const));
     return Array.from(c.entries()).sort((a, b) => (idx.get(a[0]) ?? 99) - (idx.get(b[0]) ?? 99));
   });
@@ -534,8 +534,8 @@ export default function PaperBrowser(props: Props) {
 
       {/* Sidebar */}
       <aside class={`${filtersOpen() ? 'block' : 'hidden lg:block'} lg:sticky lg:top-20 self-start max-h-[calc(100vh-6rem)] overflow-y-auto pr-1`}>
-        <div class="flex items-center justify-between pb-2">
-          <span class="text-xs font-semibold uppercase tracking-[0.18em] text-ink-400 dark:text-ink-300">Filters</span>
+        <div class="flex items-center justify-between pb-3 mb-1 border-b border-paper-300 dark:border-ink-600">
+          <span class="text-base font-semibold uppercase tracking-[0.16em] text-ink-700 dark:text-ink-50">Filters<Show when={activeFilterCount() > 0}><span class="ml-1.5 text-accent dark:text-accent-dark">· {activeFilterCount()}</span></Show></span>
           <Show when={activeFilterCount() > 0 || q()}>
             <button
               class="inline-flex items-center gap-1 text-xs px-2 py-1 rounded-md border border-paper-300/80 dark:border-ink-600/60 text-ink-500 dark:text-ink-200 hover:bg-paper-200/60 dark:hover:bg-ink-700/40 hover:text-accent dark:hover:text-accent-dark transition-colors"
@@ -554,8 +554,8 @@ export default function PaperBrowser(props: Props) {
             folded — they re-expand automatically if the user has an
             active selection in them. */}
         {filterSection('Phase', allPhases as any, phases, setPhases, () => '', () => {}, false, 8, null,
-          (k) => `${PHASE_CODE[k] ?? k} — ${PHASE_HEADINGS[k]?.title ?? k}`)}
-        {filterSection('Theme', allEnvs as any, envs, setEnvs, () => '', () => {}, false, 8)}
+          (k) => `${PHASE_CODE[k] ?? k} — ${PHASE_HEADINGS[k]?.title ?? k}`, false)}
+        {filterSection('Theme', allEnvs as any, envs, setEnvs, () => '', () => {}, false, 8, null, undefined, false)}
         {filterSection('Keywords', allKeys as any, keys, setKeys, keyFacetSearch, setKeyFacetSearch, true, 12, null, undefined, false)}
         {filterSection('Author', allAuthors as any, authors, setAuthors, authorFacetSearch, setAuthorFacetSearch, true, 12, null, undefined, false)}
         {filterSection('Institution', allInstitutions as any, institutions, setInstitutions, instFacetSearch, setInstFacetSearch, true, 12, null, undefined, false)}
@@ -574,7 +574,7 @@ export default function PaperBrowser(props: Props) {
             checked={includeAdjacent()}
             onChange={setIncludeAdjacent}
             label="Include adjacent papers"
-            hint="Non-canonical entries that inform GUI research"
+            hint="Non-canonical entries that inform the area"
           />
         </section>
       </aside>
@@ -789,7 +789,7 @@ function monthAddOffset(ym: string, offset: number): string {
 }
 
 function DateRangeSection(props: DateRangeProps) {
-  const [open, setOpen] = createSignal(true);
+  const [open, setOpen] = createSignal(false);
 
   // axis = months from the candidate set, padded to a full year on each
   // side so the bars don't crowd the very edges of the track.
@@ -1203,7 +1203,7 @@ function buildReportUrl(p: BrowserPaper): string {
     labels: 'metadata-correction',
     template: 'metadata-correction.yml',
   });
-  return `https://github.com/xli04/Awesome-Human-AI-Coevolution-Paper-List/issues/new?${params.toString()}`;
+  return `https://github.com/human-ai-coevolution/human-ai-coevolution.github.io/issues/new?${params.toString()}`;
 }
 
 function PaperCardClient(props: CardProps) {
@@ -1336,7 +1336,7 @@ function PaperCardClient(props: CardProps) {
         </Show>
 
         {/* Action row — text links, no buttons */}
-        <div class={`mt-4 flex flex-wrap items-baseline gap-x-6 gap-y-2 text-[11.5px] font-mono uppercase tracking-[0.08em] ${bibCopied() ? 'copy-pulse copy-glow-source' : ''}`}>
+        <div class={`mt-4 flex flex-wrap items-baseline gap-x-6 gap-y-2 text-[13.5px] font-mono uppercase tracking-[0.08em] ${bibCopied() ? 'copy-pulse copy-glow-source' : ''}`}>
           <a class="text-accent dark:text-accent-dark hover:underline underline-offset-[3px]" href={detailHref}>
             Read entry →
           </a>

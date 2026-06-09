@@ -22,14 +22,14 @@ function paperColors() {
         text: '#e9e6df',
         muted: '#9a978d',
         faint: 'rgba(255,255,255,0.04)',
-        bar: '#7c9ec9',                 // navy on dark
-        barAlt: '#a5bdd4',
-        line: '#7c9ec9',
+        bar: '#76bdb6',                 // teal on dark
+        barAlt: '#9ecdc8',
+        line: '#76bdb6',
         // Primary axis — five phase bands. We collapse emerging-phase-N
         // into the corresponding main phase for the stacked area / donut
         // so the visual story stays legible.
         phaseColors: {
-          'phase-1':   '#7c9ec9',   // navy — Tool
+          'phase-1':   '#76bdb6',   // teal — Tool
           'phase-2':   '#cdb89f',   // brass — Assistant
           'phase-3':   '#9ab0a0',   // olive — Executor
           'phase-4':   '#b89a78',   // bronze — Organization (currently empty)
@@ -38,14 +38,14 @@ function paperColors() {
         // Secondary axis — five theme categories. Slightly desaturated
         // so they don't compete with the phase palette.
         envColors: {
-          'Collaboration & Co-Creation': '#7c9ec9',
+          'Collaboration & Co-Creation': '#76bdb6',
           'Mutual Adaptation': '#cdb89f',
           'Human Feedback Loops': '#9ab0a0',
           'Longitudinal HCI Studies': '#b89a78',
           'Position & Survey': '#a8a8b8',
         } as Record<string, string>,
-        donut: ['#7c9ec9', '#cdb89f', '#9ab0a0', '#b89a78', '#a8a8b8'],
-        treemapTones: ['#283a52', '#2f4258', '#374b5f', '#3f5466', '#475d6d', '#506674', '#586f7a', '#617881'],
+        donut: ['#76bdb6', '#cdb89f', '#9ab0a0', '#b89a78', '#a8a8b8'],
+        treemapTones: ['#234e4b', '#2c5754', '#35605d', '#3e6966', '#47716e', '#507a77', '#56827f', '#5f8b87'],
         cardBorder: 'rgba(233,230,223,0.08)',
         tooltipBg: '#171b23',
         tooltipBorder: 'rgba(255,255,255,0.08)',
@@ -55,26 +55,26 @@ function paperColors() {
         text: '#2f2d28',
         muted: '#6e6c64',
         faint: 'rgba(0,0,0,0.04)',
-        bar: '#1e3a5f',
-        barAlt: '#516b85',
-        line: '#1e3a5f',
-        phaseColors: {                 // navy + brass + olive + bronze family
-          'phase-1':   '#1e3a5f',
+        bar: '#2e6b68',
+        barAlt: '#5f928e',
+        line: '#2e6b68',
+        phaseColors: {                 // teal + brass + olive + bronze family
+          'phase-1':   '#2e6b68',
           'phase-2':   '#a0826d',
           'phase-3':   '#5b7461',
           'phase-4':   '#7d5e47',
           'framework': '#6b6b87',
         } as Record<string, string>,
         envColors: {
-          'Collaboration & Co-Creation': '#1e3a5f',
+          'Collaboration & Co-Creation': '#2e6b68',
           'Mutual Adaptation': '#a0826d',
           'Human Feedback Loops': '#5b7461',
           'Longitudinal HCI Studies': '#7d5e47',
           'Position & Survey': '#6b6b87',
         } as Record<string, string>,
-        donut: ['#1e3a5f', '#a0826d', '#5b7461', '#7d5e47', '#6b6b87'],
-        // single-hue navy treemap progression
-        treemapTones: ['#1e3a5f', '#2a466b', '#365176', '#425d82', '#4f6a8d', '#5b7799', '#6884a4', '#7591b0'],
+        donut: ['#2e6b68', '#a0826d', '#5b7461', '#7d5e47', '#6b6b87'],
+        // single-hue teal treemap progression
+        treemapTones: ['#2e6b68', '#3d7774', '#4c8380', '#5b8f8c', '#699a97', '#78a6a3', '#87b2af', '#96beba'],
         cardBorder: 'rgba(31,29,26,0.08)',
         tooltipBg: '#faf9f5',
         tooltipBorder: 'rgba(31,29,26,0.12)',
@@ -98,6 +98,16 @@ const PHASE_AGG_LABEL: Record<string, string> = {
   'phase-3':   'P3 · Executor (incl. EP3)',
   'phase-4':   'P4 · Organization (incl. EP4)',
   'framework': 'Surveys & Position',
+};
+
+// Abbreviated labels for the donut's outside text on narrow (mobile)
+// viewports — the bottom legend still carries the full names.
+const PHASE_AGG_SHORT: Record<string, string> = {
+  'phase-1':   'P1 · Tool',
+  'phase-2':   'P2 · Assistant',
+  'phase-3':   'P3 · Executor',
+  'phase-4':   'P4 · Org.',
+  'framework': 'Surveys',
 };
 
 const PHASE_AGG_ORDER = ['phase-1', 'phase-2', 'phase-3', 'phase-4', 'framework'];
@@ -160,11 +170,15 @@ export default function StatsCharts(props: Props) {
 
   const [, setTick] = createSignal(0);
   const [longTail, setLongTail] = createSignal<Array<{ k: string; v: number }>>([]);
+  // Top keywords shown as full-name chips on mobile, where the stacked
+  // bar's segments are too narrow to carry readable inline labels.
+  const [topKw, setTopKw] = createSignal<Array<{ k: string; v: number }>>([]);
 
   function build() {
     for (const c of charts) c.dispose();
     charts.length = 0;
     const c = paperColors();
+    const isMobile = typeof window !== 'undefined' && window.innerWidth < 640;
 
     // === 1. Quarterly trend — stacked by aggregated phase ===
     // The framework's central distribution claim becomes a chart:
@@ -236,6 +250,32 @@ export default function StatsCharts(props: Props) {
     const topBarKw = sortedKw.slice(0, 6);
     const maxKw = topBarKw[0]?.[1] ?? 1;
     const totalBar = topBarKw.reduce((s, [, v]) => s + v, 0);
+    // Pre-measure how much label each stacked segment can hold at the
+    // current chart width, so a long keyword never spills into the
+    // neighbouring segment. Full name + count if it fits; else drop the
+    // count; else ellipsis-truncate the name.
+    const kwInnerW = Math.max(0, kwEl.clientWidth - 8); // grid left + right
+    const kwDisplay = new Map<string, { name: string; count: string }>();
+    {
+      const NAME_CH = 6.6;  // px per char at 11px bold
+      const CNT_CH = 6.2;   // px per char at 10px
+      const PAD = 16;       // label padding + breathing room
+      const GAP = 8;        // gap before the count
+      for (const [k, v] of topBarKw) {
+        const segW = totalBar ? (v / totalBar) * kwInnerW : 0;
+        const avail = segW - PAD;
+        const cnt = String(v);
+        const cntW = cnt.length * CNT_CH + GAP;
+        if (k.length * NAME_CH + cntW <= avail) {
+          kwDisplay.set(k, { name: k, count: cnt });
+        } else if (k.length * NAME_CH <= avail) {
+          kwDisplay.set(k, { name: k, count: '' });
+        } else {
+          const max = Math.floor(avail / NAME_CH) - 1;
+          kwDisplay.set(k, { name: max >= 2 ? k.slice(0, max) + '…' : '', count: '' });
+        }
+      }
+    }
     const kwChart = echarts.init(kwEl, null, { renderer: 'canvas' });
     kwChart.setOption({
       backgroundColor: c.bg,
@@ -251,7 +291,7 @@ export default function StatsCharts(props: Props) {
       grid: { left: 4, right: 4, top: 26, bottom: 8, containLabel: false },
       xAxis: { type: 'value', show: false, max: totalBar },
       yAxis: { type: 'category', show: false, data: ['Keywords'] },
-      series: topBarKw.map(([k, v], i) => ({
+      series: topBarKw.map(([k, v]) => ({
         name: k,
         type: 'bar',
         stack: 'kw',
@@ -263,12 +303,16 @@ export default function StatsCharts(props: Props) {
           borderWidth: 2,
         },
         label: {
-          show: true, position: 'inside', align: 'left',
+          // insideLeft anchors the label to the segment's left edge so
+          // it flows rightward within the segment — combined with the
+          // width-aware truncation above, it can't spill into the next
+          // segment. ('inside' anchors at the centre, so long labels
+          // overflow both sides.)
+          show: !isMobile, position: 'insideLeft', align: 'left',
           formatter: (info: any) => {
-            const pct = info.value / totalBar;
-            const name = info.seriesName.length > 18 ? info.seriesName.slice(0, 17) + '…' : info.seriesName;
-            // With 6 segments each is ≥ ~8% by construction.
-            return pct >= 0.07 ? `{n|${name}}  {v|${info.value}}` : `{n|${name}}`;
+            const d = kwDisplay.get(info.seriesName);
+            if (!d || !d.name) return '';
+            return d.count ? `{n|${d.name}}  {v|${d.count}}` : `{n|${d.name}}`;
           },
           rich: {
             n: { color: '#fbf6ec', fontSize: 11, fontWeight: 600, ...SHARED_TEXT },
@@ -281,11 +325,12 @@ export default function StatsCharts(props: Props) {
     });
     kwChart.on('click', (params: any) => {
       if (!params || !params.seriesName) return;
-      window.location.href = `${props.basePath}/papers?key=${encodeURIComponent(params.seriesName)}`;
+      window.location.href = `${props.basePath}/?key=${encodeURIComponent(params.seriesName)}`;
     });
     charts.push(kwChart);
     // Stash the long-tail list for the chip cloud rendered below.
     setLongTail(sortedKw.slice(6, 56).map(([k, v]) => ({ k, v })));
+    setTopKw(topBarKw.map(([k, v]) => ({ k, v })));
 
     // === 3. Phase donut — the primary distribution chart. Aggregated to
     //        five bands (P1 / P2+EP2 / P3+EP3 / P4+EP4 / Surveys). ===
@@ -314,7 +359,9 @@ export default function StatsCharts(props: Props) {
         formatter: (name: string) => PHASE_AGG_LABEL[name] ?? name,
       },
       series: [{
-        type: 'pie', radius: ['54%', '78%'], center: ['50%', '42%'],
+        type: 'pie',
+        radius: isMobile ? ['31%', '47%'] : ['54%', '78%'],
+        center: ['50%', isMobile ? '38%' : '42%'],
         avoidLabelOverlap: true,
         itemStyle: {
           borderColor: isDark() ? '#161a21' : '#faf9f5',
@@ -322,14 +369,18 @@ export default function StatsCharts(props: Props) {
         },
         label: {
           show: true,
-          formatter: (p: any) => `{n|${PHASE_AGG_LABEL[p.name] ?? p.name}}\n{v|${p.value}}`,
+          formatter: (p: any) => `{n|${(isMobile ? PHASE_AGG_SHORT : PHASE_AGG_LABEL)[p.name] ?? p.name}}\n{v|${p.value}}`,
           rich: {
-            n: { color: c.text, fontSize: 12, fontWeight: 600, ...SHARED_TEXT, lineHeight: 18 },
-            v: { color: c.muted, fontSize: 11, ...SHARED_TEXT },
+            n: { color: c.text, fontSize: isMobile ? 10 : 12, fontWeight: 600, ...SHARED_TEXT, lineHeight: isMobile ? 14 : 18 },
+            v: { color: c.muted, fontSize: isMobile ? 9.5 : 11, ...SHARED_TEXT },
           },
-          alignTo: 'edge', edgeDistance: 6,
+          alignTo: 'edge', edgeDistance: isMobile ? 2 : 6,
         },
-        labelLine: { lineStyle: { color: c.muted, width: 1 }, length: 10, length2: 10 },
+        labelLine: {
+          lineStyle: { color: c.muted, width: 1 },
+          length: isMobile ? 6 : 10,
+          length2: isMobile ? 6 : 10,
+        },
         data: phaseEntries.map(([k, v]) => ({
           name: k, value: v,
           itemStyle: { color: c.phaseColors[k] ?? c.donut[0] },
@@ -340,7 +391,7 @@ export default function StatsCharts(props: Props) {
       // Click a slice → filter the index by that aggregated phase. We
       // use a single ?phase= tag rather than expanding into EP+P, since
       // the user clicked the aggregated band.
-      window.location.href = `${props.basePath}/papers?phase=${encodeURIComponent(params.name)}`;
+      window.location.href = `${props.basePath}/?phase=${encodeURIComponent(params.name)}`;
     });
     charts.push(phaseChart);
 
@@ -363,7 +414,9 @@ export default function StatsCharts(props: Props) {
         icon: 'circle', itemWidth: 8, itemHeight: 8, itemGap: 14,
       },
       series: [{
-        type: 'pie', radius: ['48%', '70%'], center: ['50%', '42%'],
+        type: 'pie',
+        radius: isMobile ? ['40%', '60%'] : ['48%', '70%'],
+        center: ['50%', isMobile ? '40%' : '42%'],
         avoidLabelOverlap: true,
         itemStyle: {
           borderColor: isDark() ? '#161a21' : '#faf9f5',
@@ -377,7 +430,7 @@ export default function StatsCharts(props: Props) {
       }],
     });
     themeChart.on('click', (params: any) => {
-      window.location.href = `${props.basePath}/papers?env=${encodeURIComponent(params.name)}`;
+      window.location.href = `${props.basePath}/?env=${encodeURIComponent(params.name)}`;
     });
     charts.push(themeChart);
 
@@ -421,7 +474,7 @@ export default function StatsCharts(props: Props) {
       }],
     });
     instChart.on('click', (params: any) => {
-      window.location.href = `${props.basePath}/papers?inst=${encodeURIComponent(params.name)}`;
+      window.location.href = `${props.basePath}/?inst=${encodeURIComponent(params.name)}`;
     });
     charts.push(instChart);
 
@@ -464,7 +517,7 @@ export default function StatsCharts(props: Props) {
       }],
     });
     aChart.on('click', (params: any) => {
-      window.location.href = `${props.basePath}/papers?author=${encodeURIComponent(params.name)}`;
+      window.location.href = `${props.basePath}/?author=${encodeURIComponent(params.name)}`;
     });
     charts.push(aChart);
 
@@ -520,11 +573,19 @@ export default function StatsCharts(props: Props) {
 
   onMount(() => {
     build();
-    const ro = new ResizeObserver(() => resizeAll());
+    // Resize: snap-resize every chart immediately, then (debounced)
+    // rebuild so width-dependent layout — the mobile breakpoint and the
+    // keyword-bar label truncation — is recomputed for the new width.
+    let rebuildTimer: ReturnType<typeof setTimeout> | undefined;
+    const ro = new ResizeObserver(() => {
+      resizeAll();
+      clearTimeout(rebuildTimer);
+      rebuildTimer = setTimeout(() => build(), 200);
+    });
     [trendEl, kwEl, phaseEl, themeEl, instEl, authorEl, pubEl].forEach((el) => ro.observe(el));
     const mo = new MutationObserver(() => { build(); setTick((x) => x + 1); });
     mo.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
-    onCleanup(() => { ro.disconnect(); mo.disconnect(); for (const c of charts) c.dispose(); });
+    onCleanup(() => { clearTimeout(rebuildTimer); ro.disconnect(); mo.disconnect(); for (const c of charts) c.dispose(); });
   });
 
   return (
@@ -532,7 +593,7 @@ export default function StatsCharts(props: Props) {
 
       {/* ─── Hero: distribution by phase ─────────────────────────── */}
       <section>
-        <div class="flex items-baseline justify-between mb-1 flex-wrap gap-x-4">
+        <div class="flex items-baseline justify-between mb-1 flex-wrap gap-x-4 gap-y-1">
           <h2 class="text-base font-semibold text-ink-700 dark:text-ink-50">Distribution by phase</h2>
           <span class="text-xs text-ink-400 dark:text-ink-300">primary axis · aggregated to 5 bands</span>
         </div>
@@ -544,7 +605,7 @@ export default function StatsCharts(props: Props) {
 
       {/* ─── Quarterly trend stacked by phase ─────────────────────── */}
       <section>
-        <div class="flex items-baseline justify-between mb-1 flex-wrap gap-x-4">
+        <div class="flex items-baseline justify-between mb-1 flex-wrap gap-x-4 gap-y-1">
           <h2 class="text-base font-semibold text-ink-700 dark:text-ink-50">Quarterly publication trend</h2>
           <span class="text-xs text-ink-400 dark:text-ink-300">stacked by phase</span>
         </div>
@@ -557,6 +618,13 @@ export default function StatsCharts(props: Props) {
         <h2 class="text-base font-semibold text-ink-700 dark:text-ink-50 mb-1">Top keywords</h2>
         <p class="text-xs text-ink-400 dark:text-ink-300 mb-4 max-w-[64ch]">Width is paper count, darker is more frequent. Click any segment or chip to filter.</p>
         <div ref={(el) => (kwEl = el)} class="w-full h-[68px]"></div>
+        {/* Mobile: bar segments are too narrow for inline labels — name
+            the top keywords as full chips directly beneath the bar. */}
+        <Show when={topKw().length > 0}>
+          <div class="mt-3 sm:hidden">
+            <KeywordCloud items={topKw()} basePath={props.basePath} />
+          </div>
+        </Show>
         <Show when={longTail().length > 0}>
           <div class="mt-6">
             <div class="text-[11px] font-semibold uppercase tracking-[0.18em] text-ink-400 dark:text-ink-300 mb-3">Long tail</div>
@@ -567,7 +635,7 @@ export default function StatsCharts(props: Props) {
 
       {/* ─── Secondary axis: theme split ──────────────────────────── */}
       <section>
-        <div class="flex items-baseline justify-between mb-1 flex-wrap gap-x-4">
+        <div class="flex items-baseline justify-between mb-1 flex-wrap gap-x-4 gap-y-1">
           <h2 class="text-base font-semibold text-ink-700 dark:text-ink-50">Theme split</h2>
           <span class="text-xs text-ink-400 dark:text-ink-300">secondary axis · CC / MA / HF / LH / PS</span>
         </div>
@@ -620,7 +688,7 @@ function KeywordCloud(props: { items: Array<{ k: string; v: number }>; basePath:
         {(item) => (
           <a
             class="inline-flex items-baseline gap-1 px-2.5 py-1 rounded-full bg-paper-200/60 dark:bg-ink-700/40 hover:bg-paper-200 dark:hover:bg-ink-700/70 border border-paper-300/60 dark:border-ink-600/60 text-ink-700 dark:text-ink-50 transition-colors"
-            href={`${props.basePath}/papers?key=${encodeURIComponent(item.k)}`}
+            href={`${props.basePath}/?key=${encodeURIComponent(item.k)}`}
             style={{
               'font-size': `${size(item.v)}px`,
               'opacity': opacity(item.v),

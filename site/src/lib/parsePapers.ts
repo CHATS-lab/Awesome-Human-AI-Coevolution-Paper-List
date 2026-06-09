@@ -256,5 +256,5 @@ export function loadAllPapers(): { canonical: Paper[]; adjacent: Paper[] } {
 
 export function repoFileUrl(p: Paper): string {
   const file = p.source === 'adjacent' ? 'adjacent.yaml' : 'papers.yaml';
-  return `https://github.com/xli04/Awesome-Human-AI-Coevolution-Paper-List/blob/main/${file}#L${p.sourceLine}`;
+  return `https://github.com/human-ai-coevolution/human-ai-coevolution.github.io/blob/main/${file}#L${p.sourceLine}`;
 }

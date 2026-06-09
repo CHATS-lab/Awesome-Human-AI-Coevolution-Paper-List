@@ -8,6 +8,9 @@ import { getStarCount } from '../lib/star';
 
 interface Props {
   title?: string;
+  /** Full <title> verbatim, used as-is. Overrides the "Page · Brand"
+   *  pattern. */
+  titleOverride?: string;
   description?: string;
   /** Path-only OG image (e.g. /og.png); defaults to site fallback. */
   ogImage?: string;
@@ -17,18 +20,26 @@ interface Props {
   jsonLd?: unknown | unknown[];
   /** Extra <meta>/<link> elements rendered into <head>. */
   extraHead?: string;
+  /** Hide the top navigation bar (used on the bare landing page). */
+  hideTopBar?: boolean;
 }
 
 const {
   title,
+  titleOverride,
   description,
   ogImage,
   ogType = 'website',
   jsonLd,
   extraHead,
+  hideTopBar = false,
 } = Astro.props as Props;
 
-const fullTitle = title ? `${title} · ${SITE_TITLE}` : `${SITE_TITLE} · A curated list of human-AI coevolution research`;
+// Title resolution: titleOverride (verbatim) > "Page · Brand" > bare
+// brand. The homepage sets titleOverride so Google reads
+// "Human–AI Coevolution" as the title instead of defaulting the
+// *.github.io host name to "GitHub".
+const fullTitle = titleOverride ?? (title ? `${title} · ${SITE_TITLE}` : SITE_TITLE);
 const desc = description ?? SITE_DESCRIPTION;
 const starCount = await getStarCount();
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
@@ -36,8 +47,8 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 // Ensure trailing slash on canonical for directory-format outputs.
 let canonicalPath = Astro.url.pathname;
 if (!canonicalPath.endsWith('/') && !/\.[a-z0-9]+$/i.test(canonicalPath)) canonicalPath += '/';
-const canonical = new URL(canonicalPath, Astro.site ?? 'https://chats-lab.github.io').toString();
-const ogImageUrl = new URL(ogImage ?? `${base}/og-v5.png`, Astro.site ?? 'https://chats-lab.github.io').toString();
+const canonical = new URL(canonicalPath, Astro.site ?? 'https://human-ai-coevolution.github.io').toString();
+const ogImageUrl = new URL(ogImage ?? `${base}/og.png`, Astro.site ?? 'https://human-ai-coevolution.github.io').toString();
 
 const jsonLdArr: unknown[] = jsonLd
   ? Array.isArray(jsonLd) ? jsonLd : [jsonLd]
@@ -51,7 +62,9 @@ const jsonLdArr: unknown[] = jsonLd
 
     <title>{fullTitle}</title>
     <meta name="description" content={desc} />
-    <meta name="keywords" content="human-AI coevolution, human-AI collaboration, RLHF, preference learning, mutual adaptation, feedback loops, longitudinal HCI, co-creation, position paper, paper list, awesome list" />
+    <meta name="keywords" content="human-AI coevolution, human-AI co-evolution, human-AI collaboration, human-AI alignment, AI literacy, AI capabilities, RLHF, preference learning, mutual adaptation, feedback loops, longitudinal HCI, co-creation, AI agents, AI literature, four-phase framework, position paper, paper list, awesome list" />
+    <meta name="author" content="CHATS-Lab, Northeastern University" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
     <link rel="canonical" href={canonical} />
 
     <meta property="og:type" content={ogType} />
@@ -93,7 +106,7 @@ const jsonLdArr: unknown[] = jsonLd
     </script>
   </head>
   <body class="min-h-screen flex flex-col">
-    <TopBar starCount={starCount} transition:name="topbar" transition:persist />
+    {!hideTopBar && <TopBar starCount={starCount} transition:name="topbar" transition:persist />}
     <main class="flex-1 relative z-10" transition:animate="fade">
       <slot />
     </main>
