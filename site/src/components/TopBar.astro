@@ -1,6 +1,6 @@
 ---
 import ThemeToggle from './ThemeToggle.astro';
-import { REPO_URL, SITE_TITLE } from '../lib/site';
+import { REPO_URL, SITE_TITLE, MAIN_SITE_URL } from '../lib/site';
 const { starCount } = Astro.props as { starCount: number | null };
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
@@ -9,8 +9,13 @@ function fmt(n: number): string {
   return String(n);
 }
 
+// This deployment is the index only. "Index" is local; everything else is
+// site-level nav that lives on the main site.
 const navItems = [
-  { href: `${base}/`,   label: 'Index' },
+  { href: `${base}/`,              label: 'Index' },
+  { href: `${MAIN_SITE_URL}/blog/`, label: 'Blog' },
+  { href: `${MAIN_SITE_URL}/stats/`, label: 'Stats' },
+  { href: `${MAIN_SITE_URL}/about/`, label: 'Colophon' },
 ];
 const currentPath = Astro.url.pathname.replace(/\/$/, '');
 ---
@@ -19,7 +24,7 @@ const currentPath = Astro.url.pathname.replace(/\/$/, '');
     text-link nav on right. No buttons, no logo badge, no chip-style nav. */}
 <div class="border-b border-paper-300 dark:border-ink-600 bg-paper-100 dark:bg-nightbg">
   <div class="mx-auto max-w-[1180px] px-6 h-12 flex items-center gap-6">
-    <a href={`${base}/`} class="flex items-baseline gap-3 group">
+    <a href={MAIN_SITE_URL} class="flex items-baseline gap-3 group">
       <span class="font-display text-[15px] font-medium tracking-tight text-ink-700 dark:text-ink-50 group-hover:text-accent dark:group-hover:text-accent-dark transition-colors">{SITE_TITLE}</span>
     </a>
 

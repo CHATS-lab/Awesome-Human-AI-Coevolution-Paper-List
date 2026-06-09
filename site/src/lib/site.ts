@@ -10,6 +10,10 @@ export const REPO_RAW_BLOB = `${REPO_URL}/blob/main`;
 // The intro site links out to it rather than serving its own.
 export const PAPERS_INDEX_URL = 'https://chats-lab.github.io/Awesome-Human-AI-Coevolution-Paper-List';
 
+// This deployment is the index only; all site-level nav (home, blog, stats,
+// colophon) lives on the main site and is linked out to it.
+export const MAIN_SITE_URL = 'https://human-ai-coevolution.github.io';
+
 // Maintainer: the CHATS lab at Northeastern.
 export const MAINTAINER_NAME = 'CHATS-LAB';
 export const MAINTAINER_AFFILIATION = 'Northeastern University';
