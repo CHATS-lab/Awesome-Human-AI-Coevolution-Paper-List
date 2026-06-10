@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <!-- Ivory tile with a single navy rule, echoing the section-rule motif. -->
+  <!-- Ivory tile with a single teal rule, echoing the section-rule motif. -->
   <rect width="32" height="32" rx="5" fill="#faf9f5"/>
-  <rect x="6" y="14" width="14" height="2" fill="#1e3a5f"/>
-  <rect x="6" y="20" width="8" height="2" fill="#1e3a5f" opacity="0.5"/>
+  <rect x="6" y="14" width="14" height="2" fill="#12867e"/>
+  <rect x="6" y="20" width="8" height="2" fill="#12867e" opacity="0.5"/>
 </svg>

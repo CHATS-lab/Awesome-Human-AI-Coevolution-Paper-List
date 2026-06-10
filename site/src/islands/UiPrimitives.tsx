@@ -149,7 +149,7 @@ export function Select<T extends string>(props: SelectProps<T>) {
                         <span>{opt.label}</span>
                       </span>
                       <Show when={opt.hint}>
-                        <span class="text-[11px] text-ink-400 dark:text-ink-300">{opt.hint}</span>
+                        <span class="text-[12px] text-ink-400 dark:text-ink-300">{opt.hint}</span>
                       </Show>
                     </button>
                   </li>
@@ -197,7 +197,7 @@ export function Toggle(props: ToggleProps) {
       <span class="text-sm leading-5 text-ink-600 dark:text-ink-100 group-hover:text-ink-700 dark:group-hover:text-ink-50 transition-colors">
         {props.label}
         <Show when={props.hint}>
-          <span class="block text-[11px] text-ink-400 dark:text-ink-300 mt-0.5">{props.hint}</span>
+          <span class="block text-[12px] text-ink-400 dark:text-ink-300 mt-0.5">{props.hint}</span>
         </Show>
       </span>
     </label>

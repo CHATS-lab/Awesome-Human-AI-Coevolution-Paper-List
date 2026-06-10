@@ -2,7 +2,7 @@
 import { createEffect, createMemo, createSignal, For, Show, onMount, onCleanup, untrack } from 'solid-js';
 import MiniSearch from 'minisearch';
 import { normalizePublisher, bibtexVenueKind } from '../lib/venues';
-import { PHASE_CODE, PHASE_HEADINGS } from '../lib/site';
+import { PHASE_CODE, PHASE_HEADINGS, PHASE_SHORT } from '../lib/site';
 import { Select, Toggle } from './UiPrimitives';
 
 export interface BrowserPaper {
@@ -593,7 +593,7 @@ export default function PaperBrowser(props: Props) {
             />
             <svg viewBox="0 0 24 24" width="16" height="16" class="absolute left-3 top-1/2 -translate-y-1/2 text-ink-400" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
             <Show when={!q()}>
-              <kbd class="hidden sm:inline-block absolute right-3 top-1/2 -translate-y-1/2 px-1.5 py-0.5 text-[10px] font-mono rounded border border-paper-300/80 dark:border-ink-600/60 text-ink-400 dark:text-ink-300 leading-none">/</kbd>
+              <kbd class="hidden sm:inline-block absolute right-3 top-1/2 -translate-y-1/2 px-1.5 py-0.5 text-[11px] font-mono rounded border border-paper-300/80 dark:border-ink-600/60 text-ink-400 dark:text-ink-300 leading-none">/</kbd>
             </Show>
           </div>
           <Select<SortKey>
@@ -956,7 +956,7 @@ function DateRangeSection(props: DateRangeProps) {
           <span class="text-ink-400 mr-2">{open() ? '−' : '+'}</span>
         </button>
         <Show when={isActive()}>
-          <button class="text-[10px] uppercase tracking-wider px-1.5 py-0.5 rounded border border-paper-300/80 dark:border-ink-600/60 hover:bg-paper-200/60 dark:hover:bg-ink-700/40" onClick={clearRange}>Reset</button>
+          <button class="text-[11px] uppercase tracking-wider px-1.5 py-0.5 rounded border border-paper-300/80 dark:border-ink-600/60 hover:bg-paper-200/60 dark:hover:bg-ink-700/40" onClick={clearRange}>Reset</button>
         </Show>
       </div>
 
@@ -964,11 +964,11 @@ function DateRangeSection(props: DateRangeProps) {
         <div class="mt-3 select-none">
           {/* Presets */}
           <div class="mb-3 flex flex-wrap gap-1">
-            <button class="text-[11px] px-2 py-0.5 rounded border border-paper-300/80 dark:border-ink-600/60 hover:bg-paper-200/60 dark:hover:bg-ink-700/40 transition-colors" onClick={() => applyPreset(3)}>3 mo</button>
-            <button class="text-[11px] px-2 py-0.5 rounded border border-paper-300/80 dark:border-ink-600/60 hover:bg-paper-200/60 dark:hover:bg-ink-700/40 transition-colors" onClick={() => applyPreset(6)}>6 mo</button>
-            <button class="text-[11px] px-2 py-0.5 rounded border border-paper-300/80 dark:border-ink-600/60 hover:bg-paper-200/60 dark:hover:bg-ink-700/40 transition-colors" onClick={() => applyPreset(12)}>12 mo</button>
-            <button class="text-[11px] px-2 py-0.5 rounded border border-paper-300/80 dark:border-ink-600/60 hover:bg-paper-200/60 dark:hover:bg-ink-700/40 transition-colors" onClick={() => applyYear(new Date().getFullYear())}>{new Date().getFullYear()}</button>
-            <button class="text-[11px] px-2 py-0.5 rounded border border-paper-300/80 dark:border-ink-600/60 hover:bg-paper-200/60 dark:hover:bg-ink-700/40 transition-colors" onClick={() => applyYear(new Date().getFullYear() - 1)}>{new Date().getFullYear() - 1}</button>
+            <button class="text-[12px] px-2 py-0.5 rounded border border-paper-300/80 dark:border-ink-600/60 hover:bg-paper-200/60 dark:hover:bg-ink-700/40 transition-colors" onClick={() => applyPreset(3)}>3 mo</button>
+            <button class="text-[12px] px-2 py-0.5 rounded border border-paper-300/80 dark:border-ink-600/60 hover:bg-paper-200/60 dark:hover:bg-ink-700/40 transition-colors" onClick={() => applyPreset(6)}>6 mo</button>
+            <button class="text-[12px] px-2 py-0.5 rounded border border-paper-300/80 dark:border-ink-600/60 hover:bg-paper-200/60 dark:hover:bg-ink-700/40 transition-colors" onClick={() => applyPreset(12)}>12 mo</button>
+            <button class="text-[12px] px-2 py-0.5 rounded border border-paper-300/80 dark:border-ink-600/60 hover:bg-paper-200/60 dark:hover:bg-ink-700/40 transition-colors" onClick={() => applyYear(new Date().getFullYear())}>{new Date().getFullYear()}</button>
+            <button class="text-[12px] px-2 py-0.5 rounded border border-paper-300/80 dark:border-ink-600/60 hover:bg-paper-200/60 dark:hover:bg-ink-700/40 transition-colors" onClick={() => applyYear(new Date().getFullYear() - 1)}>{new Date().getFullYear() - 1}</button>
           </div>
 
           {/* Slider — track + histogram + thumbs all share the same
@@ -978,7 +978,7 @@ function DateRangeSection(props: DateRangeProps) {
             {/* Hover tooltip floats above the histogram */}
             <Show when={hoverIdx() != null}>
               <div
-                class="pointer-events-none absolute -top-1 px-1.5 py-0.5 rounded text-[10px] bg-ink-700 text-paper-50 dark:bg-paper-50 dark:text-ink-700 whitespace-nowrap shadow-sm z-10"
+                class="pointer-events-none absolute -top-1 px-1.5 py-0.5 rounded text-[11px] bg-ink-700 text-paper-50 dark:bg-paper-50 dark:text-ink-700 whitespace-nowrap shadow-sm z-10"
                 style={{ left: `calc(${widthPct(hoverIdx()!)}% + 0.625rem)`, transform: 'translateX(-50%)' }}
               >
                 {fmtMonth(idxToYm(hoverIdx()!) ?? '')} · {props.histogram.counts[idxToYm(hoverIdx()!) ?? ''] ?? 0}
@@ -1057,7 +1057,7 @@ function DateRangeSection(props: DateRangeProps) {
           </div>
 
           {/* Range labels — placed inside the same gutter as the slider */}
-          <div class="mt-1 px-2.5 flex items-center justify-between text-[11px] tabular-nums text-ink-500 dark:text-ink-200">
+          <div class="mt-1 px-2.5 flex items-center justify-between text-[12px] tabular-nums text-ink-500 dark:text-ink-200">
             <span>{labelLeft()}</span>
             <span class="text-ink-400 dark:text-ink-300">→</span>
             <span>{labelRight()}</span>
@@ -1253,32 +1253,10 @@ function PaperCardClient(props: CardProps) {
   return (
     <article class={`entry-row ${p.source === 'adjacent' ? 'opacity-90' : ''}`}>
 
-      {/* Left rail: year, phase code, theme abbreviations, adjacent badge */}
-      <div class="space-y-2">
-        <div class="font-mono text-[12px] text-ink-700 dark:text-ink-50 tabular-nums">{yearTag}</div>
-        <Show when={p.phase}>
-          <button
-            class="phase-badge hover:underline underline-offset-[3px]"
-            onClick={() => props.onPhase?.(p.phase!)}
-            title={`${PHASE_CODE[p.phase!] ?? '—'} — ${PHASE_HEADINGS[p.phase!]?.title ?? ''}`}
-          >
-            {PHASE_CODE[p.phase!] ?? '—'}
-          </button>
-        </Show>
-        <div class="flex flex-wrap gap-x-2 gap-y-1">
-          <For each={p.envs}>{(env) => (
-            <button
-              class="font-mono text-[10px] uppercase tracking-[0.08em] text-ink-400 dark:text-ink-300 hover:text-accent dark:hover:text-accent-dark transition-colors"
-              onClick={() => props.onEnv?.(env)}
-              title={env}
-            >
-              {ENV_ICON[env] ?? '—'}
-            </button>
-          )}</For>
-        </div>
-        <Show when={p.source === 'adjacent'}>
-          <div class="font-mono text-[10px] uppercase tracking-[0.08em] text-ink-400 dark:text-ink-300">[adjacent]</div>
-        </Show>
+      {/* Left rail: just the year (phase/theme/adjacent tags live in the
+          card body, written out in full) */}
+      <div>
+        <div class="font-mono text-[13px] text-ink-700 dark:text-ink-50 tabular-nums">{yearTag}</div>
       </div>
 
       {/* Main column */}
@@ -1289,7 +1267,7 @@ function PaperCardClient(props: CardProps) {
           </a>
         </h3>
 
-        <p class="mt-2 text-[13.5px] text-ink-500 dark:text-ink-200 break-words">
+        <p class="mt-2 text-[14.5px] text-ink-500 dark:text-ink-200 break-words">
           <For each={p.authors}>{(author, i) => (
             <>
               <Show when={i() > 0}><span class="text-paper-400 dark:text-ink-600">, </span></Show>
@@ -1302,7 +1280,7 @@ function PaperCardClient(props: CardProps) {
           )}</For>
         </p>
 
-        <p class="mt-1 text-[12.5px] text-ink-400 dark:text-ink-300">
+        <p class="mt-1 text-[13.5px] text-ink-400 dark:text-ink-300">
           <span class="font-mono">{p.publisher || '—'}</span>
           <Show when={p.institutions.length > 0}>
             <span class="mx-2 text-paper-400 dark:text-ink-600">·</span>
@@ -1320,23 +1298,44 @@ function PaperCardClient(props: CardProps) {
         </p>
 
         <Show when={p.tldr}>
-          <p class="mt-3 text-[14px] text-ink-600 dark:text-ink-100 leading-relaxed max-w-[68ch]">
+          <p class="mt-3 text-[15px] text-ink-600 dark:text-ink-100 leading-relaxed max-w-[68ch]">
             {highlight(p.tldr, props.query)}
           </p>
         </Show>
 
-        <Show when={p.keywords.length > 0}>
-          <p class="mt-3 text-[12.5px] text-ink-500 dark:text-ink-300 flex flex-wrap gap-x-3 gap-y-1">
-            <For each={p.keywords}>{(kw) => (
-              <button class="hover:text-accent dark:hover:text-accent-dark transition-colors" onClick={() => props.onChip(kw)}>
-                <span class="text-paper-400 dark:text-ink-600 mr-0.5">·</span>{kw}
-              </button>
-            )}</For>
-          </p>
-        </Show>
+        {/* Phase + theme tags, written out in full (keywords live on the
+            entry's detail page) */}
+        <div class="mt-3 flex flex-wrap gap-x-2 gap-y-1.5">
+          <Show when={p.phase}>
+            <button
+              class="rounded-[6px] border border-accent/40 dark:border-accent-dark/40 px-2 py-0.5 text-[13px] text-accent dark:text-accent-dark hover:bg-accent hover:text-paper-50 dark:hover:bg-accent-dark dark:hover:text-nightbg transition-colors"
+              onClick={() => props.onPhase?.(p.phase!)}
+              title={PHASE_HEADINGS[p.phase!]?.title ?? p.phase!}
+            >
+              {PHASE_SHORT[p.phase!] ?? p.phase}
+            </button>
+          </Show>
+          <For each={p.envs}>{(env) => (
+            <button
+              class="rounded-[6px] border border-paper-300 dark:border-ink-600 px-2 py-0.5 text-[13px] text-ink-500 dark:text-ink-300 hover:border-accent hover:text-accent dark:hover:border-accent-dark dark:hover:text-accent-dark transition-colors"
+              onClick={() => props.onEnv?.(env)}
+              title={`Theme: ${env}`}
+            >
+              {env}
+            </button>
+          )}</For>
+          <Show when={p.source === 'adjacent'}>
+            <span
+              class="rounded-[6px] border border-dashed border-paper-300 dark:border-ink-600 px-2 py-0.5 text-[13px] text-ink-400 dark:text-ink-300"
+              title="Adjacent entry — supporting context, not part of the canonical list"
+            >
+              Adjacent
+            </span>
+          </Show>
+        </div>
 
         {/* Action row — text links, no buttons */}
-        <div class={`mt-4 flex flex-wrap items-baseline gap-x-6 gap-y-2 text-[13.5px] font-mono uppercase tracking-[0.08em] ${bibCopied() ? 'copy-pulse copy-glow-source' : ''}`}>
+        <div class={`mt-4 flex flex-wrap items-baseline gap-x-6 gap-y-2 text-[14.5px] font-mono uppercase tracking-[0.08em] ${bibCopied() ? 'copy-pulse copy-glow-source' : ''}`}>
           <a class="text-accent dark:text-accent-dark hover:underline underline-offset-[3px]" href={detailHref}>
             Read entry →
           </a>

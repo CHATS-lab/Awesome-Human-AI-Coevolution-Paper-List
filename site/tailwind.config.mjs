@@ -30,10 +30,11 @@ export default {
           DEFAULT: '#10131a',
           soft: '#171b23',
         },
-        // accent: desaturated teal, drawn from the CHATS lab logo
+        // accent: vivid teal, sampled from the CHATS lab logo (#4098a0),
+        // deepened a touch so link text keeps contrast on the ivory paper
         accent: {
-          DEFAULT: '#2e6b68',
-          dark: '#76bdb6',  // legible teal on dark bg
+          DEFAULT: '#12867e',
+          dark: '#54cfc3',  // legible teal on dark bg
         },
         // brass secondary — used sparingly for emphasis chips, indices, etc.
         brass: {

@@ -176,14 +176,14 @@ const reportUrl = `${REPO_URL}/issues/new?` + new URLSearchParams({
           <a class="action-link action-link--ghost" href={`${base}/`}><span class="font-mono">←</span>Index</a>
         </nav>
 
-        <dl class="space-y-4 text-[12.5px]">
+        <dl class="space-y-4 text-[13.5px]">
           {paper.phase && (
             <div>
               <dt class="meta-label">Phase</dt>
               <dd class="mt-1.5">
                 <a class="block hover:underline underline-offset-[3px]" href={`${base}/?phase=${encodeURIComponent(paper.phase)}`} title={PHASE_HEADINGS[paper.phase]?.title ?? paper.phase}>
                   <span class="phase-badge tabular-nums">{PHASE_CODE[paper.phase] ?? '—'}</span>
-                  <span class="block mt-1 text-[12px] text-ink-500 dark:text-ink-300">{PHASE_HEADINGS[paper.phase]?.title}</span>
+                  <span class="block mt-1 text-[13px] text-ink-500 dark:text-ink-300">{PHASE_HEADINGS[paper.phase]?.title}</span>
                 </a>
               </dd>
             </div>
@@ -206,7 +206,7 @@ const reportUrl = `${REPO_URL}/issues/new?` + new URLSearchParams({
           </div>
           <div>
             <dt class="meta-label">Institutions</dt>
-            <dd class="text-[12.5px] text-ink-700 dark:text-ink-50 mt-0.5">{paper.institutions.join(', ') || '—'}</dd>
+            <dd class="text-[13.5px] text-ink-700 dark:text-ink-50 mt-0.5">{paper.institutions.join(', ') || '—'}</dd>
           </div>
           {paper.arxivId && (
             <div>
@@ -225,19 +225,19 @@ const reportUrl = `${REPO_URL}/issues/new?` + new URLSearchParams({
           <a href={paper.link} target="_blank" rel="noopener" class="hover:text-accent dark:hover:text-accent-dark transition-colors">{paper.title}</a>
         </h1>
 
-        <p class="mt-5 text-[15px] text-ink-600 dark:text-ink-200 leading-relaxed max-w-[60ch]">{paper.authors.join(', ')}</p>
+        <p class="mt-5 text-[16px] text-ink-600 dark:text-ink-200 leading-relaxed max-w-[60ch]">{paper.authors.join(', ')}</p>
 
         {paper.tldr && (
           <section class="mt-10">
             <p class="meta-label">Synopsis</p>
-            <p class="mt-2 text-[16px] leading-[1.7] text-ink-700 dark:text-ink-50 max-w-[60ch]">{paper.tldr}</p>
+            <p class="mt-2 text-[17px] leading-[1.7] text-ink-700 dark:text-ink-50 max-w-[60ch]">{paper.tldr}</p>
           </section>
         )}
 
         {paper.keywords.length > 0 && (
           <section class="mt-8">
             <p class="meta-label mb-2">Keywords</p>
-            <p class="text-[13.5px] text-ink-600 dark:text-ink-200 flex flex-wrap gap-x-3 gap-y-1.5 max-w-[60ch]">
+            <p class="text-[14.5px] text-ink-600 dark:text-ink-200 flex flex-wrap gap-x-3 gap-y-1.5 max-w-[60ch]">
               {paper.keywords.map((kw) => (
                 <a class="hover:text-accent dark:hover:text-accent-dark transition-colors" href={`${base}/?key=${encodeURIComponent(kw)}`}>
                   <span class="text-paper-400 dark:text-ink-600 mr-0.5">·</span>{kw}
@@ -247,7 +247,7 @@ const reportUrl = `${REPO_URL}/issues/new?` + new URLSearchParams({
           </section>
         )}
 
-        <section class="mt-10 pt-6 border-t border-paper-300 dark:border-ink-600 flex flex-wrap items-baseline gap-x-8 gap-y-3 text-[12px] font-mono uppercase tracking-[0.08em]">
+        <section class="mt-10 pt-6 border-t border-paper-300 dark:border-ink-600 flex flex-wrap items-baseline gap-x-8 gap-y-3 text-[13px] font-mono uppercase tracking-[0.08em]">
           <a href={paper.link} target="_blank" rel="noopener" class="text-accent dark:text-accent-dark hover:underline underline-offset-[3px]">Open paper ↗</a>
           {paper.arxivId && (
             <a href={`https://arxiv.org/abs/${paper.arxivId}`} target="_blank" rel="noopener" class="text-ink-500 dark:text-ink-300 hover:text-accent dark:hover:text-accent-dark">arXiv ↗</a>
@@ -298,8 +298,8 @@ const reportUrl = `${REPO_URL}/issues/new?` + new URLSearchParams({
           {related.map((p) => (
             <li class="border-t border-paper-300 dark:border-ink-600 pt-4">
               <a href={`${base}/papers/${p.slug}`} class="block hover:text-accent dark:hover:text-accent-dark transition-colors">
-                <div class="font-display text-[15px] text-ink-700 dark:text-ink-50 leading-snug">{p.title}</div>
-                <div class="mt-1.5 text-[11.5px] font-mono text-ink-400 dark:text-ink-300 uppercase tracking-[0.06em]">{p.date} · {p.publisher}</div>
+                <div class="font-display text-[16px] text-ink-700 dark:text-ink-50 leading-snug">{p.title}</div>
+                <div class="mt-1.5 text-[12.5px] font-mono text-ink-400 dark:text-ink-300 uppercase tracking-[0.06em]">{p.date} · {p.publisher}</div>
               </a>
             </li>
           ))}

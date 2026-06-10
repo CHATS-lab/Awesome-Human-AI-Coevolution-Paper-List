@@ -32,7 +32,7 @@ const phaseTitle = phaseTag ? (PHASE_HEADINGS[phaseTag]?.title ?? phaseTag) : 'u
       {paper.envs.map((env) => (
         <a
           href={`${base}/?env=${encodeURIComponent(env)}`}
-          class="font-mono text-[10px] uppercase tracking-[0.08em] text-ink-400 dark:text-ink-300 hover:text-accent dark:hover:text-accent-dark transition-colors"
+          class="font-mono text-[11px] uppercase tracking-[0.08em] text-ink-400 dark:text-ink-300 hover:text-accent dark:hover:text-accent-dark transition-colors"
           title={env}
         >
           {ENV_ABBREV[env] ?? '—'}
@@ -40,7 +40,7 @@ const phaseTitle = phaseTag ? (PHASE_HEADINGS[phaseTag]?.title ?? phaseTag) : 'u
       ))}
     </div>
     {isAdj && (
-      <div class="font-mono text-[10px] uppercase tracking-[0.08em] text-ink-400 dark:text-ink-300">[adjacent]</div>
+      <div class="font-mono text-[11px] uppercase tracking-[0.08em] text-ink-400 dark:text-ink-300">[adjacent]</div>
     )}
   </div>
 
@@ -52,11 +52,11 @@ const phaseTitle = phaseTag ? (PHASE_HEADINGS[phaseTag]?.title ?? phaseTag) : 'u
       </a>
     </h3>
 
-    <p class="mt-2 text-[13.5px] text-ink-500 dark:text-ink-200">
+    <p class="mt-2 text-[14.5px] text-ink-500 dark:text-ink-200">
       {paper.authors.slice(0, 4).join(', ')}{moreAuthors > 0 ? ` · +${moreAuthors} more` : ''}
     </p>
 
-    <p class="mt-1 text-[12.5px] text-ink-400 dark:text-ink-300">
+    <p class="mt-1 text-[13.5px] text-ink-400 dark:text-ink-300">
       <span class="font-mono">{paper.publisher || '—'}</span>
       {paper.institutions.length > 0 && (
         <>
@@ -67,11 +67,11 @@ const phaseTitle = phaseTag ? (PHASE_HEADINGS[phaseTag]?.title ?? phaseTag) : 'u
     </p>
 
     {!compact && paper.tldr && (
-      <p class="mt-3 text-[14px] text-ink-600 dark:text-ink-100 leading-relaxed clamp-3 max-w-[68ch]">{paper.tldr}</p>
+      <p class="mt-3 text-[15px] text-ink-600 dark:text-ink-100 leading-relaxed clamp-3 max-w-[68ch]">{paper.tldr}</p>
     )}
 
     {paper.keywords.length > 0 && (
-      <p class="mt-3 text-[12.5px] text-ink-500 dark:text-ink-300 flex flex-wrap gap-x-3 gap-y-1">
+      <p class="mt-3 text-[13.5px] text-ink-500 dark:text-ink-300 flex flex-wrap gap-x-3 gap-y-1">
         {paper.keywords.slice(0, compact ? 5 : 8).map((kw) => (
           <a class="hover:text-accent dark:hover:text-accent-dark" href={`${base}/?key=${encodeURIComponent(kw)}`}>
             <span class="text-paper-400 dark:text-ink-600 mr-0.5">·</span>{kw}
@@ -80,7 +80,7 @@ const phaseTitle = phaseTag ? (PHASE_HEADINGS[phaseTag]?.title ?? phaseTag) : 'u
       </p>
     )}
 
-    <div class="mt-4 flex items-baseline gap-5 text-[12px] font-mono uppercase tracking-[0.08em]">
+    <div class="mt-4 flex items-baseline gap-5 text-[13px] font-mono uppercase tracking-[0.08em]">
       <a class="text-accent dark:text-accent-dark hover:underline underline-offset-[3px]" href={`${base}/papers/${paper.slug}`}>Read entry <span>→</span></a>
       {showArxiv && (
         <a class="text-ink-500 dark:text-ink-300 hover:text-accent dark:hover:text-accent-dark" href={`https://arxiv.org/abs/${paper.arxivId}`} target="_blank" rel="noopener">arXiv ↗</a>
