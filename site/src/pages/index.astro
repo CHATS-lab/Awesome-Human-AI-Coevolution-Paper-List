@@ -23,30 +23,23 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 >
   <article class="mx-auto max-w-[960px] px-6 pt-14 pb-16 reveal-stagger">
 
-    <header class="grid lg:grid-cols-[200px_minmax(0,1fr)] gap-x-16 gap-y-6 pb-10 border-b border-paper-300 dark:border-ink-600">
-      <aside class="lg:border-r border-paper-300 dark:border-ink-600 lg:pr-6">
-        <p class="meta-label">Page</p>
-        <p class="kicker mt-2 text-ink-700 dark:text-ink-50">Index</p>
-        <p class="mt-6 text-[13.5px] text-ink-500 dark:text-ink-300 leading-relaxed max-w-[14em]">
-          Search across titles, authors, institutions, TLDRs, and keywords. Filter by category, keyword, year, venue.
-        </p>
-      </aside>
-
-      <div>
-        <p class="heading-eyebrow">All entries</p>
-        <h1 class="kicker-lg mt-5 text-ink-700 dark:text-ink-50">
-          <span class="font-mono tabular-nums">{canonical.length}</span> papers, openly listed.
-        </h1>
-        <a
-          class="mt-6 inline-flex items-center gap-2 rounded-md border border-accent/70 dark:border-accent-dark/70 px-4 py-2 text-[15px] font-medium text-accent dark:text-accent-dark hover:bg-accent hover:text-paper-50 dark:hover:bg-accent-dark dark:hover:text-nightbg transition-colors"
-          href={`${REPO_URL}/issues/new`}
-          target="_blank"
-          rel="noopener"
-        >
-          <svg viewBox="0 0 16 16" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg>
-          Contribute a paper
-        </a>
-      </div>
+    <header class="pb-10 border-b border-paper-300 dark:border-ink-600">
+      <p class="heading-eyebrow">All entries</p>
+      <h1 class="kicker-lg mt-5 text-ink-700 dark:text-ink-50">
+        <span class="font-mono tabular-nums">{canonical.length}</span> papers, openly listed.
+      </h1>
+      <p class="mt-4 text-[16px] text-ink-500 dark:text-ink-300 leading-relaxed max-w-[60ch]">
+        Search across titles, authors, institutions, TLDRs, and keywords. Filter by category, keyword, year, venue.
+      </p>
+      <a
+        class="mt-6 inline-flex items-center gap-2 rounded-md border border-accent/70 dark:border-accent-dark/70 px-4 py-2 text-[15px] font-medium text-accent dark:text-accent-dark hover:bg-accent hover:text-paper-50 dark:hover:bg-accent-dark dark:hover:text-nightbg transition-colors"
+        href={`${REPO_URL}/issues/new`}
+        target="_blank"
+        rel="noopener"
+      >
+        <svg viewBox="0 0 16 16" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg>
+        Contribute a paper
+      </a>
     </header>
 
     <PaperBrowser client:only="solid-js" papers={lite} basePath={base} repoBlobUrl={REPO_RAW_BLOB} />
