@@ -85,7 +85,7 @@ html.dark, html.dark body {
     border-top: 1px solid theme('colors.paper.300');
     border-bottom: 1px solid theme('colors.paper.300');
   }
-  :global(html.dark) .frame {
+  html.dark .frame {
     border-color: theme('colors.ink.600');
   }
 
@@ -120,7 +120,7 @@ html.dark, html.dark body {
     color: theme('colors.accent.DEFAULT');
     font-weight: 500;
   }
-  :global(html.dark) .sec-idx { color: theme('colors.accent.dark'); }
+  html.dark .sec-idx { color: theme('colors.accent.dark'); }
 
   /* Phase badge — the four-phase framework is the contribution this
      index is built around, so its codes get a bigger, slightly bolder
@@ -134,7 +134,7 @@ html.dark, html.dark body {
     line-height: 1;
     display: inline-block;
   }
-  :global(html.dark) .phase-badge { color: theme('colors.accent.dark'); }
+  html.dark .phase-badge { color: theme('colors.accent.dark'); }
 
   /* Larger phase-badge used in the home-page TOC where it anchors the
      whole framework. */
@@ -146,7 +146,7 @@ html.dark, html.dark body {
     letter-spacing: 0.02em;
     line-height: 1;
   }
-  :global(html.dark) .phase-badge-xl { color: theme('colors.accent.dark'); }
+  html.dark .phase-badge-xl { color: theme('colors.accent.dark'); }
 
   /* Tiny mono label — used for left-rail metadata column. */
   .meta-label {
@@ -156,10 +156,10 @@ html.dark, html.dark body {
     letter-spacing: 0.08em;
     color: theme('colors.ink.400');
   }
-  :global(html.dark) .meta-label { color: theme('colors.ink.300'); }
+  html.dark .meta-label { color: theme('colors.ink.300'); }
   /* section markers (§01 …) — larger than a plain meta-label */
   .section-no { font-size: 20px; letter-spacing: 0.04em; color: theme('colors.ink.500'); }
-  :global(html.dark) .section-no { color: theme('colors.ink.200'); }
+  html.dark .section-no { color: theme('colors.ink.200'); }
 
   /* Mono value (for category codes, year, etc.) */
   .meta-value {
@@ -167,7 +167,7 @@ html.dark, html.dark body {
     font-size: 13px;
     color: theme('colors.ink.700');
   }
-  :global(html.dark) .meta-value { color: theme('colors.ink.50'); }
+  html.dark .meta-value { color: theme('colors.ink.50'); }
 
   /* Entry row — vertical index entry style, replaces .card. */
   .entry-row {
@@ -179,7 +179,7 @@ html.dark, html.dark body {
   @media (max-width: 640px) {
     .entry-row { grid-template-columns: 1fr; gap-y: 0.5rem; }
   }
-  :global(html.dark) .entry-row { border-top-color: theme('colors.ink.600'); }
+  html.dark .entry-row { border-top-color: theme('colors.ink.600'); }
 
   /* Old-name compat shims — keep .card/.chip/.surface working in case any
      untouched file still references them. They render minimally so nothing
@@ -223,7 +223,7 @@ html.dark, html.dark body {
     background-color: theme('colors.accent.DEFAULT');
     display: inline-block;
   }
-  :global(html.dark) .heading-eyebrow::before {
+  html.dark .heading-eyebrow::before {
     background-color: theme('colors.accent.dark');
   }
 
@@ -276,7 +276,7 @@ html.dark .hairline { background: theme('colors.ink.600'); }
 }
 
 /* Copy-success pulse */
-:global(html.dark) .copy-glow-source { --glow: rgba(118, 189, 182, 0.24); }
+html.dark .copy-glow-source { --glow: rgba(118, 189, 182, 0.24); }
 .copy-glow-source { --glow: rgba(46, 107, 104, 0.16); }
 @keyframes copy-glow-var {
   0%   { box-shadow: 0 0 0 0 rgba(0, 0, 0, 0); }
@@ -316,7 +316,7 @@ mark.search-hl {
   padding: 0 1px;
   border-radius: 2px;
 }
-:global(html.dark) mark.search-hl {
+html.dark mark.search-hl {
   background-color: rgba(160, 130, 109, 0.32);
   color: #f5f3ee;
 }

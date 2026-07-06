@@ -585,7 +585,7 @@ export default function PaperBrowser(props: Props) {
           <div class="flex-1 min-w-[14rem] relative">
             <input
               type="search"
-              placeholder="Search title, authors, TLDR, keywords…  ( / )"
+              placeholder="Search title, authors, TLDR, keywords…"
               class="input pl-9 pr-9"
               value={q()}
               ref={(el) => (searchInput = el)}
