@@ -100,6 +100,46 @@
       doi = {10.1007/s40299-025-01076-9}
     }
   bibtex_confirmed: false
+- institutions:
+  - Unknown
+  envs:
+  - Position & Survey
+  phase: phase-4
+  keywords:
+  - agentic AI
+  - governance
+  - oversight
+  - adoption
+  tldr: |-
+    Preliminary assessment of agentic AI governance challenges including the absence of consistent human oversight.
+  title: 'Towards Agentic AI Governance: A Preliminary Assessment'
+  link: https://arxiv.org/abs/2607.07612
+  authors:
+  - Mubarak Raji
+  - Masooda Bashir
+  date: '2026-07-08'
+  publisher: arXiv
+  arxiv_id: '2607.07612'
+- institutions:
+  - Unknown
+  envs:
+  - Mutual Adaptation
+  - Position & Survey
+  phase: phase-2
+  keywords:
+  - skill formation
+  - scaffolding
+  - screening
+  - deskilling
+  tldr: |-
+    Argues that persistent AI scaffolding can impede elite skill formation and complicate screening, synthesizing field-experiment evidence on the jagged capability frontier.
+  title: 'When the Scaffold Stays On: AI, Practice Style, and Screening in Elite Skill Formation'
+  link: https://arxiv.org/abs/2606.06253
+  authors:
+  - Song Yao
+  date: '2026-06-04'
+  publisher: arXiv
+  arxiv_id: '2606.06253'
 - title: 'The Deskilling Effect: Is Artificial Intelligence Eroding Clinical Competence?'
   link: https://www.acpjournals.org/doi/10.7326/ANNALS-26-00613
   authors:
@@ -133,6 +173,25 @@
       doi = {10.7326/ANNALS-26-00613}
     }
   bibtex_confirmed: false
+- institutions:
+  - Unknown
+  envs:
+  - Position & Survey
+  phase: framework
+  keywords:
+  - overdependence
+  - deskilling
+  - cognitive decline
+  - mitigation
+  tldr: |-
+    Review synthesizing hazards and evidence of AI overdependence and human cognitive decline, with mitigation strategies.
+  title: 'AI-overdependence and human cognitive decline: Hazards, evidence, and mitigation strategies'
+  link: https://doi.org/10.1016/j.chbr.2026.101102
+  authors:
+  - Fakhroddin Noorbehbahani
+  - Kiemute Oyibo
+  date: 2026-05
+  publisher: Computers in Human Behavior Reports 2026
 - title: 'Evaluating Cognitive Biases in AI-Assisted Mammography Interpretation: A Simulation Reader Study of Explainable
     AI Across Radiologist Experience Levels'
   link: https://link.springer.com/article/10.1007/s00330-026-12666-6
@@ -172,6 +231,56 @@
       doi = {10.1007/s00330-026-12666-6}
     }
   bibtex_confirmed: false
+- institutions:
+  - Unknown
+  envs:
+  - Mutual Adaptation
+  phase: phase-1
+  keywords:
+  - cognitive offloading
+  - reliance measurement
+  - counterfactual
+  tldr: |-
+    Proposes a metric ("Offloading Score") to quantify how much cognitive work a human delegates to AI using counterfactual workflows.
+  title: 'Offloading Score: Measuring AI Reliance Through Counterfactual Workflows'
+  link: https://arxiv.org/abs/2605.29392
+  authors:
+  - Vishakh Padmakumar
+  - Lujain Ibrahim
+  - Zora Zhiruo Wang
+  - Jennifer Wang
+  - Q. Vera Liao
+  - Diyi Yang
+  date: '2026-05-28'
+  publisher: arXiv
+  arxiv_id: '2605.29392'
+- institutions:
+  - Unknown
+  envs:
+  - Collaboration & Co-Creation
+  - Mutual Adaptation
+  phase: phase-2
+  keywords:
+  - security awareness
+  - verification
+  - trust calibration
+  - deskilling
+  tldr: |-
+    Interviews and think-aloud coding with 15 professional developers; AI shifts security thinking from preventive (writing) to reactive (reviewing); only 2 of 14 caught unstated security issues and experience cohort did not predict performance, indicating a decoupling of security knowledge from behavior.
+  title: 'From Preventive to Reactive: How AI Coding Assistants Transform Developers'' Security Awareness'
+  link: https://arxiv.org/abs/2605.23130
+  authors:
+  - Faisal Haque Bappy
+  - Tahrim Hossain
+  - Sidratul Muntaher Meheraj
+  - Annoor Sharara Akhand
+  - Tasfia Tabassum
+  - Tarannum Shaila Zaman
+  - Raiful Hasan
+  - Tariqul Islam
+  date: '2026-05-22'
+  publisher: SOUPS 2026
+  arxiv_id: '2605.23130'
 - title: 'Trust in human-AI collaboration in finance: a bibliometric-systematic literature review'
   link: https://doi.org/10.1007/s00146-026-03049-y
   authors:
@@ -202,6 +311,25 @@
       doi = {10.1007/s00146-026-03049-y}
     }
   bibtex_confirmed: false
+- institutions:
+  - Unknown
+  envs:
+  - Position & Survey
+  phase: framework
+  keywords:
+  - AI-augmented development
+  - deskilling
+  - governance
+  - literature review
+  tldr: |-
+    Multivocal literature review (67 sources, 2022–2026) synthesizing evidence on AI-augmented software development, including skill-atrophy and reliability trade-offs, proposing specification-driven governance.
+  title: 'The Productivity-Reliability Paradox: Specification-Driven Governance for AI-Augmented Software Development'
+  link: https://arxiv.org/abs/2605.01160
+  authors:
+  - Sabry E. Farrag
+  date: '2026-05-01'
+  publisher: arXiv
+  arxiv_id: '2605.01160'
 - title: Agentic AI in the Software Development Lifecycle
   link: https://arxiv.org/abs/2604.26275
   authors:
@@ -335,6 +463,25 @@
       archivePrefix = {arXiv}
     }
   bibtex_confirmed: false
+- institutions:
+  - Unknown
+  envs:
+  - Mutual Adaptation
+  phase: phase-1
+  keywords:
+  - cognitive offload
+  - executive function
+  - reliance
+  - confidence
+  tldr: |-
+    Study of 1,923 adults (Canada n=946, US n=977; ages 25–57, M=38.4) in which 58% agreed AI "did most of the thinking"; AI reliance undermined confidence in independent reasoning and perceived idea ownership, while participants who modified/challenged/rejected AI suggestions reported greater confidence and authorship.
+  title: 'Generative artificial intelligence reliance and executive function attenuation: Behavioral evidence of cognitive
+    offload in high-use adults.'
+  link: https://doi.org/10.1037/tmb0000191
+  authors:
+  - Sarah Baldeo
+  date: '2026-04-16'
+  publisher: Technology, Mind, and Behavior 2026
 - title: 'Intersectional Sycophancy: How Perceived User Demographics Shape False Validation in Large Language Models'
   link: https://arxiv.org/abs/2604.11609
   authors:
@@ -442,6 +589,26 @@
       archivePrefix = {arXiv}
     }
   bibtex_confirmed: false
+- institutions:
+  - Unknown
+  envs:
+  - Position & Survey
+  phase: phase-4
+  keywords:
+  - accountability
+  - governance
+  - multi-agent
+  - oversight
+  tldr: |-
+    Presents an impossibility-theorem-style argument about the limits of accountability when governing collectives of humans and AI agents.
+  title: 'The Accountability Horizon: An Impossibility Theorem for Governing Human-Agent Collectives'
+  link: https://arxiv.org/abs/2604.07778
+  authors:
+  - Haileleol Tibebu
+  - Hewan Shemtaga
+  date: '2026-04-09'
+  publisher: arXiv
+  arxiv_id: '2604.07778'
 - title: AI Assistance Reduces Persistence and Hurts Independent Performance
   link: https://arxiv.org/abs/2604.04721
   authors:
@@ -578,6 +745,68 @@
       doi = {10.1016/j.esmorw.2026.100693}
     }
   bibtex_confirmed: false
+- institutions:
+  - Unknown
+  envs:
+  - Position & Survey
+  phase: framework
+  keywords:
+  - cognitive amplification
+  - delegation
+  - human capability
+  - atrophy
+  tldr: |-
+    Proposes metrics (collaborative gain, dependency, human reliance, cognitive drift) distinguishing genuine cognitive amplification from silent human displacement, arguing preserving human capability is a design goal.
+  title: 'Cognitive Amplification vs Cognitive Delegation in Human-AI Systems: A Metric Framework'
+  link: https://arxiv.org/abs/2603.18677
+  authors:
+  - Eduardo Di Santi
+  date: '2026-03-19'
+  publisher: arXiv
+  arxiv_id: '2603.18677'
+- institutions:
+  - Unknown
+  envs:
+  - Mutual Adaptation
+  phase: phase-1
+  keywords:
+  - AI literacy
+  - critical thinking
+  - medical students
+  - mediation
+  tldr: |-
+    Three-wave study finding AI literacy mediates the relationship between AI-assisted diagnosis participation and critical thinking among supervised medical students.
+  title: AI literacy mediates AI assisted diagnosis participation and critical thinking among medical students under supervision
+  link: https://doi.org/10.1038/s41746-026-02521-9
+  authors:
+  - Yang Xin
+  - Deng Yan
+  - Luo Shuren
+  - Luo Minyang
+  - Lu Liuheng
+  date: '2026-03-14'
+  publisher: npj Digital Medicine 2026
+- institutions:
+  - Unknown
+  envs:
+  - Position & Survey
+  phase: framework
+  keywords:
+  - self-regulated learning
+  - meta-analysis
+  - AI in education
+  tldr: |-
+    Meta-analysis of 35 studies (2013–2025) finding a moderate overall effect (g=0.507) of AI-supported SRL, stronger in the task-performance phase (g=0.574) than forethought (g=0.401).
+  title: "AI\n                    support in self‐regulated learning: A decade of technological evolution and meta‐analysis"
+  link: https://doi.org/10.1111/bjet.70058
+  authors:
+  - Jun Xu
+  - Yuying Luo
+  - Chengliang Wang
+  - Mengji Wang
+  - Yonghe Wu
+  date: '2026-03-12'
+  publisher: British Journal of Educational Technology 2026
 - title: 'Reactive Writers: How Co-Writing with AI Changes How We Engage with Ideas'
   link: https://arxiv.org/abs/2603.10374
   authors:
@@ -611,6 +840,25 @@
       archivePrefix = {arXiv}
     }
   bibtex_confirmed: false
+- institutions:
+  - Unknown
+  envs:
+  - Human Feedback Loops
+  phase: framework
+  keywords:
+  - choice blindness
+  - RLHF
+  - human feedback
+  - alignment
+  tldr: |-
+    Examines how choice-blindness effects in human and AI feedback distort the preference signals used for alignment.
+  title: 'Aligning to Illusions: Choice Blindness in Human and AI Feedback'
+  link: https://arxiv.org/abs/2603.08412
+  authors:
+  - Wenbin Wu
+  date: '2026-03-09'
+  publisher: arXiv
+  arxiv_id: '2603.08412'
 - title: 'Investigating the Effects of LLM Use on Critical Thinking Under Time Constraints: Access Timing and Time Availability'
   link: https://arxiv.org/abs/2603.08849
   authors:
@@ -738,6 +986,29 @@
       url = {https://arxiv.org/abs/2602.23971}
     }
   bibtex_confirmed: false
+- institutions:
+  - Unknown
+  envs:
+  - Collaboration & Co-Creation
+  phase: phase-1
+  keywords:
+  - critical thinking
+  - explainability
+  - reliability
+  - transparency
+  - professionals
+  tldr: |-
+    Three experiments with professionals finding AI reliability primarily drives critical engagement, and epistemic uncertainty prompts critical thinking when reliability varies.
+  title: 'Critical Thinking in AI-Assisted Deontologically-Governed Professional Decision-Making: When and How Explainability,
+    Reliability, and Transparency Matter'
+  link: https://doi.org/10.1007/s10796-025-10691-2
+  authors:
+  - Marion Korosec-Serfaty
+  - Pierre-Majorique Léger
+  - Xavier Parent-Rocheleau
+  - Sylvain Sénécal
+  date: '2026-02-23'
+  publisher: Information Systems Frontiers 2026
 - title: 'The Path to Conversational AI Tutors: Integrating Tutoring Best Practices and Targeted Technologies to Produce Scalable
     AI Agents'
   link: https://arxiv.org/abs/2602.19303
@@ -856,6 +1127,30 @@
       archivePrefix = {arXiv}
     }
   bibtex_confirmed: false
+- institutions:
+  - Unknown
+  envs:
+  - Longitudinal HCI Studies
+  phase: phase-1
+  keywords:
+  - reliance
+  - problem-solving
+  - students
+  - chatbots
+  tldr: |-
+    Proposes an analytical framework to characterize student reliance patterns on GenAI chatbots during problem solving.
+  title: 'RelianceScope: An Analytical Framework for Examining Students'' Reliance on Generative AI Chatbots in Problem Solving'
+  link: https://arxiv.org/abs/2602.16251
+  authors:
+  - Hyoungwook Jin
+  - Minju Yoo
+  - Jieun Han
+  - Zixin Chen
+  - So-Yeon Ahn
+  - Xu Wang
+  date: '2026-02-18'
+  publisher: arXiv
+  arxiv_id: '2602.16251'
 - title: A Rational Analysis of the Effects of Sycophantic AI
   link: https://arxiv.org/abs/2602.14270
   authors:
@@ -1021,6 +1316,27 @@
       url = {https://arxiv.org/abs/2602.09286}
     }
   bibtex_confirmed: false
+- institutions:
+  - Unknown
+  envs:
+  - Collaboration & Co-Creation
+  phase: phase-1
+  keywords:
+  - AI-assisted critical thinking
+  - counterfactual
+  - overreliance
+  - appropriate reliance
+  tldr: |-
+    Introduces the AACT framework where a domain AI critiques the human's own reasoning via counterfactual analysis; reduces overreliance versus standard decision support but raises cognitive load, benefiting high–Need-for-Cognition users most.
+  title: Understanding the Effects of AI-Assisted Critical Thinking on Human-AI Decision Making
+  link: https://arxiv.org/abs/2602.10222
+  authors:
+  - Harry Yizhou Tian
+  - Hasan Amin
+  - Ming Yin
+  date: '2026-02-10'
+  publisher: CHI 2026
+  arxiv_id: '2602.10222'
 - title: Belief Offloading in Human-AI Interaction
   link: https://arxiv.org/abs/2602.08754
   authors:
@@ -1699,6 +2015,27 @@
       archivePrefix = {arXiv}
     }
   bibtex_confirmed: false
+- institutions:
+  - Unknown
+  envs:
+  - Collaboration & Co-Creation
+  phase: phase-2
+  keywords:
+  - authorship
+  - ownership
+  - co-writing
+  - design patterns
+  tldr: |-
+    Presents an ownership-aware co-writing editor and evaluation (N=176) showing design choices shape felt authorship in professional writing genres.
+  title: Who Owns the Text? Design Patterns for Preserving Authorship in AI-Assisted Writing
+  link: https://arxiv.org/abs/2601.10236
+  authors:
+  - Bohan Zhang
+  - Chengke Bu
+  - Paramveer S. Dhillon
+  date: '2026-01-15'
+  publisher: arXiv
+  arxiv_id: '2601.10236'
 - title: 'Becoming human in the age of AI: cognitive co-evolutionary processes'
   link: https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2025.1734048/full
   authors:
@@ -1730,6 +2067,31 @@
       doi = {10.3389/fpsyg.2025.1734048}
     }
   bibtex_confirmed: false
+- institutions:
+  - Unknown
+  envs:
+  - Collaboration & Co-Creation
+  - Mutual Adaptation
+  phase: phase-2
+  keywords:
+  - cognitive bias
+  - developer-LLM interaction
+  - decision-making
+  - taxonomy
+  tldr: |-
+    Mixed-methods study (n=14 observed developers, n=22 surveyed) yielding a taxonomy of 15 bias categories (90 biases) in developer-LLM interaction; 48.8% of programmer actions were biased, with developer-LLM interactions accounting for 56.4% of biased actions.
+  title: Cognitive Biases in LLM-Assisted Software Development
+  link: https://arxiv.org/abs/2601.08045
+  authors:
+  - Xinyi Zhou
+  - Zeinadsadat Saghi
+  - Sadra Sabouri
+  - Rahul Pandita
+  - Mollie McGuire
+  - Souti Chattopadhyay
+  date: '2026-01-12'
+  publisher: arXiv
+  arxiv_id: '2601.08045'
 - title: 'AI in the classroom: Exploring students'' interaction with ChatGPT in programming learning'
   link: https://link.springer.com/article/10.1007/s10639-025-13337-7
   authors:
@@ -1987,6 +2349,28 @@
       doi = {10.1016/j.jacr.2025.09.015}
     }
   bibtex_confirmed: false
+- institutions:
+  - Unknown
+  envs:
+  - Collaboration & Co-Creation
+  phase: phase-1
+  keywords:
+  - trust calibration
+  - confidence displays
+  - decision-making
+  - uncertainty
+  tldr: |-
+    Examines how conveying AI confidence in dynamic contexts helps humans weight AI inputs against their own judgment for better decisions under uncertainty.
+  title: Trust Calibration for Joint Human/AI Decision-Making in Dynamic and Uncertain Contexts
+  link: https://doi.org/10.1007/978-3-031-93412-4_6
+  authors:
+  - Laura R. Marusich
+  - Benjamin T. Files
+  - Melanie Bancilhon
+  - Justine C. Rawal
+  - Adrienne Raglin
+  date: '2025'
+  publisher: Lecture Notes in Computer Science 2025
 - title: Using AI in My Disputes? Clients' Perception and Acceptance of Using AI in Mediation
   link: https://onlinelibrary.wiley.com/doi/full/10.1002/crq.21483
   authors:
@@ -2084,6 +2468,46 @@
       doi = {10.1007/s44217-025-01057-6}
     }
   bibtex_confirmed: false
+- institutions:
+  - Unknown
+  envs:
+  - Position & Survey
+  phase: phase-4
+  keywords:
+  - human oversight
+  - governance
+  - well-being efficacy
+  - capacity
+  tldr: |-
+    Proposes a "well-being efficacy" framework positioning human oversight as sustained human capacity development rather than procedural compliance.
+  title: 'Beyond Procedural Compliance: Human Oversight as a Dimension of Well-being Efficacy in AI Governance'
+  link: https://arxiv.org/abs/2512.13768
+  authors:
+  - Yao Xie
+  - Walter Cullen
+  date: '2025-12-15'
+  publisher: arXiv
+  arxiv_id: '2512.13768'
+- institutions:
+  - Unknown
+  envs:
+  - Longitudinal HCI Studies
+  phase: phase-1
+  keywords:
+  - metacognitive laziness
+  - vocational education
+  - cognitive offloading
+  tldr: |-
+    Evaluates GenAI in vocational education, documenting metacognitive-laziness effects where learners offload metacognitive load.
+  title: 'From Co-Design to Metacognitive Laziness: Evaluating Generative AI in Vocational Education'
+  link: https://arxiv.org/abs/2512.12306
+  authors:
+  - Amir Yunus
+  - Peng Rend Gay
+  - Oon Teng Lee
+  date: '2025-12-13'
+  publisher: arXiv
+  arxiv_id: '2512.12306'
 - title: Generative AI for Analysts
   link: https://arxiv.org/abs/2512.19705
   authors:
@@ -2252,6 +2676,29 @@
       url = {https://arxiv.org/abs/2512.03180}
     }
   bibtex_confirmed: false
+- institutions:
+  - Unknown
+  envs:
+  - Collaboration & Co-Creation
+  phase: phase-1
+  keywords:
+  - cognitive forcing
+  - need for cognition
+  - overreliance
+  - decision-making
+  tldr: |-
+    Experiment testing cognitive-forcing interventions and Need for Cognition on biased AI-assisted decisions about mental-health emergencies.
+  title: Impacts of cognitive forcing and need for cognition on biased AI-assisted decision making about mental health emergencies
+  link: https://doi.org/10.1038/s41598-025-30506-3
+  authors:
+  - Shrika Vejandla
+  - Aksharaa Ray
+  - Laura Sikstrom
+  - Matt Ratto
+  - Juveria Zaheer
+  - Marta M. Maslej
+  date: '2025-12-01'
+  publisher: Scientific Reports 2025
 - title: 'In ChatGPT they trust: a study of students'' perceptions and misuse of ChatGPT in higher education'
   link: https://link.springer.com/article/10.1007/s43681-025-00855-w
   authors:
@@ -2611,6 +3058,31 @@
       doi = {10.3390/bioengineering12101070}
     }
   bibtex_confirmed: false
+- institutions:
+  - Unknown
+  envs:
+  - Human Feedback Loops
+  phase: framework
+  keywords:
+  - mode collapse
+  - typicality bias
+  - human preference
+  - diversity
+  tldr: |-
+    Identifies "typicality bias" in human preference data as a data-level cause of RLHF mode collapse, showing annotators prefer typical text (p<10⁻¹⁴ correlation with base-model likelihood) and proposing a prompting fix.
+  title: 'Verbalized Sampling: How to Mitigate Mode Collapse and Unlock LLM Diversity'
+  link: https://arxiv.org/abs/2510.01171
+  authors:
+  - Jiayi Zhang
+  - Simon Yu
+  - Derek Chong
+  - Anthony Sicilia
+  - Michael R. Tomz
+  - Christopher D. Manning
+  - Weiyan Shi
+  date: '2025-10-01'
+  publisher: arXiv
+  arxiv_id: '2510.01171'
 - title: 'From Superficial Outputs to Superficial Learning: Risks of Large Language Models in Education'
   link: https://arxiv.org/abs/2509.21972
   authors:
@@ -2710,6 +3182,31 @@
       year = {2025}
     }
   bibtex_confirmed: false
+- institutions:
+  - Unknown
+  envs:
+  - Longitudinal HCI Studies
+  - Mutual Adaptation
+  phase: phase-2
+  keywords:
+  - trust calibration
+  - Copilot
+  - longitudinal
+  - skill
+  tldr: |-
+    Longitudinal survey of 71 CS students measuring trust in Copilot after 1 hour and 10 days; trust rose on average but students concluded the tool "requires a competent programmer" to verify and complete tasks.
+  title: Evolution of Programmers' Trust in Generative AI Programming Assistants
+  link: https://arxiv.org/abs/2509.13253
+  authors:
+  - Anshul Shah
+  - Thomas Rexin
+  - Elena Tomson
+  - Leo Porter
+  - William G. Griswold
+  - Adalbert Gerald Soosai Raj
+  date: '2025-09-16'
+  publisher: Koli Calling 2025
+  arxiv_id: '2509.13253'
 - title: Agentic AI has a Human Oversight Problem
   link: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5529058
   authors:
@@ -2841,6 +3338,29 @@
       url = {https://www.brookings.edu/articles/generative-ai-at-the-crossroads-light-bulb-dynamo-or-microscope/}
     }
   bibtex_confirmed: false
+- institutions:
+  - Unknown
+  envs:
+  - Position & Survey
+  phase: framework
+  keywords:
+  - safe-by-coevolution
+  - oversight
+  - alignment
+  - scalability
+  tldr: |-
+    Introduces "safe-by-coevolution" framing where AI safety and human oversight co-evolve, treating goal formation as a safety-critical process under increasing autonomy.
+  title: '\texttt{R$^\textbf{2}$AI}: Towards Resistant and Resilient AI in an Evolving World'
+  link: https://arxiv.org/abs/2509.06786
+  authors:
+  - Youbang Sun
+  - Xiang Wang
+  - Jie Fu
+  - Chaochao Lu
+  - Bowen Zhou
+  date: '2025-09-08'
+  publisher: arXiv
+  arxiv_id: '2509.06786'
 - title: 'Understanding, Protecting, and Augmenting Human Cognition with Generative AI: A Synthesis of the CHI 2025 Tools
     for Thought Workshop'
   link: https://arxiv.org/abs/2508.21036
@@ -3000,6 +3520,24 @@
       doi = {10.1016/S2468-1253(25)00133-5}
     }
   bibtex_confirmed: false
+- institutions:
+  - Unknown
+  envs:
+  - Position & Survey
+  phase: framework
+  keywords:
+  - AI literacy
+  - critical literacy
+  - integrative review
+  tldr: |-
+    Reviews 124 studies, identifying functional/critical/indirect conceptualizations of AI literacy and three perspectives on AI, mapping how literacy interventions equip humans to use AI well.
+  title: 'AI Literacy in K-12 and Higher Education in the Wake of Generative AI: An Integrative Review'
+  link: https://doi.org/10.1145/3702652.3744217
+  authors:
+  - Xingjian (Lance) Gu
+  - Barbara J. Ericson
+  date: '2025-08-02'
+  publisher: Proceedings of the 2025 ACM Conference on International Computing Education Research V.1
 - title: Assessing Medical Students' Attitudes, Performance, and Usage of ChatGPT in Jeddah, Saudi Arabia
   link: https://www.frontiersin.org/journals/artificial-intelligence/articles/10.3389/frai.2025.1577911/full
   authors:
@@ -3107,6 +3645,26 @@
       url = {https://arxiv.org/abs/2507.08029}
     }
   bibtex_confirmed: false
+- institutions:
+  - Unknown
+  envs:
+  - Collaboration & Co-Creation
+  phase: phase-2
+  keywords:
+  - psychological ownership
+  - friction
+  - prompt design
+  - co-writing
+  tldr: |-
+    Evaluates interface friction techniques (press-and-hold, sliders) that encourage longer prompts and increase writers' psychological ownership of AI-assisted text.
+  title: Interaction Techniques that Encourage Longer Prompts Can Improve Psychological Ownership when Writing with AI
+  link: https://arxiv.org/abs/2507.03670
+  authors:
+  - Nikhita Joshi
+  - Daniel Vogel
+  date: '2025-07-04'
+  publisher: Graphics Interface 2026
+  arxiv_id: '2507.03670'
 - title: 'Artificial intelligence in adaptive strategy creation and implementation: Toward enhanced attentional control in
     strategy processes'
   link: https://www.sciencedirect.com/science/article/pii/S0024630125000640
@@ -3205,6 +3763,32 @@
       doi = {10.1007/s10648-025-10039-x}
     }
   bibtex_confirmed: false
+- institutions:
+  - Unknown
+  envs:
+  - Collaboration & Co-Creation
+  - Longitudinal HCI Studies
+  phase: phase-2
+  keywords:
+  - Copilot
+  - verification behavior
+  - programming process
+  - comprehension
+  tldr: |-
+    Within-subjects experiment (10 undergraduates) on legacy-code tasks; with Copilot students completed tasks 34.9% faster and made 50.0% more solution progress (both p<0.05), spending 10.6% less time manually writing code and 11.6% less on web searches, while raising concerns about not understanding suggestions.
+  title: The Effects of GitHub Copilot on Computing Students' Programming Effectiveness, Efficiency, and Processes in Brownfield
+    Programming Tasks
+  link: https://arxiv.org/abs/2506.10051
+  authors:
+  - Md Istiak Hossain Shihab
+  - Christopher Hundhausen
+  - Ahsun Tariq
+  - Summit Haque
+  - Yunhan Qiao
+  - Brian Mulanda
+  date: '2025-06-11'
+  publisher: ICER 2025
+  arxiv_id: '2506.10051'
 - title: 'Your Brain on ChatGPT: Accumulation of Cognitive Debt when Using an AI Assistant for Essay Writing Task'
   link: https://arxiv.org/abs/2506.08872
   authors:
@@ -3485,6 +4069,72 @@
       doi = {10.1609/aaaiss.v5i1.35558}
     }
   bibtex_confirmed: false
+- institutions:
+  - Unknown
+  envs:
+  - Human Feedback Loops
+  phase: framework
+  keywords:
+  - sycophancy
+  - RLHF
+  - multi-turn
+  - preference optimization
+  tldr: |-
+    Introduces a benchmark for sycophancy across multi-turn dialogues, showing models increasingly conform to user assertions over turns, tied to preference-based post-training.
+  title: Measuring Sycophancy of Language Models in Multi-turn Dialogues
+  link: https://arxiv.org/abs/2505.23840
+  authors:
+  - Jiseung Hong
+  - Grace Byun
+  - Seungone Kim
+  - Kai Shu
+  - Jinho D. Choi
+  date: '2025-05-28'
+  publisher: Findings of EMNLP 2025
+  arxiv_id: '2505.23840'
+- institutions:
+  - Unknown
+  envs:
+  - Longitudinal HCI Studies
+  phase: phase-1
+  keywords:
+  - self-regulated learning
+  - metacognitive support
+  - quasi-experiment
+  - GenAI
+  tldr: |-
+    Four-week quasi-experiment (N=68) finding explicit metacognitive support in a GenAI environment improves self-regulated learning (task strategy, self-evaluation) though not raw achievement.
+  title: "Enhancing self‐regulated learning and learning experience in generative\n                    AI\n              \
+    \      environments: The critical role of metacognitive support"
+  link: https://doi.org/10.1111/bjet.13599
+  authors:
+  - Xiaoqing Xu
+  - Lifang Qiao
+  - Nuo Cheng
+  - Hongxia Liu
+  - Wei Zhao
+  date: '2025-05-05'
+  publisher: British Journal of Educational Technology 2025
+- institutions:
+  - Unknown
+  envs:
+  - Collaboration & Co-Creation
+  phase: phase-1
+  keywords:
+  - partial explanations
+  - cognitive forcing
+  - overreliance
+  tldr: |-
+    Shows partial explanations act as a cognitive-forcing mechanism that increases user engagement and reduces overreliance in high-stakes AI-assisted decisions.
+  title: 'Cognitive Forcing for Better Decision-Making: Reducing Overreliance on AI Systems Through Partial Explanations'
+  link: https://doi.org/10.1145/3710946
+  authors:
+  - Sander de Jong
+  - Ville Paananen
+  - Benjamin Tag
+  - Niels van Berkel
+  date: '2025-05-02'
+  publisher: Proceedings of the ACM on Human-Computer Interaction 2025
 - title: 'The Impact of Generative AI on Critical Thinking: Self-Reported Reductions in Cognitive Effort and Confidence Effects
     From a Survey of Knowledge Workers'
   link: https://doi.org/10.1145/3706598.3713778
@@ -3559,6 +4209,53 @@
       archivePrefix = {arXiv}
     }
   bibtex_confirmed: false
+- institutions:
+  - Unknown
+  envs:
+  - Longitudinal HCI Studies
+  - Collaboration & Co-Creation
+  phase: phase-1
+  keywords:
+  - metacognitive calibration
+  - self-regulated learning
+  - intervention
+  - learning outcomes
+  tldr: |-
+    Shows a real-time AI intervention supporting metacognitive calibration increases knowledge-seeking behaviors that mediate improved learning gains.
+  title: Learning Behaviors Mediate the Effect of AI-powered Support for Metacognitive Calibration on Learning Outcomes
+  link: https://doi.org/10.1145/3706598.3713960
+  authors:
+  - HaeJin Lee
+  - Frank Stinar
+  - Ruohan Zong
+  - Hannah Valdiviejas
+  - Dong Wang
+  - Nigel Bosch
+  date: '2025-04-25'
+  publisher: Proceedings of the 2025 CHI Conference on Human Factors in Computing Systems
+- institutions:
+  - Unknown
+  envs:
+  - Longitudinal HCI Studies
+  - Mutual Adaptation
+  phase: phase-2
+  keywords:
+  - field experiment
+  - knowledge work
+  - Copilot
+  - work patterns
+  tldr: |-
+    Six-month randomized field experiment (7,137 workers, 66 firms) measuring how integrated GenAI changes email, document, and meeting work patterns.
+  title: Shifting Work Patterns with Generative AI
+  link: https://arxiv.org/abs/2504.11436
+  authors:
+  - Eleanor Wiske Dillon
+  - Sonia Jaffe
+  - Nicole Immorlica
+  - Christopher T. Stanton
+  date: '2025-04-15'
+  publisher: arXiv
+  arxiv_id: '2504.11436'
 - title: 'The AI Scientist-v2: Workshop-Level Automated Scientific Discovery via Agentic Tree Search'
   link: https://arxiv.org/abs/2504.08066
   authors:
@@ -3705,6 +4402,29 @@
       url = {https://arxiv.org/abs/2503.17473}
     }
   bibtex_confirmed: false
+- institutions:
+  - Unknown
+  envs:
+  - Collaboration & Co-Creation
+  phase: phase-2
+  keywords:
+  - idea generation
+  - mindless echoing
+  - co-writing
+  - cognitive engagement
+  tldr: |-
+    Identifies "mindless echoing" interaction patterns (from keystroke logs and think-aloud) where writers stop generating new ideas while still producing text with AI.
+  title: How Problematic Writer-AI Interactions (Rather than Problematic AI) Hinder Writers' Idea Generation
+  link: https://arxiv.org/abs/2503.11915
+  authors:
+  - Khonzoda Umarova
+  - Talia Wise
+  - Zhuoer Lyu
+  - Mina Lee
+  - Qian Yang
+  date: '2025-03-14'
+  publisher: arXiv
+  arxiv_id: '2503.11915'
 - title: Strategyproof Reinforcement Learning from Human Feedback
   link: https://arxiv.org/abs/2503.09561
   authors:
@@ -3845,6 +4565,28 @@
       doi = {10.1145/3706598.3713668}
     }
   bibtex_confirmed: false
+- institutions:
+  - Unknown
+  envs:
+  - Collaboration & Co-Creation
+  phase: phase-1
+  keywords:
+  - adaptive explanation
+  - trust calibration
+  - decision-making
+  tldr: |-
+    Presents adaptive LLM-powered analysis for AI-assisted decisions and evaluates its effect on appropriate reliance and trust.
+  title: 'From Text to Trust: Empowering AI-assisted Decision Making with Adaptive LLM-powered Analysis'
+  link: https://arxiv.org/abs/2502.11919
+  authors:
+  - Zhuoyan Li
+  - Hangxiao Zhu
+  - Zhuoran Lu
+  - Ziang Xiao
+  - Ming Yin
+  date: '2025-02-17'
+  publisher: CHI 2025
+  arxiv_id: '2502.11919'
 - title: 'Asking an AI for salary negotiation advice is a matter of concern: Controlled experimental perturbation of ChatGPT
     for protected and non-protected group discrimination on a contextual task with no clear ground truth answers'
   link: https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0318500
@@ -3878,6 +4620,25 @@
       doi = {10.1371/journal.pone.0318500}
     }
   bibtex_confirmed: false
+- institutions:
+  - Unknown
+  envs:
+  - Collaboration & Co-Creation
+  phase: phase-1
+  keywords:
+  - uncertainty visualization
+  - trust
+  - decision confidence
+  tldr: |-
+    Experiment showing different uncertainty visual encodings (size, saturation, transparency) shape user trust and decision confidence, especially for users with negative AI attitudes.
+  title: 'Trusting AI: does uncertainty visualization affect decision-making?'
+  link: https://doi.org/10.3389/fcomp.2025.1464348
+  authors:
+  - Jonatan Reyes
+  - Anil Ufuk Batmaz
+  - Marta Kersten-Oertel
+  date: '2025-02-07'
+  publisher: Frontiers in Computer Science 2025
 - title: 'Higher Education Students'' Perceptions of ChatGPT: A Global Study of Early Reactions'
   link: https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0315011
   authors:
@@ -4007,6 +4768,50 @@
       doi = {10.1186/s13244-024-01893-4}
     }
   bibtex_confirmed: false
+- institutions:
+  - Unknown
+  envs:
+  - Collaboration & Co-Creation
+  phase: phase-2
+  keywords:
+  - provocations
+  - critical thinking
+  - knowledge work
+  - friction
+  tldr: |-
+    Introduces "provocations" — interface prompts that surface assumptions and challenge users — to restore critical thinking in AI-assisted knowledge work.
+  title: '"It makes you think": Provocations Help Restore Critical Thinking to AI-Assisted Knowledge Work'
+  link: https://arxiv.org/abs/2501.17247
+  authors:
+  - Ian Drosos
+  - Advait Sarkar
+  - ' Xiaotong'
+  - ' Xu'
+  - Neil Toronto
+  date: '2025-01-28'
+  publisher: arXiv
+  arxiv_id: '2501.17247'
+- institutions:
+  - Unknown
+  envs:
+  - Longitudinal HCI Studies
+  phase: phase-1
+  keywords:
+  - ChatGPT
+  - programming learning
+  - quasi-experiment
+  - high school
+  tldr: |-
+    Quasi-experiment with 153 students; ChatGPT users reported lower cognitive load, with mixed effects on independent learning outcomes.
+  title: 'The effectiveness of ChatGPT in assisting high school students in programming learning: evidence from a quasi-experimental
+    research'
+  link: https://doi.org/10.1080/10494820.2025.2450659
+  authors:
+  - Tzu-Chi Yang
+  - Yi-Chuan Hsu
+  - Jiun-Yu Wu
+  date: '2025-01-16'
+  publisher: Interactive Learning Environments 2025
 - title: 'Widespread Use of ChatGPT and Other Artificial Intelligence Tools Among Medical Students in Uganda: A Cross-Sectional
     Study'
   link: https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0313776
@@ -4059,6 +4864,25 @@
       doi = {10.1371/journal.pone.0313776}
     }
   bibtex_confirmed: false
+- institutions:
+  - Unknown
+  envs:
+  - Mutual Adaptation
+  - Position & Survey
+  phase: phase-1
+  keywords:
+  - cognitive offloading
+  - critical thinking
+  - AI reliance
+  - survey
+  tldr: |-
+    Mixed-method study of 666 participants (50 also interviewed) reporting a significant negative correlation between frequent AI tool use and critical thinking, mediated by increased cognitive offloading; younger participants exhibited higher AI dependence and scored lower on the Halpern Critical Thinking Assessment.
+  title: 'AI Tools in Society: Impacts on Cognitive Offloading and the Future of Critical Thinking'
+  link: https://doi.org/10.3390/soc15010006
+  authors:
+  - Michael Gerlich
+  date: '2025-01-03'
+  publisher: Societies 2025
 - title: 'Creativity in Human-AI Co-Creation: A Two-Stage Model and the Da Vinci Score'
   link: https://scholarspace.manoa.hawaii.edu/items/d2b58c60-9b25-4d36-95fb-715fff6a6ddf
   authors:
@@ -4189,6 +5013,26 @@
       doi = {10.1038/s41562-024-02077-2}
     }
   bibtex_confirmed: false
+- institutions:
+  - Unknown
+  envs:
+  - Position & Survey
+  phase: framework
+  keywords:
+  - human-agent coevolution
+  - symbiosis
+  - incentives
+  tldr: |-
+    Proposes an incentivized-symbiosis paradigm for aligning AI-agent goals with human objectives to foster cooperative human-agent coevolution.
+  title: 'Incentivized Symbiosis: A Paradigm for Human-Agent Coevolution'
+  link: https://arxiv.org/abs/2412.06855
+  authors:
+  - Tomer Jordi Chaffer
+  - Justin Goldston
+  - Gemach D. A. T. A.
+  date: '2024-12-08'
+  publisher: arXiv
+  arxiv_id: '2412.06855'
 - title: 'ChatGPT Versus Expert Feedback on Clinical Reasoning Questions and Their Effect on Learning: A Randomized Controlled
     Trial'
   link: https://academic.oup.com/pmj/article/101/1195/458/7917102
@@ -4886,6 +5730,33 @@
       doi = {10.1073/pnas.2422633122}
     }
   bibtex_confirmed: false
+- institutions:
+  - Unknown
+  envs:
+  - Position & Survey
+  phase: framework
+  keywords:
+  - skill decay
+  - skill acquisition
+  - awareness
+  - illusions of understanding
+  tldr: |-
+    Theoretical perspective arguing AI assistants may accelerate expert skill decay and hinder learner skill acquisition while masking these effects (illusions of understanding) from users.
+  title: Does using artificial intelligence assistance accelerate skill decay and hinder skill development without performers’
+    awareness?
+  link: https://doi.org/10.1186/s41235-024-00572-8
+  authors:
+  - Brooke N. Macnamara
+  - Ibrahim Berber
+  - M. Cenk Çavuşoğlu
+  - Elizabeth A. Krupinski
+  - Naren Nallapareddy
+  - Noelle E. Nelson
+  - Philip J. Smith
+  - Amy L. Wilson-Delfosse
+  - Soumya Ray
+  date: '2024-07-12'
+  publisher: 'Cognitive Research: Principles and Implications 2024'
 - title: Generative AI enhances individual creativity but reduces the collective diversity of novel content
   link: https://www.science.org/doi/10.1126/sciadv.adn5290
   authors:
@@ -5093,6 +5964,31 @@
       doi = {10.1111/jels.12413}
     }
   bibtex_confirmed: false
+- institutions:
+  - Unknown
+  envs:
+  - Human Feedback Loops
+  phase: framework
+  keywords:
+  - RLHF
+  - preference collapse
+  - minority preferences
+  - regularization
+  tldr: |-
+    Argues KL-based RLHF regularization induces "preference collapse" that disregards minority preferences, and proposes preference-matching RLHF.
+  title: 'On the Algorithmic Bias of Aligning Large Language Models with RLHF: Preference Collapse and Matching Regularization'
+  link: https://arxiv.org/abs/2405.16455
+  authors:
+  - Jiancong Xiao
+  - Ziniu Li
+  - Xingyu Xie
+  - Emily Getzen
+  - Cong Fang
+  - Qi Long
+  - Weijie J. Su
+  date: '2024-05-26'
+  publisher: Journal of the American Statistical Association
+  arxiv_id: '2405.16455'
 - title: A Study on Developer Behaviors for Validating and Repairing LLM-Generated Code Using Eye Tracking and IDE Actions
   link: https://arxiv.org/abs/2405.16081
   authors:
@@ -5716,6 +6612,26 @@
       url = {https://openai.com/index/practices-for-governing-agentic-ai-systems/}
     }
   bibtex_confirmed: false
+- institutions:
+  - Unknown
+  envs:
+  - Position & Survey
+  phase: framework
+  keywords:
+  - automation
+  - deskilling
+  - oversight
+  - aviation analogy
+  tldr: |-
+    Draws on aviation automation history (Bainbridge's ironies of automation) to argue for design that preserves human manual and diagnostic skills as AI co-pilots take over work.
+  title: 'The Rise of the AI Co-Pilot: Lessons for Design from Aviation and Beyond'
+  link: https://arxiv.org/abs/2311.14713
+  authors:
+  - Abigail Sellen
+  - Eric Horvitz
+  date: '2023-11-16'
+  publisher: arXiv
+  arxiv_id: '2311.14713'
 - title: Towards Understanding Sycophancy in Language Models
   link: https://arxiv.org/abs/2310.13548
   authors:
