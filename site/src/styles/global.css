@@ -212,14 +212,14 @@ html.dark, html.dark body {
 
   /* Eyebrow rule + small-caps mono label */
   .heading-eyebrow {
-    @apply text-[12px] uppercase text-ink-400 dark:text-ink-300 inline-flex items-center gap-3;
+    @apply text-[16px] uppercase text-ink-400 dark:text-ink-300 inline-flex items-center gap-3.5;
     font-family: var(--font-mono);
-    letter-spacing: 0.14em;
+    letter-spacing: 0.08em;
   }
   .heading-eyebrow::before {
     content: '';
-    width: 24px;
-    height: 1.5px;
+    width: 36px;
+    height: 2.5px;
     background-color: theme('colors.accent.DEFAULT');
     display: inline-block;
   }
